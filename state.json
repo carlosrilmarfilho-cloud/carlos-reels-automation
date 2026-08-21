@@ -1,9 +1,9 @@
 {
-  "video_index": 1,
-  "content_index": 1,
-  "posts_total": 1,
+  "video_index": 0,
+  "posts_total": 4,
   "last_posted_at": "2026-08-21T12:52:40Z",
   "last_video": "1DB3DA5B-1B12-470E-9C42-CCDB4447E6A7.mp4",
   "last_overlay": "Essa é a terapia que você precisava hoje.",
-  "last_mode": "trial"
+  "last_mode": "trial",
+  "variant_usage": {}
 }
