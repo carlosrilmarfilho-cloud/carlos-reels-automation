@@ -11,6 +11,20 @@ VIDEOS = ROOT / "videos"
 OUT = ROOT / "video_analysis.json"
 
 
+def safe_result(video_name, error=""):
+    result = {
+        "video": video_name,
+        "detected_text": "",
+        "theme": "generic",
+        "text_bbox_norm": None,
+        "sample_time": 0,
+        "source_size": None,
+        "analysis_error": error[:500],
+    }
+    OUT.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return result
+
+
 def video_duration(path: Path) -> float:
     p = subprocess.run([
         "ffprobe", "-v", "error", "-show_entries", "format=duration",
@@ -32,8 +46,7 @@ def extract_frame(video: Path, second: float, out: Path):
 def preprocess(img: Image.Image) -> Image.Image:
     gray = ImageOps.grayscale(img)
     gray = ImageEnhance.Contrast(gray).enhance(1.8)
-    gray = gray.filter(ImageFilter.SHARPEN)
-    return gray
+    return gray.filter(ImageFilter.SHARPEN)
 
 
 def normalize_text(text: str) -> str:
@@ -49,15 +62,26 @@ def classify(text: str) -> str:
     if "terapia" in t:
         return "musica_terapia"
     if any(k in t for k in ["saudade", "coração", "coracao", "amor", "amar", "sofrer", "sofrimento", "ex"]):
-        return "romantico"
+        return "generic"
     return "generic"
+
+
+def tesseract_data(proc):
+    # Português é preferido; se o pacote de idioma falhar, tenta inglês e depois cai para genérico.
+    last_error = None
+    for lang in ["por+eng", "eng"]:
+        try:
+            return pytesseract.image_to_data(proc, lang=lang, config="--psm 6", output_type=Output.DICT)
+        except Exception as e:
+            last_error = e
+    raise RuntimeError(f"OCR indisponível: {last_error}")
 
 
 def read_frame(path: Path):
     img = Image.open(path).convert("RGB")
     w, h = img.size
     proc = preprocess(img)
-    data = pytesseract.image_to_data(proc, lang="por+eng", config="--psm 6", output_type=Output.DICT)
+    data = tesseract_data(proc)
     words, boxes = [], []
     for i, raw in enumerate(data.get("text", [])):
         word = normalize_text(raw)
@@ -71,7 +95,6 @@ def read_frame(path: Path):
             continue
         x, y = int(data["left"][i]), int(data["top"][i])
         bw, bh = int(data["width"][i]), int(data["height"][i])
-        # Prioriza a metade superior, onde ficam os ganchos dos Reels deste projeto.
         if y > h * 0.58:
             continue
         words.append(word)
@@ -83,10 +106,7 @@ def read_frame(path: Path):
         y0 = max(0, min(b[1] for b in boxes))
         x1 = min(w, max(b[2] for b in boxes))
         y1 = min(h, max(b[3] for b in boxes))
-        bbox = {
-            "x0": x0 / w, "y0": y0 / h,
-            "x1": x1 / w, "y1": y1 / h,
-        }
+        bbox = {"x0": x0 / w, "y0": y0 / h, "x1": x1 / w, "y1": y1 / h}
     return text, bbox, (w, h)
 
 
@@ -95,32 +115,33 @@ def main():
     if not videos:
         raise SystemExit("Nenhum vídeo para analisar")
     video = videos[0]
-    duration = video_duration(video)
-    sample_times = sorted(set([min(0.7, duration * 0.15), min(1.8, duration * 0.35), min(3.0, duration * 0.55)]))
-    candidates = []
     temp_files = []
     try:
+        duration = video_duration(video)
+        sample_times = sorted(set([min(0.7, duration * 0.15), min(1.8, duration * 0.35), min(3.0, duration * 0.55)]))
+        candidates = []
         for n, sec in enumerate(sample_times):
             frame = ROOT / f".ocr_frame_{n}.jpg"
             temp_files.append(frame)
             extract_frame(video, sec, frame)
             text, bbox, size = read_frame(frame)
             candidates.append({"text": text, "bbox": bbox, "size": size, "time": sec})
+        best = max(candidates, key=lambda x: len(x["text"])) if candidates else {"text": "", "bbox": None, "size": None, "time": 0}
+        result = {
+            "video": video.name,
+            "detected_text": best["text"],
+            "theme": classify(best["text"]),
+            "text_bbox_norm": best["bbox"],
+            "sample_time": best["time"],
+            "source_size": best["size"],
+            "analysis_error": "",
+        }
+        OUT.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    except Exception as e:
+        result = safe_result(video.name, str(e))
     finally:
         for p in temp_files:
             p.unlink(missing_ok=True)
-
-    best = max(candidates, key=lambda x: len(x["text"])) if candidates else {"text": "", "bbox": None, "size": None, "time": 0}
-    theme = classify(best["text"])
-    result = {
-        "video": video.name,
-        "detected_text": best["text"],
-        "theme": theme,
-        "text_bbox_norm": best["bbox"],
-        "sample_time": best["time"],
-        "source_size": best["size"],
-    }
-    OUT.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(result, ensure_ascii=False))
 
 
