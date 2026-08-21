@@ -8,17 +8,47 @@ VIDEOS = ROOT / "videos"
 STATE = ROOT / "state.json"
 PROFILES = ROOT / "video_profiles.json"
 CONTENT = ROOT / "content.json"
+ANALYSIS = ROOT / "video_analysis.json"
 OUTDIR = ROOT / "output"
 OUT = OUTDIR / "reel.mp4"
 OVERLAY = OUTDIR / "overlay.png"
 META = ROOT / "metadata.json"
+
+HASHTAG_SETS = {
+    "forro_antigo": [
+        ["#forro", "#forrodasantigas", "#musicabrasileira", "#reelsbrasil", "#forrozeiro"],
+        ["#forroantigo", "#forro", "#musicanordestina", "#nostalgia", "#reelsbrasil"],
+        ["#forrodasantigas", "#musicaboa", "#nordeste", "#musicabrasileira", "#reelsbrasil"],
+        ["#forro", "#classicosdoforro", "#sanfona", "#musicanordestina", "#reelsbrasil"],
+    ],
+    "brega": [
+        ["#brega", "#musicabrega", "#musicabrasileira", "#reelsbrasil", "#nostalgia"],
+        ["#bregadasantigas", "#brega", "#seresta", "#musicaboa", "#reelsbrasil"],
+        ["#musicabrega", "#sofrencia", "#musicabrasileira", "#nostalgia", "#reelsbrasil"],
+        ["#brega", "#seresta", "#classicos", "#musicabrasileira", "#reelsbrasil"],
+    ],
+    "musica_terapia": [
+        ["#musica", "#musicabrasileira", "#reelsbrasil", "#nostalgia", "#boamusica"],
+        ["#musica", "#terapiamusical", "#musicaboa", "#reelsbrasil", "#sentimento"],
+        ["#musicabrasileira", "#musica", "#reelsbrasil", "#som", "#nostalgia"],
+        ["#boamusica", "#musica", "#sentimento", "#musicabrasileira", "#reelsbrasil"],
+    ],
+    "generic": [
+        ["#musica", "#musicabrasileira", "#reelsbrasil", "#musicaboa"],
+        ["#musica", "#reelsbrasil", "#som", "#sentimento"],
+        ["#musicabrasileira", "#reelsbrasil", "#musica", "#nostalgia"],
+        ["#boamusica", "#reelsbrasil", "#musica", "#brasil"],
+    ],
+}
 
 
 def run(cmd):
     subprocess.run(cmd, check=True)
 
 
-def load_json(path):
+def load_json(path, default=None):
+    if not path.exists():
+        return {} if default is None else default
     return json.loads(path.read_text(encoding="utf-8"))
 
 
@@ -37,7 +67,7 @@ def probe_size(video):
 
 def target_size(video):
     sw, sh = probe_size(video)
-    # Preserve source detail; never fake-upscale 1080 to 1440. Cap at 1440x2560 for reliability.
+    # Preserva detalhe real; não cria upscale falso. Cap em 1440x2560 para estabilidade da API.
     if sw >= 1440 and sh >= 2560:
         return 1440, 2560
     return 1080, 1920
@@ -86,7 +116,7 @@ def fit_text(draw, text, width, max_lines=3):
     return font, textwrap.wrap(text, width=36)[:max_lines]
 
 
-def make_overlay(text, theme, width, height):
+def make_overlay(text, theme, width, height, dynamic_bbox=None):
     img = Image.new("RGBA", (width, height), (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
     font, lines = fit_text(draw, text, width)
@@ -94,22 +124,31 @@ def make_overlay(text, theme, width, height):
     line_h = int(font.size * 1.25)
     margin = int(55 * scale)
     box_x0, box_x1 = margin, width - margin
-    box_h = max(int(350 * scale), line_h * len(lines) + int(100 * scale))
-    y_ratio = {
-        "forro_antigo": 480 / 2560,
-        "brega": 610 / 2560,
-        "musica_terapia": 480 / 2560,
-        "generic": 500 / 2560,
-    }
-    y0 = int(height * y_ratio.get(theme, 500 / 2560))
-    y1 = y0 + box_h
+    min_box_h = max(int(350 * scale), line_h * len(lines) + int(100 * scale))
+
+    if dynamic_bbox:
+        # Para vídeos novos: usa a região de texto detectada automaticamente e dá folga ao redor.
+        y0 = max(int(height * dynamic_bbox.get("y0", 0.18)) - int(70 * scale), int(40 * scale))
+        detected_y1 = min(int(height * dynamic_bbox.get("y1", 0.34)) + int(70 * scale), height - int(40 * scale))
+        box_h = max(min_box_h, detected_y1 - y0)
+    else:
+        y_ratio = {
+            "forro_antigo": 480 / 2560,
+            "brega": 610 / 2560,
+            "musica_terapia": 480 / 2560,
+            "generic": 500 / 2560,
+        }
+        y0 = int(height * y_ratio.get(theme, 500 / 2560))
+        box_h = min_box_h
+
+    y1 = min(height - int(40 * scale), y0 + box_h)
     draw.rounded_rectangle(
         (box_x0, y0, box_x1, y1),
         radius=max(18, int(28 * scale)),
         fill=(8, 8, 8, 255),
     )
     text_block_h = line_h * len(lines)
-    y = y0 + (box_h - text_block_h) // 2
+    y = y0 + max(0, (y1 - y0 - text_block_h) // 2)
     for line in lines:
         box = draw.textbbox((0, 0), line, font=font)
         w = box[2] - box[0]
@@ -119,20 +158,39 @@ def make_overlay(text, theme, width, height):
     img.save(OVERLAY)
 
 
-def choose_content(video_name, state):
-    cfg = load_json(PROFILES)
+def choose_content(video_name, state, analysis):
+    cfg = load_json(PROFILES, {})
     profile = cfg.get("profiles", {}).get(video_name, {})
-    theme = profile.get("theme", "generic")
+    analyzed_theme = str(analysis.get("theme", "generic"))
+    theme = profile.get("theme") or analyzed_theme
     pool = cfg.get("themes", {}).get(theme) or cfg.get("themes", {}).get("generic", [])
     if not pool:
-        pool = load_json(CONTENT)
+        pool = load_json(CONTENT, [])
+    if not pool:
+        raise RuntimeError("Nenhuma frase disponível")
+
     usage = dict(state.get("variant_usage", {}))
     used = int(usage.get(video_name, 0))
     offset = int(profile.get("variant_offset", 0))
-    idx = (used + offset) % len(pool)
-    item = pool[idx]
+    recent = set(state.get("recent_overlays", [])[-14:])
+
+    chosen_idx = (used + offset) % len(pool)
+    for step in range(len(pool)):
+        idx = (used + offset + step) % len(pool)
+        if str(pool[idx].get("overlay", "")) not in recent:
+            chosen_idx = idx
+            break
+
+    item = pool[chosen_idx]
     usage[video_name] = used + 1
-    return item, theme, profile.get("source_text"), idx, usage
+    source_text = profile.get("source_text") or analysis.get("detected_text") or ""
+    return item, theme, source_text, chosen_idx, usage, bool(profile)
+
+
+def choose_hashtags(theme, state, variant_idx):
+    sets = HASHTAG_SETS.get(theme) or HASHTAG_SETS["generic"]
+    idx = (int(state.get("posts_total", 0)) + int(variant_idx)) % len(sets)
+    return " ".join(sets[idx])
 
 
 def main():
@@ -141,15 +199,20 @@ def main():
     if not videos:
         raise SystemExit("Nenhum vídeo encontrado na pasta videos/")
 
-    state = load_json(STATE)
+    state = load_json(STATE, {})
+    analysis = load_json(ANALYSIS, {})
     total_videos = max(1, int(os.environ.get("TOTAL_VIDEOS", len(videos))))
     current_video_index = int(state.get("video_index", 0)) % total_videos
     video = videos[0]
     target_w, target_h = target_size(video)
-    item, theme, source_text, variant_idx, usage = choose_content(video.name, state)
+    item, theme, source_text, variant_idx, usage, has_manual_profile = choose_content(video.name, state, analysis)
     overlay_text = str(item["overlay"]).strip()
-    caption = str(item["caption"]).strip()
-    make_overlay(overlay_text, theme, target_w, target_h)
+    base_caption = str(item["caption"]).strip()
+    hashtags = choose_hashtags(theme, state, variant_idx)
+    caption = f"{base_caption}\n\n{hashtags}".strip()
+
+    dynamic_bbox = None if has_manual_profile else analysis.get("text_bbox_norm")
+    make_overlay(overlay_text, theme, target_w, target_h, dynamic_bbox=dynamic_bbox)
 
     maxrate = "14M" if target_w >= 1440 else "10M"
     bufsize = "28M" if target_w >= 1440 else "20M"
@@ -163,13 +226,19 @@ def main():
         "-movflags", "+faststart", "-shortest", str(OUT),
     ])
 
+    recent_overlays = (list(state.get("recent_overlays", [])) + [overlay_text])[-18:]
+    recent_captions = (list(state.get("recent_captions", [])) + [base_caption])[-18:]
     next_state = {
         **state,
         "video_index": (current_video_index + 1) % total_videos,
         "posts_total": int(state.get("posts_total", 0)) + 1,
         "last_video": video.name,
         "last_overlay": overlay_text,
+        "last_caption": base_caption,
+        "last_hashtags": hashtags,
         "variant_usage": usage,
+        "recent_overlays": recent_overlays,
+        "recent_captions": recent_captions,
     }
     save_json(META, {
         "video": video.name,
@@ -177,13 +246,15 @@ def main():
         "total_videos": total_videos,
         "theme": theme,
         "source_text_detected": source_text,
+        "automatic_analysis": not has_manual_profile,
         "variant_index": variant_idx,
         "overlay": overlay_text,
         "caption": caption,
+        "hashtags": hashtags,
         "render_resolution": f"{target_w}x{target_h}",
         "next_state": next_state,
     })
-    print(f"Renderizado {video.name} | tema={theme} | variante={variant_idx + 1} | {target_w}x{target_h}")
+    print(f"Renderizado {video.name} | tema={theme} | variante={variant_idx + 1} | {target_w}x{target_h} | hashtags rotativas")
 
 
 if __name__ == "__main__":
