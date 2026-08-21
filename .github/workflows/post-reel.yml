@@ -136,6 +136,8 @@ jobs:
           git add run-status.json
           if ! git diff --cached --quiet; then
             git commit -m "Finalizar execução $GITHUB_RUN_ID [skip ci]"
+            git reset --hard HEAD
+            git clean -fd
             git pull --rebase origin "$GITHUB_REF_NAME"
             git push origin HEAD:"$GITHUB_REF_NAME"
           fi
