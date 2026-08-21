@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '7 * * * *'
   workflow_dispatch:
+  push:
+    paths:
+      - '.trigger'
 
 permissions:
   contents: write
@@ -94,6 +97,7 @@ jobs:
         env:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           IG_API_VERSION: v26.0
+          TRIAL_REEL: true
           PUBLIC_VIDEO_URL: https://raw.githubusercontent.com/${{ github.repository }}/media-host/latest.mp4?run=${{ github.run_id }}
         run: python publish.py
 
