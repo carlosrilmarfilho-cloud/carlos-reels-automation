@@ -1,6 +1,8 @@
 name: Postar Reel a cada hora
 
 on:
+  schedule:
+    - cron: '7 * * * *'
   workflow_dispatch:
   push:
     paths:
@@ -121,14 +123,18 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -e
           git config user.name "Carlos Reels Automation"
           git config user.email "actions@users.noreply.github.com"
-          git pull --rebase origin "$GITHUB_REF_NAME"
           [ -f diagnostic.json ] && git add diagnostic.json || true
           if [ "${{ steps.publish.outcome }}" = "success" ]; then git add state.json; fi
           printf '{"run_id":"%s","finished_at":"%s","publish_outcome":"%s"}\n' "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.publish.outcome }}" > run-status.json
           git add run-status.json
-          if ! git diff --cached --quiet; then git commit -m "Finalizar execução $GITHUB_RUN_ID [skip ci]"; git push origin HEAD:"$GITHUB_REF_NAME"; fi
+          if ! git diff --cached --quiet; then
+            git commit -m "Finalizar execução $GITHUB_RUN_ID [skip ci]"
+            git pull --rebase origin "$GITHUB_REF_NAME"
+            git push origin HEAD:"$GITHUB_REF_NAME"
+          fi
 
       - name: Falhar se a publicação falhou
         if: steps.publish.outcome == 'failure'
