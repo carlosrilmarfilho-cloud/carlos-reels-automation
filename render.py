@@ -26,12 +26,11 @@ def save_json(path, data):
 
 
 def find_font():
-    candidates = [
+    for p in [
         "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
         "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
         "/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf",
-    ]
-    for p in candidates:
+    ]:
         if Path(p).exists():
             return p
     raise RuntimeError("Nenhuma fonte compatível encontrada")
@@ -45,30 +44,30 @@ def fit_text(draw, text, max_width=930, max_lines=4):
         lines, cur = [], ""
         for w in words:
             test = (cur + " " + w).strip()
-            box = draw.textbbox((0,0), test, font=font, stroke_width=4)
+            box = draw.textbbox((0, 0), test, font=font, stroke_width=4)
             if box[2] - box[0] <= max_width:
                 cur = test
             else:
-                if cur: lines.append(cur)
+                if cur:
+                    lines.append(cur)
                 cur = w
-        if cur: lines.append(cur)
+        if cur:
+            lines.append(cur)
         if len(lines) <= max_lines:
             return font, lines
     return ImageFont.truetype(font_path, size=36), textwrap.wrap(text, width=28)[:max_lines]
 
 
 def make_overlay(text):
-    img = Image.new("RGBA", (1080, 1920), (0,0,0,0))
+    img = Image.new("RGBA", (1080, 1920), (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
     font, lines = fit_text(draw, text)
     line_h = int(font.size * 1.22)
-    total_h = line_h * len(lines)
-    y = 250 - total_h // 2
+    y = 250 - (line_h * len(lines)) // 2
     for line in lines:
-        box = draw.textbbox((0,0), line, font=font, stroke_width=5)
-        w = box[2]-box[0]
-        x = (1080-w)//2
-        draw.text((x,y), line, font=font, fill="white", stroke_width=5, stroke_fill="black", align="center")
+        box = draw.textbbox((0, 0), line, font=font, stroke_width=5)
+        x = (1080 - (box[2] - box[0])) // 2
+        draw.text((x, y), line, font=font, fill="white", stroke_width=5, stroke_fill="black", align="center")
         y += line_h
     img.save(OVERLAY)
 
@@ -78,13 +77,18 @@ def main():
     videos = sorted([p for p in VIDEOS.iterdir() if p.suffix.lower() in {".mp4", ".mov", ".m4v", ".avi", ".mkv"}])
     if not videos:
         raise SystemExit("Nenhum vídeo encontrado na pasta videos/")
+
     content = load_json(CONTENT)
     if not content:
         raise SystemExit("content.json está vazio")
+
     state = load_json(STATE)
-    vi = int(state.get("video_index", 0)) % len(videos)
+    total_videos = max(1, int(os.environ.get("TOTAL_VIDEOS", len(videos))))
+    current_video_index = int(state.get("video_index", 0)) % total_videos
     ci = int(state.get("content_index", 0)) % len(content)
-    video = videos[vi]
+
+    # O workflow já baixou exatamente o vídeo correspondente ao índice atual.
+    video = videos[0]
     item = content[ci]
     overlay_text = str(item["overlay"]).strip()
     caption = str(item["caption"]).strip()
@@ -97,12 +101,12 @@ def main():
         "-map", "[v]", "-map", "0:a?",
         "-c:v", "libx264", "-preset", "medium", "-crf", "23", "-maxrate", "6M", "-bufsize", "12M", "-pix_fmt", "yuv420p",
         "-r", "30", "-g", "60", "-c:a", "aac", "-b:a", "128k", "-ar", "48000",
-        "-movflags", "+faststart", "-shortest", str(OUT)
+        "-movflags", "+faststart", "-shortest", str(OUT),
     ])
 
     next_state = {
         **state,
-        "video_index": (vi + 1) % len(videos),
+        "video_index": (current_video_index + 1) % total_videos,
         "content_index": (ci + 1) % len(content),
         "posts_total": int(state.get("posts_total", 0)) + 1,
         "last_video": video.name,
@@ -110,11 +114,14 @@ def main():
     }
     save_json(META, {
         "video": video.name,
+        "video_index": current_video_index,
+        "total_videos": total_videos,
         "overlay": overlay_text,
         "caption": caption,
         "next_state": next_state,
     })
-    print(f"Renderizado: {video.name} | frase: {overlay_text}")
+    print(f"Renderizado índice {current_video_index + 1}/{total_videos}: {video.name}")
+
 
 if __name__ == "__main__":
     main()
