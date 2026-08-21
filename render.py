@@ -5,12 +5,14 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parent
 VIDEOS = ROOT / "videos"
-CONTENT = ROOT / "content.json"
 STATE = ROOT / "state.json"
+PROFILES = ROOT / "video_profiles.json"
+CONTENT = ROOT / "content.json"
 OUTDIR = ROOT / "output"
 OUT = OUTDIR / "reel.mp4"
 OVERLAY = OUTDIR / "overlay.png"
 META = ROOT / "metadata.json"
+TARGET_W, TARGET_H = 1440, 2560
 
 
 def run(cmd):
@@ -28,48 +30,85 @@ def save_json(path, data):
 def find_font():
     for p in [
         "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
-        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
         "/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
     ]:
         if Path(p).exists():
             return p
     raise RuntimeError("Nenhuma fonte compatível encontrada")
 
 
-def fit_text(draw, text, max_width=930, max_lines=4):
+def wrap_for_font(draw, text, font, max_width):
+    words = text.strip().split()
+    lines, cur = [], ""
+    for word in words:
+        test = (cur + " " + word).strip()
+        box = draw.textbbox((0, 0), test, font=font)
+        if box[2] - box[0] <= max_width:
+            cur = test
+        else:
+            if cur:
+                lines.append(cur)
+            cur = word
+    if cur:
+        lines.append(cur)
+    return lines
+
+
+def fit_text(draw, text, max_width=1240, max_lines=3):
     font_path = find_font()
-    for size in range(72, 35, -2):
+    for size in range(82, 45, -2):
         font = ImageFont.truetype(font_path, size=size)
-        words = text.strip().split()
-        lines, cur = [], ""
-        for w in words:
-            test = (cur + " " + w).strip()
-            box = draw.textbbox((0, 0), test, font=font, stroke_width=4)
-            if box[2] - box[0] <= max_width:
-                cur = test
-            else:
-                if cur:
-                    lines.append(cur)
-                cur = w
-        if cur:
-            lines.append(cur)
+        lines = wrap_for_font(draw, text, font, max_width)
         if len(lines) <= max_lines:
             return font, lines
-    return ImageFont.truetype(font_path, size=36), textwrap.wrap(text, width=28)[:max_lines]
+    font = ImageFont.truetype(font_path, size=46)
+    return font, textwrap.wrap(text, width=34)[:max_lines]
 
 
 def make_overlay(text):
-    img = Image.new("RGBA", (1080, 1920), (0, 0, 0, 0))
+    img = Image.new("RGBA", (TARGET_W, TARGET_H), (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
     font, lines = fit_text(draw, text)
-    line_h = int(font.size * 1.22)
-    y = 250 - (line_h * len(lines)) // 2
+    line_h = int(font.size * 1.25)
+    pad_x, pad_y = 55, 38
+    text_h = line_h * len(lines)
+    widths = [draw.textbbox((0, 0), line, font=font)[2] for line in lines]
+    box_w = min(TARGET_W - 80, max(widths) + 2 * pad_x)
+    box_h = text_h + 2 * pad_y
+    x0 = (TARGET_W - box_w) // 2
+    y0 = 85
+    # O box opaco cobre a frase que já vem gravada no vídeo original.
+    draw.rounded_rectangle(
+        (x0, y0, x0 + box_w, y0 + box_h),
+        radius=28,
+        fill=(8, 8, 8, 248),
+    )
+    y = y0 + pad_y
     for line in lines:
-        box = draw.textbbox((0, 0), line, font=font, stroke_width=5)
-        x = (1080 - (box[2] - box[0])) // 2
-        draw.text((x, y), line, font=font, fill="white", stroke_width=5, stroke_fill="black", align="center")
+        box = draw.textbbox((0, 0), line, font=font)
+        w = box[2] - box[0]
+        x = (TARGET_W - w) // 2
+        draw.text((x, y), line, font=font, fill=(255, 255, 255, 255), align="center")
         y += line_h
     img.save(OVERLAY)
+
+
+def choose_content(video_name, state):
+    cfg = load_json(PROFILES)
+    profile = cfg.get("profiles", {}).get(video_name, {})
+    theme = profile.get("theme", "generic")
+    pool = cfg.get("themes", {}).get(theme) or cfg.get("themes", {}).get("generic", [])
+    if not pool:
+        fallback = load_json(CONTENT)
+        pool = fallback
+    usage = dict(state.get("variant_usage", {}))
+    used = int(usage.get(video_name, 0))
+    offset = int(profile.get("variant_offset", 0))
+    idx = (used + offset) % len(pool)
+    item = pool[idx]
+    usage[video_name] = used + 1
+    return item, theme, profile.get("source_text"), idx, usage
 
 
 def main():
@@ -78,18 +117,11 @@ def main():
     if not videos:
         raise SystemExit("Nenhum vídeo encontrado na pasta videos/")
 
-    content = load_json(CONTENT)
-    if not content:
-        raise SystemExit("content.json está vazio")
-
     state = load_json(STATE)
     total_videos = max(1, int(os.environ.get("TOTAL_VIDEOS", len(videos))))
     current_video_index = int(state.get("video_index", 0)) % total_videos
-    ci = int(state.get("content_index", 0)) % len(content)
-
-    # O workflow já baixou exatamente o vídeo correspondente ao índice atual.
     video = videos[0]
-    item = content[ci]
+    item, theme, source_text, variant_idx, usage = choose_content(video.name, state)
     overlay_text = str(item["overlay"]).strip()
     caption = str(item["caption"]).strip()
     make_overlay(overlay_text)
@@ -97,30 +129,34 @@ def main():
     run([
         "ffmpeg", "-y", "-i", str(video), "-i", str(OVERLAY),
         "-filter_complex",
-        "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1[base];[base][1:v]overlay=0:0[v]",
+        f"[0:v]scale={TARGET_W}:{TARGET_H}:force_original_aspect_ratio=increase,crop={TARGET_W}:{TARGET_H},setsar=1[base];[base][1:v]overlay=0:0[v]",
         "-map", "[v]", "-map", "0:a?",
-        "-c:v", "libx264", "-preset", "medium", "-crf", "23", "-maxrate", "6M", "-bufsize", "12M", "-pix_fmt", "yuv420p",
-        "-r", "30", "-g", "60", "-c:a", "aac", "-b:a", "128k", "-ar", "48000",
+        "-c:v", "libx264", "-preset", "slow", "-crf", "18", "-maxrate", "14M", "-bufsize", "28M", "-pix_fmt", "yuv420p",
+        "-r", "30", "-g", "60", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
         "-movflags", "+faststart", "-shortest", str(OUT),
     ])
 
     next_state = {
         **state,
         "video_index": (current_video_index + 1) % total_videos,
-        "content_index": (ci + 1) % len(content),
         "posts_total": int(state.get("posts_total", 0)) + 1,
         "last_video": video.name,
         "last_overlay": overlay_text,
+        "variant_usage": usage,
     }
     save_json(META, {
         "video": video.name,
         "video_index": current_video_index,
         "total_videos": total_videos,
+        "theme": theme,
+        "source_text_detected": source_text,
+        "variant_index": variant_idx,
         "overlay": overlay_text,
         "caption": caption,
+        "render_resolution": f"{TARGET_W}x{TARGET_H}",
         "next_state": next_state,
     })
-    print(f"Renderizado índice {current_video_index + 1}/{total_videos}: {video.name}")
+    print(f"Renderizado {video.name} | tema={theme} | variante={variant_idx + 1} | {TARGET_W}x{TARGET_H}")
 
 
 if __name__ == "__main__":
