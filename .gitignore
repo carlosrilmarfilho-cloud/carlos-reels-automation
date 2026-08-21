@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+output/
+metadata.json
+.env
+.DS_Store
+videos/*
+!videos/.gitkeep
