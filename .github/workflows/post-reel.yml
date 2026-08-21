@@ -1,0 +1,112 @@
+name: Postar Reel a cada hora
+
+on:
+  schedule:
+    - cron: '7 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: instagram-reels-hourly
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      GDRIVE_FOLDER_URL: https://drive.google.com/drive/folders/1sVLfUVK2FgssbqEEQeUrrUT5z9WluAin
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verificar ativação
+        id: gate
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+        shell: bash
+        run: |
+          if [ -z "$INSTAGRAM_ACCESS_TOKEN" ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Token ainda não configurado; nenhuma publicação será feita."
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Python
+        if: steps.gate.outputs.ready == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependências
+        if: steps.gate.outputs.ready == 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-dejavu-core
+          pip install -r requirements.txt
+
+      - name: Baixar vídeos do Google Drive
+        id: videos
+        if: steps.gate.outputs.ready == 'true'
+        run: |
+          rm -rf videos
+          mkdir -p videos
+          gdown --folder "$GDRIVE_FOLDER_URL" -O videos --remaining-ok
+          count=$(find videos -type f \( -iname '*.mp4' -o -iname '*.mov' -o -iname '*.m4v' -o -iname '*.avi' -o -iname '*.mkv' \) | wc -l)
+          echo "Vídeos encontrados: $count"
+          if [ "$count" -eq 0 ]; then
+            echo "has_videos=false" >> "$GITHUB_OUTPUT"
+            echo "Nenhum vídeo disponível; encerrando sem publicar."
+          else
+            echo "has_videos=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Renderizar próximo Reel
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        run: python render.py
+
+      - name: Hospedar vídeo temporário
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          rm -rf /tmp/media-host
+          mkdir -p /tmp/media-host
+          cp output/reel.mp4 /tmp/media-host/latest.mp4
+          cd /tmp/media-host
+          git init
+          git config user.name "Carlos Reels Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add latest.mp4
+          git commit -m "latest reel"
+          git branch -M media-host
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin media-host
+
+      - name: Publicar no Instagram
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          IG_API_VERSION: v26.0
+          PUBLIC_VIDEO_URL: https://raw.githubusercontent.com/${{ github.repository }}/media-host/latest.mp4?run=${{ github.run_id }}
+        run: python publish.py
+
+      - name: Salvar rotação somente após sucesso
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          git config user.name "Carlos Reels Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add state.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Atualizar rotação [skip ci]"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin HEAD:"${GITHUB_REF_NAME}"
