@@ -1,24 +1,18 @@
 # Carlos Reels Automation
 
-Automação para escolher um vídeo, trocar a frase na tela, trocar a legenda e publicar um Reel por hora via API oficial do Instagram.
+Automação do Instagram para o perfil-piloto: alterna uma fila de vídeos, troca a frase na tela e a legenda e publica um Reel por hora.
 
-## Fluxo
+## Estrutura
+- Vídeos: Google Drive `Carlos Reels Automation / 01 - Videos`.
+- Frases/legendas: `content.json` (40 combinações iniciais).
+- Frequência: uma execução por hora, 24h/dia durante o teste.
+- Estado: `state.json` evita repetir o mesmo vídeo antes de completar a volta.
+- Segurança: o token do Instagram fica apenas em GitHub Actions Secrets.
 
-- Busca os vídeos de uma pasta compartilhada do Google Drive (ou usa a pasta `videos/` do repositório).
-- Alterna os vídeos em ordem, sem repetir até completar a volta.
-- Alterna as frases e legendas de `content.json`.
-- Renderiza em 1080x1920 com H.264 + AAC e texto na tela.
-- Hospeda somente o vídeo já renderizado em um branch temporário `media-host`.
-- Publica via API oficial do Instagram e só então avança o contador.
-- Executa uma vez por hora.
+## Para ativar
+1. Compartilhe a pasta `01 - Videos` no Google Drive como **Qualquer pessoa com o link > Leitor**.
+2. Coloque os vídeos nessa pasta.
+3. No GitHub, crie o secret `INSTAGRAM_ACCESS_TOKEN` e cole o token novo que você gerou na Meta.
+4. Rode o workflow manualmente uma vez em Actions para validar. Depois ele continua sozinho de hora em hora.
 
-## Configuração final
-
-1. No GitHub, crie o secret `INSTAGRAM_ACCESS_TOKEN` com um token NOVO da Meta. Nunca salve o token no código ou no chat.
-2. Se usar Google Drive, crie a variável `GDRIVE_FOLDER_URL` com o link da pasta compartilhada que contém os vídeos.
-3. Deixe o repositório público, pois a Meta precisa acessar temporariamente `latest.mp4` para publicar o Reel.
-4. Em **Settings > Actions > General > Workflow permissions**, habilite `Read and write permissions`.
-5. Troque frases/legendas em `content.json`.
-6. Rode manualmente `Postar Reel a cada hora` uma vez para o teste inicial.
-
-O cron `7 * * * *` executa uma vez por hora. GitHub Actions pode atrasar alguns minutos em horários de pico.
+A automação não inicia publicação enquanto o token ou os vídeos estiverem ausentes.
