@@ -55,36 +55,42 @@ def wrap_for_font(draw, text, font, max_width):
     return lines
 
 
-def fit_text(draw, text, max_width=1240, max_lines=3):
+def fit_text(draw, text, max_width=1220, max_lines=3):
     font_path = find_font()
-    for size in range(82, 45, -2):
+    for size in range(72, 43, -2):
         font = ImageFont.truetype(font_path, size=size)
         lines = wrap_for_font(draw, text, font, max_width)
         if len(lines) <= max_lines:
             return font, lines
-    font = ImageFont.truetype(font_path, size=46)
-    return font, textwrap.wrap(text, width=34)[:max_lines]
+    font = ImageFont.truetype(font_path, size=44)
+    return font, textwrap.wrap(text, width=36)[:max_lines]
 
 
-def make_overlay(text):
+def make_overlay(text, theme):
     img = Image.new("RGBA", (TARGET_W, TARGET_H), (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
     font, lines = fit_text(draw, text)
     line_h = int(font.size * 1.25)
-    pad_x, pad_y = 55, 38
-    text_h = line_h * len(lines)
-    widths = [draw.textbbox((0, 0), line, font=font)[2] for line in lines]
-    box_w = min(TARGET_W - 80, max(widths) + 2 * pad_x)
-    box_h = text_h + 2 * pad_y
-    x0 = (TARGET_W - box_w) // 2
-    y0 = 85
-    # O box opaco cobre a frase que já vem gravada no vídeo original.
+    box_x0, box_x1 = 55, TARGET_W - 55
+    box_h = max(350, line_h * len(lines) + 100)
+    y_by_theme = {
+        "forro_antigo": 480,
+        "brega": 610,
+        "musica_terapia": 480,
+        "generic": 500,
+    }
+    y0 = int(y_by_theme.get(theme, 500))
+    y1 = y0 + box_h
+
+    # Caixa opaca: substitui de fato a frase já gravada no arquivo.
     draw.rounded_rectangle(
-        (x0, y0, x0 + box_w, y0 + box_h),
+        (box_x0, y0, box_x1, y1),
         radius=28,
-        fill=(8, 8, 8, 248),
+        fill=(8, 8, 8, 255),
     )
-    y = y0 + pad_y
+
+    text_block_h = line_h * len(lines)
+    y = y0 + (box_h - text_block_h) // 2
     for line in lines:
         box = draw.textbbox((0, 0), line, font=font)
         w = box[2] - box[0]
@@ -100,8 +106,7 @@ def choose_content(video_name, state):
     theme = profile.get("theme", "generic")
     pool = cfg.get("themes", {}).get(theme) or cfg.get("themes", {}).get("generic", [])
     if not pool:
-        fallback = load_json(CONTENT)
-        pool = fallback
+        pool = load_json(CONTENT)
     usage = dict(state.get("variant_usage", {}))
     used = int(usage.get(video_name, 0))
     offset = int(profile.get("variant_offset", 0))
@@ -124,7 +129,7 @@ def main():
     item, theme, source_text, variant_idx, usage = choose_content(video.name, state)
     overlay_text = str(item["overlay"]).strip()
     caption = str(item["caption"]).strip()
-    make_overlay(overlay_text)
+    make_overlay(overlay_text, theme)
 
     run([
         "ffmpeg", "-y", "-i", str(video), "-i", str(OVERLAY),
