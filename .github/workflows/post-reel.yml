@@ -93,6 +93,8 @@ jobs:
           git push --force origin media-host
 
       - name: Publicar no Instagram
+        id: publish
+        continue-on-error: true
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
@@ -101,16 +103,37 @@ jobs:
           PUBLIC_VIDEO_URL: https://raw.githubusercontent.com/${{ github.repository }}/media-host/latest.mp4?run=${{ github.run_id }}
         run: python publish.py
 
-      - name: Salvar rotação somente após sucesso
-        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+      - name: Salvar diagnóstico
+        if: always() && steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -e
           git config user.name "Carlos Reels Automation"
           git config user.email "actions@users.noreply.github.com"
+          if [ -f diagnostic.json ]; then
+            git add diagnostic.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Atualizar diagnóstico [skip ci]"
+              git pull --rebase origin "${GITHUB_REF_NAME}"
+              git push origin HEAD:"${GITHUB_REF_NAME}"
+            fi
+          fi
+
+      - name: Salvar rotação somente após sucesso
+        if: steps.publish.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          git config user.name "Carlos Reels Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
           git add state.json
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Atualizar rotação [skip ci]"
-          git pull --rebase origin "${GITHUB_REF_NAME}"
           git push origin HEAD:"${GITHUB_REF_NAME}"
+
+      - name: Falhar se a publicação falhou
+        if: steps.publish.outcome == 'failure'
+        run: exit 1
