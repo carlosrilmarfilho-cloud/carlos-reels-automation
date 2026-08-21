@@ -16,7 +16,7 @@ concurrency:
 jobs:
   post:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 15
     env:
       GDRIVE_FOLDER_URL: https://drive.google.com/drive/folders/1sVLfUVK2FgssbqEEQeUrrUT5z9WluAin
     steps:
@@ -55,20 +55,38 @@ jobs:
         if: steps.gate.outputs.ready == 'true'
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg fonts-dejavu-core
+          sudo apt-get install -y ffmpeg fonts-dejavu-core jq
           pip install -r requirements.txt
 
-      - name: Baixar vídeos do Google Drive
+      - name: Escolher e baixar um vídeo do Google Drive
         id: videos
         if: steps.gate.outputs.ready == 'true'
+        shell: bash
         run: |
+          set -e
           rm -rf videos && mkdir -p videos
-          gdown --folder "$GDRIVE_FOLDER_URL" -O videos --remaining-ok
-          count=$(find videos -type f \( -iname '*.mp4' -o -iname '*.mov' -o -iname '*.m4v' -o -iname '*.avi' -o -iname '*.mkv' \) | wc -l)
-          if [ "$count" -eq 0 ]; then echo "has_videos=false" >> "$GITHUB_OUTPUT"; else echo "has_videos=true" >> "$GITHUB_OUTPUT"; fi
+          gdown "$GDRIVE_FOLDER_URL" --folder --json > /tmp/all-drive-files.json
+          jq '[.[] | select(.path | ascii_downcase | test("\\.(mp4|mov|m4v|avi|mkv)$"))]' /tmp/all-drive-files.json > /tmp/video-list.json
+          count=$(jq 'length' /tmp/video-list.json)
+          echo "Vídeos disponíveis: $count"
+          if [ "$count" -eq 0 ]; then
+            echo "has_videos=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          state_index=$(jq -r '.video_index // 0' state.json)
+          idx=$((state_index % count))
+          url=$(jq -r ".[$idx].url" /tmp/video-list.json)
+          path=$(jq -r ".[$idx].path" /tmp/video-list.json)
+          filename=$(basename "$path")
+          echo "Selecionado [$((idx+1))/$count]: $filename"
+          gdown "$url" -O "videos/$filename"
+          echo "has_videos=true" >> "$GITHUB_OUTPUT"
+          echo "total_videos=$count" >> "$GITHUB_OUTPUT"
 
       - name: Renderizar próximo Reel
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        env:
+          TOTAL_VIDEOS: ${{ steps.videos.outputs.total_videos }}
         run: python render.py
 
       - name: Hospedar vídeo temporário
