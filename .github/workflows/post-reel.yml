@@ -1,6 +1,8 @@
 name: Postar Reel a cada hora
 
 on:
+  schedule:
+    - cron: '7 * * * *'
   workflow_dispatch:
   push:
     paths:
