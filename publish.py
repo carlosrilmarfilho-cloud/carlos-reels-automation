@@ -10,6 +10,7 @@ STATE = ROOT / "state.json"
 TOKEN = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "").strip()
 VIDEO_URL = os.environ.get("PUBLIC_VIDEO_URL", "").strip()
 API_VERSION = os.environ.get("IG_API_VERSION", "v26.0").strip()
+TRIAL_REEL = os.environ.get("TRIAL_REEL", "true").strip().lower() in {"1", "true", "yes", "sim"}
 
 if not TOKEN:
     raise SystemExit("INSTAGRAM_ACCESS_TOKEN não configurado")
@@ -48,13 +49,20 @@ def main():
     print(f"Conta autenticada: @{me.get('username','?')} ({ig_id})")
 
     wait_public(VIDEO_URL)
-    container = api("POST", f"/{ig_id}/media", data={
+    payload = {
         "media_type": "REELS",
         "video_url": VIDEO_URL,
         "caption": caption,
-        "share_to_feed": "true",
+        "share_to_feed": "false" if TRIAL_REEL else "true",
         "access_token": TOKEN,
-    })
+    }
+    if TRIAL_REEL:
+        payload["trial_params"] = json.dumps({"graduation_strategy": "MANUAL"})
+        print("Modo: Trial Reel / Reel de Teste")
+    else:
+        print("Modo: Reel normal")
+
+    container = api("POST", f"/{ig_id}/media", data=payload)
     cid = container["id"]
     print(f"Container criado: {cid}")
 
@@ -82,6 +90,7 @@ def main():
 
     state = meta["next_state"]
     state["last_posted_at"] = datetime.now(timezone.utc).isoformat()
+    state["last_mode"] = "trial" if TRIAL_REEL else "normal"
     STATE.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 if __name__ == "__main__":
