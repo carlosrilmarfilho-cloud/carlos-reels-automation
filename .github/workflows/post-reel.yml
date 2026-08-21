@@ -16,7 +16,7 @@ concurrency:
 jobs:
   post:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     env:
       GDRIVE_FOLDER_URL: https://drive.google.com/drive/folders/1sVLfUVK2FgssbqEEQeUrrUT5z9WluAin
     steps:
@@ -58,7 +58,7 @@ jobs:
           sudo apt-get install -y ffmpeg fonts-dejavu-core jq
           pip install -r requirements.txt
 
-      - name: Escolher e baixar um vídeo do Google Drive
+      - name: Escolher e baixar um vídeo sem repetir
         id: videos
         if: steps.gate.outputs.ready == 'true'
         shell: bash
@@ -66,24 +66,22 @@ jobs:
           set -e
           rm -rf videos && mkdir -p videos
           gdown "$GDRIVE_FOLDER_URL" --folder --json > /tmp/all-drive-files.json
-          jq '[.[] | select(.path | ascii_downcase | test("\\.(mp4|mov|m4v|avi|mkv)$"))]' /tmp/all-drive-files.json > /tmp/video-list.json
-          count=$(jq 'length' /tmp/video-list.json)
-          echo "Vídeos disponíveis: $count"
+          python select_video.py /tmp/all-drive-files.json > /tmp/selected.json
+          count=$(jq -r '.count' /tmp/selected.json)
+          echo "Vídeos únicos disponíveis: $count"
           if [ "$count" -eq 0 ]; then
             echo "has_videos=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          state_index=$(jq -r '.video_index // 0' state.json)
-          idx=$((state_index % count))
-          url=$(jq -r ".[$idx].url" /tmp/video-list.json)
-          path=$(jq -r ".[$idx].path" /tmp/video-list.json)
-          filename=$(basename "$path")
+          url=$(jq -r '.url' /tmp/selected.json)
+          filename=$(jq -r '.name' /tmp/selected.json)
+          idx=$(jq -r '.index' /tmp/selected.json)
           echo "Selecionado [$((idx+1))/$count]: $filename"
           gdown "$url" -O "videos/$filename"
           echo "has_videos=true" >> "$GITHUB_OUTPUT"
           echo "total_videos=$count" >> "$GITHUB_OUTPUT"
 
-      - name: Renderizar próximo Reel
+      - name: Renderizar em alta qualidade e substituir frase original
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:
           TOTAL_VIDEOS: ${{ steps.videos.outputs.total_videos }}
@@ -105,7 +103,7 @@ jobs:
           git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git push --force origin media-host
 
-      - name: Publicar no Instagram
+      - name: Publicar Trial Reel no Instagram
         id: publish
         continue-on-error: true
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
