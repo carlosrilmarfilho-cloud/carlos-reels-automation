@@ -12,7 +12,6 @@ OUTDIR = ROOT / "output"
 OUT = OUTDIR / "reel.mp4"
 OVERLAY = OUTDIR / "overlay.png"
 META = ROOT / "metadata.json"
-TARGET_W, TARGET_H = 1440, 2560
 
 
 def run(cmd):
@@ -25,6 +24,23 @@ def load_json(path):
 
 def save_json(path, data):
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def probe_size(video):
+    p = subprocess.run([
+        "ffprobe", "-v", "error", "-select_streams", "v:0",
+        "-show_entries", "stream=width,height", "-of", "json", str(video)
+    ], check=True, capture_output=True, text=True)
+    s = json.loads(p.stdout)["streams"][0]
+    return int(s["width"]), int(s["height"])
+
+
+def target_size(video):
+    sw, sh = probe_size(video)
+    # Preserve source detail; never fake-upscale 1080 to 1440. Cap at 1440x2560 for reliability.
+    if sw >= 1440 and sh >= 2560:
+        return 1440, 2560
+    return 1080, 1920
 
 
 def find_font():
@@ -55,46 +71,49 @@ def wrap_for_font(draw, text, font, max_width):
     return lines
 
 
-def fit_text(draw, text, max_width=1220, max_lines=3):
+def fit_text(draw, text, width, max_lines=3):
     font_path = find_font()
-    for size in range(72, 43, -2):
+    scale = width / 1440
+    max_width = int(1220 * scale)
+    start_size = max(52, int(72 * scale))
+    min_size = max(34, int(44 * scale))
+    for size in range(start_size, min_size - 1, -2):
         font = ImageFont.truetype(font_path, size=size)
         lines = wrap_for_font(draw, text, font, max_width)
         if len(lines) <= max_lines:
             return font, lines
-    font = ImageFont.truetype(font_path, size=44)
+    font = ImageFont.truetype(font_path, size=min_size)
     return font, textwrap.wrap(text, width=36)[:max_lines]
 
 
-def make_overlay(text, theme):
-    img = Image.new("RGBA", (TARGET_W, TARGET_H), (0, 0, 0, 0))
+def make_overlay(text, theme, width, height):
+    img = Image.new("RGBA", (width, height), (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
-    font, lines = fit_text(draw, text)
+    font, lines = fit_text(draw, text, width)
+    scale = width / 1440
     line_h = int(font.size * 1.25)
-    box_x0, box_x1 = 55, TARGET_W - 55
-    box_h = max(350, line_h * len(lines) + 100)
-    y_by_theme = {
-        "forro_antigo": 480,
-        "brega": 610,
-        "musica_terapia": 480,
-        "generic": 500,
+    margin = int(55 * scale)
+    box_x0, box_x1 = margin, width - margin
+    box_h = max(int(350 * scale), line_h * len(lines) + int(100 * scale))
+    y_ratio = {
+        "forro_antigo": 480 / 2560,
+        "brega": 610 / 2560,
+        "musica_terapia": 480 / 2560,
+        "generic": 500 / 2560,
     }
-    y0 = int(y_by_theme.get(theme, 500))
+    y0 = int(height * y_ratio.get(theme, 500 / 2560))
     y1 = y0 + box_h
-
-    # Caixa opaca: substitui de fato a frase já gravada no arquivo.
     draw.rounded_rectangle(
         (box_x0, y0, box_x1, y1),
-        radius=28,
+        radius=max(18, int(28 * scale)),
         fill=(8, 8, 8, 255),
     )
-
     text_block_h = line_h * len(lines)
     y = y0 + (box_h - text_block_h) // 2
     for line in lines:
         box = draw.textbbox((0, 0), line, font=font)
         w = box[2] - box[0]
-        x = (TARGET_W - w) // 2
+        x = (width - w) // 2
         draw.text((x, y), line, font=font, fill=(255, 255, 255, 255), align="center")
         y += line_h
     img.save(OVERLAY)
@@ -126,17 +145,20 @@ def main():
     total_videos = max(1, int(os.environ.get("TOTAL_VIDEOS", len(videos))))
     current_video_index = int(state.get("video_index", 0)) % total_videos
     video = videos[0]
+    target_w, target_h = target_size(video)
     item, theme, source_text, variant_idx, usage = choose_content(video.name, state)
     overlay_text = str(item["overlay"]).strip()
     caption = str(item["caption"]).strip()
-    make_overlay(overlay_text, theme)
+    make_overlay(overlay_text, theme, target_w, target_h)
 
+    maxrate = "14M" if target_w >= 1440 else "10M"
+    bufsize = "28M" if target_w >= 1440 else "20M"
     run([
         "ffmpeg", "-y", "-i", str(video), "-i", str(OVERLAY),
         "-filter_complex",
-        f"[0:v]scale={TARGET_W}:{TARGET_H}:force_original_aspect_ratio=increase,crop={TARGET_W}:{TARGET_H},setsar=1[base];[base][1:v]overlay=0:0[v]",
+        f"[0:v]scale={target_w}:{target_h}:force_original_aspect_ratio=increase,crop={target_w}:{target_h},setsar=1[base];[base][1:v]overlay=0:0[v]",
         "-map", "[v]", "-map", "0:a?",
-        "-c:v", "libx264", "-preset", "slow", "-crf", "18", "-maxrate", "14M", "-bufsize", "28M", "-pix_fmt", "yuv420p",
+        "-c:v", "libx264", "-preset", "slow", "-crf", "18", "-maxrate", maxrate, "-bufsize", bufsize, "-pix_fmt", "yuv420p",
         "-r", "30", "-g", "60", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
         "-movflags", "+faststart", "-shortest", str(OUT),
     ])
@@ -158,10 +180,10 @@ def main():
         "variant_index": variant_idx,
         "overlay": overlay_text,
         "caption": caption,
-        "render_resolution": f"{TARGET_W}x{TARGET_H}",
+        "render_resolution": f"{target_w}x{target_h}",
         "next_state": next_state,
     })
-    print(f"Renderizado {video.name} | tema={theme} | variante={variant_idx + 1} | {TARGET_W}x{TARGET_H}")
+    print(f"Renderizado {video.name} | tema={theme} | variante={variant_idx + 1} | {target_w}x{target_h}")
 
 
 if __name__ == "__main__":
