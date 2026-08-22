@@ -101,6 +101,10 @@ jobs:
           TOTAL_VIDEOS: ${{ steps.videos.outputs.total_videos }}
         run: python render.py
 
+      - name: Bloquear qualquer render que cubra o rosto ou o enquadramento
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        run: python validate_visual.py
+
       - name: Hospedar vídeo temporário
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:

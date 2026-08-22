@@ -101,12 +101,11 @@ def wrap_for_font(draw, text, font, max_width):
     return lines
 
 
-def fit_text(draw, text, width, max_lines=3):
+def fit_text(draw, text, max_width, canvas_width, max_lines=3):
     font_path = find_font()
-    scale = width / 1440
-    max_width = int(1220 * scale)
-    start_size = max(52, int(72 * scale))
-    min_size = max(34, int(44 * scale))
+    scale = canvas_width / 1440
+    start_size = max(46, int(64 * scale))
+    min_size = max(32, int(40 * scale))
     for size in range(start_size, min_size - 1, -2):
         font = ImageFont.truetype(font_path, size=size)
         lines = wrap_for_font(draw, text, font, max_width)
@@ -116,46 +115,110 @@ def fit_text(draw, text, width, max_lines=3):
     return font, textwrap.wrap(text, width=36)[:max_lines]
 
 
-def make_overlay(text, theme, width, height, dynamic_bbox=None):
+def normalized_box(raw):
+    if not isinstance(raw, dict):
+        return None
+    try:
+        x0 = float(raw["x0"])
+        y0 = float(raw["y0"])
+        x1 = float(raw["x1"])
+        y1 = float(raw["y1"])
+    except (KeyError, TypeError, ValueError):
+        return None
+    if not (0.03 <= x0 < x1 <= 0.97 and 0.04 <= y0 < y1 <= 0.86):
+        return None
+    if x1 - x0 > 0.88 or y1 - y0 > 0.18:
+        return None
+    return {"x0": x0, "y0": y0, "x1": x1, "y1": y1}
+
+
+def make_overlay(text, width, height, safe_text_box=None):
+    """Desenha somente texto compacto em uma área humana/revisada.
+
+    Sem uma área segura explícita, o overlay fica transparente e o gancho é
+    transferido para a legenda. Isso é intencional: nunca arriscar cobrir rosto,
+    cabeça ou sujeito principal.
+    """
     img = Image.new("RGBA", (width, height), (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
-    font, lines = fit_text(draw, text, width)
-    scale = width / 1440
-    line_h = int(font.size * 1.25)
-    margin = int(55 * scale)
-    box_x0, box_x1 = margin, width - margin
-    min_box_h = max(int(350 * scale), line_h * len(lines) + int(100 * scale))
-
-    if dynamic_bbox:
-        # Para vídeos novos: usa a região de texto detectada automaticamente e dá folga ao redor.
-        y0 = max(int(height * dynamic_bbox.get("y0", 0.18)) - int(70 * scale), int(40 * scale))
-        detected_y1 = min(int(height * dynamic_bbox.get("y1", 0.34)) + int(70 * scale), height - int(40 * scale))
-        box_h = max(min_box_h, detected_y1 - y0)
-    else:
-        y_ratio = {
-            "forro_antigo": 480 / 2560,
-            "brega": 610 / 2560,
-            "musica_terapia": 480 / 2560,
-            "generic": 500 / 2560,
+    safe = normalized_box(safe_text_box)
+    if not safe:
+        img.save(OVERLAY)
+        return {
+            "applied": False,
+            "reason": "sem_area_livre_revisada",
+            "text_bbox_norm": None,
         }
-        y0 = int(height * y_ratio.get(theme, 500 / 2560))
-        box_h = min_box_h
 
-    y1 = min(height - int(40 * scale), y0 + box_h)
-    draw.rounded_rectangle(
-        (box_x0, y0, box_x1, y1),
-        radius=max(18, int(28 * scale)),
-        fill=(8, 8, 8, 255),
-    )
+    scale = width / 1440
+    x0 = int(width * safe["x0"])
+    y0 = int(height * safe["y0"])
+    x1 = int(width * safe["x1"])
+    y1 = int(height * safe["y1"])
+    padding = max(12, int(22 * scale))
+    max_width = max(120, x1 - x0 - 2 * padding)
+    font, lines = fit_text(draw, text, max_width, width, max_lines=3)
+    line_h = int(font.size * 1.25)
     text_block_h = line_h * len(lines)
-    y = y0 + max(0, (y1 - y0 - text_block_h) // 2)
+    if text_block_h > y1 - y0 - 2 * padding:
+        img.save(OVERLAY)
+        return {
+            "applied": False,
+            "reason": "texto_nao_cabe_na_area_segura",
+            "text_bbox_norm": None,
+        }
+
+    y = y0 + max(padding, (y1 - y0 - text_block_h) // 2)
+    drawn = []
+    stroke = max(2, int(5 * scale))
+    shadow = max(2, int(4 * scale))
     for line in lines:
         box = draw.textbbox((0, 0), line, font=font)
         w = box[2] - box[0]
-        x = (width - w) // 2
-        draw.text((x, y), line, font=font, fill=(255, 255, 255, 255), align="center")
+        x = x0 + (x1 - x0 - w) // 2
+        if x < x0 + padding or x + w > x1 - padding:
+            img = Image.new("RGBA", (width, height), (0, 0, 0, 0))
+            img.save(OVERLAY)
+            return {
+                "applied": False,
+                "reason": "texto_excede_area_segura",
+                "text_bbox_norm": None,
+            }
+        draw.text(
+            (x + shadow, y + shadow),
+            line,
+            font=font,
+            fill=(0, 0, 0, 170),
+            stroke_width=stroke,
+            stroke_fill=(0, 0, 0, 170),
+            align="center",
+        )
+        draw.text(
+            (x, y),
+            line,
+            font=font,
+            fill=(255, 255, 255, 255),
+            stroke_width=stroke,
+            stroke_fill=(0, 0, 0, 220),
+            align="center",
+        )
+        drawn.append((x, y, x + w, y + line_h))
         y += line_h
     img.save(OVERLAY)
+    bx0 = min(b[0] for b in drawn)
+    by0 = min(b[1] for b in drawn)
+    bx1 = max(b[2] for b in drawn)
+    by1 = max(b[3] for b in drawn)
+    return {
+        "applied": True,
+        "reason": "area_livre_revisada",
+        "text_bbox_norm": {
+            "x0": bx0 / width,
+            "y0": by0 / height,
+            "x1": bx1 / width,
+            "y1": by1 / height,
+        },
+    }
 
 
 def choose_content(video_name, state, analysis):
@@ -184,7 +247,7 @@ def choose_content(video_name, state, analysis):
     item = pool[chosen_idx]
     usage[video_name] = used + 1
     source_text = profile.get("source_text") or analysis.get("detected_text") or ""
-    return item, theme, source_text, chosen_idx, usage, bool(profile)
+    return item, theme, source_text, chosen_idx, usage, profile
 
 
 def choose_hashtags(theme, state, variant_idx):
@@ -205,14 +268,20 @@ def main():
     current_video_index = int(state.get("video_index", 0)) % total_videos
     video = videos[0]
     target_w, target_h = target_size(video)
-    item, theme, source_text, variant_idx, usage, has_manual_profile = choose_content(video.name, state, analysis)
+    item, theme, source_text, variant_idx, usage, profile = choose_content(video.name, state, analysis)
     overlay_text = str(item["overlay"]).strip()
     base_caption = str(item["caption"]).strip()
     hashtags = choose_hashtags(theme, state, variant_idx)
-    caption = f"{base_caption}\n\n{hashtags}".strip()
-
-    dynamic_bbox = None if has_manual_profile else analysis.get("text_bbox_norm")
-    make_overlay(overlay_text, theme, target_w, target_h, dynamic_bbox=dynamic_bbox)
+    overlay_result = make_overlay(
+        overlay_text,
+        target_w,
+        target_h,
+        safe_text_box=profile.get("safe_text_box"),
+    )
+    if overlay_result["applied"]:
+        caption = f"{base_caption}\n\n{hashtags}".strip()
+    else:
+        caption = f"{overlay_text}\n\n{base_caption}\n\n{hashtags}".strip()
 
     maxrate = "14M" if target_w >= 1440 else "10M"
     bufsize = "28M" if target_w >= 1440 else "20M"
@@ -246,9 +315,14 @@ def main():
         "total_videos": total_videos,
         "theme": theme,
         "source_text_detected": source_text,
-        "automatic_analysis": not has_manual_profile,
+        "automatic_analysis": not bool(profile),
         "variant_index": variant_idx,
         "overlay": overlay_text,
+        "overlay_applied": overlay_result["applied"],
+        "overlay_reason": overlay_result["reason"],
+        "overlay_text_bbox_norm": overlay_result["text_bbox_norm"],
+        "safe_text_box": normalized_box(profile.get("safe_text_box")),
+        "visual_policy": "sem_caixa_preta_e_sem_sobrepor_rosto",
         "caption": caption,
         "hashtags": hashtags,
         "render_resolution": f"{target_w}x{target_h}",
