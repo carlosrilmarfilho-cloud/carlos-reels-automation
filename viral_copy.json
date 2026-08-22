@@ -241,16 +241,16 @@
   },
   "musica_terapia": {
     "overlays_templates": [
-      "Tem música que {ending}.",
-      "Quando o refrão certo chega, {ending}.",
+      "Tem música que faz isso: {ending}.",
+      "Quando o refrão certo chega, acontece isto: {ending}.",
       "Às vezes basta apertar o play: {ending}.",
-      "Bastaram três segundos e {ending}.",
-      "A música começa e {ending}.",
-      "Nem todo conselho consegue, mas {ending}.",
-      "Hoje o remédio foi {ending}.",
-      "Não resolveu tudo, mas {ending}.",
-      "A cabeça estava cheia até {ending}.",
-      "Tem dia em que {ending}."
+      "Bastaram três segundos: {ending}.",
+      "Quando a música começa, acontece isto: {ending}.",
+      "Nem todo conselho consegue; a música sim: {ending}.",
+      "O remédio de hoje veio em forma de música: {ending}.",
+      "Não resolveu tudo, mas mudou o momento: {ending}.",
+      "A cabeça estava cheia; aí a música entrou: {ending}.",
+      "Tem dia em que o melhor cuidado é simples: {ending}."
     ],
     "overlays_endings": [
       "organiza o que a gente não explica",
