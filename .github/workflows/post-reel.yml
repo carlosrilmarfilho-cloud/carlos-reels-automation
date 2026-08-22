@@ -21,7 +21,7 @@ jobs:
     timeout-minutes: 20
     env:
       GDRIVE_FOLDER_URL: https://drive.google.com/drive/folders/1sVLfUVK2FgssbqEEQeUrrUT5z9WluAin
-      AUTOMATION_PAUSED: 'true'
+      AUTOMATION_PAUSED: 'false'
     steps:
       - name: Baixar repositório
         uses: actions/checkout@v4
