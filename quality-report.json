@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "video": "AFE8994E-540E-4730-80F3-CEB9F9140789.mp4",
+  "overlay": "Tem música que a cabeça ganha alguns minutos de paz.",
+  "overlay_rect_norm": {
+    "x0": 0.11875,
+    "y0": 0.2078125,
+    "x1": 0.88125,
+    "y1": 0.326171875
+  },
+  "faces_checked": 5,
+  "failures": []
+}
