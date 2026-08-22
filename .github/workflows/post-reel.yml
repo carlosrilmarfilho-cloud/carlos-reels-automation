@@ -18,10 +18,10 @@ concurrency:
 jobs:
   post:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     env:
       GDRIVE_FOLDER_URL: https://drive.google.com/drive/folders/1sVLfUVK2FgssbqEEQeUrrUT5z9WluAin
-      AUTOMATION_PAUSED: 'false'
+      AUTOMATION_PAUSED: 'true'
     steps:
       - name: Baixar repositório
         uses: actions/checkout@v4
@@ -46,9 +46,12 @@ jobs:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
         shell: bash
         run: |
-          if [ "$AUTOMATION_PAUSED" = "true" ] || [ -z "$INSTAGRAM_ACCESS_TOKEN" ]; then
+          if [ "$AUTOMATION_PAUSED" = "true" ]; then
             echo "ready=false" >> "$GITHUB_OUTPUT"
             echo "Publicação pausada para correção visual."
+          elif [ -z "$INSTAGRAM_ACCESS_TOKEN" ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Token do Instagram ausente."
           else
             echo "ready=true" >> "$GITHUB_OUTPUT"
           fi
@@ -64,6 +67,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg fonts-dejavu-core jq tesseract-ocr
+          sudo apt-get install -y fonts-montserrat || true
           sudo apt-get install -y tesseract-ocr-por tesseract-ocr-eng || true
           pip install -r requirements.txt
 
@@ -91,7 +95,6 @@ jobs:
           echo "total_videos=$count" >> "$GITHUB_OUTPUT"
 
       - name: Ler texto e tema do vídeo
-        continue-on-error: true
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         run: python analyze_video.py
 
@@ -101,9 +104,9 @@ jobs:
           TOTAL_VIDEOS: ${{ steps.videos.outputs.total_videos }}
         run: python render.py
 
-      - name: Bloquear qualquer render que cubra o rosto ou o enquadramento
+      - name: Revisar rosto, enquadramento, frase e legenda
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
-        run: python validate_visual.py
+        run: python quality_gate.py
 
       - name: Hospedar vídeo temporário
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
@@ -141,6 +144,7 @@ jobs:
           git config user.name "Carlos Reels Automation"
           git config user.email "actions@users.noreply.github.com"
           [ -f diagnostic.json ] && git add diagnostic.json || true
+          [ -f quality-report.json ] && git add quality-report.json || true
           if [ "${{ steps.publish.outcome }}" = "success" ]; then git add state.json; fi
           printf '{"run_id":"%s","finished_at":"%s","publish_outcome":"%s"}\n' "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.publish.outcome }}" > run-status.json
           git add run-status.json
