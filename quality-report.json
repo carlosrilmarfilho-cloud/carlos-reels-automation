@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "BEFA83C2-61E8-46B4-BE41-14525804E8A3.mp4",
-  "overlay": "Às vezes a terapia é organiza o que a gente não explica.",
+  "video": "C5C7D2C9-0BC6-4806-8736-6D79750CB9FE.mp4",
+  "overlay": "Bastam três segundos e o sorriso aparece sozinho.",
   "overlay_rect_norm": {
-    "x0": 0.07361111111111111,
-    "y0": 0.21328125,
-    "x1": 0.8333333333333334,
-    "y1": 0.29296875
+    "x0": 0.13541666666666666,
+    "y0": 0.175390625,
+    "x1": 0.8951388888888889,
+    "y1": 0.262890625
   },
-  "faces_checked": 4,
+  "faces_checked": 2,
   "failures": []
 }
