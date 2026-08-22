@@ -2,6 +2,9 @@ __pycache__/
 *.pyc
 output/
 metadata.json
+video_analysis.json
+.analysis_frame_*.jpg
+.quality_frame_*.jpg
 .env
 .DS_Store
 videos/*
