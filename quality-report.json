@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "C5C7D2C9-0BC6-4806-8736-6D79750CB9FE.mp4",
-  "overlay": "Bastam três segundos e o sorriso aparece sozinho.",
+  "video": "D2D10E96-CCD2-4C0B-96E2-6E4793AFBC5D.mp4",
+  "overlay": "Bastou o primeiro verso e o dia muda de ritmo.",
   "overlay_rect_norm": {
-    "x0": 0.13541666666666666,
-    "y0": 0.175390625,
-    "x1": 0.8951388888888889,
-    "y1": 0.262890625
+    "x0": 0.09444444444444444,
+    "y0": 0.134765625,
+    "x1": 0.9048611111111111,
+    "y1": 0.225390625
   },
-  "faces_checked": 2,
+  "faces_checked": 4,
   "failures": []
 }
