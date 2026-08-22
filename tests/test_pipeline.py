@@ -22,7 +22,7 @@ class EditorialRulesTests(unittest.TestCase):
                 overlays = render.expand_variants(section, "overlays")
                 captions = render.expand_variants(section, "captions")
                 self.assertGreaterEqual(len(overlays), 200)
-                self.assertGreaterEqual(len(captions), 90)
+                self.assertGreaterEqual(len(captions), 200)
                 self.assertEqual(len(overlays), len(set(overlays)))
                 self.assertEqual(len(captions), len(set(captions)))
                 self.assertTrue(all(16 <= len(value) <= 82 for value in overlays))
