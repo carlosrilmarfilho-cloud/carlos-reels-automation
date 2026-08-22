@@ -29,6 +29,21 @@ EXPLICIT_TERMS = {
     "sexo", "sexual", "transar", "trepar",
 }
 
+COMMON_CAPTION_TEMPLATES = [
+    "{ending}. Qual parte dessa história mais parece com a tua?",
+    "{ending}. Você já viveu algo parecido?",
+    "{ending}. Se isso também fala contigo, deixa uma palavra nos comentários.",
+    "{ending}. Que lembrança essa ideia trouxe?",
+    "{ending}. Salva para rever quando fizer sentido.",
+    "{ending}. Quem entenderia isso sem você precisar explicar?",
+    "{ending}. O que você acrescentaria a essa frase?",
+    "{ending}. Concorda ou enxerga de outro jeito?",
+    "{ending}. Em que momento isso ficou claro para você?",
+    "{ending}. Qual pessoa veio à tua cabeça agora?",
+    "{ending}. Essa também faz parte da tua história?",
+    "{ending}. Se pudesse resumir em uma palavra, qual seria?",
+]
+
 HASHTAG_SETS = {
     "forro_antigo": [
         ["#forro", "#forrodasantigas", "#musicabrasileira", "#nordeste", "#reelsbrasil"],
@@ -427,7 +442,9 @@ def make_overlay(
 
 def expand_variants(section: dict, key: str) -> list[str]:
     direct = [str(value).strip() for value in section.get(key, []) if str(value).strip()]
-    templates = section.get(f"{key}_templates", [])
+    templates = list(section.get(f"{key}_templates", []))
+    if key == "captions":
+        templates.extend(COMMON_CAPTION_TEMPLATES)
     endings = section.get(f"{key}_endings", [])
     for template in templates:
         for ending in endings:
