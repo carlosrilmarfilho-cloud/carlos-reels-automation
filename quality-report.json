@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "B8276FA2-9886-4E7C-A117-202C25AC3DD8.mp4",
-  "overlay": "Esse refrão chega e a cabeça volta muitos anos.",
+  "video": "BEFA83C2-61E8-46B4-BE41-14525804E8A3.mp4",
+  "overlay": "Às vezes a terapia é organiza o que a gente não explica.",
   "overlay_rect_norm": {
-    "x0": 0.044444444444444446,
-    "y0": 0.20703125,
-    "x1": 0.9555555555555556,
-    "y1": 0.29765625
+    "x0": 0.07361111111111111,
+    "y0": 0.21328125,
+    "x1": 0.8333333333333334,
+    "y1": 0.29296875
   },
-  "faces_checked": 8,
+  "faces_checked": 4,
   "failures": []
 }
