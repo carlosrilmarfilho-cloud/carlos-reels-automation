@@ -443,8 +443,6 @@ def make_overlay(
 def expand_variants(section: dict, key: str) -> list[str]:
     direct = [str(value).strip() for value in section.get(key, []) if str(value).strip()]
     templates = list(section.get(f"{key}_templates", []))
-    if key == "captions":
-        templates.extend(COMMON_CAPTION_TEMPLATES)
     endings = section.get(f"{key}_endings", [])
     for template in templates:
         for ending in endings:
