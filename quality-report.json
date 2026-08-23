@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "AFE8994E-540E-4730-80F3-CEB9F9140789.mp4",
-  "overlay": "Quando o refrão certo chega, acontece isto: a alma reconhece o caminho.",
+  "video": "B8276FA2-9886-4E7C-A117-202C25AC3DD8.mp4",
+  "overlay": "Quem viveu essa época sabe: o Nordeste cabe dentro de um acorde.",
   "overlay_rect_norm": {
-    "x0": 0.11875,
-    "y0": 0.2078125,
-    "x1": 0.88125,
-    "y1": 0.326171875
+    "x0": 0.044444444444444446,
+    "y0": 0.21953125,
+    "x1": 0.9555555555555556,
+    "y1": 0.29765625
   },
-  "faces_checked": 7,
+  "faces_checked": 8,
   "failures": []
 }
