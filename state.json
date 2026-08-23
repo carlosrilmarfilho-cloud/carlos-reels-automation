@@ -1,5 +1,5 @@
 {
-  "video_index": 10,
+  "video_index": 11,
   "posts_total": 37,
   "last_posted_at": "2026-08-23T09:08:32.233498+00:00",
   "last_video": "61813BBA-E746-4134-BCCD-9E054778C018.mp4",
@@ -101,5 +101,8 @@
     "Tem melodia que faz a rolagem da tela esperar. Se isso também fala contigo, deixa uma palavra nos comentários.",
     "A sanfona começa e o coração completa. Quem entenderia isso sem você precisar explicar?",
     "Tem som que encontra paz onde havia barulho. Salva para repetir quando precisar."
+  ],
+  "blocked_videos": [
+    "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4"
   ]
 }
