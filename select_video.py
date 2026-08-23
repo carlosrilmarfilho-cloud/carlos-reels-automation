@@ -29,7 +29,17 @@ if not ordered_names:
     raise SystemExit(0)
 
 idx = int(STATE.get("video_index", 0)) % len(ordered_names)
-name = ordered_names[idx]
+blocked = set(STATE.get("blocked_videos", []))
+for step in range(len(ordered_names)):
+    candidate_idx = (idx + step) % len(ordered_names)
+    candidate_name = ordered_names[candidate_idx]
+    if candidate_name not in blocked:
+        idx = candidate_idx
+        name = candidate_name
+        break
+else:
+    print(json.dumps({"count": 0, "blocked_count": len(blocked)}))
+    raise SystemExit(0)
 selected = by_name[name]
 print(json.dumps({
     "count": len(ordered_names),
