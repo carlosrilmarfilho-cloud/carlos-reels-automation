@@ -556,7 +556,6 @@
       "o pensamento muda de lugar",
       "uma lembrança aparece inteira",
       "o coração presta atenção",
-      "a gente esquece de passar a tela",
       "o mundo fica em segundo plano",
       "a emoção encontra voz",
       "o silêncio ganha sentido",
@@ -575,7 +574,6 @@
       "o próximo minuto fica melhor"
     ],
     "captions_templates": [
-      "{ending}. Qual parte mais te segurou aqui?",
       "{ending}. Você também ouviu até o fim?",
       "{ending}. Salva para escutar outra vez.",
       "{ending}. Que música te causa isso?",
@@ -586,7 +584,6 @@
     ],
     "captions_endings": [
       "Algumas músicas não pedem atenção, conquistam",
-      "Tem melodia que faz a rolagem da tela esperar",
       "A voz começa e o resto perde importância",
       "Uma boa canção sempre encontra alguma lembrança",
       "O refrão termina, mas continua dentro da cabeça",
