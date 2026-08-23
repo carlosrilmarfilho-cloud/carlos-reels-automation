@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "6FCAA360-CB16-45CA-8738-1AA6C7603517.mp4",
-  "overlay": "Não é só nostalgia: a terapia perde para a sanfona.",
+  "video": "81BAAFDF-CC1A-430A-8C83-683B5D294AEC.mp4",
+  "overlay": "Não resolveu tudo, mas mudou o momento: a preocupação perde volume.",
   "overlay_rect_norm": {
-    "x0": 0.08819444444444445,
-    "y0": 0.191015625,
+    "x0": 0.06527777777777778,
+    "y0": 0.218359375,
     "x1": 0.9555555555555556,
-    "y1": 0.281640625
+    "y1": 0.288671875
   },
-  "faces_checked": 8,
+  "faces_checked": 7,
   "failures": []
 }
