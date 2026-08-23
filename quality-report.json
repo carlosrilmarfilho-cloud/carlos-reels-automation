@@ -1,12 +1,12 @@
 {
   "passed": true,
-  "video": "D2D10E96-CCD2-4C0B-96E2-6E4793AFBC5D.mp4",
-  "overlay": "Esse refrão chega e o refrão vira resposta.",
+  "video": "F08AEB30-A4DA-410C-8A40-8EC5C73AFF22.mp4",
+  "overlay": "Quem viveu essa época sabe: a saudade aprende a dançar.",
   "overlay_rect_norm": {
-    "x0": 0.09444444444444444,
-    "y0": 0.134765625,
-    "x1": 0.9048611111111111,
-    "y1": 0.225390625
+    "x0": 0.11736111111111111,
+    "y0": 0.16953125,
+    "x1": 0.8798611111111111,
+    "y1": 0.24921875
   },
   "faces_checked": 3,
   "failures": []
