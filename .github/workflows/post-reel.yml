@@ -145,7 +145,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           [ -f diagnostic.json ] && git add diagnostic.json || true
           [ -f quality-report.json ] && git add quality-report.json || true
-          if [ "${{ steps.publish.outcome }}" = "success" ]; then git add state.json; fi
+          git add state.json
           printf '{"run_id":"%s","finished_at":"%s","publish_outcome":"%s"}\n' "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.publish.outcome }}" > run-status.json
           git add run-status.json
           if ! git diff --cached --quiet; then
