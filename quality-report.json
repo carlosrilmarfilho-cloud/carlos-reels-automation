@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "61813BBA-E746-4134-BCCD-9E054778C018.mp4",
-  "overlay": "Não resolveu tudo, mas mudou o momento: o coração entende o recado.",
+  "video": "6E2A8D85-6BC8-4484-8509-EA2130F9EED9.mp4",
+  "overlay": "Quando a música começa, acontece isto: o peso do dia diminui.",
   "overlay_rect_norm": {
-    "x0": 0.11944444444444445,
-    "y0": 0.213671875,
-    "x1": 0.8798611111111111,
-    "y1": 0.32734375
+    "x0": 0.10902777777777778,
+    "y0": 0.228125,
+    "x1": 0.9534722222222223,
+    "y1": 0.30234375
   },
-  "faces_checked": 5,
+  "faces_checked": 6,
   "failures": []
 }
