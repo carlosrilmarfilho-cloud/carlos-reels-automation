@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "8FF36EB3-1928-4972-A4A9-EBBDE1E61D07.mp4",
-  "overlay": "O remédio de hoje veio em forma de música: o volume vira abrigo.",
+  "video": "AFE8994E-540E-4730-80F3-CEB9F9140789.mp4",
+  "overlay": "Quando o refrão certo chega, acontece isto: a alma reconhece o caminho.",
   "overlay_rect_norm": {
-    "x0": 0.06111111111111111,
-    "y0": 0.214453125,
-    "x1": 0.8444444444444444,
-    "y1": 0.288671875
+    "x0": 0.11875,
+    "y0": 0.2078125,
+    "x1": 0.88125,
+    "y1": 0.326171875
   },
-  "faces_checked": 6,
+  "faces_checked": 7,
   "failures": []
 }
