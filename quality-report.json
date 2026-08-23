@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "B8276FA2-9886-4E7C-A117-202C25AC3DD8.mp4",
-  "overlay": "Quem viveu essa época sabe: o Nordeste cabe dentro de um acorde.",
+  "video": "BEFA83C2-61E8-46B4-BE41-14525804E8A3.mp4",
+  "overlay": "Às vezes basta apertar o play: o peito finalmente desacelera.",
   "overlay_rect_norm": {
-    "x0": 0.044444444444444446,
-    "y0": 0.21953125,
-    "x1": 0.9555555555555556,
-    "y1": 0.29765625
+    "x0": 0.07361111111111111,
+    "y0": 0.21484375,
+    "x1": 0.8333333333333334,
+    "y1": 0.29296875
   },
-  "faces_checked": 8,
+  "faces_checked": 3,
   "failures": []
 }
