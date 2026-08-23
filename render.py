@@ -132,6 +132,12 @@ def contains_explicit_terms(text: str) -> bool:
     return bool(words & EXPLICIT_TERMS)
 
 
+def caption_signature(text: str) -> str:
+    sentences = [part.strip() for part in re.split(r"(?<=[.!?])\\s+", text.strip()) if part.strip()]
+    tail = sentences[-1] if sentences else text.strip()
+    return fold_text(tail).strip(" .!?")
+
+
 def validate_copy(overlay: str, caption: str) -> None:
     if contains_explicit_terms(f"{overlay} {caption}"):
         raise RuntimeError("Conteúdo bloqueado pelo filtro de linguagem sexual")
@@ -483,7 +489,15 @@ def choose_content(video_name: str, state: dict, analysis: dict) -> tuple[dict, 
     overlays = expand_variants(section, "overlays")
     captions = expand_variants(section, "captions")
     used_overlays = set(state.get("recent_overlays", []))
-    used_captions = set(state.get("recent_captions", []))
+    recent_caption_values = list(state.get("recent_captions", []))
+    used_captions = set(recent_caption_values)
+    recent_caption_signatures = {
+        caption_signature(value) for value in recent_caption_values[-12:]
+    }
+    captions = [
+        value for value in captions
+        if caption_signature(value) not in recent_caption_signatures
+    ]
     post_number = int(state.get("posts_total", 0))
     overlay, overlay_index = choose_unused(
         overlays,
