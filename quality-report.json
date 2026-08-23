@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "F34BCD36-345A-430E-8F5B-D90C30F2957D.mp4",
-  "overlay": "Tem forró antigo que até a preocupação espera.",
+  "video": "f79bc212495a4a3bba2efe8bc7bba941.mov",
+  "overlay": "Não é só nostalgia: o corpo fica e a alma viaja.",
   "overlay_rect_norm": {
-    "x0": 0.19583333333333333,
-    "y0": 0.134375,
-    "x1": 0.9555555555555556,
-    "y1": 0.228515625
+    "x0": 0.053703703703703705,
+    "y0": 0.3229166666666667,
+    "x1": 0.9472222222222222,
+    "y1": 0.42916666666666664
   },
-  "faces_checked": 4,
+  "faces_checked": 6,
   "failures": []
 }
