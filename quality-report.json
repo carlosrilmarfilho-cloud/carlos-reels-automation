@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "BEFA83C2-61E8-46B4-BE41-14525804E8A3.mp4",
-  "overlay": "Às vezes basta apertar o play: o peito finalmente desacelera.",
+  "video": "C5C7D2C9-0BC6-4806-8736-6D79750CB9FE.mp4",
+  "overlay": "Bastam três segundos e a vontade é aumentar o volume.",
   "overlay_rect_norm": {
-    "x0": 0.07361111111111111,
-    "y0": 0.21484375,
-    "x1": 0.8333333333333334,
-    "y1": 0.29296875
+    "x0": 0.13541666666666666,
+    "y0": 0.187109375,
+    "x1": 0.8951388888888889,
+    "y1": 0.262890625
   },
-  "faces_checked": 3,
+  "faces_checked": 1,
   "failures": []
 }
