@@ -535,12 +535,20 @@ def main() -> None:
     hashtags = choose_hashtags(theme, state, variant_index)
     caption = f"{base_caption}\n\n{hashtags}".strip()
 
-    overlay_rect, mapped_faces = make_overlay(
-        overlay_text,
-        analysis,
-        (source_width, source_height),
-        (target_width, target_height),
-    )
+    try:
+        overlay_rect, mapped_faces = make_overlay(
+            overlay_text,
+            analysis,
+            (source_width, source_height),
+            (target_width, target_height),
+        )
+    except RuntimeError as exc:
+        if str(exc) == "Nenhuma área livre permite trocar o texto sem cobrir o rosto":
+            blocked = list(dict.fromkeys(list(state.get("blocked_videos", [])) + [video.name]))
+            state["blocked_videos"] = blocked
+            state["video_index"] = (current_video_index + 1) % total_videos
+            save_json(STATE, state)
+        raise
 
     maxrate = "14M" if target_width >= 1440 else "10M"
     bufsize = "28M" if target_width >= 1440 else "20M"
