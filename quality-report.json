@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "84D4C644-BEE4-40AB-85DB-722ED3871DCD.mp4",
-  "overlay": "O mapa é grande, mas a origem continua falando alto.",
+  "video": "8FF36EB3-1928-4972-A4A9-EBBDE1E61D07.mp4",
+  "overlay": "O remédio de hoje veio em forma de música: o volume vira abrigo.",
   "overlay_rect_norm": {
-    "x0": 0.09166666666666666,
-    "y0": 0.15234375,
-    "x1": 0.9083333333333333,
-    "y1": 0.241796875
+    "x0": 0.06111111111111111,
+    "y0": 0.214453125,
+    "x1": 0.8444444444444444,
+    "y1": 0.288671875
   },
-  "faces_checked": 7,
+  "faces_checked": 6,
   "failures": []
 }
