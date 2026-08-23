@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "8292C05F-B11D-4A7F-BB5D-0D0592D25781.mp4",
-  "overlay": "Esse refrão chega e o passado senta ao nosso lado.",
+  "video": "84D4C644-BEE4-40AB-85DB-722ED3871DCD.mp4",
+  "overlay": "O mapa é grande, mas a origem continua falando alto.",
   "overlay_rect_norm": {
-    "x0": 0.06736111111111111,
-    "y0": 0.196875,
-    "x1": 0.8451388888888889,
-    "y1": 0.27890625
+    "x0": 0.09166666666666666,
+    "y0": 0.15234375,
+    "x1": 0.9083333333333333,
+    "y1": 0.241796875
   },
-  "faces_checked": 8,
+  "faces_checked": 7,
   "failures": []
 }
