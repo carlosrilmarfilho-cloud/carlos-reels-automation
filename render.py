@@ -133,7 +133,7 @@ def contains_explicit_terms(text: str) -> bool:
 
 
 def caption_signature(text: str) -> str:
-    sentences = [part.strip() for part in re.split(r"(?<=[.!?])\\s+", text.strip()) if part.strip()]
+    sentences = [part.strip() for part in re.split(r"(?<=[.!?])\s+", text.strip()) if part.strip()]
     tail = sentences[-1] if sentences else text.strip()
     return fold_text(tail).strip(" .!?")
 
