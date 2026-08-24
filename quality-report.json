@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "1DB3DA5B-1B12-470E-9C42-CCDB4447E6A7.mp4",
-  "overlay": "Quando a sanfona entra, a vida ganha trilha sonora.",
+  "video": "482d9e1dbe53494ba696c36e4507425c.mov",
+  "overlay": "Tem música que faz isso: o peso do dia diminui.",
   "overlay_rect_norm": {
-    "x0": 0.12222222222222222,
-    "y0": 0.224609375,
-    "x1": 0.8819444444444444,
-    "y1": 0.312109375
+    "x0": 0.06851851851851852,
+    "y0": 0.19895833333333332,
+    "x1": 0.9314814814814815,
+    "y1": 0.3171875
   },
-  "faces_checked": 4,
+  "faces_checked": 9,
   "failures": []
 }
