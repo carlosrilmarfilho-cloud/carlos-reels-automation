@@ -1,12 +1,12 @@
 {
   "passed": true,
-  "video": "629ba99319714ee6863fb4c9f58045aa.mov",
-  "overlay": "Essa melodia chega e a lembrança escolhe o refrão.",
+  "video": "F34BCD36-345A-430E-8F5B-D90C30F2957D.mp4",
+  "overlay": "Forró bom é assim: o peito canta antes da boca.",
   "overlay_rect_norm": {
-    "x0": 0.07314814814814814,
-    "y0": 0.26510416666666664,
-    "x1": 0.9268518518518518,
-    "y1": 0.3567708333333333
+    "x0": 0.19583333333333333,
+    "y0": 0.134375,
+    "x1": 0.9555555555555556,
+    "y1": 0.228515625
   },
   "faces_checked": 4,
   "failures": []
