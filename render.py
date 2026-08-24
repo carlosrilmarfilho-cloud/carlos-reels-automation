@@ -518,10 +518,10 @@ def choose_content(video_name: str, state: dict, analysis: dict) -> tuple[dict, 
     recent_caption_values = list(state.get("recent_captions", []))
     used_captions = set(recent_caption_values)
     recent_caption_signatures = {
-        caption_signature(value) for value in recent_caption_values[-12:]
+        caption_signature(value) for value in recent_caption_values[-60:]
     }
     recent_caption_openings = {
-        caption_opening_signature(value) for value in recent_caption_values[-12:]
+        caption_opening_signature(value) for value in recent_caption_values[-60:]
     }
     captions = [
         value for value in captions
