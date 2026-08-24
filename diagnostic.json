@@ -1,12 +1,12 @@
 {
-  "started_at": "2026-08-24T06:05:57.181522+00:00",
+  "started_at": "2026-08-24T08:33:35.999853+00:00",
   "mode": "trial",
-  "stage": "container_processing",
+  "stage": "success",
   "username": "carlosrilmarfilho",
   "ig_id": "38039932802287190",
-  "container_id": "18621423376062725",
-  "success": false,
-  "error_type": "RuntimeError",
-  "error": "Falha no processamento: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18621423376062725'}",
-  "finished_at": "2026-08-24T06:06:55.882152+00:00"
+  "container_id": "18621447634062725",
+  "container_status": "FINISHED",
+  "success": true,
+  "media_id": "18119332003901225",
+  "finished_at": "2026-08-24T08:34:11.804610+00:00"
 }
