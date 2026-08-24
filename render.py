@@ -138,6 +138,18 @@ def caption_signature(text: str) -> str:
     return fold_text(tail).strip(" .!?")
 
 
+def overlay_signature(text: str) -> str:
+    folded = fold_text(text)
+    clauses = [
+        re.findall(r"[a-z0-9]+", part)
+        for part in re.split(r"[:;.!?—]+", folded)
+        if part.strip()
+    ]
+    tail = clauses[-1] if clauses else re.findall(r"[a-z0-9]+", folded)
+    tokens = tail if len(tail) >= 4 else re.findall(r"[a-z0-9]+", folded)
+    return " ".join(tokens[-6:])
+
+
 def validate_copy(overlay: str, caption: str) -> None:
     if contains_explicit_terms(f"{overlay} {caption}"):
         raise RuntimeError("Conteúdo bloqueado pelo filtro de linguagem sexual")
@@ -488,7 +500,15 @@ def choose_content(video_name: str, state: dict, analysis: dict) -> tuple[dict, 
     section = copy_bank.get(theme) or copy_bank.get("generic", {})
     overlays = expand_variants(section, "overlays")
     captions = expand_variants(section, "captions")
-    used_overlays = set(state.get("recent_overlays", []))
+    recent_overlay_values = list(state.get("recent_overlays", []))
+    used_overlays = set(recent_overlay_values)
+    recent_overlay_signatures = {
+        overlay_signature(value) for value in recent_overlay_values[-60:]
+    }
+    overlays = [
+        value for value in overlays
+        if overlay_signature(value) not in recent_overlay_signatures
+    ]
     recent_caption_values = list(state.get("recent_captions", []))
     used_captions = set(recent_caption_values)
     recent_caption_signatures = {
