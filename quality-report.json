@@ -1,12 +1,12 @@
 {
   "passed": true,
-  "video": "B4D67C9E-7332-4388-ACF7-FE37CF46922D.mp4",
-  "overlay": "Tem forró antigo que ninguém consegue ouvir parado.",
+  "video": "629ba99319714ee6863fb4c9f58045aa.mov",
+  "overlay": "Essa melodia chega e a lembrança escolhe o refrão.",
   "overlay_rect_norm": {
-    "x0": 0.09583333333333334,
-    "y0": 0.1671875,
-    "x1": 0.9555555555555556,
-    "y1": 0.2609375
+    "x0": 0.07314814814814814,
+    "y0": 0.26510416666666664,
+    "x1": 0.9268518518518518,
+    "y1": 0.3567708333333333
   },
   "faces_checked": 4,
   "failures": []
