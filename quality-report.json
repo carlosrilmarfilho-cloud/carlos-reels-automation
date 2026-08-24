@@ -1,12 +1,12 @@
 {
   "passed": true,
-  "video": "2ebc8c8660e742e188d26e8b3dfbf50f.mov",
-  "overlay": "Quem conhece esse brega sabe: a recaída vira trilha sonora.",
+  "video": "1DB3DA5B-1B12-470E-9C42-CCDB4447E6A7.mp4",
+  "overlay": "Quando a sanfona entra, a vida ganha trilha sonora.",
   "overlay_rect_norm": {
-    "x0": 0.09074074074074075,
-    "y0": 0.24114583333333334,
-    "x1": 0.9092592592592592,
-    "y1": 0.3572916666666667
+    "x0": 0.12222222222222222,
+    "y0": 0.224609375,
+    "x1": 0.8819444444444444,
+    "y1": 0.312109375
   },
   "faces_checked": 4,
   "failures": []
