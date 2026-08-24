@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "f79bc212495a4a3bba2efe8bc7bba941.mov",
-  "overlay": "Tem forró antigo que a lembrança chega sem avisar.",
+  "video": "44F767A8-9787-45C5-8F6C-8967F60C9463.mp4",
+  "overlay": "Quando essa voz entra, o sentimento fica nítido.",
   "overlay_rect_norm": {
-    "x0": 0.053703703703703705,
-    "y0": 0.3229166666666667,
-    "x1": 0.9472222222222222,
-    "y1": 0.42916666666666664
+    "x0": 0.0875,
+    "y0": 0.183984375,
+    "x1": 0.9125,
+    "y1": 0.298828125
   },
-  "faces_checked": 5,
+  "faces_checked": 3,
   "failures": []
 }
