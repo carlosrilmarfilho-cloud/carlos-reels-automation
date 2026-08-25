@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "3B39DB0D-7FDF-452E-A0DF-DA9DE006F164.mp4",
-  "overlay": "A letra continua e a memória abre uma porta.",
+  "video": "41EF1F58-C757-4821-8692-EE6110066BFA.mp4",
+  "overlay": "Quem sente música sabe: o silêncio ganha sentido.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
     "y0": 0.084765625,
     "x1": 0.9555555555555556,
     "y1": 0.175390625
   },
-  "faces_checked": 11,
+  "faces_checked": 12,
   "failures": []
 }
