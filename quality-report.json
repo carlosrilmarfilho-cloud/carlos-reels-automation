@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
-  "overlay": "A melodia começa e uma história volta à cabeça.",
+  "video": "30620ACB-E217-45FD-9002-E09469B7A763.mp4",
+  "overlay": "Tem canção que faz o sentimento fica nítido.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
     "y0": 0.084765625,
     "x1": 0.9555555555555556,
     "y1": 0.175390625
   },
-  "faces_checked": 6,
+  "faces_checked": 4,
   "failures": []
 }
