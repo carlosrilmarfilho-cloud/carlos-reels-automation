@@ -1,0 +1,233 @@
+from __future__ import annotations
+
+import json
+import os
+import re
+import time
+import traceback
+from datetime import datetime, timezone
+from pathlib import Path
+
+import requests
+
+ROOT = Path(__file__).resolve().parent
+META = ROOT / "metadata.json"
+STATE = ROOT / "state_tiktok.json"
+DIAG = ROOT / "tiktok-diagnostic.json"
+BUFFER_API_KEY = os.environ.get("BUFFER_API_KEY", "").strip()
+VIDEO_URL = os.environ.get("PUBLIC_VIDEO_URL", "").strip()
+CHANNEL_OVERRIDE = os.environ.get("BUFFER_TIKTOK_CHANNEL_ID", "").strip()
+BUFFER_API = "https://api.buffer.com"
+
+if not BUFFER_API_KEY:
+    raise SystemExit("BUFFER_API_KEY não configurado")
+if not VIDEO_URL:
+    raise SystemExit("PUBLIC_VIDEO_URL não configurado")
+
+
+diag = {
+    "started_at": datetime.now(timezone.utc).isoformat(),
+    "platform": "tiktok",
+    "publisher": "buffer",
+    "stage": "start",
+}
+
+
+def save_diag(**extra):
+    diag.update(extra)
+    DIAG.write_text(json.dumps(diag, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def graphql(query: str) -> dict:
+    response = requests.post(
+        BUFFER_API,
+        headers={
+            "Authorization": f"Bearer {BUFFER_API_KEY}",
+            "Content-Type": "application/json",
+        },
+        json={"query": query},
+        timeout=120,
+    )
+    if not response.ok:
+        raise RuntimeError(f"Buffer API HTTP {response.status_code}: {response.text[:1200]}")
+    payload = response.json()
+    if payload.get("errors"):
+        raise RuntimeError(f"Buffer GraphQL: {json.dumps(payload['errors'], ensure_ascii=False)[:1800]}")
+    return payload.get("data", {})
+
+
+def gql_string(value: str) -> str:
+    return json.dumps(value, ensure_ascii=False)
+
+
+def wait_public(url: str) -> None:
+    for _ in range(24):
+        try:
+            response = requests.get(url, timeout=30, stream=True)
+            if response.ok:
+                length = int(response.headers.get("content-length", "1") or "1")
+                if length > 0:
+                    return
+        except requests.RequestException:
+            pass
+        time.sleep(5)
+    raise RuntimeError("O vídeo ainda não ficou público para o Buffer")
+
+
+def find_tiktok_channel() -> tuple[str, str]:
+    if CHANNEL_OVERRIDE:
+        return CHANNEL_OVERRIDE, "override"
+
+    account = graphql(
+        """
+        query GetOrganizations {
+          account {
+            organizations {
+              id
+              name
+            }
+          }
+        }
+        """
+    )
+    organizations = account.get("account", {}).get("organizations", [])
+    channels: list[dict] = []
+    for organization in organizations:
+        organization_id = str(organization.get("id", ""))
+        if not organization_id:
+            continue
+        data = graphql(
+            f"""
+            query GetChannels {{
+              channels(input: {{ organizationId: {gql_string(organization_id)} }}) {{
+                id
+                name
+                displayName
+                service
+              }}
+            }}
+            """
+        )
+        channels.extend(data.get("channels", []))
+
+    tiktok_channels = [
+        channel for channel in channels
+        if str(channel.get("service", "")).lower() == "tiktok"
+    ]
+    if not tiktok_channels:
+        raise RuntimeError("Nenhum canal TikTok conectado ao Buffer")
+    if len(tiktok_channels) > 1:
+        options = ", ".join(
+            f"{channel.get('displayName') or channel.get('name')} ({channel.get('id')})"
+            for channel in tiktok_channels
+        )
+        raise RuntimeError(
+            "Há mais de um TikTok no Buffer. Configure BUFFER_TIKTOK_CHANNEL_ID. "
+            f"Canais encontrados: {options}"
+        )
+    channel = tiktok_channels[0]
+    return str(channel["id"]), str(channel.get("displayName") or channel.get("name") or "TikTok")
+
+
+def adapt_caption_for_tiktok(caption: str) -> tuple[str, str]:
+    hashtags = re.findall(r"(?<!\w)#[\wÀ-ÿ]+", caption, flags=re.UNICODE)
+    body = re.sub(r"(?<!\w)#[\wÀ-ÿ]+", "", caption, flags=re.UNICODE)
+    body = re.sub(r"[ \t]+\n", "\n", body)
+    body = re.sub(r"\n{3,}", "\n\n", body).strip()
+
+    converted: list[str] = []
+    for tag in hashtags:
+        folded = tag.lower()
+        if folded == "#reelsbrasil":
+            tag = "#tiktokbrasil"
+        elif folded == "#reels":
+            tag = "#paravoce"
+        if tag.lower() not in {item.lower() for item in converted}:
+            converted.append(tag)
+
+    if not converted:
+        converted = ["#tiktokbrasil", "#musicabrasileira", "#musica"]
+    converted = converted[:5]
+    hashtags_text = " ".join(converted)
+    final_caption = f"{body}\n\n{hashtags_text}".strip()
+    return final_caption, hashtags_text
+
+
+def create_post(channel_id: str, caption: str) -> dict:
+    query = f"""
+    mutation CreateTikTokPost {{
+      createPost(
+        input: {{
+          text: {gql_string(caption)}
+          channelId: {gql_string(channel_id)}
+          schedulingType: automatic
+          mode: shareNow
+          assets: [
+            {{
+              video: {{
+                url: {gql_string(VIDEO_URL)}
+                metadata: {{ thumbnailOffset: 1000 }}
+              }}
+            }}
+          ]
+        }}
+      ) {{
+        ... on PostActionSuccess {{
+          post {{
+            id
+            text
+            dueAt
+          }}
+        }}
+        ... on MutationError {{
+          message
+        }}
+      }}
+    }}
+    """
+    result = graphql(query).get("createPost", {})
+    if not result.get("post"):
+        raise RuntimeError(f"Buffer recusou o post: {result.get('message') or result}")
+    return result["post"]
+
+
+def main() -> None:
+    try:
+        metadata = json.loads(META.read_text(encoding="utf-8"))
+        caption, hashtags = adapt_caption_for_tiktok(str(metadata["caption"]))
+        save_diag(stage="auth")
+        channel_id, channel_name = find_tiktok_channel()
+        save_diag(stage="video_public", channel_id=channel_id, channel_name=channel_name)
+        wait_public(VIDEO_URL)
+        save_diag(stage="publish")
+        post = create_post(channel_id, caption)
+
+        state = dict(metadata["next_state"])
+        state["last_posted_at"] = datetime.now(timezone.utc).isoformat()
+        state["last_mode"] = "buffer_auto"
+        state["last_platform"] = "tiktok"
+        state["last_hashtags"] = hashtags
+        state["last_buffer_post_id"] = post.get("id")
+        STATE.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+        save_diag(
+            stage="success",
+            success=True,
+            post_id=post.get("id"),
+            finished_at=datetime.now(timezone.utc).isoformat(),
+        )
+        print(f"TikTok enviado ao Buffer: {post.get('id')}")
+    except Exception as exc:
+        save_diag(
+            stage=diag.get("stage", "unknown"),
+            success=False,
+            error_type=type(exc).__name__,
+            error=str(exc)[:1800],
+            finished_at=datetime.now(timezone.utc).isoformat(),
+        )
+        traceback.print_exc()
+        raise
+
+
+if __name__ == "__main__":
+    main()
