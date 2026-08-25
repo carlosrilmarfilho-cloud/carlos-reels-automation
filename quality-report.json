@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "41EF1F58-C757-4821-8692-EE6110066BFA.mp4",
-  "overlay": "Quem sente música sabe: o silêncio ganha sentido.",
+  "video": "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4",
+  "overlay": "O trecho certo começa exatamente quando você ia passar.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.084765625,
+    "y0": 0.090234375,
     "x1": 0.9555555555555556,
-    "y1": 0.175390625
+    "y1": 0.169921875
   },
-  "faces_checked": 12,
+  "faces_checked": 5,
   "failures": []
 }
