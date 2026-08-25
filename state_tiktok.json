@@ -1,9 +1,9 @@
 {
-  "video_index": 15,
-  "posts_total": 64,
-  "last_posted_at": "2026-08-25T18:08:55.581027+00:00",
-  "last_video": "30620ACB-E217-45FD-9002-E09469B7A763.mp4",
-  "last_overlay": "Tem canção que chega e a pressa perde espaço.",
+  "video_index": 16,
+  "posts_total": 65,
+  "last_posted_at": "2026-08-25T20:01:53.919271+00:00",
+  "last_video": "30E3E09C-22BC-4D18-B5CC-D5DF595ED34D.mp4",
+  "last_overlay": "Quem sente música sabe: a gente sente antes de entender.",
   "last_mode": "buffer_auto",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -30,10 +30,11 @@
     "D2D10E96-CCD2-4C0B-96E2-6E4793AFBC5D.mp4": 2,
     "F08AEB30-A4DA-410C-8A40-8EC5C73AFF22.mp4": 2,
     "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4": 1,
-    "30620ACB-E217-45FD-9002-E09469B7A763.mp4": 1
+    "30620ACB-E217-45FD-9002-E09469B7A763.mp4": 1,
+    "30E3E09C-22BC-4D18-B5CC-D5DF595ED34D.mp4": 1
   },
-  "last_caption": "Uma boa canção sempre encontra alguma lembrança. Salva para escutar outra vez.",
-  "last_hashtags": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
+  "last_caption": "Algumas músicas não pedem atenção, conquistam. Manda para quem escuta com sentimento.",
+  "last_hashtags": "#musica #tiktokbrasil #som #boamusica #brasil",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -94,7 +95,8 @@
     "Tem dia em que o melhor cuidado é simples: o refrão faz o trabalho.",
     "O tempo passa, mas a saudade aprende a dançar.",
     "A melodia começa e uma história volta à cabeça.",
-    "Tem canção que chega e a pressa perde espaço."
+    "Tem canção que chega e a pressa perde espaço.",
+    "Quem sente música sabe: a gente sente antes de entender."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -156,11 +158,12 @@
     "A gente aperta o play e o corpo entende. Que canção funciona assim para você?",
     "Algumas músicas ainda sabem exatamente onde chegar. Diz o nome do forró que merece tocar agora.",
     "A letra chega antes de qualquer explicação. Que música te causa isso?",
-    "Uma boa canção sempre encontra alguma lembrança. Salva para escutar outra vez."
+    "Uma boa canção sempre encontra alguma lembrança. Salva para escutar outra vez.",
+    "Algumas músicas não pedem atenção, conquistam. Manda para quem escuta com sentimento."
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6a8dda2d3649edb632412b35"
+  "last_buffer_post_id": "6a8df4a74236595eb3c98168"
 }
