@@ -1,9 +1,9 @@
 {
-  "video_index": 17,
-  "posts_total": 66,
-  "last_posted_at": "2026-08-25T21:55:08.299777+00:00",
-  "last_video": "3B39DB0D-7FDF-452E-A0DF-DA9DE006F164.mp4",
-  "last_overlay": "O volume sobe e a vontade é ouvir de novo.",
+  "video_index": 18,
+  "posts_total": 67,
+  "last_posted_at": "2026-08-25T23:47:06.147758+00:00",
+  "last_video": "41EF1F58-C757-4821-8692-EE6110066BFA.mp4",
+  "last_overlay": "A letra continua e a emoção encontra voz.",
   "last_mode": "buffer_auto",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -32,10 +32,11 @@
     "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4": 1,
     "30620ACB-E217-45FD-9002-E09469B7A763.mp4": 1,
     "30E3E09C-22BC-4D18-B5CC-D5DF595ED34D.mp4": 1,
-    "3B39DB0D-7FDF-452E-A0DF-DA9DE006F164.mp4": 1
+    "3B39DB0D-7FDF-452E-A0DF-DA9DE006F164.mp4": 1,
+    "41EF1F58-C757-4821-8692-EE6110066BFA.mp4": 1
   },
-  "last_caption": "Quando a música acerta, não existe pressa. Comenta o que esse refrão te lembrou.",
-  "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
+  "last_caption": "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?",
+  "last_hashtags": "#musica #tiktokbrasil #som #boamusica #brasil",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -98,7 +99,8 @@
     "A melodia começa e uma história volta à cabeça.",
     "Tem canção que chega e a pressa perde espaço.",
     "Quem sente música sabe: a gente sente antes de entender.",
-    "O volume sobe e a vontade é ouvir de novo."
+    "O volume sobe e a vontade é ouvir de novo.",
+    "A letra continua e a emoção encontra voz."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -162,11 +164,12 @@
     "A letra chega antes de qualquer explicação. Que música te causa isso?",
     "Uma boa canção sempre encontra alguma lembrança. Salva para escutar outra vez.",
     "Algumas músicas não pedem atenção, conquistam. Manda para quem escuta com sentimento.",
-    "Quando a música acerta, não existe pressa. Comenta o que esse refrão te lembrou."
+    "Quando a música acerta, não existe pressa. Comenta o que esse refrão te lembrou.",
+    "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?"
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6a8e0f328a6fde97995d1a84"
+  "last_buffer_post_id": "6a8e296f4daefb0f908adc03"
 }
