@@ -7,6 +7,9 @@ on:
     - cron: '37 13-23 * * *'
     - cron: '37 0 * * *'
   workflow_dispatch:
+  push:
+    paths:
+      - '.trigger-tiktok'
 
 permissions:
   contents: write
