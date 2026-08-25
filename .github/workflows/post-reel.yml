@@ -93,6 +93,7 @@ jobs:
           gdown "$url" -O "videos/$filename"
           echo "has_videos=true" >> "$GITHUB_OUTPUT"
           echo "total_videos=$count" >> "$GITHUB_OUTPUT"
+          echo "selected_video_index=$idx" >> "$GITHUB_OUTPUT"
 
       - name: Ler texto e tema do vídeo
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
@@ -102,6 +103,7 @@ jobs:
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:
           TOTAL_VIDEOS: ${{ steps.videos.outputs.total_videos }}
+          SELECTED_VIDEO_INDEX: ${{ steps.videos.outputs.selected_video_index }}
         run: python render.py
 
       - name: Revisar rosto, enquadramento, frase e legenda
