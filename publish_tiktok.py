@@ -18,6 +18,7 @@ BUFFER_API_KEY = os.environ.get("BUFFER_API_KEY", "").strip()
 VIDEO_URL = os.environ.get("PUBLIC_VIDEO_URL", "").strip()
 CHANNEL_OVERRIDE = os.environ.get("BUFFER_TIKTOK_CHANNEL_ID", "").strip()
 BUFFER_API = "https://api.buffer.com"
+TIKTOK_DESCRIPTION_LIMIT = 150
 
 if not BUFFER_API_KEY:
     raise SystemExit("BUFFER_API_KEY não configurado")
@@ -129,6 +130,18 @@ def find_tiktok_channel() -> tuple[str, str]:
     return str(channel["id"]), str(channel.get("displayName") or channel.get("name") or "TikTok")
 
 
+def truncate_body(body: str, max_chars: int) -> str:
+    body = re.sub(r"\s+", " ", body).strip()
+    if len(body) <= max_chars:
+        return body
+    if max_chars <= 1:
+        return ""
+    clipped = body[: max_chars - 1].rstrip()
+    if " " in clipped:
+        clipped = clipped.rsplit(" ", 1)[0].rstrip()
+    return (clipped + "…").strip()
+
+
 def adapt_caption_for_tiktok(caption: str) -> tuple[str, str]:
     hashtags = re.findall(r"(?<!\w)#[\wÀ-ÿ]+", caption, flags=re.UNICODE)
     body = re.sub(r"(?<!\w)#[\wÀ-ÿ]+", "", caption, flags=re.UNICODE)
@@ -147,9 +160,24 @@ def adapt_caption_for_tiktok(caption: str) -> tuple[str, str]:
 
     if not converted:
         converted = ["#tiktokbrasil", "#musicabrasileira", "#musica"]
-    converted = converted[:5]
-    hashtags_text = " ".join(converted)
-    final_caption = f"{body}\n\n{hashtags_text}".strip()
+
+    # Preserve as many relevant hashtags as fit while respecting TikTok's 150-char description limit.
+    selected: list[str] = []
+    for tag in converted[:5]:
+        candidate = " ".join(selected + [tag])
+        if len(candidate) <= 72:
+            selected.append(tag)
+    hashtags_text = " ".join(selected)
+
+    separator = "\n\n" if body and hashtags_text else ""
+    available_for_body = TIKTOK_DESCRIPTION_LIMIT - len(separator) - len(hashtags_text)
+    body = truncate_body(body, max(0, available_for_body))
+    final_caption = f"{body}{separator}{hashtags_text}".strip()
+
+    if len(final_caption) > TIKTOK_DESCRIPTION_LIMIT:
+        raise RuntimeError(
+            f"Legenda do TikTok excedeu {TIKTOK_DESCRIPTION_LIMIT} caracteres após adaptação"
+        )
     return final_caption, hashtags_text
 
 
@@ -195,7 +223,7 @@ def main() -> None:
     try:
         metadata = json.loads(META.read_text(encoding="utf-8"))
         caption, hashtags = adapt_caption_for_tiktok(str(metadata["caption"]))
-        save_diag(stage="auth")
+        save_diag(stage="auth", caption_length=len(caption))
         channel_id, channel_name = find_tiktok_channel()
         save_diag(stage="video_public", channel_id=channel_id, channel_name=channel_name)
         wait_public(VIDEO_URL)
