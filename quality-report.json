@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "51820F1B-965B-4136-BB36-91097971313C.mp4",
-  "overlay": "É tocar um clássico desses e uma fase inteira reaparece.",
+  "video": "61813BBA-E746-4134-BCCD-9E054778C018.mp4",
+  "overlay": "Bastaram três segundos: a mente deixa a música trabalhar.",
   "overlay_rect_norm": {
-    "x0": 0.05555555555555555,
-    "y0": 0.19140625,
-    "x1": 0.9451388888888889,
-    "y1": 0.31015625
+    "x0": 0.11944444444444445,
+    "y0": 0.213671875,
+    "x1": 0.8798611111111111,
+    "y1": 0.32734375
   },
-  "faces_checked": 2,
+  "faces_checked": 7,
   "failures": []
 }
