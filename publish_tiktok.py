@@ -14,14 +14,36 @@ ROOT = Path(__file__).resolve().parent
 META = ROOT / "metadata.json"
 STATE = ROOT / "state_tiktok.json"
 DIAG = ROOT / "tiktok-diagnostic.json"
-BUFFER_API_KEY = os.environ.get("BUFFER_API_KEY", "").strip()
 VIDEO_URL = os.environ.get("PUBLIC_VIDEO_URL", "").strip()
 CHANNEL_OVERRIDE = os.environ.get("BUFFER_TIKTOK_CHANNEL_ID", "").strip()
 BUFFER_API = "https://api.buffer.com"
 TIKTOK_DESCRIPTION_LIMIT = 150
 
-if not BUFFER_API_KEY:
-    raise SystemExit("BUFFER_API_KEY não configurado")
+
+def normalize_api_key(raw: str) -> str:
+    value = raw.strip()
+    if value.lower().startswith("bearer "):
+        value = value[7:].strip()
+    if len(value) >= 2 and value[0] == value[-1] and value[0] in {"'", '"'}:
+        value = value[1:-1].strip()
+    if not value:
+        raise SystemExit("BUFFER_API_KEY não configurado")
+    try:
+        value.encode("ascii")
+    except UnicodeEncodeError as exc:
+        raise SystemExit(
+            "BUFFER_API_KEY contém caracteres inválidos. Salve no GitHub somente a chave pura do Buffer, "
+            "sem 'Bearer', aspas, rótulos, espaços ou emojis."
+        ) from exc
+    if any(character.isspace() for character in value):
+        raise SystemExit(
+            "BUFFER_API_KEY contém espaços/quebras de linha. Salve somente a chave pura do Buffer."
+        )
+    return value
+
+
+BUFFER_API_KEY = normalize_api_key(os.environ.get("BUFFER_API_KEY", ""))
+
 if not VIDEO_URL:
     raise SystemExit("PUBLIC_VIDEO_URL não configurado")
 
@@ -161,7 +183,6 @@ def adapt_caption_for_tiktok(caption: str) -> tuple[str, str]:
     if not converted:
         converted = ["#tiktokbrasil", "#musicabrasileira", "#musica"]
 
-    # Preserve as many relevant hashtags as fit while respecting TikTok's 150-char description limit.
     selected: list[str] = []
     for tag in converted[:5]:
         candidate = " ".join(selected + [tag])
