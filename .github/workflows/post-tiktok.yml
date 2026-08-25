@@ -1,0 +1,163 @@
+name: Postar TikTok constante
+
+on:
+  schedule:
+    # 12 posts/dia: 10h–21h no horário de Brasília (13h–00h UTC).
+    # Roda no minuto 37 para não disputar commits com o Instagram, que roda no minuto 7.
+    - cron: '37 13-23 * * *'
+    - cron: '37 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tiktok-buffer-constant
+  cancel-in-progress: true
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      GDRIVE_FOLDER_URL: https://drive.google.com/drive/folders/1sVLfUVK2FgssbqEEQeUrrUT5z9WluAin
+      TIKTOK_AUTOMATION_PAUSED: 'false'
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verificar ativação
+        id: gate
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        shell: bash
+        run: |
+          if [ "$TIKTOK_AUTOMATION_PAUSED" = "true" ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "TikTok pausado."
+          elif [ -z "$BUFFER_API_KEY" ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "BUFFER_API_KEY ausente; nenhuma publicação será tentada."
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Python
+        if: steps.gate.outputs.ready == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependências de edição
+        if: steps.gate.outputs.ready == 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-dejavu-core jq tesseract-ocr
+          sudo apt-get install -y fonts-montserrat || true
+          sudo apt-get install -y tesseract-ocr-por tesseract-ocr-eng || true
+          pip install -r requirements.txt
+
+      - name: Preparar estado exclusivo do TikTok
+        if: steps.gate.outputs.ready == 'true'
+        run: cp state_tiktok.json state.json
+
+      - name: Escolher e baixar um vídeo sem repetir
+        id: videos
+        if: steps.gate.outputs.ready == 'true'
+        shell: bash
+        run: |
+          set -e
+          rm -rf videos && mkdir -p videos
+          gdown "$GDRIVE_FOLDER_URL" --folder --json > /tmp/all-drive-files.json
+          python select_video.py /tmp/all-drive-files.json > /tmp/selected.json
+          count=$(jq -r '.count' /tmp/selected.json)
+          echo "Vídeos únicos disponíveis: $count"
+          if [ "$count" -eq 0 ]; then
+            echo "has_videos=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          url=$(jq -r '.url' /tmp/selected.json)
+          filename=$(jq -r '.name' /tmp/selected.json)
+          idx=$(jq -r '.index' /tmp/selected.json)
+          echo "Selecionado [$((idx+1))/$count]: $filename"
+          gdown "$url" -O "videos/$filename"
+          echo "has_videos=true" >> "$GITHUB_OUTPUT"
+          echo "total_videos=$count" >> "$GITHUB_OUTPUT"
+
+      - name: Ler texto, tema e rosto do vídeo
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        run: python analyze_video.py
+
+      - name: Renderizar preservando rosto e substituindo texto antigo
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        env:
+          TOTAL_VIDEOS: ${{ steps.videos.outputs.total_videos }}
+        run: python render.py
+
+      - name: Revisar rosto, enquadramento, duplicação e linguagem
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        run: python quality_gate.py
+
+      - name: Hospedar vídeo temporário para o Buffer
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          rm -rf /tmp/tiktok-media-host && mkdir -p /tmp/tiktok-media-host
+          cp output/reel.mp4 /tmp/tiktok-media-host/latest.mp4
+          cd /tmp/tiktok-media-host
+          git init
+          git config user.name "Carlos TikTok Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add latest.mp4 && git commit -m "latest tiktok"
+          git branch -M media-host-tiktok
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin media-host-tiktok
+
+      - name: Publicar automaticamente no TikTok via Buffer
+        id: publish
+        continue-on-error: true
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_TIKTOK_CHANNEL_ID: ${{ secrets.BUFFER_TIKTOK_CHANNEL_ID }}
+          PUBLIC_VIDEO_URL: https://raw.githubusercontent.com/${{ github.repository }}/media-host-tiktok/latest.mp4?run=${{ github.run_id }}
+        run: python publish_tiktok.py
+
+      - name: Salvar diagnóstico e estado do TikTok
+        if: always() && steps.gate.outputs.ready == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+
+          # Se o render bloqueou um vídeo por segurança, render.py atualiza state.json.
+          # Se a publicação deu certo, publish_tiktok.py já gravou o próximo estado em state_tiktok.json.
+          if [ "${{ steps.publish.outcome }}" != "success" ] && [ -f state.json ]; then
+            cp state.json state_tiktok.json
+          fi
+
+          # Nunca deixar o TikTok sobrescrever o estado do Instagram.
+          git checkout -- state.json || true
+
+          git config user.name "Carlos TikTok Automation"
+          git config user.email "actions@users.noreply.github.com"
+          [ -f tiktok-diagnostic.json ] && git add tiktok-diagnostic.json || true
+          [ -f state_tiktok.json ] && git add state_tiktok.json || true
+          printf '{"run_id":"%s","finished_at":"%s","publish_outcome":"%s"}\n' "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.publish.outcome }}" > tiktok-run-status.json
+          git add tiktok-run-status.json
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Finalizar TikTok $GITHUB_RUN_ID [skip ci]"
+            git reset --hard HEAD
+            git clean -fd
+            git pull --rebase origin "$GITHUB_REF_NAME"
+            git push origin HEAD:"$GITHUB_REF_NAME"
+          fi
+
+      - name: Falhar se a publicação falhou
+        if: steps.publish.outcome == 'failure'
+        run: exit 1
