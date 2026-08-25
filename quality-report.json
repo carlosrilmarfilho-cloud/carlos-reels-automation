@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "6FCAA360-CB16-45CA-8738-1AA6C7603517.mp4",
-  "overlay": "O tempo passa, mas a saudade aprende a dançar.",
+  "video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
+  "overlay": "A melodia começa e uma história volta à cabeça.",
   "overlay_rect_norm": {
-    "x0": 0.08819444444444445,
-    "y0": 0.191015625,
+    "x0": 0.044444444444444446,
+    "y0": 0.084765625,
     "x1": 0.9555555555555556,
-    "y1": 0.281640625
+    "y1": 0.175390625
   },
-  "faces_checked": 8,
+  "faces_checked": 6,
   "failures": []
 }
