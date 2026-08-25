@@ -163,9 +163,9 @@ def overlay_signature(text: str) -> str:
     ]
     tail = clauses[-1] if clauses else re.findall(r"[a-z0-9]+", folded)
     tokens = tail if len(tail) >= 4 else re.findall(r"[a-z0-9]+", folded)
-    # Cinco palavras capturam fechamentos repetidos mesmo quando uma conjunção
-    # diferente é acrescentada antes do trecho.
-    return " ".join(tokens[-5:])
+    # Quatro palavras capturam fechamentos repetidos mesmo quando o verbo
+    # imediatamente anterior muda, sem depender do começo da frase.
+    return " ".join(tokens[-4:])
 
 
 def overlay_opening_signature(text: str) -> str:
