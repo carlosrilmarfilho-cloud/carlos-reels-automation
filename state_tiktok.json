@@ -1,9 +1,9 @@
 {
-  "video_index": 13,
-  "posts_total": 62,
-  "last_posted_at": "2026-08-25T11:45:22.870060+00:00",
-  "last_video": "6FCAA360-CB16-45CA-8738-1AA6C7603517.mp4",
-  "last_overlay": "O tempo passa, mas a saudade aprende a dançar.",
+  "video_index": 14,
+  "posts_total": 63,
+  "last_posted_at": "2026-08-25T16:09:39.842527+00:00",
+  "last_video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
+  "last_overlay": "A melodia começa e uma história volta à cabeça.",
   "last_mode": "buffer_auto",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -28,10 +28,11 @@
     "BEFA83C2-61E8-46B4-BE41-14525804E8A3.mp4": 2,
     "C5C7D2C9-0BC6-4806-8736-6D79750CB9FE.mp4": 2,
     "D2D10E96-CCD2-4C0B-96E2-6E4793AFBC5D.mp4": 2,
-    "F08AEB30-A4DA-410C-8A40-8EC5C73AFF22.mp4": 2
+    "F08AEB30-A4DA-410C-8A40-8EC5C73AFF22.mp4": 2,
+    "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4": 1
   },
-  "last_caption": "Algumas músicas ainda sabem exatamente onde chegar. Diz o nome do forró que merece tocar agora.",
-  "last_hashtags": "#forroantigo #forro #musicanordestina #nostalgia #tiktokbrasil",
+  "last_caption": "A letra chega antes de qualquer explicação. Que música te causa isso?",
+  "last_hashtags": "#musica #tiktokbrasil #som #boamusica #brasil",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -90,7 +91,8 @@
     "Bastaram três segundos: a mente deixa a música trabalhar.",
     "A cabeça estava cheia; aí a música entrou: a vida ganha uma pausa.",
     "Tem dia em que o melhor cuidado é simples: o refrão faz o trabalho.",
-    "O tempo passa, mas a saudade aprende a dançar."
+    "O tempo passa, mas a saudade aprende a dançar.",
+    "A melodia começa e uma história volta à cabeça."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -150,11 +152,12 @@
     "A música certa não resolve tudo, mas muda o próximo minuto. Você também precisava ouvir isso hoje?",
     "O volume sobe e a cabeça finalmente respira. Deixa tocar até o fim e depois me diz.",
     "A gente aperta o play e o corpo entende. Que canção funciona assim para você?",
-    "Algumas músicas ainda sabem exatamente onde chegar. Diz o nome do forró que merece tocar agora."
+    "Algumas músicas ainda sabem exatamente onde chegar. Diz o nome do forró que merece tocar agora.",
+    "A letra chega antes de qualquer explicação. Que música te causa isso?"
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6a8d8048ba6d36800480ff54"
+  "last_buffer_post_id": "6a8dbe39611e4930d2d0aac4"
 }
