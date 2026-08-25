@@ -144,6 +144,16 @@ def caption_opening_signature(text: str) -> str:
     return fold_text(head).strip(" .!?")
 
 
+def caption_opening_ngrams(text: str) -> set[str]:
+    sentences = [part.strip() for part in re.split(r"(?<=[.!?])\\s+", text.strip()) if part.strip()]
+    head = sentences[0] if sentences else text.strip()
+    tokens = re.findall(r"[a-z0-9]+", fold_text(head))
+    # Trigramas bloqueiam a mesma fórmula sintática com substantivos trocados,
+    # como "Algumas vozes sabem exatamente onde..." após
+    # "Algumas músicas ainda sabem exatamente onde...".
+    return {" ".join(tokens[index:index + 3]) for index in range(len(tokens) - 2)}
+
+
 def overlay_signature(text: str) -> str:
     folded = fold_text(text)
     clauses = [
@@ -540,10 +550,14 @@ def choose_content(video_name: str, state: dict, analysis: dict) -> tuple[dict, 
     recent_caption_openings = {
         caption_opening_signature(value) for value in recent_caption_values[-60:]
     }
+    recent_caption_opening_ngrams = set().union(
+        *(caption_opening_ngrams(value) for value in recent_caption_values[-60:])
+    )
     captions = [
         value for value in captions
         if caption_signature(value) not in recent_caption_signatures
         and caption_opening_signature(value) not in recent_caption_openings
+        and caption_opening_ngrams(value).isdisjoint(recent_caption_opening_ngrams)
     ]
     post_number = int(state.get("posts_total", 0))
     overlay, overlay_index = choose_unused(
