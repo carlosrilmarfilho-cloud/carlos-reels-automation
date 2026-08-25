@@ -1,12 +1,12 @@
 {
   "passed": true,
-  "video": "6E2A8D85-6BC8-4484-8509-EA2130F9EED9.mp4",
-  "overlay": "Tem dia em que o melhor cuidado é simples: o refrão faz o trabalho.",
+  "video": "6FCAA360-CB16-45CA-8738-1AA6C7603517.mp4",
+  "overlay": "O tempo passa, mas a saudade aprende a dançar.",
   "overlay_rect_norm": {
-    "x0": 0.10902777777777778,
-    "y0": 0.22421875,
-    "x1": 0.9534722222222223,
-    "y1": 0.30234375
+    "x0": 0.08819444444444445,
+    "y0": 0.191015625,
+    "x1": 0.9555555555555556,
+    "y1": 0.281640625
   },
   "faces_checked": 8,
   "failures": []
