@@ -584,7 +584,10 @@ def main() -> None:
         raise RuntimeError("Vídeo bloqueado: texto sexual detectado na origem")
 
     total_videos = max(1, int(os.environ.get("TOTAL_VIDEOS", len(videos))))
-    current_video_index = int(state.get("video_index", 0)) % total_videos
+    selected_index = os.environ.get("SELECTED_VIDEO_INDEX")
+    current_video_index = int(
+        selected_index if selected_index is not None else state.get("video_index", 0)
+    ) % total_videos
     video = videos[0]
     source_width, source_height = probe_size(video)
     target_width, target_height = target_size(video)
