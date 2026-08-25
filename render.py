@@ -145,7 +145,7 @@ def caption_opening_signature(text: str) -> str:
 
 
 def caption_opening_ngrams(text: str) -> set[str]:
-    sentences = [part.strip() for part in re.split(r"(?<=[.!?])\\s+", text.strip()) if part.strip()]
+    sentences = [part.strip() for part in re.split(r"(?<=[.!?])\s+", text.strip()) if part.strip()]
     head = sentences[0] if sentences else text.strip()
     tokens = re.findall(r"[a-z0-9]+", fold_text(head))
     # Trigramas bloqueiam a mesma fórmula sintática com substantivos trocados,
