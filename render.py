@@ -156,6 +156,17 @@ def overlay_signature(text: str) -> str:
     return " ".join(tokens[-6:])
 
 
+def overlay_opening_signature(text: str) -> str:
+    tokens = re.findall(r"[a-z0-9]+", fold_text(text))
+    # Reduz flexões longas ao mesmo radical para bloquear aberturas disfarçadas,
+    # como "Bastam três segundos" e "Bastaram três segundos".
+    stems = [
+        token[:4] if len(token) >= 6 else token
+        for token in tokens[:3]
+    ]
+    return " ".join(stems)
+
+
 def validate_copy(overlay: str, caption: str) -> None:
     if contains_explicit_terms(f"{overlay} {caption}"):
         raise RuntimeError("Conteúdo bloqueado pelo filtro de linguagem sexual")
@@ -511,9 +522,13 @@ def choose_content(video_name: str, state: dict, analysis: dict) -> tuple[dict, 
     recent_overlay_signatures = {
         overlay_signature(value) for value in recent_overlay_values[-60:]
     }
+    recent_overlay_openings = {
+        overlay_opening_signature(value) for value in recent_overlay_values[-60:]
+    }
     overlays = [
         value for value in overlays
         if overlay_signature(value) not in recent_overlay_signatures
+        and overlay_opening_signature(value) not in recent_overlay_openings
     ]
     recent_caption_values = list(state.get("recent_captions", []))
     used_captions = set(recent_caption_values)
