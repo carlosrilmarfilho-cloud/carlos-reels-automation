@@ -23,6 +23,15 @@ if os.getenv("GITHUB_ACTIONS") == "true":
         }
         for old, new in replacements.items():
             source = source.replace(old, new)
+
+        # Quando existe texto antigo, o render tinha como primeira opção estender a nova
+        # caixa para CIMA. Invertemos as duas primeiras opções: a substituição passa a
+        # manter o topo do texto antigo e usar o espaço extra para BAIXO.
+        old_order = '''                {"x0": x0, "y0": cover_bottom - box_height, "x1": x1, "y1": cover_bottom},
+                {"x0": x0, "y0": cover_top, "x1": x1, "y1": cover_top + box_height},'''
+        new_order = '''                {"x0": x0, "y0": cover_top, "x1": x1, "y1": cover_top + box_height},
+                {"x0": x0, "y0": cover_bottom - box_height, "x1": x1, "y1": cover_bottom},'''
+        source = source.replace(old_order, new_order, 1)
         render_path.write_text(source, encoding="utf-8")
 
     # O banco específico continua mandando na frase do vídeo. Na legenda, somamos o banco
