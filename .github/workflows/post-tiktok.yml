@@ -94,6 +94,10 @@ jobs:
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         run: python analyze_video.py
 
+      - name: Aplicar voz autoral e baixar posição da frase
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        run: python apply_style_overrides.py
+
       - name: Renderizar preservando rosto e substituindo texto antigo
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:
