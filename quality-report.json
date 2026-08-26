@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4",
-  "overlay": "Se isso te fez lembrar de alguém, a responsabilidade é do compositor.",
+  "video": "66DDCAFF-E155-463B-B226-F8270C9B5E3A.mp4",
+  "overlay": "Se você ficou até aqui, provavelmente não foi por causa do algoritmo.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.17890625,
+    "y0": 0.18203125,
     "x1": 0.9555555555555556,
-    "y1": 0.2609375
+    "y1": 0.2578125
   },
-  "faces_checked": 5,
+  "faces_checked": 6,
   "failures": []
 }
