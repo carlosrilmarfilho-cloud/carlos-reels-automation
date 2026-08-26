@@ -1,14 +1,21 @@
 {
-  "video_index": 0,
-  "posts_total": 0,
+  "video_index": 1,
+  "posts_total": 1,
   "last_posted_at": null,
-  "last_video": "",
-  "last_overlay": "",
-  "last_mode": "",
-  "variant_usage": {},
-  "last_caption": "",
-  "last_hashtags": "",
-  "recent_overlays": [],
-  "recent_captions": [],
-  "blocked_videos": []
+  "last_video": "0153EEA9-9518-41CD-A36E-1EF25BE33B6A.mp4",
+  "last_overlay": "Terapia do dia: ouvir isso até a cabeça parar de discutir comigo.",
+  "last_mode": "kwai_mobile_queue",
+  "variant_usage": {
+    "0153EEA9-9518-41CD-A36E-1EF25BE33B6A.mp4": 1
+  },
+  "last_caption": "Nem tudo precisa virar reflexão profunda. Às vezes uma música boa já cumpre o expediente.",
+  "last_hashtags": "#kwai #musica #musicabrasileira #terapiamusical #musicaboa",
+  "recent_overlays": [
+    "Terapia do dia: ouvir isso até a cabeça parar de discutir comigo."
+  ],
+  "recent_captions": [
+    "Nem tudo precisa virar reflexão profunda. Às vezes uma música boa já cumpre o expediente."
+  ],
+  "blocked_videos": [],
+  "last_platform": "kwai"
 }
