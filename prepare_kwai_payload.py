@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 META = ROOT / "metadata.json"
 PAYLOAD = ROOT / "kwai-payload.json"
-STATE = ROOT / "state_kwai.json"
+PENDING_STATE = ROOT / "state_kwai_pending.json"
 KWAI_CAPTION_LIMIT = 300
 
 
@@ -67,12 +67,14 @@ def main() -> None:
     }
     PAYLOAD.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
+    # O estado só vira state_kwai.json depois que a API confirmar a publicação.
+    # Assim um erro de upload/API não consome nem pula o vídeo da fila.
     state = dict(metadata.get("next_state", {}))
     state["last_posted_at"] = None
-    state["last_mode"] = "kwai_mobile_queue"
+    state["last_mode"] = "kwai_api_pending"
     state["last_platform"] = "kwai"
     state["last_hashtags"] = hashtags
-    STATE.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    PENDING_STATE.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     print(f"Pacote Kwai preparado: {payload['video']} | legenda={len(caption)} chars")
 
