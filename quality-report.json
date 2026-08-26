@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4",
-  "overlay": "O trecho certo começa exatamente quando você ia passar.",
+  "video": "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4",
+  "overlay": "A voz entrou e minha atenção desistiu de ir embora.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.090234375,
+    "y0": 0.174609375,
     "x1": 0.9555555555555556,
-    "y1": 0.169921875
+    "y1": 0.265234375
   },
-  "faces_checked": 5,
+  "faces_checked": 4,
   "failures": []
 }
