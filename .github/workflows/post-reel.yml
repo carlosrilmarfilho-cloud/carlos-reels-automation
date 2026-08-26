@@ -103,6 +103,10 @@ jobs:
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         run: python apply_style_overrides.py
 
+      - name: Procurar posição segura adaptativamente
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        run: python adaptive_placement.py
+
       - name: Renderizar em alta qualidade, variar texto, legenda e hashtags
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:
