@@ -1,0 +1,160 @@
+name: Preparar Kwai constante
+
+on:
+  schedule:
+    # Mesmo ritmo do TikTok: 12 pacotes/dia, 10h–21h no horário de Brasília.
+    # Minuto 52 evita encostar nas execuções do Instagram (07) e TikTok (37).
+    - cron: '52 13-23 * * *'
+    - cron: '52 0 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - '.trigger-kwai'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kwai-mobile-bridge-constant
+  cancel-in-progress: true
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      GDRIVE_FOLDER_URL: https://drive.google.com/drive/folders/1sVLfUVK2FgssbqEEQeUrrUT5z9WluAin
+      # Só muda para false quando o celular estiver pronto para consumir e publicar a fila.
+      KWAI_AUTOMATION_PAUSED: 'true'
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verificar ativação
+        id: gate
+        shell: bash
+        run: |
+          if [ "$KWAI_AUTOMATION_PAUSED" = "true" ] && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Kwai preparado, mas a ponte móvel ainda está pausada."
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Python
+        if: steps.gate.outputs.ready == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependências de edição
+        if: steps.gate.outputs.ready == 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-dejavu-core jq tesseract-ocr
+          sudo apt-get install -y fonts-montserrat || true
+          sudo apt-get install -y tesseract-ocr-por tesseract-ocr-eng || true
+          pip install -r requirements.txt
+
+      - name: Preparar estado exclusivo do Kwai
+        if: steps.gate.outputs.ready == 'true'
+        run: cp state_kwai.json state.json
+
+      - name: Escolher e baixar um vídeo sem repetir
+        id: videos
+        if: steps.gate.outputs.ready == 'true'
+        shell: bash
+        run: |
+          set -e
+          rm -rf videos && mkdir -p videos
+          gdown "$GDRIVE_FOLDER_URL" --folder --json > /tmp/all-drive-files.json
+          python select_video.py /tmp/all-drive-files.json > /tmp/selected.json
+          count=$(jq -r '.count' /tmp/selected.json)
+          echo "Vídeos únicos disponíveis: $count"
+          if [ "$count" -eq 0 ]; then
+            echo "has_videos=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          url=$(jq -r '.url' /tmp/selected.json)
+          filename=$(jq -r '.name' /tmp/selected.json)
+          idx=$(jq -r '.index' /tmp/selected.json)
+          echo "Selecionado [$((idx+1))/$count]: $filename"
+          gdown "$url" -O "videos/$filename"
+          echo "has_videos=true" >> "$GITHUB_OUTPUT"
+          echo "total_videos=$count" >> "$GITHUB_OUTPUT"
+
+      - name: Ler texto, tema e rosto do vídeo
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        run: python analyze_video.py
+
+      - name: Aplicar voz autoral e posição segura da frase
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        run: python apply_style_overrides.py
+
+      - name: Renderizar preservando rosto e substituindo texto antigo
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        env:
+          TOTAL_VIDEOS: ${{ steps.videos.outputs.total_videos }}
+        run: python render.py
+
+      - name: Revisar rosto, enquadramento, duplicação e linguagem
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        run: python quality_gate.py
+
+      - name: Adaptar legenda e hashtags para Kwai
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        run: python prepare_kwai_payload.py
+
+      - name: Hospedar pacote para a ponte móvel do Kwai
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          rm -rf /tmp/kwai-media-host && mkdir -p /tmp/kwai-media-host
+          cp output/reel.mp4 /tmp/kwai-media-host/latest.mp4
+          cp kwai-payload.json /tmp/kwai-media-host/latest.json
+          printf '%s\n' "$GITHUB_RUN_ID" > /tmp/kwai-media-host/run-id.txt
+          cd /tmp/kwai-media-host
+          git init
+          git config user.name "Carlos Kwai Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add latest.mp4 latest.json run-id.txt
+          git commit -m "latest kwai package"
+          git branch -M media-host-kwai
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin media-host-kwai
+
+      - name: Salvar estado e diagnóstico do Kwai
+        if: always() && steps.gate.outputs.ready == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -e
+          tmpdir=$(mktemp -d)
+          [ -f state_kwai.json ] && cp state_kwai.json "$tmpdir/state_kwai.json" || true
+          [ -f kwai-payload.json ] && cp kwai-payload.json "$tmpdir/kwai-payload.json" || true
+          printf '{"run_id":"%s","finished_at":"%s","has_videos":"%s"}\n' \
+            "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.videos.outputs.has_videos }}" \
+            > "$tmpdir/kwai-run-status.json"
+
+          git fetch origin "$GITHUB_REF_NAME"
+          git reset --hard "origin/$GITHUB_REF_NAME"
+
+          [ -f "$tmpdir/state_kwai.json" ] && cp "$tmpdir/state_kwai.json" state_kwai.json || true
+          [ -f "$tmpdir/kwai-payload.json" ] && cp "$tmpdir/kwai-payload.json" kwai-payload.json || true
+          cp "$tmpdir/kwai-run-status.json" kwai-run-status.json
+
+          git config user.name "Carlos Kwai Automation"
+          git config user.email "actions@users.noreply.github.com"
+          [ -f state_kwai.json ] && git add state_kwai.json || true
+          [ -f kwai-payload.json ] && git add kwai-payload.json || true
+          git add kwai-run-status.json
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Finalizar preparação Kwai $GITHUB_RUN_ID [skip ci]"
+            git push origin HEAD:"$GITHUB_REF_NAME"
+          fi
