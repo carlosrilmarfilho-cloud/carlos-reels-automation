@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "video": "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4",
+  "overlay": "Tem dia que a melhor decisão é só deixar a música terminar.",
+  "overlay_rect_norm": {
+    "x0": 0.044444444444444446,
+    "y0": 0.174609375,
+    "x1": 0.9555555555555556,
+    "y1": 0.265234375
+  },
+  "faces_checked": 1,
+  "failures": []
+}
