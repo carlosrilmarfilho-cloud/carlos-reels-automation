@@ -85,6 +85,14 @@ def load_token_state(app_secret: str) -> dict | None:
         raise KwaiApiError("Não foi possível abrir o cofre de token do Kwai.") from exc
 
 
+def require_publish_scope(bundle: dict) -> None:
+    scopes = bundle.get("scopes") or []
+    if "user_video_publish" not in scopes:
+        raise KwaiApiError(
+            "O token foi emitido sem a permissão user_video_publish. A conta/app precisa autorizar publicação de vídeo."
+        )
+
+
 def refresh_tokens(app_id: str, app_secret: str, refresh_token: str) -> dict:
     response = requests.get(
         f"{OPEN_BASE}/oauth2/refresh_token",
@@ -98,12 +106,8 @@ def refresh_tokens(app_id: str, app_secret: str, refresh_token: str) -> dict:
     )
     data = read_json_response(response, "refresh token")
     scopes = data.get("scopes") or []
-    if "user_video_publish" not in scopes:
-        raise KwaiApiError(
-            "O token foi emitido sem a permissão user_video_publish. A conta/app precisa autorizar publicação de vídeo."
-        )
     now = int(time.time())
-    return {
+    bundle = {
         "access_token": data["access_token"],
         "refresh_token": data["refresh_token"],
         "access_expires_at": now + int(data.get("expires_in", 172800)),
@@ -111,6 +115,8 @@ def refresh_tokens(app_id: str, app_secret: str, refresh_token: str) -> dict:
         "scopes": scopes,
         "open_id": data.get("open_id", ""),
     }
+    require_publish_scope(bundle)
+    return bundle
 
 
 def get_access_bundle(app_id: str, app_secret: str) -> dict:
@@ -121,6 +127,7 @@ def get_access_bundle(app_id: str, app_secret: str) -> dict:
         save_token_state(bundle, app_secret)
         return bundle
 
+    require_publish_scope(bundle)
     if int(bundle.get("access_expires_at", 0)) <= int(time.time()) + REFRESH_MARGIN_SECONDS:
         bundle = refresh_tokens(app_id, app_secret, bundle["refresh_token"])
         save_token_state(bundle, app_secret)
@@ -215,14 +222,18 @@ def publish_video(app_id: str, access_token: str, upload_token: str, caption: st
 
 
 def commit_success_state(video_info: dict) -> None:
-    if PENDING_STATE.exists():
+    pending_already_advanced = PENDING_STATE.exists()
+    if pending_already_advanced:
         state = json.loads(PENDING_STATE.read_text(encoding="utf-8"))
     elif LIVE_STATE.exists():
         state = json.loads(LIVE_STATE.read_text(encoding="utf-8"))
     else:
         state = {}
 
-    state["posts_total"] = int(state.get("posts_total", 0)) + 1
+    # metadata.next_state já incrementa posts_total e video_index. Quando existe
+    # estado pendente, apenas confirmamos a publicação; não incrementamos de novo.
+    if not pending_already_advanced:
+        state["posts_total"] = int(state.get("posts_total", 0)) + 1
     state["last_posted_at"] = now_iso()
     state["last_mode"] = "kwai_server_api"
     state["last_platform"] = "kwai"
