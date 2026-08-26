@@ -1,9 +1,9 @@
 {
-  "video_index": 20,
-  "posts_total": 69,
-  "last_posted_at": "2026-08-26T11:07:45.020757+00:00",
-  "last_video": "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4",
-  "last_overlay": "A voz entrou e minha atenção desistiu de ir embora.",
+  "video_index": 21,
+  "posts_total": 70,
+  "last_posted_at": "2026-08-26T14:16:15.471519+00:00",
+  "last_video": "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4",
+  "last_overlay": "A música é curta. O tanto de coisa que ela puxa da cabeça não.",
   "last_mode": "buffer_auto",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -35,9 +35,10 @@
     "3B39DB0D-7FDF-452E-A0DF-DA9DE006F164.mp4": 1,
     "41EF1F58-C757-4821-8692-EE6110066BFA.mp4": 1,
     "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4": 1,
-    "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4": 1
+    "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4": 1,
+    "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4": 1
   },
-  "last_caption": "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo.",
+  "last_caption": "Tem voz que impressiona pela técnica. Tem voz que prende porque parece verdade. Eu fico com a segunda.",
   "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
@@ -104,7 +105,8 @@
     "O volume sobe e a vontade é ouvir de novo.",
     "A letra continua e a emoção encontra voz.",
     "A cabeça tava em outro lugar até essa voz entrar.",
-    "A voz entrou e minha atenção desistiu de ir embora."
+    "A voz entrou e minha atenção desistiu de ir embora.",
+    "A música é curta. O tanto de coisa que ela puxa da cabeça não."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -171,11 +173,12 @@
     "Quando a música acerta, não existe pressa. Comenta o que esse refrão te lembrou.",
     "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?",
     "Se ficou até o final, escolhe a próxima terapia musical nos comentários.",
-    "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo."
+    "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo.",
+    "Tem voz que impressiona pela técnica. Tem voz que prende porque parece verdade. Eu fico com a segunda."
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6a8ec8f66f61821678e1be52"
+  "last_buffer_post_id": "6a8ef5255a6c4e84e2537451"
 }

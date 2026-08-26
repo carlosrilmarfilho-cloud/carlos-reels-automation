@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4",
-  "overlay": "A voz entrou e minha atenção desistiu de ir embora.",
+  "video": "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4",
+  "overlay": "A música é curta. O tanto de coisa que ela puxa da cabeça não.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.733984375,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.816015625
   },
-  "faces_checked": 3,
+  "faces_checked": 5,
   "failures": []
 }
