@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4",
-  "overlay": "A voz entrou e minha atenção desistiu de ir embora.",
+  "video": "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4",
+  "overlay": "Terapia do dia: essa música e cinco minutos sem explicar nada.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.178125,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.26171875
   },
-  "faces_checked": 4,
+  "faces_checked": 11,
   "failures": []
 }
