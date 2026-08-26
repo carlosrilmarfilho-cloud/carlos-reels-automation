@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "6AA0991D-5050-4107-A363-6D0C646C5741.mp4",
-  "overlay": "Eu gosto de música que me faz esquecer por que peguei o celular.",
+  "video": "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4",
+  "overlay": "Essa foi daquelas que transformam rolagem em pausa.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.17890625,
+    "y0": 0.732421875,
     "x1": 0.9555555555555556,
-    "y1": 0.2609375
+    "y1": 0.817578125
   },
-  "faces_checked": 7,
+  "faces_checked": 8,
   "failures": []
 }
