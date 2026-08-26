@@ -1,5 +1,8 @@
 from __future__ import annotations
-import json, sys
+
+import json
+import os
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -30,6 +33,20 @@ if not ordered_names:
 
 idx = int(STATE.get("video_index", 0)) % len(ordered_names)
 blocked = set(STATE.get("blocked_videos", []))
+
+# Nunca repete imediatamente o último vídeo da própria plataforma.
+last_video = str(STATE.get("last_video", "")).strip()
+if last_video:
+    blocked.add(last_video)
+
+# Os workflows são escalonados dentro de cada hora. Cada um passa aqui os
+# últimos vídeos confirmados nas outras plataformas, garantindo que Instagram,
+# TikTok e Kwai não publiquem o mesmo arquivo no mesmo ciclo horário.
+for value in os.environ.get("CROSS_PLATFORM_EXCLUDES", "").split("|"):
+    value = value.strip()
+    if value:
+        blocked.add(value)
+
 for step in range(len(ordered_names)):
     candidate_idx = (idx + step) % len(ordered_names)
     candidate_name = ordered_names[candidate_idx]
@@ -40,6 +57,7 @@ for step in range(len(ordered_names)):
 else:
     print(json.dumps({"count": 0, "blocked_count": len(blocked)}))
     raise SystemExit(0)
+
 selected = by_name[name]
 print(json.dumps({
     "count": len(ordered_names),
@@ -47,4 +65,5 @@ print(json.dumps({
     "name": name,
     "url": selected["url"],
     "path": selected["path"],
+    "cross_platform_excluded": sorted(blocked),
 }, ensure_ascii=False))
