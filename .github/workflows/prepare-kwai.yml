@@ -1,8 +1,8 @@
-name: Preparar Kwai constante
+name: Kwai server-side
 
 on:
   schedule:
-    # Mesmo ritmo do TikTok: 12 pacotes/dia, 10h–21h no horário de Brasília.
+    # Mesmo ritmo do TikTok: 12 publicações/dia, 10h–21h no horário de Brasília.
     # Minuto 52 evita encostar nas execuções do Instagram (07) e TikTok (37).
     - cron: '52 13-23 * * *'
     - cron: '52 0 * * *'
@@ -15,17 +15,21 @@ permissions:
   contents: write
 
 concurrency:
-  group: kwai-mobile-bridge-constant
+  group: kwai-server-api-constant
   cancel-in-progress: true
 
 jobs:
-  prepare:
+  publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 30
     env:
       GDRIVE_FOLDER_URL: https://drive.google.com/drive/folders/1sVLfUVK2FgssbqEEQeUrrUT5z9WluAin
-      # Só muda para false quando o celular estiver pronto para consumir e publicar a fila.
+      # Mantemos pausado até a conta internacional confirmar que recebeu user_video_publish.
       KWAI_AUTOMATION_PAUSED: 'true'
+      KWAI_API_ENABLED: 'false'
+      KWAI_APP_ID: ${{ secrets.KWAI_APP_ID }}
+      KWAI_APP_SECRET: ${{ secrets.KWAI_APP_SECRET }}
+      KWAI_INITIAL_REFRESH_TOKEN: ${{ secrets.KWAI_INITIAL_REFRESH_TOKEN }}
 
     steps:
       - name: Baixar repositório
@@ -43,7 +47,7 @@ jobs:
           fi
           if [ "$KWAI_AUTOMATION_PAUSED" = "true" ] && [ "${{ github.event_name }}" != "workflow_dispatch" ] && [ "$run_once" != "true" ]; then
             echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "Kwai preparado, mas a ponte móvel ainda está pausada."
+            echo "Kwai server-side configurado, porém pausado até a autorização oficial da conta."
           else
             echo "ready=true" >> "$GITHUB_OUTPUT"
           fi
@@ -54,7 +58,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Instalar dependências de edição
+      - name: Instalar dependências de edição e API
         if: steps.gate.outputs.ready == 'true'
         run: |
           sudo apt-get update
@@ -112,26 +116,33 @@ jobs:
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         run: python prepare_kwai_payload.py
 
-      - name: Hospedar pacote para a ponte móvel do Kwai
+      - name: Conferir credenciais da API
+        id: api
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
         run: |
-          rm -rf /tmp/kwai-media-host && mkdir -p /tmp/kwai-media-host
-          cp output/reel.mp4 /tmp/kwai-media-host/latest.mp4
-          cp kwai-payload.json /tmp/kwai-media-host/latest.json
-          printf '%s\n' "$GITHUB_RUN_ID" > /tmp/kwai-media-host/run-id.txt
-          cd /tmp/kwai-media-host
-          git init
-          git config user.name "Carlos Kwai Automation"
-          git config user.email "actions@users.noreply.github.com"
-          git add latest.mp4 latest.json run-id.txt
-          git commit -m "latest kwai package"
-          git branch -M media-host-kwai
-          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          git push --force origin media-host-kwai
+          if [ "$KWAI_API_ENABLED" != "true" ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "API Kwai ainda não habilitada. Pacote foi validado sem consumir a fila."
+            exit 0
+          fi
+          if [ -z "$KWAI_APP_ID" ] || [ -z "$KWAI_APP_SECRET" ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Credenciais KWAI_APP_ID/KWAI_APP_SECRET ausentes."
+            exit 1
+          fi
+          if [ ! -f kwai-token-state.enc ] && [ -z "$KWAI_INITIAL_REFRESH_TOKEN" ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Token inicial do Kwai ausente."
+            exit 1
+          fi
+          echo "ready=true" >> "$GITHUB_OUTPUT"
 
-      - name: Salvar estado e diagnóstico do Kwai
+      - name: Publicar no Kwai pela API oficial
+        if: steps.api.outputs.ready == 'true'
+        run: python publish_kwai_api.py
+
+      - name: Salvar estado, token criptografado e diagnóstico
         if: always() && steps.gate.outputs.ready == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -140,25 +151,33 @@ jobs:
           set -e
           tmpdir=$(mktemp -d)
           [ -f state_kwai.json ] && cp state_kwai.json "$tmpdir/state_kwai.json" || true
+          [ -f kwai-token-state.enc ] && cp kwai-token-state.enc "$tmpdir/kwai-token-state.enc" || true
           [ -f kwai-payload.json ] && cp kwai-payload.json "$tmpdir/kwai-payload.json" || true
-          printf '{"run_id":"%s","finished_at":"%s","has_videos":"%s"}\n' \
-            "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.videos.outputs.has_videos }}" \
+          [ -f kwai-publish-result.json ] && cp kwai-publish-result.json "$tmpdir/kwai-publish-result.json" || true
+          printf '{"run_id":"%s","finished_at":"%s","has_videos":"%s","api_ready":"%s"}\n' \
+            "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.videos.outputs.has_videos }}" "${{ steps.api.outputs.ready }}" \
             > "$tmpdir/kwai-run-status.json"
 
           git fetch origin "$GITHUB_REF_NAME"
           git reset --hard "origin/$GITHUB_REF_NAME"
 
           [ -f "$tmpdir/state_kwai.json" ] && cp "$tmpdir/state_kwai.json" state_kwai.json || true
+          [ -f "$tmpdir/kwai-token-state.enc" ] && cp "$tmpdir/kwai-token-state.enc" kwai-token-state.enc || true
           [ -f "$tmpdir/kwai-payload.json" ] && cp "$tmpdir/kwai-payload.json" kwai-payload.json || true
+          [ -f "$tmpdir/kwai-publish-result.json" ] && cp "$tmpdir/kwai-publish-result.json" kwai-publish-result.json || true
           cp "$tmpdir/kwai-run-status.json" kwai-run-status.json
+
+          [ -f state_kwai_pending.json ] && rm -f state_kwai_pending.json || true
 
           git config user.name "Carlos Kwai Automation"
           git config user.email "actions@users.noreply.github.com"
           [ -f state_kwai.json ] && git add state_kwai.json || true
+          [ -f kwai-token-state.enc ] && git add kwai-token-state.enc || true
           [ -f kwai-payload.json ] && git add kwai-payload.json || true
+          [ -f kwai-publish-result.json ] && git add kwai-publish-result.json || true
           git add kwai-run-status.json
 
           if ! git diff --cached --quiet; then
-            git commit -m "Finalizar preparação Kwai $GITHUB_RUN_ID [skip ci]"
+            git commit -m "Finalizar Kwai server-side $GITHUB_RUN_ID [skip ci]"
             git push origin HEAD:"$GITHUB_REF_NAME"
           fi
