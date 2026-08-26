@@ -22,6 +22,7 @@ jobs:
     env:
       GDRIVE_FOLDER_URL: https://drive.google.com/drive/folders/1sVLfUVK2FgssbqEEQeUrrUT5z9WluAin
       AUTOMATION_PAUSED: 'false'
+      PLATFORM: instagram
     steps:
       - name: Baixar repositório
         uses: actions/checkout@v4
@@ -71,7 +72,7 @@ jobs:
           sudo apt-get install -y tesseract-ocr-por tesseract-ocr-eng || true
           pip install -r requirements.txt
 
-      - name: Escolher e baixar um vídeo sem repetir
+      - name: Escolher e baixar um vídeo diferente das outras plataformas
         id: videos
         if: steps.gate.outputs.ready == 'true'
         shell: bash
@@ -79,7 +80,23 @@ jobs:
           set -e
           rm -rf videos && mkdir -p videos
           gdown "$GDRIVE_FOLDER_URL" --folder --json > /tmp/all-drive-files.json
-          python select_video.py /tmp/all-drive-files.json > /tmp/selected.json
+          cross=$(python - <<'PY'
+          import json
+          from pathlib import Path
+          names = []
+          for filename in ("state_tiktok.json", "state_kwai.json"):
+              path = Path(filename)
+              if path.exists():
+                  try:
+                      value = str(json.loads(path.read_text(encoding="utf-8")).get("last_video", "")).strip()
+                      if value:
+                          names.append(value)
+                  except Exception:
+                      pass
+          print("|".join(dict.fromkeys(names)))
+          PY
+          )
+          CROSS_PLATFORM_EXCLUDES="$cross" python select_video.py /tmp/all-drive-files.json > /tmp/selected.json
           count=$(jq -r '.count' /tmp/selected.json)
           echo "Vídeos únicos disponíveis: $count"
           if [ "$count" -eq 0 ]; then
