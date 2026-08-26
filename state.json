@@ -1,5 +1,5 @@
 {
-  "video_index": 20,
+  "video_index": 21,
   "posts_total": 69,
   "last_posted_at": "2026-08-26T03:41:08.992433+00:00",
   "last_video": "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4",
@@ -174,6 +174,7 @@
     "Se você parou a rolagem por causa da voz, me diz qual detalhe te fez ficar."
   ],
   "blocked_videos": [
-    "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4"
+    "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
+    "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4"
   ]
 }
