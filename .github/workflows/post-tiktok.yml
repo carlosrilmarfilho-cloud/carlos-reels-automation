@@ -1,11 +1,9 @@
-name: Postar TikTok constante
+name: Postar TikTok a cada hora
 
 on:
   schedule:
-    # 12 posts/dia: 10h–21h no horário de Brasília (13h–00h UTC).
-    # Roda no minuto 37 para não disputar commits com o Instagram, que roda no minuto 7.
-    - cron: '37 13-23 * * *'
-    - cron: '37 0 * * *'
+    # Uma publicação por hora. Minuto 37 evita disputar execução com Instagram (:07) e Kwai (:52).
+    - cron: '37 * * * *'
   workflow_dispatch:
   push:
     paths:
@@ -15,7 +13,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: tiktok-buffer-constant
+  group: tiktok-buffer-hourly
   cancel-in-progress: true
 
 jobs:
@@ -25,6 +23,7 @@ jobs:
     env:
       GDRIVE_FOLDER_URL: https://drive.google.com/drive/folders/1sVLfUVK2FgssbqEEQeUrrUT5z9WluAin
       TIKTOK_AUTOMATION_PAUSED: 'false'
+      PLATFORM: tiktok
 
     steps:
       - name: Baixar repositório
@@ -63,11 +62,30 @@ jobs:
           sudo apt-get install -y tesseract-ocr-por tesseract-ocr-eng || true
           pip install -r requirements.txt
 
-      - name: Preparar estado exclusivo do TikTok
+      - name: Preparar estado exclusivo e exclusões do TikTok
         if: steps.gate.outputs.ready == 'true'
-        run: cp state_tiktok.json state.json
+        shell: bash
+        run: |
+          cross=$(python - <<'PY'
+          import json
+          from pathlib import Path
+          names = []
+          for filename in ("state.json", "state_kwai.json"):
+              path = Path(filename)
+              if path.exists():
+                  try:
+                      value = str(json.loads(path.read_text(encoding="utf-8")).get("last_video", "")).strip()
+                      if value:
+                          names.append(value)
+                  except Exception:
+                      pass
+          print("|".join(dict.fromkeys(names)))
+          PY
+          )
+          echo "CROSS_PLATFORM_EXCLUDES=$cross" >> "$GITHUB_ENV"
+          cp state_tiktok.json state.json
 
-      - name: Escolher e baixar um vídeo sem repetir
+      - name: Escolher e baixar um vídeo diferente das outras plataformas
         id: videos
         if: steps.gate.outputs.ready == 'true'
         shell: bash
@@ -89,6 +107,7 @@ jobs:
           gdown "$url" -O "videos/$filename"
           echo "has_videos=true" >> "$GITHUB_OUTPUT"
           echo "total_videos=$count" >> "$GITHUB_OUTPUT"
+          echo "selected_video_index=$idx" >> "$GITHUB_OUTPUT"
 
       - name: Ler texto, tema e rosto do vídeo
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
@@ -98,10 +117,15 @@ jobs:
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         run: python apply_style_overrides.py
 
+      - name: Procurar posição segura adaptativamente
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        run: python adaptive_placement.py
+
       - name: Renderizar preservando rosto e substituindo texto antigo
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:
           TOTAL_VIDEOS: ${{ steps.videos.outputs.total_videos }}
+          SELECTED_VIDEO_INDEX: ${{ steps.videos.outputs.selected_video_index }}
         run: python render.py
 
       - name: Revisar rosto, enquadramento, duplicação e linguagem
@@ -152,23 +176,24 @@ jobs:
 
           [ -f tiktok-diagnostic.json ] && cp tiktok-diagnostic.json "$tmpdir/tiktok-diagnostic.json" || true
           [ -f state_tiktok.json ] && cp state_tiktok.json "$tmpdir/state_tiktok.json" || true
+          [ -f quality-report.json ] && cp quality-report.json "$tmpdir/tiktok-quality-report.json" || true
           printf '{"run_id":"%s","finished_at":"%s","publish_outcome":"%s"}\n' \
             "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.publish.outcome }}" \
             > "$tmpdir/tiktok-run-status.json"
 
-          # Sincroniza primeiro com o remoto e só depois reaplica os arquivos do TikTok.
-          # Isso evita conflitos quando duas execuções se encostam.
           git fetch origin "$GITHUB_REF_NAME"
           git reset --hard "origin/$GITHUB_REF_NAME"
 
           [ -f "$tmpdir/tiktok-diagnostic.json" ] && cp "$tmpdir/tiktok-diagnostic.json" tiktok-diagnostic.json || true
           [ -f "$tmpdir/state_tiktok.json" ] && cp "$tmpdir/state_tiktok.json" state_tiktok.json || true
+          [ -f "$tmpdir/tiktok-quality-report.json" ] && cp "$tmpdir/tiktok-quality-report.json" tiktok-quality-report.json || true
           cp "$tmpdir/tiktok-run-status.json" tiktok-run-status.json
 
           git config user.name "Carlos TikTok Automation"
           git config user.email "actions@users.noreply.github.com"
           [ -f tiktok-diagnostic.json ] && git add tiktok-diagnostic.json || true
           [ -f state_tiktok.json ] && git add state_tiktok.json || true
+          [ -f tiktok-quality-report.json ] && git add tiktok-quality-report.json || true
           git add tiktok-run-status.json
 
           if ! git diff --cached --quiet; then
