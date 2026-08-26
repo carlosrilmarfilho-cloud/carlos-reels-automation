@@ -2,7 +2,9 @@ name: Postar Reel a cada hora
 
 on:
   schedule:
-    - cron: '7 * * * *'
+    # Três oportunidades por hora. O guard abaixo garante no máximo uma publicação
+    # por ciclo e permite recuperar automaticamente se o GitHub perder um cron.
+    - cron: '7,27,47 * * * *'
   workflow_dispatch:
   push:
     paths:
@@ -13,7 +15,8 @@ permissions:
 
 concurrency:
   group: instagram-reels-hourly
-  cancel-in-progress: true
+  # Enfileira um fallback em vez de cancelar uma publicação que já esteja rodando.
+  cancel-in-progress: false
 
 jobs:
   post:
@@ -29,7 +32,56 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Pré-validar pausa, credenciais e cadência
+        id: cadence
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          EVENT_NAME: ${{ github.event_name }}
+        shell: bash
+        run: |
+          if [ "$AUTOMATION_PAUSED" = "true" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "Automação pausada intencionalmente."
+            exit 0
+          fi
+
+          if [ -z "$INSTAGRAM_ACCESS_TOKEN" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "Token do Instagram ausente."
+            exit 0
+          fi
+
+          if [ "$EVENT_NAME" = "schedule" ]; then
+            recent=$(python3 - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          path = Path("state.json")
+          recent = False
+          if path.exists():
+              try:
+                  value = json.loads(path.read_text(encoding="utf-8")).get("last_posted_at")
+                  if value:
+                      last = datetime.fromisoformat(str(value).replace("Z", "+00:00")).astimezone(timezone.utc)
+                      age = (datetime.now(timezone.utc) - last).total_seconds()
+                      recent = 0 <= age < 45 * 60
+              except Exception:
+                  recent = False
+          print("true" if recent else "false")
+          PY
+            )
+            if [ "$recent" = "true" ]; then
+              echo "run=false" >> "$GITHUB_OUTPUT"
+              echo "Fallback ignorado: já houve publicação nos últimos 45 minutos."
+              exit 0
+            fi
+          fi
+
+          echo "run=true" >> "$GITHUB_OUTPUT"
+
       - name: Registrar execução
+        if: steps.cadence.outputs.run == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -43,6 +95,7 @@ jobs:
 
       - name: Verificar ativação
         id: gate
+        if: steps.cadence.outputs.run == 'true'
         env:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
         shell: bash
