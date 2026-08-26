@@ -1,11 +1,9 @@
-name: Kwai server-side
+name: Kwai a cada hora
 
 on:
   schedule:
-    # Mesmo ritmo do TikTok: 12 publicações/dia, 10h–21h no horário de Brasília.
-    # Minuto 52 evita encostar nas execuções do Instagram (07) e TikTok (37).
-    - cron: '52 13-23 * * *'
-    - cron: '52 0 * * *'
+    # Uma publicação por hora. Minuto 52 evita encostar nas execuções do Instagram (:07) e TikTok (:37).
+    - cron: '52 * * * *'
   workflow_dispatch:
   push:
     paths:
@@ -15,7 +13,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: kwai-server-api-constant
+  group: kwai-server-api-hourly
   cancel-in-progress: true
 
 jobs:
@@ -24,9 +22,11 @@ jobs:
     timeout-minutes: 30
     env:
       GDRIVE_FOLDER_URL: https://drive.google.com/drive/folders/1sVLfUVK2FgssbqEEQeUrrUT5z9WluAin
-      # Mantemos pausado até a conta internacional confirmar que recebeu user_video_publish.
-      KWAI_AUTOMATION_PAUSED: 'true'
-      KWAI_API_ENABLED: 'false'
+      # Carlos autorizou explicitamente a reativação em 2026-08-26.
+      KWAI_AUTOMATION_PAUSED: 'false'
+      # A publicação só ocorre se as credenciais oficiais e user_video_publish forem válidas.
+      KWAI_API_ENABLED: 'true'
+      PLATFORM: kwai
       KWAI_APP_ID: ${{ secrets.KWAI_APP_ID }}
       KWAI_APP_SECRET: ${{ secrets.KWAI_APP_SECRET }}
       KWAI_INITIAL_REFRESH_TOKEN: ${{ secrets.KWAI_INITIAL_REFRESH_TOKEN }}
@@ -41,13 +41,9 @@ jobs:
         id: gate
         shell: bash
         run: |
-          run_once=false
-          if grep -q '^RUN_ONCE=true$' .trigger-kwai 2>/dev/null; then
-            run_once=true
-          fi
-          if [ "$KWAI_AUTOMATION_PAUSED" = "true" ] && [ "${{ github.event_name }}" != "workflow_dispatch" ] && [ "$run_once" != "true" ]; then
+          if [ "$KWAI_AUTOMATION_PAUSED" = "true" ]; then
             echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "Kwai server-side configurado, porém pausado até a autorização oficial da conta."
+            echo "Kwai pausado."
           else
             echo "ready=true" >> "$GITHUB_OUTPUT"
           fi
@@ -67,11 +63,30 @@ jobs:
           sudo apt-get install -y tesseract-ocr-por tesseract-ocr-eng || true
           pip install -r requirements.txt
 
-      - name: Preparar estado exclusivo do Kwai
+      - name: Preparar estado exclusivo e exclusões do Kwai
         if: steps.gate.outputs.ready == 'true'
-        run: cp state_kwai.json state.json
+        shell: bash
+        run: |
+          cross=$(python - <<'PY'
+          import json
+          from pathlib import Path
+          names = []
+          for filename in ("state.json", "state_tiktok.json"):
+              path = Path(filename)
+              if path.exists():
+                  try:
+                      value = str(json.loads(path.read_text(encoding="utf-8")).get("last_video", "")).strip()
+                      if value:
+                          names.append(value)
+                  except Exception:
+                      pass
+          print("|".join(dict.fromkeys(names)))
+          PY
+          )
+          echo "CROSS_PLATFORM_EXCLUDES=$cross" >> "$GITHUB_ENV"
+          cp state_kwai.json state.json
 
-      - name: Escolher e baixar um vídeo sem repetir
+      - name: Escolher e baixar um vídeo diferente das outras plataformas
         id: videos
         if: steps.gate.outputs.ready == 'true'
         shell: bash
@@ -93,6 +108,7 @@ jobs:
           gdown "$url" -O "videos/$filename"
           echo "has_videos=true" >> "$GITHUB_OUTPUT"
           echo "total_videos=$count" >> "$GITHUB_OUTPUT"
+          echo "selected_video_index=$idx" >> "$GITHUB_OUTPUT"
 
       - name: Ler texto, tema e rosto do vídeo
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
@@ -102,10 +118,15 @@ jobs:
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         run: python apply_style_overrides.py
 
+      - name: Procurar posição segura adaptativamente
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        run: python adaptive_placement.py
+
       - name: Renderizar preservando rosto e substituindo texto antigo
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:
           TOTAL_VIDEOS: ${{ steps.videos.outputs.total_videos }}
+          SELECTED_VIDEO_INDEX: ${{ steps.videos.outputs.selected_video_index }}
         run: python render.py
 
       - name: Revisar rosto, enquadramento, duplicação e linguagem
@@ -123,7 +144,7 @@ jobs:
         run: |
           if [ "$KWAI_API_ENABLED" != "true" ]; then
             echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "API Kwai ainda não habilitada. Pacote foi validado sem consumir a fila."
+            echo "API Kwai desabilitada; fila não será consumida."
             exit 0
           fi
           if [ -z "$KWAI_APP_ID" ] || [ -z "$KWAI_APP_SECRET" ]; then
@@ -139,10 +160,11 @@ jobs:
           echo "ready=true" >> "$GITHUB_OUTPUT"
 
       - name: Publicar no Kwai pela API oficial
+        id: publish
         if: steps.api.outputs.ready == 'true'
         run: python publish_kwai_api.py
 
-      - name: Salvar estado, token criptografado e diagnóstico
+      - name: Salvar estado, qualidade, token criptografado e diagnóstico
         if: always() && steps.gate.outputs.ready == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -154,8 +176,9 @@ jobs:
           [ -f kwai-token-state.enc ] && cp kwai-token-state.enc "$tmpdir/kwai-token-state.enc" || true
           [ -f kwai-payload.json ] && cp kwai-payload.json "$tmpdir/kwai-payload.json" || true
           [ -f kwai-publish-result.json ] && cp kwai-publish-result.json "$tmpdir/kwai-publish-result.json" || true
-          printf '{"run_id":"%s","finished_at":"%s","has_videos":"%s","api_ready":"%s"}\n' \
-            "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.videos.outputs.has_videos }}" "${{ steps.api.outputs.ready }}" \
+          [ -f quality-report.json ] && cp quality-report.json "$tmpdir/kwai-quality-report.json" || true
+          printf '{"run_id":"%s","finished_at":"%s","has_videos":"%s","api_ready":"%s","publish_outcome":"%s"}\n' \
+            "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.videos.outputs.has_videos }}" "${{ steps.api.outputs.ready }}" "${{ steps.publish.outcome }}" \
             > "$tmpdir/kwai-run-status.json"
 
           git fetch origin "$GITHUB_REF_NAME"
@@ -165,6 +188,7 @@ jobs:
           [ -f "$tmpdir/kwai-token-state.enc" ] && cp "$tmpdir/kwai-token-state.enc" kwai-token-state.enc || true
           [ -f "$tmpdir/kwai-payload.json" ] && cp "$tmpdir/kwai-payload.json" kwai-payload.json || true
           [ -f "$tmpdir/kwai-publish-result.json" ] && cp "$tmpdir/kwai-publish-result.json" kwai-publish-result.json || true
+          [ -f "$tmpdir/kwai-quality-report.json" ] && cp "$tmpdir/kwai-quality-report.json" kwai-quality-report.json || true
           cp "$tmpdir/kwai-run-status.json" kwai-run-status.json
 
           [ -f state_kwai_pending.json ] && rm -f state_kwai_pending.json || true
@@ -175,6 +199,7 @@ jobs:
           [ -f kwai-token-state.enc ] && git add kwai-token-state.enc || true
           [ -f kwai-payload.json ] && git add kwai-payload.json || true
           [ -f kwai-publish-result.json ] && git add kwai-publish-result.json || true
+          [ -f kwai-quality-report.json ] && git add kwai-quality-report.json || true
           git add kwai-run-status.json
 
           if ! git diff --cached --quiet; then
