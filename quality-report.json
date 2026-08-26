@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "66DDCAFF-E155-463B-B226-F8270C9B5E3A.mp4",
-  "overlay": "Se você ficou até aqui, provavelmente não foi por causa do algoritmo.",
+  "video": "6AA0991D-5050-4107-A363-6D0C646C5741.mp4",
+  "overlay": "Eu gosto de música que me faz esquecer por que peguei o celular.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.18203125,
+    "y0": 0.17890625,
     "x1": 0.9555555555555556,
-    "y1": 0.2578125
+    "y1": 0.2609375
   },
-  "faces_checked": 6,
+  "faces_checked": 7,
   "failures": []
 }
