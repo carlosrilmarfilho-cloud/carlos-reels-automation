@@ -1,0 +1,15 @@
+{
+  "platform": "kwai",
+  "prepared_at": "2026-08-26T03:41:53.270787+00:00",
+  "video": "0153EEA9-9518-41CD-A36E-1EF25BE33B6A.mp4",
+  "theme": "musica_terapia",
+  "overlay": "Terapia do dia: ouvir isso até a cabeça parar de discutir comigo.",
+  "caption": "Nem tudo precisa virar reflexão profunda. Às vezes uma música boa já cumpre o expediente.\n\n#kwai #musica #musicabrasileira #terapiamusical #musicaboa",
+  "hashtags": "#kwai #musica #musicabrasileira #terapiamusical #musicaboa",
+  "render_resolution": "1440x2560",
+  "quality": {
+    "face_overlap_allowed": false,
+    "preserve_full_frame": true,
+    "explicit_language_allowed": false
+  }
+}
