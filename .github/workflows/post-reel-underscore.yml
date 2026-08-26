@@ -5,6 +5,9 @@ on:
     # 09:17, 12:17, 15:17, 18:17 e 21:17 em Fortaleza/Brasília (UTC-3)
     - cron: '17 0,12,15,18,21 * * *'
   workflow_dispatch:
+  push:
+    paths:
+      - '.trigger-underscore'
 
 permissions:
   contents: write
