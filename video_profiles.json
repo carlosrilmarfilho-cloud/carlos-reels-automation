@@ -9,56 +9,41 @@
     "f79bc212495a4a3bba2efe8bc7bba941.mov"
   ],
   "profiles": {
-    "1DB3DA5B-1B12-470E-9C42-CCDB4447E6A7.mp4": {"theme":"forro_antigo","variant_offset":0,"source_text":"A terapia que tu precisa é um forró das antigas assim"},
-    "B4D67C9E-7332-4388-ACF7-FE37CF46922D.mp4": {"theme":"forro_antigo","variant_offset":3,"source_text":"A terapia que tu precisa é um forró das antigas assim"},
-    "F34BCD36-345A-430E-8F5B-D90C30F2957D.mp4": {"theme":"forro_antigo","variant_offset":6,"source_text":"A terapia que tu precisa é um forró das antigas assim"},
-    "f79bc212495a4a3bba2efe8bc7bba941.mov": {"theme":"forro_antigo","variant_offset":9,"source_text":"A terapia que tu precisa é um forró das antigas assim"},
-    "2ebc8c8660e742e188d26e8b3dfbf50f.mov": {"theme":"brega","variant_offset":0,"source_text":"Uns fazem terapia, outros aumentam o volume do Brega"},
-    "629ba99319714ee6863fb4c9f58045aa.mov": {"theme":"brega","variant_offset":5,"source_text":"Uns fazem terapia, outros aumentam o volume do Brega"},
-    "482d9e1dbe53494ba696c36e4507425c.mov": {"theme":"musica_terapia","variant_offset":0,"source_text":"Acho que essa é a terapia que tu precisa"}
+    "1DB3DA5B-1B12-470E-9C42-CCDB4447E6A7.mp4": {
+      "theme": "forro_antigo",
+      "variant_offset": 0,
+      "source_text": "A terapia que tu precisa é um forró das antigas assim"
+    },
+    "B4D67C9E-7332-4388-ACF7-FE37CF46922D.mp4": {
+      "theme": "forro_antigo",
+      "variant_offset": 3,
+      "source_text": "A terapia que tu precisa é um forró das antigas assim"
+    },
+    "F34BCD36-345A-430E-8F5B-D90C30F2957D.mp4": {
+      "theme": "forro_antigo",
+      "variant_offset": 6,
+      "source_text": "A terapia que tu precisa é um forró das antigas assim"
+    },
+    "f79bc212495a4a3bba2efe8bc7bba941.mov": {
+      "theme": "forro_antigo",
+      "variant_offset": 9,
+      "source_text": "A terapia que tu precisa é um forró das antigas assim"
+    },
+    "2ebc8c8660e742e188d26e8b3dfbf50f.mov": {
+      "theme": "brega",
+      "variant_offset": 0,
+      "source_text": "Uns fazem terapia, outros aumentam o volume do Brega"
+    },
+    "629ba99319714ee6863fb4c9f58045aa.mov": {
+      "theme": "brega",
+      "variant_offset": 5,
+      "source_text": "Uns fazem terapia, outros aumentam o volume do Brega"
+    },
+    "482d9e1dbe53494ba696c36e4507425c.mov": {
+      "theme": "musica_terapia",
+      "variant_offset": 0,
+      "source_text": "Acho que essa é a terapia que tu precisa"
+    }
   },
-  "themes": {
-    "forro_antigo": [
-      {"overlay":"Tem saudade que só um forró desses resolve.","caption":"Tem música que não envelhece — só ganha mais história. Qual forró antigo te pega assim? 🎶"},
-      {"overlay":"Não é música velha. É memória com sanfona.","caption":"Se você cantou antes do refrão chegar, sua idade acabou de aparecer. 😂❤️"},
-      {"overlay":"Isso aqui desbloqueia lembrança que nem tava na memória.","caption":"Um acorde e pronto: a cabeça viajou anos pra trás. Qual música faz isso contigo?"},
-      {"overlay":"Forró antigo tem um negócio que a terapia não explica.","caption":"Tem dia que o remédio é só aumentar o volume e deixar tocar. 🪗"},
-      {"overlay":"Quem viveu essa época sabe o estrago dessa batida.","caption":"Não precisa explicar. Quem conhece, sentiu nos primeiros segundos."},
-      {"overlay":"O corpo tá em 2026. A cabeça acabou de voltar uns anos.","caption":"Essa é daquelas que teletransporta. Pra qual época ela te levou?"},
-      {"overlay":"Se isso não cura, pelo menos dá vontade de viver.","caption":"Forró bom muda o humor antes mesmo do refrão. ❤️"},
-      {"overlay":"Tem música que não toca. Acerta em cheio.","caption":"Se bateu aí, deixa ela terminar. Algumas músicas merecem."},
-      {"overlay":"A geração de hoje nunca vai entender esse arrepio.","caption":"Quem sabe, sabe. Qual clássico não pode faltar nessa sequência?"},
-      {"overlay":"O remédio de hoje vem com zabumba e sanfona.","caption":"Receita simples: volume alto e zero pressa pra acabar. 🪗🔥"},
-      {"overlay":"Essa batida devia vir com aviso de nostalgia.","caption":"Risco alto de lembrar de gente, lugar e fase que já passou. 😂"},
-      {"overlay":"Se você sorriu antes de cantar, essa música já ganhou.","caption":"Tem som que melhora o dia sem pedir licença. Marca quem curte um forró desses."}
-    ],
-    "brega": [
-      {"overlay":"Tem sofrimento que só fica bonito quando vira brega.","caption":"A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️"},
-      {"overlay":"O problema continua. Mas agora tem trilha sonora.","caption":"Às vezes não é solução. É só o volume certo. 🔊"},
-      {"overlay":"Quem nunca sofreu cantando isso mentiu.","caption":"O bom do brega é sofrer em grupo e com refrão. 😂"},
-      {"overlay":"Isso aqui não é música. É recaída com melodia.","caption":"Se veio alguém na cabeça, eu não tenho nada a ver com isso. 👀"},
-      {"overlay":"Se doeu, é porque você lembrou de alguém.","caption":"Tem refrão que conhece a história toda sem ninguém contar."},
-      {"overlay":"Brega bom não passa. Ele volta na hora errada.","caption":"E normalmente volta quando você jurava que já tinha superado. 😂"},
-      {"overlay":"Essa letra parece que leu teu WhatsApp antes de tocar.","caption":"Coincidência demais pra uma música só. Quem se identificou?"},
-      {"overlay":"A terapia é cara. Esse refrão já sabe de tudo.","caption":"Não resolve a vida, mas pelo menos entende o problema. ❤️"},
-      {"overlay":"Volume alto: porque sofrer baixo é desperdício.","caption":"Se é pra sentir, deixa tocar direito. 🔊🔥"},
-      {"overlay":"O brega não julga. Só aumenta o drama.","caption":"E talvez seja exatamente por isso que a gente gosta tanto. 😂"}
-    ],
-    "musica_terapia": [
-      {"overlay":"Você não precisava de conselho. Precisava ouvir isso.","caption":"Tem música que entende a gente antes da gente conseguir explicar."},
-      {"overlay":"Tem dia que a música faz o trabalho que a cabeça não consegue.","caption":"Só deixa tocar. Depois você pensa no resto. 🎶"},
-      {"overlay":"Se o peito apertou, a música encontrou o lugar certo.","caption":"Algumas chegam exatamente onde precisavam chegar."},
-      {"overlay":"Não chama de terapia. Chama de três minutos de paz.","caption":"Às vezes é tudo que o dia tava pedindo."},
-      {"overlay":"Essa aqui não resolve a vida. Mas melhora os próximos minutos.","caption":"E às vezes já é suficiente pra mudar o clima do dia."},
-      {"overlay":"A música certa na hora certa vale mais que muito conselho.","caption":"Qual música sempre consegue mudar teu humor?"},
-      {"overlay":"Tem sentimento que só fica claro quando vira música.","caption":"Quando falta palavra, deixa o refrão falar."},
-      {"overlay":"Se você parou pra ouvir, talvez fosse exatamente o que precisava.","caption":"Sem pressa. Deixa a música terminar. ❤️"}
-    ],
-    "generic": [
-      {"overlay":"Se essa música te segurou por alguns segundos, já valeu.","caption":"Qual parte te fez parar de rolar a tela?"},
-      {"overlay":"Tem vídeo que a gente vê. E tem música que a gente sente.","caption":"Se sentiu, salva pra ouvir de novo depois."},
-      {"overlay":"Essa chegou sem pedir licença.","caption":"Se bateu diferente, comenta qual música você quer na próxima."},
-      {"overlay":"Só deixa tocar. O resto pode esperar um pouco.","caption":"Alguns segundos de música também contam como descanso."}
-    ]
-  }
+  "themes": {}
 }
