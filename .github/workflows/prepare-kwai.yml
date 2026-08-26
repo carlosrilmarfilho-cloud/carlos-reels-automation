@@ -37,7 +37,11 @@ jobs:
         id: gate
         shell: bash
         run: |
-          if [ "$KWAI_AUTOMATION_PAUSED" = "true" ] && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
+          run_once=false
+          if grep -q '^RUN_ONCE=true$' .trigger-kwai 2>/dev/null; then
+            run_once=true
+          fi
+          if [ "$KWAI_AUTOMATION_PAUSED" = "true" ] && [ "${{ github.event_name }}" != "workflow_dispatch" ] && [ "$run_once" != "true" ]; then
             echo "ready=false" >> "$GITHUB_OUTPUT"
             echo "Kwai preparado, mas a ponte móvel ainda está pausada."
           else
