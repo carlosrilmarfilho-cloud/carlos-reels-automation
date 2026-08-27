@@ -200,7 +200,7 @@ jobs:
           git config user.name "Carlos Reels Automation"
           git config user.email "actions@users.noreply.github.com"
           git add state_instagram_underscore.json run-status-instagram-underscore.json
-          [ -f diagnostic_instagram_underscore.json ] && git add diagnostic_instagram-underscore.json || true
+          [ -f diagnostic_instagram_underscore.json ] && git add diagnostic_instagram_underscore.json || true
           [ -f quality-report-instagram-underscore.json ] && git add quality-report-instagram-underscore.json || true
           if ! git diff --cached --quiet; then
             git commit -m "Atualizar @_carlosrilmarfilho $GITHUB_RUN_ID [skip ci]"
