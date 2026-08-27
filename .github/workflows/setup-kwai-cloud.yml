@@ -1,0 +1,46 @@
+name: Configurar Kwai no Android na nuvem
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GENYMOTION_API_TOKEN: ${{ secrets.GENYMOTION_API_TOKEN }}
+      GENYMOTION_INSTANCE_UUID: ${{ secrets.GENYMOTION_INSTANCE_UUID }}
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Configurar Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.7'
+
+      - name: Compilar Carlos Kwai Bridge
+        working-directory: kwai-android
+        run: gradle :app:assembleDebug --no-daemon
+
+      - name: Validar secrets
+        shell: bash
+        run: |
+          test -n "$GENYMOTION_API_TOKEN" || (echo 'Secret GENYMOTION_API_TOKEN ausente' && exit 1)
+          test -n "$GENYMOTION_INSTANCE_UUID" || (echo 'Secret GENYMOTION_INSTANCE_UUID ausente' && exit 1)
+
+      - name: Configurar Android virtual
+        shell: bash
+        run: |
+          chmod +x scripts/genymotion_kwai_bootstrap.sh
+          scripts/genymotion_kwai_bootstrap.sh kwai-android/app/build/outputs/apk/debug/app-debug.apk
