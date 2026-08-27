@@ -1,13 +1,13 @@
 {
   "passed": true,
   "video": "868797B9-A7FB-40EF-9431-ADEA273423C9.mp4",
-  "overlay": "Se você ficou até aqui, provavelmente não foi por causa do algoritmo.",
+  "overlay": "Nem precisa conhecer: essa voz faz você ficar.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.122265625,
+    "y0": 0.11484375,
     "x1": 0.9555555555555556,
-    "y1": 0.198046875
+    "y1": 0.20546875
   },
-  "faces_checked": 11,
+  "faces_checked": 10,
   "failures": []
 }

@@ -1,5 +1,5 @@
 {
-  "video_index": 35,
+  "video_index": 36,
   "posts_total": 82,
   "last_posted_at": "2026-08-27T19:59:15.901Z",
   "last_video": "868797B9-A7FB-40EF-9431-ADEA273423C9.mp4",
@@ -214,7 +214,8 @@
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
-    "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4"
+    "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4",
+    "89B35892-2506-4442-BBBD-044049F7C5BE.mp4"
   ],
   "last_platform": "tiktok",
   "last_buffer_post_id": "6a9096a75b365168c5cb37ff",
