@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4",
-  "overlay": "Essa parte aqui merece mais atenção do que muita conversa por aí.",
+  "video": "83093820-DCDB-4081-BE78-1118698B99C6.mp4",
+  "overlay": "Tem dia que a melhor decisão é só deixar a música terminar.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.75703125,
+    "y0": 0.174609375,
     "x1": 0.9555555555555556,
-    "y1": 0.8328125
+    "y1": 0.265234375
   },
-  "faces_checked": 7,
+  "faces_checked": 4,
   "failures": []
 }
