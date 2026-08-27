@@ -13,7 +13,9 @@ permissions:
   contents: write
 
 concurrency:
-  group: tiktok-buffer-hourly
+  # Compartilha a fila com o Instagram para que o segundo workflow leia o
+  # estado cruzado já atualizado e nunca escolha o mesmo vídeo no mesmo ciclo.
+  group: instagram-tiktok-publishing
   cancel-in-progress: false
 
 jobs:
