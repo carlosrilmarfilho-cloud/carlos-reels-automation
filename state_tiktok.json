@@ -1,9 +1,9 @@
 {
-  "video_index": 27,
-  "posts_total": 76,
-  "last_posted_at": "2026-08-27T11:50:13.885Z",
-  "last_video": "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4",
-  "last_overlay": "Se essa parte não te pegou, espera o próximo verso antes de julgar.",
+  "video_index": 28,
+  "posts_total": 77,
+  "last_posted_at": "2026-08-27T12:46:21.361Z",
+  "last_video": "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4",
+  "last_overlay": "Tem dia que a melhor decisão é só deixar a música terminar.",
   "last_mode": "buffer_auto_confirmed",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -42,10 +42,11 @@
     "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4": 1,
     "66DDCAFF-E155-463B-B226-F8270C9B5E3A.mp4": 1,
     "6AA0991D-5050-4107-A363-6D0C646C5741.mp4": 1,
-    "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4": 1
+    "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4": 1,
+    "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4": 1
   },
-  "last_caption": "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas.",
-  "last_hashtags": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
+  "last_caption": "Se te lembrou alguém, um lugar ou uma fase, comenta só uma palavra. Quero ver as histórias que aparecem.",
+  "last_hashtags": "#boamusica #tiktokbrasil #musica #brasil #paravoce",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -118,7 +119,8 @@
     "Não sei se é nostalgia, terapia ou só uma música boa. Aceito os três.",
     "Tem som que você escuta. E tem som que muda teu jeito de ficar quieto.",
     "Se isso te fez lembrar de alguém, a responsabilidade é do compositor.",
-    "Se essa parte não te pegou, espera o próximo verso antes de julgar."
+    "Se essa parte não te pegou, espera o próximo verso antes de julgar.",
+    "Tem dia que a melhor decisão é só deixar a música terminar."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -192,13 +194,14 @@
     "Qual foi a última música que fez você esquecer o que tava fazendo por alguns segundos?",
     "Tem dia que eu posto pra cantar. Em outros, percebo que a música acaba falando com alguém do outro lado.",
     "Eu não quero te convencer a gostar. Só deixa essa parte terminar e decide depois.",
-    "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas."
+    "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas.",
+    "Se te lembrou alguém, um lugar ou uma fase, comenta só uma palavra. Quero ver as histórias que aparecem."
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6a9023c87d1a5188a5eb46c0",
+  "last_buffer_post_id": "6a90311f84d8e8332503d9a9",
   "last_buffer_status": "sent",
-  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7678676924842921223"
+  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7678691420563131655"
 }
