@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "85F02D78-FE04-447B-A11C-DBD5C74D45A2.mp4",
-  "overlay": "Essa virada separa quem ouve de quem sente.",
+  "video": "868797B9-A7FB-40EF-9431-ADEA273423C9.mp4",
+  "overlay": "Se você ficou até aqui, provavelmente não foi por causa do algoritmo.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.122265625,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.198046875
   },
-  "faces_checked": 5,
+  "faces_checked": 11,
   "failures": []
 }

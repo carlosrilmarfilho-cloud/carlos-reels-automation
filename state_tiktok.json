@@ -1,9 +1,9 @@
 {
-  "video_index": 34,
-  "posts_total": 81,
-  "last_posted_at": "2026-08-27T18:44:49.928Z",
-  "last_video": "85F02D78-FE04-447B-A11C-DBD5C74D45A2.mp4",
-  "last_overlay": "Essa virada separa quem ouve de quem sente.",
+  "video_index": 35,
+  "posts_total": 82,
+  "last_posted_at": "2026-08-27T19:59:15.901Z",
+  "last_video": "868797B9-A7FB-40EF-9431-ADEA273423C9.mp4",
+  "last_overlay": "Se você ficou até aqui, provavelmente não foi por causa do algoritmo.",
   "last_mode": "buffer_auto_confirmed",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -47,9 +47,10 @@
     "6FFB8681-5089-4A43-8E3C-ED1F0A6BB8D8.mp4": 1,
     "71F75039-C662-4FCA-AD77-6433FC9FC4E1.mp4": 1,
     "83093820-DCDB-4081-BE78-1118698B99C6.mp4": 1,
-    "85F02D78-FE04-447B-A11C-DBD5C74D45A2.mp4": 1
+    "85F02D78-FE04-447B-A11C-DBD5C74D45A2.mp4": 1,
+    "868797B9-A7FB-40EF-9431-ADEA273423C9.mp4": 1
   },
-  "last_caption": "Um pequeno detalhe no arranjo muda a história toda. Você percebeu qual?",
+  "last_caption": "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.",
   "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
@@ -128,7 +129,8 @@
     "Essa foi daquelas que transformam rolagem em pausa.",
     "Eu gosto de música que me faz esquecer por que peguei o celular.",
     "Eu vim cantar. A música resolveu conversar com quem tava ouvindo.",
-    "Essa virada separa quem ouve de quem sente."
+    "Essa virada separa quem ouve de quem sente.",
+    "Se você ficou até aqui, provavelmente não foi por causa do algoritmo."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -207,14 +209,15 @@
     "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂",
     "Eu gosto quando a música segura a pessoa sem precisar inventar efeito, texto ou promessa. Só a música mesmo.",
     "O trecho chegou na hora certa ou foi coincidência? Diz o que ele despertou.",
-    "Um pequeno detalhe no arranjo muda a história toda. Você percebeu qual?"
+    "Um pequeno detalhe no arranjo muda a história toda. Você percebeu qual?",
+    "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu."
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
     "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6a9085365b365168c5ca2d6e",
+  "last_buffer_post_id": "6a9096a75b365168c5cb37ff",
   "last_buffer_status": "sent",
-  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7678783834141281537"
+  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7678803053528616212"
 }
