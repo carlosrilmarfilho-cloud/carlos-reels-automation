@@ -14,8 +14,10 @@ permissions:
   contents: write
 
 concurrency:
-  group: instagram-reels-hourly
-  # Enfileira um fallback em vez de cancelar uma publicação que já esteja rodando.
+  # Grupo compartilhado com o TikTok: impede que as duas plataformas escolham
+  # o mesmo vídeo antes de o estado cruzado ser persistido.
+  group: instagram-tiktok-publishing
+  # Enfileira a outra plataforma sem cancelar uma publicação em andamento.
   cancel-in-progress: false
 
 jobs:
