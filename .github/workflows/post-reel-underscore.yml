@@ -22,7 +22,7 @@ jobs:
     timeout-minutes: 25
     env:
       GDRIVE_FOLDER_URL: https://drive.google.com/drive/folders/1sVLfUVK2FgssbqEEQeUrrUT5z9WluAin
-      AUTOMATION_PAUSED: 'true'
+      AUTOMATION_PAUSED: 'false'
       PLATFORM: instagram_underscore
       FIXED_OVERLAY_TEXT: 'Tá aí a terapia que você precisa 🪗🎶❤️'
       EXPECTED_INSTAGRAM_USERNAME: '_carlosrilmarfilho'
@@ -200,7 +200,7 @@ jobs:
           git config user.name "Carlos Reels Automation"
           git config user.email "actions@users.noreply.github.com"
           git add state_instagram_underscore.json run-status-instagram-underscore.json
-          [ -f diagnostic_instagram_underscore.json ] && git add diagnostic_instagram_underscore.json || true
+          [ -f diagnostic_instagram_underscore.json ] && git add diagnostic_instagram-underscore.json || true
           [ -f quality-report-instagram-underscore.json ] && git add quality-report-instagram-underscore.json || true
           if ! git diff --cached --quiet; then
             git commit -m "Atualizar @_carlosrilmarfilho $GITHUB_RUN_ID [skip ci]"
