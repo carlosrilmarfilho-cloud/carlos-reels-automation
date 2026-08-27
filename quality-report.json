@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "83093820-DCDB-4081-BE78-1118698B99C6.mp4",
-  "overlay": "Tem dia que a melhor decisão é só deixar a música terminar.",
+  "video": "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4",
+  "overlay": "Eu ia passar o vídeo. A música claramente tinha outros planos.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.11666666666666667,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.203125
   },
-  "faces_checked": 4,
+  "faces_checked": 7,
   "failures": []
 }
