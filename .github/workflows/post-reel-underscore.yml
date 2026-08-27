@@ -90,7 +90,7 @@ jobs:
           cp state.json /tmp/state-main-instagram.json
           cp state_instagram_underscore.json state.json
           style=$(jq -r '.posts_total // 0' state.json)
-          echo "FIXED_STYLE_INDEX=$((style % 3))" >> "$GITHUB_ENV"
+          echo "FIXED_STYLE_INDEX=$((style % 7))" >> "$GITHUB_ENV"
 
       - name: Escolher e baixar vídeo da rotação
         id: videos
@@ -204,6 +204,7 @@ jobs:
           [ -f quality-report-instagram-underscore.json ] && git add quality-report-instagram-underscore.json || true
           if ! git diff --cached --quiet; then
             git commit -m "Atualizar @_carlosrilmarfilho $GITHUB_RUN_ID [skip ci]"
+            git reset --hard HEAD
             git pull --rebase origin "$GITHUB_REF_NAME"
             git push origin HEAD:"$GITHUB_REF_NAME"
           fi
