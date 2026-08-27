@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4",
-  "overlay": "Meu tipo favorito de música é a que faz a gente parar sem perceber.",
+  "video": "5E9AA733-82BF-4099-B77F-FDE5F646184F.mp4",
+  "overlay": "Nem toda música precisa de contexto. Algumas só precisam de volume.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.180078125,
+    "y0": 0.1828125,
     "x1": 0.9555555555555556,
-    "y1": 0.259765625
+    "y1": 0.25703125
   },
-  "faces_checked": 10,
+  "faces_checked": 5,
   "failures": []
 }

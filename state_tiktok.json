@@ -1,9 +1,9 @@
 {
-  "video_index": 22,
-  "posts_total": 71,
-  "last_posted_at": "2026-08-27T03:57:44.366801+00:00",
-  "last_video": "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4",
-  "last_overlay": "Meu tipo favorito de música é a que faz a gente parar sem perceber.",
+  "video_index": 23,
+  "posts_total": 72,
+  "last_posted_at": "2026-08-27T05:13:14.596073+00:00",
+  "last_video": "5E9AA733-82BF-4099-B77F-FDE5F646184F.mp4",
+  "last_overlay": "Nem toda música precisa de contexto. Algumas só precisam de volume.",
   "last_mode": "buffer_auto",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -37,10 +37,11 @@
     "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4": 1,
     "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4": 1,
     "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4": 1,
-    "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4": 1
+    "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4": 1,
+    "5E9AA733-82BF-4099-B77F-FDE5F646184F.mp4": 1
   },
-  "last_caption": "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi.",
-  "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
+  "last_caption": "Se você parou a rolagem por causa da voz, me diz qual detalhe te fez ficar.",
+  "last_hashtags": "#boamusica #tiktokbrasil #musica #brasil #paravoce",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -108,7 +109,8 @@
     "A cabeça tava em outro lugar até essa voz entrar.",
     "A voz entrou e minha atenção desistiu de ir embora.",
     "A música é curta. O tanto de coisa que ela puxa da cabeça não.",
-    "Meu tipo favorito de música é a que faz a gente parar sem perceber."
+    "Meu tipo favorito de música é a que faz a gente parar sem perceber.",
+    "Nem toda música precisa de contexto. Algumas só precisam de volume."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -177,11 +179,12 @@
     "Se ficou até o final, escolhe a próxima terapia musical nos comentários.",
     "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo.",
     "Tem voz que impressiona pela técnica. Tem voz que prende porque parece verdade. Eu fico com a segunda.",
-    "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi."
+    "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi.",
+    "Se você parou a rolagem por causa da voz, me diz qual detalhe te fez ficar."
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6a8fb5ad613647d56fe32ea5"
+  "last_buffer_post_id": "6a8fc75f68f0bd7ea6561532"
 }
