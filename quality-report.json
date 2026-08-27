@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "868797B9-A7FB-40EF-9431-ADEA273423C9.mp4",
-  "overlay": "Nem precisa conhecer: essa voz faz você ficar.",
+  "video": "8AD72ED8-DC07-43E7-B8CF-39BCEFB12647.mp4",
+  "overlay": "Aqui está o segundo em que a música muda tudo.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
     "y0": 0.11484375,
     "x1": 0.9555555555555556,
     "y1": 0.20546875
   },
-  "faces_checked": 10,
+  "faces_checked": 6,
   "failures": []
 }
