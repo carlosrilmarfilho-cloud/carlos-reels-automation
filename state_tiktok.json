@@ -1,9 +1,9 @@
 {
-  "video_index": 26,
-  "posts_total": 75,
-  "last_posted_at": "2026-08-27T10:45:40.559Z",
-  "last_video": "6AA0991D-5050-4107-A363-6D0C646C5741.mp4",
-  "last_overlay": "Se isso te fez lembrar de alguém, a responsabilidade é do compositor.",
+  "video_index": 27,
+  "posts_total": 76,
+  "last_posted_at": "2026-08-27T11:50:13.885Z",
+  "last_video": "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4",
+  "last_overlay": "Se essa parte não te pegou, espera o próximo verso antes de julgar.",
   "last_mode": "buffer_auto_confirmed",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -41,10 +41,11 @@
     "5E9AA733-82BF-4099-B77F-FDE5F646184F.mp4": 1,
     "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4": 1,
     "66DDCAFF-E155-463B-B226-F8270C9B5E3A.mp4": 1,
-    "6AA0991D-5050-4107-A363-6D0C646C5741.mp4": 1
+    "6AA0991D-5050-4107-A363-6D0C646C5741.mp4": 1,
+    "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4": 1
   },
-  "last_caption": "Eu não quero te convencer a gostar. Só deixa essa parte terminar e decide depois.",
-  "last_hashtags": "#musica #tiktokbrasil #som #boamusica #brasil",
+  "last_caption": "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas.",
+  "last_hashtags": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -116,7 +117,8 @@
     "Nem toda música precisa de contexto. Algumas só precisam de volume.",
     "Não sei se é nostalgia, terapia ou só uma música boa. Aceito os três.",
     "Tem som que você escuta. E tem som que muda teu jeito de ficar quieto.",
-    "Se isso te fez lembrar de alguém, a responsabilidade é do compositor."
+    "Se isso te fez lembrar de alguém, a responsabilidade é do compositor.",
+    "Se essa parte não te pegou, espera o próximo verso antes de julgar."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -189,13 +191,14 @@
     "Se você parou a rolagem por causa da voz, me diz qual detalhe te fez ficar.",
     "Qual foi a última música que fez você esquecer o que tava fazendo por alguns segundos?",
     "Tem dia que eu posto pra cantar. Em outros, percebo que a música acaba falando com alguém do outro lado.",
-    "Eu não quero te convencer a gostar. Só deixa essa parte terminar e decide depois."
+    "Eu não quero te convencer a gostar. Só deixa essa parte terminar e decide depois.",
+    "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas."
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6a9014ea7d1a5188a5e9a174",
+  "last_buffer_post_id": "6a9023c87d1a5188a5eb46c0",
   "last_buffer_status": "sent",
-  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7678660404310199559"
+  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7678676924842921223"
 }
