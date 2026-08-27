@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4",
-  "overlay": "Eu ia passar o vídeo. A música claramente tinha outros planos.",
+  "video": "85F02D78-FE04-447B-A11C-DBD5C74D45A2.mp4",
+  "overlay": "Nem toda música precisa de contexto. Algumas só precisam de volume.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.11666666666666667,
+    "y0": 0.1828125,
     "x1": 0.9555555555555556,
-    "y1": 0.203125
+    "y1": 0.25703125
   },
-  "faces_checked": 7,
+  "faces_checked": 4,
   "failures": []
 }
