@@ -2,8 +2,8 @@ name: Postar TikTok a cada hora
 
 on:
   schedule:
-    # Uma publicação por hora. Minuto 37 evita disputar execução com Instagram (:07) e Kwai (:52).
-    - cron: '37 * * * *'
+    # Três oportunidades por hora. O guard abaixo impede duplicação e recupera cron perdido.
+    - cron: '17,37,57 * * * *'
   workflow_dispatch:
   push:
     paths:
@@ -14,7 +14,7 @@ permissions:
 
 concurrency:
   group: tiktok-buffer-hourly
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   post:
@@ -31,8 +31,57 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Pré-validar pausa, credenciais e cadência
+        id: cadence
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          EVENT_NAME: ${{ github.event_name }}
+        shell: bash
+        run: |
+          if [ "$TIKTOK_AUTOMATION_PAUSED" = "true" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "TikTok pausado."
+            exit 0
+          fi
+
+          if [ -z "$BUFFER_API_KEY" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "BUFFER_API_KEY ausente."
+            exit 0
+          fi
+
+          if [ "$EVENT_NAME" = "schedule" ]; then
+            recent=$(python3 - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          path = Path("state_tiktok.json")
+          recent = False
+          if path.exists():
+              try:
+                  value = json.loads(path.read_text(encoding="utf-8")).get("last_posted_at")
+                  if value:
+                      last = datetime.fromisoformat(str(value).replace("Z", "+00:00")).astimezone(timezone.utc)
+                      age = (datetime.now(timezone.utc) - last).total_seconds()
+                      recent = 0 <= age < 45 * 60
+              except Exception:
+                  recent = False
+          print("true" if recent else "false")
+          PY
+            )
+            if [ "$recent" = "true" ]; then
+              echo "run=false" >> "$GITHUB_OUTPUT"
+              echo "Fallback ignorado: TikTok confirmado nos últimos 45 minutos."
+              exit 0
+            fi
+          fi
+
+          echo "run=true" >> "$GITHUB_OUTPUT"
+
       - name: Verificar ativação
         id: gate
+        if: steps.cadence.outputs.run == 'true'
         env:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
         shell: bash
@@ -167,9 +216,9 @@ jobs:
           set -e
           tmpdir=$(mktemp -d)
 
-          # publish_tiktok.py só atualiza state_tiktok.json quando o Buffer aceita o post.
-          # Se a publicação nem chegou a ser tentada porque um vídeo foi bloqueado antes,
-          # preservamos o bloqueio/avanço calculado em state.json.
+          # O estado só avança após publish_tiktok.py confirmar status "sent" no Buffer.
+          # Se a publicação não chegou a ser tentada porque o vídeo foi bloqueado antes,
+          # preservamos o avanço/bloqueio calculado em state.json.
           if [ "${{ steps.publish.outcome }}" = "skipped" ] && [ -f state.json ]; then
             cp state.json state_tiktok.json
           fi
