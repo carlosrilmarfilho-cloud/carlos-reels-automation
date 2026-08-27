@@ -578,6 +578,21 @@ def choose_content(video_name: str, state: dict, analysis: dict) -> tuple[dict, 
             and caption_signature(value) not in recent_caption_signatures
             and not contains_explicit_terms(value)
         ]
+    # Último nível: quando assinaturas semânticas semelhantes consumirem o
+    # banco, aceite apenas opções literalmente inéditas e seguras. Isso evita
+    # travar com dezenas de textos novos disponíveis sem permitir repetição.
+    if not overlays:
+        overlays = [
+            value for value in overlay_pool
+            if value not in used_overlays
+            and not contains_explicit_terms(value)
+        ]
+    if not captions:
+        captions = [
+            value for value in caption_pool
+            if value not in used_captions
+            and not contains_explicit_terms(value)
+        ]
     post_number = int(state.get("posts_total", 0))
     overlay, overlay_index = choose_unused(
         overlays,
