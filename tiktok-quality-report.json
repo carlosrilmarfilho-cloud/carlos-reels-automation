@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "83093820-DCDB-4081-BE78-1118698B99C6.mp4",
-  "overlay": "Eu vim cantar. A música resolveu conversar com quem tava ouvindo.",
+  "video": "85F02D78-FE04-447B-A11C-DBD5C74D45A2.mp4",
+  "overlay": "Essa virada separa quem ouve de quem sente.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.180078125,
+    "y0": 0.174609375,
     "x1": 0.9555555555555556,
-    "y1": 0.259765625
+    "y1": 0.265234375
   },
-  "faces_checked": 3,
+  "faces_checked": 5,
   "failures": []
 }
