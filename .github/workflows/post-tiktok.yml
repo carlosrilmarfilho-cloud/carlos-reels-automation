@@ -117,11 +117,17 @@ jobs:
         if: steps.gate.outputs.ready == 'true'
         shell: bash
         run: |
+          # Se esta execução esperou a fila compartilhada, o checkout ainda
+          # aponta para o commit do disparo. Busque os estados já persistidos.
+          git fetch origin "$GITHUB_REF_NAME"
+          git show "origin/$GITHUB_REF_NAME:state.json" > /tmp/latest-state-instagram.json
+          git show "origin/$GITHUB_REF_NAME:state_kwai.json" > /tmp/latest-state-kwai.json
+
           cross=$(python - <<'PY'
           import json
           from pathlib import Path
           names = []
-          for filename in ("state.json", "state_kwai.json"):
+          for filename in ("/tmp/latest-state-instagram.json", "/tmp/latest-state-kwai.json"):
               path = Path(filename)
               if path.exists():
                   try:
