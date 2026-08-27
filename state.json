@@ -1,5 +1,5 @@
 {
-  "video_index": 35,
+  "video_index": 36,
   "posts_total": 83,
   "last_posted_at": "2026-08-27T19:52:34.863496+00:00",
   "last_video": "868797B9-A7FB-40EF-9431-ADEA273423C9.mp4",
@@ -217,6 +217,7 @@
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
-    "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4"
+    "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4",
+    "89B35892-2506-4442-BBBD-044049F7C5BE.mp4"
   ]
 }
