@@ -347,9 +347,13 @@ def main() -> None:
         profile_items = curated.get(theme, [])
         profile_overlays = [item.get("overlay", "") for item in profile_items]
         profile_captions = [item.get("caption", "") for item in profile_items]
+        direct_overlays = list(section.get("overlays", []))
+        direct_captions = list(section.get("captions", []))
 
-        overlays = unique(profile_overlays + library["overlays"])
-        captions = unique(profile_captions + library["captions"])
+        # Preserve também as linhas diretas já revisadas do banco principal.
+        # Só os templates combinatórios são removidos abaixo.
+        overlays = unique(profile_overlays + library["overlays"] + direct_overlays)
+        captions = unique(profile_captions + library["captions"] + direct_captions)
 
         # A frase precisa parecer escrita para o vídeo, não um encaixe de template.
         # Eliminamos as combinações automáticas nos temas principais e usamos linhas fechadas.
