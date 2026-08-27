@@ -226,6 +226,7 @@ def create_post(channel_id: str, caption: str) -> dict:
             id
             text
             dueAt
+            status
           }}
         }}
         ... on MutationError {{
@@ -240,6 +241,56 @@ def create_post(channel_id: str, caption: str) -> dict:
     return result["post"]
 
 
+def get_post(post_id: str) -> dict:
+    query = f"""
+    query ConfirmTikTokPost {{
+      post(input: {{ id: {gql_string(post_id)} }}) {{
+        id
+        status
+        sentAt
+        externalLink
+        error {{
+          message
+          supportUrl
+        }}
+      }}
+    }}
+    """
+    post = graphql(query).get("post")
+    if not post:
+        raise RuntimeError(f"Buffer não encontrou o post {post_id} para confirmação")
+    return post
+
+
+def wait_until_sent(post_id: str, timeout_seconds: int = 600, interval_seconds: int = 10) -> dict:
+    deadline = time.monotonic() + timeout_seconds
+    last_status = "unknown"
+    while time.monotonic() < deadline:
+        post = get_post(post_id)
+        status = str(post.get("status") or "unknown").lower()
+        last_status = status
+        save_diag(
+            stage="confirm_delivery",
+            post_id=post_id,
+            buffer_status=status,
+            sent_at=post.get("sentAt"),
+            external_link=post.get("externalLink"),
+        )
+        if status == "sent":
+            return post
+        if status == "error":
+            error = post.get("error") or {}
+            message = error.get("message") or "erro sem mensagem"
+            support_url = error.get("supportUrl") or ""
+            detail = f"; suporte: {support_url}" if support_url else ""
+            raise RuntimeError(f"Buffer/TikTok falhou ao publicar: {message}{detail}")
+        time.sleep(interval_seconds)
+    raise RuntimeError(
+        f"Buffer não confirmou publicação no TikTok em {timeout_seconds // 60} minutos; "
+        f"último status: {last_status}"
+    )
+
+
 def main() -> None:
     try:
         metadata = json.loads(META.read_text(encoding="utf-8"))
@@ -250,22 +301,33 @@ def main() -> None:
         wait_public(VIDEO_URL)
         save_diag(stage="publish")
         post = create_post(channel_id, caption)
+        post_id = str(post.get("id") or "").strip()
+        if not post_id:
+            raise RuntimeError("Buffer aceitou a criação sem retornar ID do post")
+
+        save_diag(stage="accepted_by_buffer", post_id=post_id, initial_status=post.get("status"))
+        confirmed = wait_until_sent(post_id)
 
         state = dict(metadata["next_state"])
-        state["last_posted_at"] = datetime.now(timezone.utc).isoformat()
-        state["last_mode"] = "buffer_auto"
+        state["last_posted_at"] = confirmed.get("sentAt") or datetime.now(timezone.utc).isoformat()
+        state["last_mode"] = "buffer_auto_confirmed"
         state["last_platform"] = "tiktok"
         state["last_hashtags"] = hashtags
-        state["last_buffer_post_id"] = post.get("id")
+        state["last_buffer_post_id"] = post_id
+        state["last_buffer_status"] = confirmed.get("status")
+        state["last_external_link"] = confirmed.get("externalLink")
         STATE.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
         save_diag(
             stage="success",
             success=True,
-            post_id=post.get("id"),
+            post_id=post_id,
+            buffer_status=confirmed.get("status"),
+            sent_at=confirmed.get("sentAt"),
+            external_link=confirmed.get("externalLink"),
             finished_at=datetime.now(timezone.utc).isoformat(),
         )
-        print(f"TikTok enviado ao Buffer: {post.get('id')}")
+        print(f"TikTok confirmado como publicado: {post_id}")
     except Exception as exc:
         save_diag(
             stage=diag.get("stage", "unknown"),
