@@ -529,6 +529,8 @@ def choose_content(video_name: str, state: dict, analysis: dict) -> tuple[dict, 
     section = copy_bank.get(theme) or copy_bank.get("generic", {})
     overlays = expand_variants(section, "overlays")
     captions = expand_variants(section, "captions")
+    overlay_pool = list(overlays)
+    caption_pool = list(captions)
     recent_overlay_values = list(state.get("recent_overlays", []))
     used_overlays = set(recent_overlay_values)
     recent_overlay_signatures = {
@@ -559,6 +561,23 @@ def choose_content(video_name: str, state: dict, analysis: dict) -> tuple[dict, 
         and caption_opening_signature(value) not in recent_caption_openings
         and caption_opening_ngrams(value).isdisjoint(recent_caption_opening_ngrams)
     ]
+    # Se o filtro de abertura esgotar o banco, relaxe apenas a semelhança do
+    # começo. Repetição literal, assinatura repetida e linguagem explícita
+    # continuam bloqueadas por este filtro e por choose_unused/validate_copy.
+    if not overlays:
+        overlays = [
+            value for value in overlay_pool
+            if value not in used_overlays
+            and overlay_signature(value) not in recent_overlay_signatures
+            and not contains_explicit_terms(value)
+        ]
+    if not captions:
+        captions = [
+            value for value in caption_pool
+            if value not in used_captions
+            and caption_signature(value) not in recent_caption_signatures
+            and not contains_explicit_terms(value)
+        ]
     post_number = int(state.get("posts_total", 0))
     overlay, overlay_index = choose_unused(
         overlays,
