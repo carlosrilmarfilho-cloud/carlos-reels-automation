@@ -1,0 +1,64 @@
+name: Vigiar Kwai Android na nuvem
+
+on:
+  schedule:
+    - cron: '27 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: kwai-cloud-health
+  cancel-in-progress: true
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      GENYMOTION_API_TOKEN: ${{ secrets.GENYMOTION_API_TOKEN }}
+      GENYMOTION_INSTANCE_UUID: ${{ secrets.GENYMOTION_INSTANCE_UUID }}
+
+    steps:
+      - name: Validar configuração
+        shell: bash
+        run: |
+          test -n "$GENYMOTION_API_TOKEN" || (echo 'GENYMOTION_API_TOKEN ausente' && exit 1)
+          test -n "$GENYMOTION_INSTANCE_UUID" || (echo 'GENYMOTION_INSTANCE_UUID ausente' && exit 1)
+
+      - name: Conectar ao Android virtual
+        shell: bash
+        run: |
+          python -m pip install --disable-pip-version-check --quiet 'gmsaas>=1.16.0'
+          gmsaas auth token "$GENYMOTION_API_TOKEN"
+          gmsaas config set android-sdk-path "$ANDROID_SDK_ROOT"
+          gmsaas instances adbconnect "$GENYMOTION_INSTANCE_UUID"
+          adb wait-for-device
+
+      - name: Garantir Bridge ativo
+        shell: bash
+        run: |
+          PACKAGE='com.carlos.kwaibridge'
+          SERVICE='com.carlos.kwaibridge/com.carlos.kwaibridge.KwaiAccessibilityService'
+          adb shell pm path "$PACKAGE" >/dev/null 2>&1 || (echo 'Carlos Kwai Bridge não está instalado' && exit 1)
+          current="$(adb shell settings get secure enabled_accessibility_services 2>/dev/null | tr -d '\r' || true)"
+          if [[ -z "$current" || "$current" == 'null' ]]; then
+            merged="$SERVICE"
+          elif [[ ":$current:" == *":$SERVICE:"* ]]; then
+            merged="$current"
+          else
+            merged="$current:$SERVICE"
+          fi
+          adb shell settings put secure enabled_accessibility_services "$merged"
+          adb shell settings put secure accessibility_enabled 1
+          adb shell dumpsys deviceidle whitelist +"$PACKAGE" || true
+          adb shell input keyevent KEYCODE_WAKEUP || true
+          adb shell monkey -p "$PACKAGE" -c android.intent.category.LAUNCHER 1 >/dev/null 2>&1 || true
+          if adb shell pm path com.kwai.video >/dev/null 2>&1; then
+            echo 'Kwai instalado: OK'
+          else
+            echo 'Kwai oficial não instalado no Android virtual'
+            exit 1
+          fi
+          echo 'Watchdog concluído.'
