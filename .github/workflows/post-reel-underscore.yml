@@ -22,7 +22,7 @@ jobs:
     timeout-minutes: 25
     env:
       GDRIVE_FOLDER_URL: https://drive.google.com/drive/folders/1sVLfUVK2FgssbqEEQeUrrUT5z9WluAin
-      AUTOMATION_PAUSED: 'false'
+      AUTOMATION_PAUSED: 'true'
       PLATFORM: instagram_underscore
       FIXED_OVERLAY_TEXT: 'Tá aí a terapia que você precisa 🪗🎶❤️'
       EXPECTED_INSTAGRAM_USERNAME: '_carlosrilmarfilho'
