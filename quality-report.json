@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "6FFB8681-5089-4A43-8E3C-ED1F0A6BB8D8.mp4",
-  "overlay": "Eu vim cantar. A música resolveu conversar com quem tava ouvindo.",
+  "video": "71F75039-C662-4FCA-AD77-6433FC9FC4E1.mp4",
+  "overlay": "Eu não sei o que essa música te lembra. Em mim, ela mexeu aqui.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.1203125,
+    "y0": 0.178125,
     "x1": 0.9555555555555556,
-    "y1": 0.2
+    "y1": 0.26171875
   },
-  "faces_checked": 10,
+  "faces_checked": 9,
   "failures": []
 }
