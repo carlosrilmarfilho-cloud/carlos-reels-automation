@@ -131,9 +131,11 @@ jobs:
               path = Path(filename)
               if path.exists():
                   try:
-                      value = str(json.loads(path.read_text(encoding="utf-8")).get("last_video", "")).strip()
-                      if value:
-                          names.append(value)
+                      state = json.loads(path.read_text(encoding="utf-8"))
+                      for key in ("last_video", "last_attempted_video"):
+                          value = str(state.get(key, "")).strip()
+                          if value:
+                              names.append(value)
                   except Exception:
                       pass
           print("|".join(dict.fromkeys(names)))
@@ -160,6 +162,16 @@ jobs:
           url=$(jq -r '.url' /tmp/selected.json)
           filename=$(jq -r '.name' /tmp/selected.json)
           idx=$(jq -r '.index' /tmp/selected.json)
+          python - "$filename" <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          path = Path("state.json")
+          state = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+          state["last_attempted_video"] = sys.argv[1]
+          path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          PY
           echo "Selecionado [$((idx+1))/$count]: $filename"
           gdown "$url" -O "videos/$filename"
           echo "has_videos=true" >> "$GITHUB_OUTPUT"
