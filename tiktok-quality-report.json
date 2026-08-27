@@ -1,12 +1,12 @@
 {
   "passed": true,
-  "video": "5E9AA733-82BF-4099-B77F-FDE5F646184F.mp4",
-  "overlay": "Nem toda música precisa de contexto. Algumas só precisam de volume.",
+  "video": "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4",
+  "overlay": "Não sei se é nostalgia, terapia ou só uma música boa. Aceito os três.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.1828125,
+    "y0": 0.17890625,
     "x1": 0.9555555555555556,
-    "y1": 0.25703125
+    "y1": 0.2609375
   },
   "faces_checked": 5,
   "failures": []
