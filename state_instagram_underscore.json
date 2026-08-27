@@ -1,8 +1,17 @@
 {
-  "video_index": 0,
-  "posts_total": 0,
+  "video_index": 2,
+  "posts_total": 1,
   "blocked_videos": [],
-  "variant_usage": {},
-  "recent_overlays": [],
-  "recent_captions": []
+  "variant_usage": {
+    "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 1
+  },
+  "recent_overlays": [
+    "Tá aí a terapia que você precisa 🪗🎶❤️"
+  ],
+  "recent_captions": [],
+  "last_video": "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4",
+  "last_overlay": "Tá aí a terapia que você precisa 🪗🎶❤️",
+  "last_mode": "trial",
+  "last_media_id": "18077273888359560",
+  "last_posted_at": "2026-08-27T17:22:24Z"
 }
