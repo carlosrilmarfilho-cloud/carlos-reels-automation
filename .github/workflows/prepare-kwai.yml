@@ -22,8 +22,8 @@ jobs:
     timeout-minutes: 30
     env:
       GDRIVE_FOLDER_URL: https://drive.google.com/drive/folders/1sVLfUVK2FgssbqEEQeUrrUT5z9WluAin
-      # Carlos autorizou explicitamente a reativação em 2026-08-26.
-      KWAI_AUTOMATION_PAUSED: 'false'
+      # Pausado para manter somente Instagram principal e TikTok ativos.
+      KWAI_AUTOMATION_PAUSED: 'true'
       # A publicação só ocorre se as credenciais oficiais e user_video_publish forem válidas.
       KWAI_API_ENABLED: 'true'
       PLATFORM: kwai
