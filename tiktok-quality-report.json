@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4",
-  "overlay": "A música é curta. O tanto de coisa que ela puxa da cabeça não.",
+  "video": "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4",
+  "overlay": "Meu tipo favorito de música é a que faz a gente parar sem perceber.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.733984375,
+    "y0": 0.180078125,
     "x1": 0.9555555555555556,
-    "y1": 0.816015625
+    "y1": 0.259765625
   },
-  "faces_checked": 5,
+  "faces_checked": 10,
   "failures": []
 }

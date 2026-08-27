@@ -1,12 +1,12 @@
 {
-  "started_at": "2026-08-26T14:16:02.182566+00:00",
+  "started_at": "2026-08-27T03:57:32.561530+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 147,
+  "caption_length": 139,
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
   "success": true,
-  "post_id": "6a8ef5255a6c4e84e2537451",
-  "finished_at": "2026-08-26T14:16:15.472177+00:00"
+  "post_id": "6a8fb5ad613647d56fe32ea5",
+  "finished_at": "2026-08-27T03:57:44.367467+00:00"
 }
