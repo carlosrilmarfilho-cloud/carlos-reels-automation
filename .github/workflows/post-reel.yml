@@ -135,11 +135,17 @@ jobs:
           set -e
           rm -rf videos && mkdir -p videos
           gdown "$GDRIVE_FOLDER_URL" --folder --json > /tmp/all-drive-files.json
+          # A execução pode ter sido enfileirada a partir de um commit antigo.
+          # Leia os estados cruzados diretamente da ponta atual da branch.
+          git fetch origin "$GITHUB_REF_NAME"
+          git show "origin/$GITHUB_REF_NAME:state_tiktok.json" > /tmp/latest-state-tiktok.json
+          git show "origin/$GITHUB_REF_NAME:state_kwai.json" > /tmp/latest-state-kwai.json
+
           cross=$(python - <<'PY'
           import json
           from pathlib import Path
           names = []
-          for filename in ("state_tiktok.json", "state_kwai.json"):
+          for filename in ("/tmp/latest-state-tiktok.json", "/tmp/latest-state-kwai.json"):
               path = Path(filename)
               if path.exists():
                   try:
