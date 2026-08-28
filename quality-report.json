@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "85F02D78-FE04-447B-A11C-DBD5C74D45A2.mp4",
-  "overlay": "Se a letra bater diferente, finge que foi só coincidência.",
+  "video": "8AD72ED8-DC07-43E7-B8CF-39BCEFB12647.mp4",
+  "overlay": "A música é curta. O tanto de coisa que ela puxa da cabeça não.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.119140625,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.201171875
   },
-  "faces_checked": 6,
+  "faces_checked": 9,
   "failures": []
 }
