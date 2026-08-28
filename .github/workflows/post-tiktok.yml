@@ -1,9 +1,10 @@
-name: Postar TikTok a cada hora
+name: Postar 7 TikToks por dia
 
 on:
   schedule:
-    # Três oportunidades por hora. O guard abaixo impede duplicação e recupera cron perdido.
-    - cron: '17,37,57 * * * *'
+    # 08h, 10h, 12h, 14h, 16h, 18h e 20h em Fortaleza/Brasília (UTC-3).
+    # :17, :37 e :57 são apenas oportunidades de recuperação dentro da mesma janela.
+    - cron: '17,37,57 11,13,15,17,19,21,23 * * *'
   workflow_dispatch:
   push:
     paths:
@@ -13,8 +14,6 @@ permissions:
   contents: write
 
 concurrency:
-  # Compartilha a fila com o Instagram para que o segundo workflow leia o
-  # estado cruzado já atualizado e nunca escolha o mesmo vídeo no mesmo ciclo.
   group: instagram-tiktok-publishing
   cancel-in-progress: false
 
@@ -26,113 +25,60 @@ jobs:
       GDRIVE_FOLDER_URL: https://drive.google.com/drive/folders/1sVLfUVK2FgssbqEEQeUrrUT5z9WluAin
       TIKTOK_AUTOMATION_PAUSED: 'false'
       PLATFORM: tiktok
-
     steps:
       - name: Baixar repositório
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Pré-validar pausa, credenciais e cadência
+      - name: Validar janela, cooldown, credenciais e duplicação
         id: cadence
         env:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
-          EVENT_NAME: ${{ github.event_name }}
         shell: bash
         run: |
-          if [ "$TIKTOK_AUTOMATION_PAUSED" = "true" ]; then
-            echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "TikTok pausado."
-            exit 0
-          fi
-
-          if [ -z "$BUFFER_API_KEY" ]; then
-            echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "BUFFER_API_KEY ausente."
-            exit 0
-          fi
-
-          cooldown=$(python3 - <<'PY'
+          if [ "$TIKTOK_AUTOMATION_PAUSED" = "true" ]; then echo "run=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          if [ -z "$BUFFER_API_KEY" ]; then echo "run=false" >> "$GITHUB_OUTPUT"; echo "BUFFER_API_KEY ausente."; exit 0; fi
+          run=$(python3 - <<'PY'
           import json
           from datetime import datetime, timedelta, timezone
           from pathlib import Path
-
-          path = Path("tiktok-diagnostic.json")
-          active = False
-          until = None
-          if path.exists():
+          now=datetime.now(timezone.utc)
+          allowed={11,13,15,17,19,21,23}
+          if now.hour not in allowed:
+              print('false'); raise SystemExit
+          diag=Path('tiktok-diagnostic.json')
+          if diag.exists():
               try:
-                  data = json.loads(path.read_text(encoding="utf-8"))
-                  error = str(data.get("error", "")).lower()
-                  finished = data.get("finished_at")
-                  is_api_limit = (
-                      "wait 24 hours" in error
-                      or "large number of posts published through the api" in error
-                  )
-                  if is_api_limit and finished:
-                      failed_at = datetime.fromisoformat(
-                          str(finished).replace("Z", "+00:00")
-                      ).astimezone(timezone.utc)
-                      until = failed_at + timedelta(hours=24)
-                      active = datetime.now(timezone.utc) < until
-              except Exception:
-                  active = False
-          print("true" if active else "false")
-          if active and until:
-              print(until.isoformat(), file=__import__("sys").stderr)
+                  d=json.loads(diag.read_text(encoding='utf-8'))
+                  err=str(d.get('error','')).lower()
+                  finished=d.get('finished_at')
+                  limited=('wait 24 hours' in err or 'large number of posts published through the api' in err or 'rate limit' in err or 'cooldown' in err)
+                  if limited and finished:
+                      failed=datetime.fromisoformat(str(finished).replace('Z','+00:00')).astimezone(timezone.utc)
+                      if now < failed + timedelta(hours=24):
+                          print('false'); raise SystemExit
+              except SystemExit: raise
+              except Exception: pass
+          state=Path('state_tiktok.json')
+          if state.exists():
+              try:
+                  value=json.loads(state.read_text(encoding='utf-8')).get('last_posted_at')
+                  if value:
+                      last=datetime.fromisoformat(str(value).replace('Z','+00:00')).astimezone(timezone.utc)
+                      if last.date()==now.date() and last.hour==now.hour:
+                          print('false'); raise SystemExit
+              except SystemExit: raise
+              except Exception: pass
+          print('true')
           PY
           )
-          if [ "$cooldown" = "true" ]; then
-            echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "TikTok em cooldown automático de 24 horas solicitado pela API; nenhuma nova tentativa será feita."
-            exit 0
-          fi
-
-          if [ "$EVENT_NAME" = "schedule" ]; then
-            recent=$(python3 - <<'PY'
-          import json
-          from datetime import datetime, timezone
-          from pathlib import Path
-
-          path = Path("state_tiktok.json")
-          recent = False
-          if path.exists():
-              try:
-                  value = json.loads(path.read_text(encoding="utf-8")).get("last_posted_at")
-                  if value:
-                      last = datetime.fromisoformat(str(value).replace("Z", "+00:00")).astimezone(timezone.utc)
-                      age = (datetime.now(timezone.utc) - last).total_seconds()
-                      recent = 0 <= age < 45 * 60
-              except Exception:
-                  recent = False
-          print("true" if recent else "false")
-          PY
-            )
-            if [ "$recent" = "true" ]; then
-              echo "run=false" >> "$GITHUB_OUTPUT"
-              echo "Fallback ignorado: TikTok confirmado nos últimos 45 minutos."
-              exit 0
-            fi
-          fi
-
-          echo "run=true" >> "$GITHUB_OUTPUT"
+          echo "run=$run" >> "$GITHUB_OUTPUT"
 
       - name: Verificar ativação
         id: gate
         if: steps.cadence.outputs.run == 'true'
-        env:
-          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
-        shell: bash
-        run: |
-          if [ "$TIKTOK_AUTOMATION_PAUSED" = "true" ]; then
-            echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "TikTok pausado."
-          elif [ -z "$BUFFER_API_KEY" ]; then
-            echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "BUFFER_API_KEY ausente; nenhuma publicação será tentada."
-          else
-            echo "ready=true" >> "$GITHUB_OUTPUT"
-          fi
+        run: echo "ready=true" >> "$GITHUB_OUTPUT"
 
       - name: Python
         if: steps.gate.outputs.ready == 'true'
@@ -140,7 +86,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Instalar dependências de edição
+      - name: Instalar dependências
         if: steps.gate.outputs.ready == 'true'
         run: |
           sudo apt-get update
@@ -149,38 +95,34 @@ jobs:
           sudo apt-get install -y tesseract-ocr-por tesseract-ocr-eng || true
           pip install -r requirements.txt
 
-      - name: Preparar estado exclusivo e exclusões do TikTok
+      - name: Preparar estado e exclusões
         if: steps.gate.outputs.ready == 'true'
         shell: bash
         run: |
-          # Se esta execução esperou a fila compartilhada, o checkout ainda
-          # aponta para o commit do disparo. Busque os estados já persistidos.
           git fetch origin "$GITHUB_REF_NAME"
-          git show "origin/$GITHUB_REF_NAME:state.json" > /tmp/latest-state-instagram.json
-          git show "origin/$GITHUB_REF_NAME:state_kwai.json" > /tmp/latest-state-kwai.json
-
+          for f in state.json state_instagram_underscore.json state_kwai.json; do
+            git show "origin/$GITHUB_REF_NAME:$f" > "/tmp/$f" 2>/dev/null || true
+          done
           cross=$(python - <<'PY'
           import json
           from pathlib import Path
-          names = []
-          for filename in ("/tmp/latest-state-instagram.json", "/tmp/latest-state-kwai.json"):
-              path = Path(filename)
-              if path.exists():
+          names=[]
+          for filename in ('/tmp/state.json','/tmp/state_instagram_underscore.json','/tmp/state_kwai.json'):
+              p=Path(filename)
+              if p.exists():
                   try:
-                      state = json.loads(path.read_text(encoding="utf-8"))
-                      for key in ("last_video", "last_attempted_video"):
-                          value = str(state.get(key, "")).strip()
-                          if value:
-                              names.append(value)
-                  except Exception:
-                      pass
-          print("|".join(dict.fromkeys(names)))
+                      s=json.loads(p.read_text(encoding='utf-8'))
+                      for key in ('last_video','last_attempted_video'):
+                          v=str(s.get(key,'')).strip()
+                          if v: names.append(v)
+                  except Exception: pass
+          print('|'.join(dict.fromkeys(names)))
           PY
           )
           echo "CROSS_PLATFORM_EXCLUDES=$cross" >> "$GITHUB_ENV"
           cp state_tiktok.json state.json
 
-      - name: Escolher e baixar um vídeo diferente das outras plataformas
+      - name: Escolher vídeo exclusivo
         id: videos
         if: steps.gate.outputs.ready == 'true'
         shell: bash
@@ -190,54 +132,34 @@ jobs:
           gdown "$GDRIVE_FOLDER_URL" --folder --json > /tmp/all-drive-files.json
           python select_video.py /tmp/all-drive-files.json > /tmp/selected.json
           count=$(jq -r '.count' /tmp/selected.json)
-          echo "Vídeos únicos disponíveis: $count"
-          if [ "$count" -eq 0 ]; then
-            echo "has_videos=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
+          if [ "$count" -eq 0 ]; then echo "has_videos=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           url=$(jq -r '.url' /tmp/selected.json)
           filename=$(jq -r '.name' /tmp/selected.json)
           idx=$(jq -r '.index' /tmp/selected.json)
-          python - "$filename" <<'PY'
-          import json
-          import sys
-          from pathlib import Path
-
-          path = Path("state.json")
-          state = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
-          state["last_attempted_video"] = sys.argv[1]
-          path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-          PY
-          echo "Selecionado [$((idx+1))/$count]: $filename"
           gdown "$url" -O "videos/$filename"
           echo "has_videos=true" >> "$GITHUB_OUTPUT"
           echo "total_videos=$count" >> "$GITHUB_OUTPUT"
           echo "selected_video_index=$idx" >> "$GITHUB_OUTPUT"
 
-      - name: Ler texto, tema e rosto do vídeo
+      - name: Analisar vídeo
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         run: python analyze_video.py
-
-      - name: Aplicar voz autoral e baixar posição da frase
+      - name: Aplicar estilo
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
-        run: python apply_style_overrides.py
-
-      - name: Procurar posição segura adaptativamente
-        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
-        run: python adaptive_placement.py
-
-      - name: Renderizar preservando rosto e substituindo texto antigo
+        run: |
+          python apply_style_overrides.py
+          python adaptive_placement.py
+      - name: Renderizar
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:
           TOTAL_VIDEOS: ${{ steps.videos.outputs.total_videos }}
           SELECTED_VIDEO_INDEX: ${{ steps.videos.outputs.selected_video_index }}
         run: python render.py
-
-      - name: Revisar rosto, enquadramento, duplicação e linguagem
+      - name: Revisar qualidade
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         run: python quality_gate.py
 
-      - name: Hospedar vídeo temporário para o Buffer
+      - name: Hospedar vídeo
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -263,7 +185,7 @@ jobs:
           PUBLIC_VIDEO_URL: https://raw.githubusercontent.com/${{ github.repository }}/media-host-tiktok/latest.mp4?run=${{ github.run_id }}
         run: python publish_tiktok.py
 
-      - name: Salvar diagnóstico e estado do TikTok
+      - name: Salvar estado do TikTok
         if: always() && steps.gate.outputs.ready == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -271,41 +193,26 @@ jobs:
         run: |
           set -e
           tmpdir=$(mktemp -d)
-
-          # O estado só avança após publish_tiktok.py confirmar status "sent" no Buffer.
-          # Se a publicação não chegou a ser tentada porque o vídeo foi bloqueado antes,
-          # preservamos o avanço/bloqueio calculado em state.json.
-          if [ "${{ steps.publish.outcome }}" = "skipped" ] && [ -f state.json ]; then
-            cp state.json state_tiktok.json
-          fi
-
           [ -f tiktok-diagnostic.json ] && cp tiktok-diagnostic.json "$tmpdir/tiktok-diagnostic.json" || true
           [ -f state_tiktok.json ] && cp state_tiktok.json "$tmpdir/state_tiktok.json" || true
           [ -f quality-report.json ] && cp quality-report.json "$tmpdir/tiktok-quality-report.json" || true
-          printf '{"run_id":"%s","finished_at":"%s","publish_outcome":"%s"}\n' \
-            "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.publish.outcome }}" \
-            > "$tmpdir/tiktok-run-status.json"
-
+          printf '{"run_id":"%s","finished_at":"%s","publish_outcome":"%s"}\n' "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.publish.outcome }}" > "$tmpdir/tiktok-run-status.json"
           git fetch origin "$GITHUB_REF_NAME"
           git reset --hard "origin/$GITHUB_REF_NAME"
-
           [ -f "$tmpdir/tiktok-diagnostic.json" ] && cp "$tmpdir/tiktok-diagnostic.json" tiktok-diagnostic.json || true
           [ -f "$tmpdir/state_tiktok.json" ] && cp "$tmpdir/state_tiktok.json" state_tiktok.json || true
           [ -f "$tmpdir/tiktok-quality-report.json" ] && cp "$tmpdir/tiktok-quality-report.json" tiktok-quality-report.json || true
           cp "$tmpdir/tiktok-run-status.json" tiktok-run-status.json
-
           git config user.name "Carlos TikTok Automation"
           git config user.email "actions@users.noreply.github.com"
-          [ -f tiktok-diagnostic.json ] && git add tiktok-diagnostic.json || true
-          [ -f state_tiktok.json ] && git add state_tiktok.json || true
-          [ -f tiktok-quality-report.json ] && git add tiktok-quality-report.json || true
           git add tiktok-run-status.json
-
+          [ -f state_tiktok.json ] && git add state_tiktok.json || true
+          [ -f tiktok-diagnostic.json ] && git add tiktok-diagnostic.json || true
+          [ -f tiktok-quality-report.json ] && git add tiktok-quality-report.json || true
           if ! git diff --cached --quiet; then
             git commit -m "Finalizar TikTok $GITHUB_RUN_ID [skip ci]"
             git push origin HEAD:"$GITHUB_REF_NAME"
           fi
-
-      - name: Falhar se a publicação falhou
+      - name: Falhar se publicação falhou
         if: steps.publish.outcome == 'failure'
         run: exit 1
