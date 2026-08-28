@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "B89D4621-D215-47E8-9A36-12932B93D041.mp4",
-  "overlay": "A canção avisa cedo quando merece chegar ao fim.",
+  "video": "C031AA4C-509B-46F6-8480-EB30D15FE161.mp4",
+  "overlay": "Meu tipo favorito de música é a que faz a gente parar sem perceber.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.18020833333333333,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.259375
   },
-  "faces_checked": 5,
+  "faces_checked": 4,
   "failures": []
 }
