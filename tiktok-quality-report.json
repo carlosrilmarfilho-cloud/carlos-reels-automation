@@ -1,12 +1,12 @@
 {
   "passed": true,
-  "video": "8DA4425C-CCE2-46B2-9116-2A947856E053.mp4",
-  "overlay": "O trecho certo começa exatamente quando você ia passar.",
+  "video": "99069C52-1345-4260-8C4A-C7B611E1BC84.mp4",
+  "overlay": "Escuta o detalhe que transforma este trecho inteiro.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.180078125,
+    "y0": 0.175390625,
     "x1": 0.9555555555555556,
-    "y1": 0.259765625
+    "y1": 0.264453125
   },
   "faces_checked": 4,
   "failures": []
