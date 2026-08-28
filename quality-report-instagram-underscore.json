@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "video": "41EF1F58-C757-4821-8692-EE6110066BFA.mp4",
+  "overlay": "Tá aí a terapia que você precisa",
+  "overlay_rect_norm": {
+    "x0": 0.044444444444444446,
+    "y0": 0.11484375,
+    "x1": 0.9555555555555556,
+    "y1": 0.20546875
+  },
+  "faces_checked": 8,
+  "failures": []
+}
