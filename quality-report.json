@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "B29A925E-34FD-4015-AFD6-5249D690E051.mp4",
-  "overlay": "Se essa parte não te pegou, espera o próximo verso antes de julgar.",
+  "video": "C496D0FE-98A5-4111-89DA-085BB731A6F5.mp4",
+  "overlay": "Ouça com atenção: a próxima linha acerta diferente.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.119140625,
+    "y0": 0.174609375,
     "x1": 0.9555555555555556,
-    "y1": 0.201171875
+    "y1": 0.265234375
   },
-  "faces_checked": 4,
+  "faces_checked": 2,
   "failures": []
 }
