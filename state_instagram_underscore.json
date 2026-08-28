@@ -1,26 +1,29 @@
 {
-  "video_index": 4,
-  "posts_total": 3,
+  "video_index": 5,
+  "posts_total": 4,
   "blocked_videos": [],
   "variant_usage": {
     "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 1,
     "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4": 1,
-    "41EF1F58-C757-4821-8692-EE6110066BFA.mp4": 1
+    "41EF1F58-C757-4821-8692-EE6110066BFA.mp4": 1,
+    "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4": 1
   },
   "recent_overlays": [
     "Tá aí a terapia que você precisa 🪗🎶❤️",
     "Tá aí a terapia que você precisa",
+    "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa"
   ],
   "recent_captions": [
-    "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe."
+    "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe.",
+    "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu."
   ],
-  "last_video": "41EF1F58-C757-4821-8692-EE6110066BFA.mp4",
+  "last_video": "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4",
   "last_overlay": "Tá aí a terapia que você precisa",
   "last_mode": "trial",
   "last_media_id": "18112266332063101",
-  "last_posted_at": "2026-08-28T13:44:46.423705+00:00",
+  "last_posted_at": "2026-08-28T15:35:50.903518+00:00",
   "last_attempted_video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
-  "last_caption": "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe.",
-  "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil"
+  "last_caption": "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.",
+  "last_hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento"
 }
