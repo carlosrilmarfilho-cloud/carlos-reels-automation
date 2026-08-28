@@ -2,8 +2,9 @@ name: Postar 7 Trial Reels no Instagram com underline
 
 on:
   schedule:
-    # 08:17, 10:17, 12:17, 14:17, 16:17, 18:17 e 20:17 em Fortaleza/Brasília (UTC-3)
-    - cron: '17 11,13,15,17,19,21,23 * * *'
+    # 08h, 10h, 12h, 14h, 16h, 18h e 20h em Fortaleza/Brasília (UTC-3).
+    # :17, :37 e :57 são apenas oportunidades de recuperação dentro da mesma janela.
+    - cron: '17,37,57 11,13,15,17,19,21,23 * * *'
   workflow_dispatch:
   push:
     paths:
@@ -24,7 +25,7 @@ jobs:
       GDRIVE_FOLDER_URL: https://drive.google.com/drive/folders/1sVLfUVK2FgssbqEEQeUrrUT5z9WluAin
       AUTOMATION_PAUSED: 'false'
       PLATFORM: instagram_underscore
-      FIXED_OVERLAY_TEXT: 'Tá aí a terapia que você precisa 🪗🎶❤️'
+      FIXED_OVERLAY_TEXT: 'Tá aí a terapia que você precisa'
       EXPECTED_INSTAGRAM_USERNAME: '_carlosrilmarfilho'
 
     steps:
@@ -33,36 +34,44 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Verificar ativação e conta correta
+      - name: Validar janela, conta e duplicação
         id: gate
         env:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN_UNDERSCORE }}
         shell: bash
         run: |
-          if [ "$AUTOMATION_PAUSED" = "true" ]; then
-            echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "Publicação pausada."
-            exit 0
-          fi
-          if [ -z "$INSTAGRAM_ACCESS_TOKEN" ]; then
-            echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "Secret INSTAGRAM_ACCESS_TOKEN_UNDERSCORE ainda não configurado."
-            exit 0
-          fi
+          if [ "$AUTOMATION_PAUSED" = "true" ]; then echo "ready=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          if [ -z "$INSTAGRAM_ACCESS_TOKEN" ]; then echo "ready=false" >> "$GITHUB_OUTPUT"; echo "Secret INSTAGRAM_ACCESS_TOKEN_UNDERSCORE ausente."; exit 0; fi
+          allowed=$(python3 - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+          now=datetime.now(timezone.utc)
+          if now.hour not in {11,13,15,17,19,21,23}:
+              print('false'); raise SystemExit
+          p=Path('state_instagram_underscore.json')
+          if p.exists():
+              try:
+                  value=json.loads(p.read_text(encoding='utf-8')).get('last_posted_at')
+                  if value:
+                      last=datetime.fromisoformat(str(value).replace('Z','+00:00')).astimezone(timezone.utc)
+                      if last.date()==now.date() and last.hour==now.hour:
+                          print('false'); raise SystemExit
+              except SystemExit: raise
+              except Exception: pass
+          print('true')
+          PY
+          )
+          if [ "$allowed" != "true" ]; then echo "ready=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           python - <<'PY'
           import os, requests
-          token = os.environ['INSTAGRAM_ACCESS_TOKEN']
-          expected = os.environ['EXPECTED_INSTAGRAM_USERNAME']
-          response = requests.get(
-              'https://graph.instagram.com/v26.0/me',
-              params={'fields': 'id,username', 'access_token': token},
-              timeout=30,
-          )
+          token=os.environ['INSTAGRAM_ACCESS_TOKEN']
+          expected=os.environ['EXPECTED_INSTAGRAM_USERNAME']
+          response=requests.get('https://graph.instagram.com/v26.0/me',params={'fields':'id,username','access_token':token},timeout=30)
           response.raise_for_status()
-          data = response.json()
-          username = str(data.get('username', ''))
+          username=str(response.json().get('username',''))
           if username != expected:
-              raise SystemExit(f'Token pertence a @{username}, mas este workflow só aceita @{expected}.')
+              raise SystemExit(f'Token pertence a @{username}, esperado @{expected}.')
           print(f'Conta confirmada: @{username}')
           PY
           echo "ready=true" >> "$GITHUB_OUTPUT"
@@ -73,7 +82,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Instalar dependências de edição
+      - name: Instalar dependências
         if: steps.gate.outputs.ready == 'true'
         run: |
           sudo apt-get update
@@ -83,7 +92,7 @@ jobs:
           pip install -r requirements.txt
           pip install pilmoji emoji
 
-      - name: Isolar estado do Instagram com underline
+      - name: Isolar estado do underline
         if: steps.gate.outputs.ready == 'true'
         shell: bash
         run: |
@@ -92,7 +101,7 @@ jobs:
           style=$(jq -r '.posts_total // 0' state.json)
           echo "FIXED_STYLE_INDEX=$((style % 7))" >> "$GITHUB_ENV"
 
-      - name: Escolher e baixar vídeo da rotação
+      - name: Escolher vídeo exclusivo
         id: videos
         if: steps.gate.outputs.ready == 'true'
         shell: bash
@@ -100,61 +109,55 @@ jobs:
           set -e
           rm -rf videos && mkdir -p videos
           gdown "$GDRIVE_FOLDER_URL" --folder --json > /tmp/all-drive-files.json
+          git fetch origin "$GITHUB_REF_NAME"
+          for f in state_tiktok.json state_kwai.json; do git show "origin/$GITHUB_REF_NAME:$f" > "/tmp/$f" 2>/dev/null || true; done
           cross=$(python - <<'PY'
           import json
           from pathlib import Path
-          names = []
-          for filename in ('/tmp/state-main-instagram.json', 'state_tiktok.json', 'state_kwai.json'):
-              path = Path(filename)
-              if path.exists():
+          names=[]
+          for filename in ('/tmp/state-main-instagram.json','/tmp/state_tiktok.json','/tmp/state_kwai.json'):
+              p=Path(filename)
+              if p.exists():
                   try:
-                      value = str(json.loads(path.read_text(encoding='utf-8')).get('last_video', '')).strip()
-                      if value:
-                          names.append(value)
-                  except Exception:
-                      pass
+                      s=json.loads(p.read_text(encoding='utf-8'))
+                      for key in ('last_video','last_attempted_video'):
+                          v=str(s.get(key,'')).strip()
+                          if v: names.append(v)
+                  except Exception: pass
           print('|'.join(dict.fromkeys(names)))
           PY
           )
           CROSS_PLATFORM_EXCLUDES="$cross" python select_video.py /tmp/all-drive-files.json > /tmp/selected.json
           count=$(jq -r '.count' /tmp/selected.json)
-          echo "Vídeos únicos disponíveis: $count"
-          if [ "$count" -eq 0 ]; then
-            echo "has_videos=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
+          if [ "$count" -eq 0 ]; then echo "has_videos=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           url=$(jq -r '.url' /tmp/selected.json)
           filename=$(jq -r '.name' /tmp/selected.json)
           idx=$(jq -r '.index' /tmp/selected.json)
-          echo "Selecionado [$((idx+1))/$count]: $filename"
           gdown "$url" -O "videos/$filename"
           echo "has_videos=true" >> "$GITHUB_OUTPUT"
           echo "total_videos=$count" >> "$GITHUB_OUTPUT"
           echo "selected_video_index=$idx" >> "$GITHUB_OUTPUT"
 
-      - name: Ler texto e tema do vídeo
+      - name: Analisar vídeo
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         run: python analyze_video.py
-
       - name: Aplicar regras visuais seguras
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         run: |
           python apply_style_overrides.py
           python adaptive_placement.py
           python prepare_fixed_instagram.py
-
-      - name: Renderizar frase fixa com legenda e hashtags variáveis
+      - name: Renderizar frase fixa
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:
           TOTAL_VIDEOS: ${{ steps.videos.outputs.total_videos }}
           SELECTED_VIDEO_INDEX: ${{ steps.videos.outputs.selected_video_index }}
         run: python render.py
-
-      - name: Revisar rosto, enquadramento e texto
+      - name: Revisar qualidade
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         run: python quality_gate.py
 
-      - name: Hospedar vídeo temporário separado
+      - name: Hospedar vídeo
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -181,7 +184,7 @@ jobs:
           PUBLIC_VIDEO_URL: https://raw.githubusercontent.com/${{ github.repository }}/media-host-underscore/latest.mp4?run=${{ github.run_id }}
         run: python publish.py
 
-      - name: Salvar estado separado e diagnóstico
+      - name: Salvar estado separado
         if: always() && steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -192,11 +195,7 @@ jobs:
           [ -f diagnostic.json ] && cp diagnostic.json diagnostic_instagram_underscore.json || true
           [ -f quality-report.json ] && cp quality-report.json quality-report-instagram-underscore.json || true
           printf '{"run_id":"%s","finished_at":"%s","publish_outcome":"%s"}\n' "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.publish.outcome }}" > run-status-instagram-underscore.json
-
-          for f in state.json diagnostic.json quality-report.json render.py viral_copy.json video_profiles.json; do
-            git checkout -- "$f" 2>/dev/null || true
-          done
-
+          for f in state.json diagnostic.json quality-report.json render.py viral_copy.json video_profiles.json; do git checkout -- "$f" 2>/dev/null || true; done
           git config user.name "Carlos Reels Automation"
           git config user.email "actions@users.noreply.github.com"
           git add state_instagram_underscore.json run-status-instagram-underscore.json
@@ -204,11 +203,9 @@ jobs:
           [ -f quality-report-instagram-underscore.json ] && git add quality-report-instagram-underscore.json || true
           if ! git diff --cached --quiet; then
             git commit -m "Atualizar @_carlosrilmarfilho $GITHUB_RUN_ID [skip ci]"
-            git reset --hard HEAD
             git pull --rebase origin "$GITHUB_REF_NAME"
             git push origin HEAD:"$GITHUB_REF_NAME"
           fi
-
-      - name: Falhar se a publicação falhou
+      - name: Falhar se publicação falhou
         if: steps.publish.outcome == 'failure'
         run: exit 1
