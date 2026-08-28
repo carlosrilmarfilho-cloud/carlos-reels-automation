@@ -1,17 +1,20 @@
 {
-  "video_index": 2,
-  "posts_total": 1,
+  "video_index": 3,
+  "posts_total": 2,
   "blocked_videos": [],
   "variant_usage": {
-    "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 1
+    "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 1,
+    "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4": 1
   },
   "recent_overlays": [
-    "Tá aí a terapia que você precisa 🪗🎶❤️"
+    "Tá aí a terapia que você precisa 🪗🎶❤️",
+    "Tá aí a terapia que você precisa"
   ],
   "recent_captions": [],
-  "last_video": "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4",
-  "last_overlay": "Tá aí a terapia que você precisa 🪗🎶❤️",
+  "last_video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
+  "last_overlay": "Tá aí a terapia que você precisa",
   "last_mode": "trial",
-  "last_media_id": "18077273888359560",
-  "last_posted_at": "2026-08-27T17:22:24Z"
+  "last_media_id": "18112266332063101",
+  "last_posted_at": "2026-08-28T11:36:24Z",
+  "last_attempted_video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4"
 }
