@@ -1,5 +1,5 @@
 {
-  "video_index": 41,
+  "video_index": 43,
   "posts_total": 86,
   "last_posted_at": "2026-08-28T01:54:43.816027+00:00",
   "last_video": "9ACC0CB2-136E-41C6-86F3-F837E3CE5490.mp4",
@@ -227,7 +227,8 @@
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
     "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4",
-    "89B35892-2506-4442-BBBD-044049F7C5BE.mp4"
+    "89B35892-2506-4442-BBBD-044049F7C5BE.mp4",
+    "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
   ],
-  "last_attempted_video": "9ACC0CB2-136E-41C6-86F3-F837E3CE5490.mp4"
+  "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
 }
