@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "C031AA4C-509B-46F6-8480-EB30D15FE161.mp4",
-  "overlay": "Meu tipo favorito de música é a que faz a gente parar sem perceber.",
+  "video": "85F02D78-FE04-447B-A11C-DBD5C74D45A2.mp4",
+  "overlay": "Se a letra bater diferente, finge que foi só coincidência.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.18020833333333333,
+    "y0": 0.174609375,
     "x1": 0.9555555555555556,
-    "y1": 0.259375
+    "y1": 0.265234375
   },
-  "faces_checked": 4,
+  "faces_checked": 6,
   "failures": []
 }
