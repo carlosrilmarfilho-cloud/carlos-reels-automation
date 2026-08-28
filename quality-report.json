@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "B29A925E-34FD-4015-AFD6-5249D690E051.mp4",
-  "overlay": "Dá mais dez segundos; essa melodia vai explicar por quê.",
+  "video": "B89D4621-D215-47E8-9A36-12932B93D041.mp4",
+  "overlay": "A canção avisa cedo quando merece chegar ao fim.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.11484375,
+    "y0": 0.174609375,
     "x1": 0.9555555555555556,
-    "y1": 0.20546875
+    "y1": 0.265234375
   },
-  "faces_checked": 4,
+  "faces_checked": 5,
   "failures": []
 }
