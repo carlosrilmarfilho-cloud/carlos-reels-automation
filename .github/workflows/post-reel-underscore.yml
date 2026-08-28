@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: instagram-reels-underscore-seven-daily
+  group: instagram-tiktok-publishing
   cancel-in-progress: false
 
 jobs:
@@ -190,22 +190,37 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
         run: |
-          set -e
+          set -euo pipefail
           cp state.json state_instagram_underscore.json
           [ -f diagnostic.json ] && cp diagnostic.json diagnostic_instagram_underscore.json || true
           [ -f quality-report.json ] && cp quality-report.json quality-report-instagram-underscore.json || true
-          printf '{"run_id":"%s","finished_at":"%s","publish_outcome":"%s"}\n' "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.publish.outcome }}" > run-status-instagram-underscore.json
-          for f in state.json diagnostic.json quality-report.json render.py viral_copy.json video_profiles.json; do git checkout -- "$f" 2>/dev/null || true; done
+          printf '{"run_id":"%s","finished_at":"%s","publish_outcome":"%s"}\\n' "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.publish.outcome }}" > run-status-instagram-underscore.json
           git config user.name "Carlos Reels Automation"
           git config user.email "actions@users.noreply.github.com"
-          git add state_instagram_underscore.json run-status-instagram-underscore.json
-          [ -f diagnostic_instagram_underscore.json ] && git add diagnostic_instagram_underscore.json || true
-          [ -f quality-report-instagram-underscore.json ] && git add quality-report-instagram-underscore.json || true
-          if ! git diff --cached --quiet; then
+          tmpdir=$(mktemp -d)
+          for file in state_instagram_underscore.json diagnostic_instagram_underscore.json quality-report-instagram-underscore.json run-status-instagram-underscore.json; do
+            [ -f "$file" ] && cp "$file" "$tmpdir/$file"
+          done
+          for attempt in 1 2 3; do
+            git fetch origin "$GITHUB_REF_NAME"
+            git reset --hard "origin/$GITHUB_REF_NAME"
+            for file in state_instagram_underscore.json diagnostic_instagram_underscore.json quality-report-instagram-underscore.json run-status-instagram-underscore.json; do
+              [ -f "$tmpdir/$file" ] && cp "$tmpdir/$file" "$file"
+            done
+            git add state_instagram_underscore.json run-status-instagram-underscore.json
+            [ -f diagnostic_instagram_underscore.json ] && git add diagnostic_instagram_underscore.json || true
+            [ -f quality-report-instagram-underscore.json ] && git add quality-report-instagram-underscore.json || true
+            if git diff --cached --quiet; then
+              exit 0
+            fi
             git commit -m "Atualizar @_carlosrilmarfilho $GITHUB_RUN_ID [skip ci]"
-            git pull --rebase origin "$GITHUB_REF_NAME"
-            git push origin HEAD:"$GITHUB_REF_NAME"
-          fi
+            if git push origin HEAD:"$GITHUB_REF_NAME"; then
+              exit 0
+            fi
+            sleep $((attempt * 3))
+          done
+          echo "Falha ao salvar estado após três tentativas." >&2
+          exit 1
       - name: Falhar se publicação falhou
         if: steps.publish.outcome == 'failure'
         run: exit 1
