@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: instagram-tiktok-publishing
+  group: instagram-main-seven-daily
   cancel-in-progress: false
 
 jobs:
