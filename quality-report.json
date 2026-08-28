@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "B27F702C-D111-43BF-8EA0-8F9257EC9546.mp4",
-  "overlay": "Tem som que você escuta. E tem som que muda teu jeito de ficar quieto.",
+  "video": "B29A925E-34FD-4015-AFD6-5249D690E051.mp4",
+  "overlay": "Dá mais dez segundos; essa melodia vai explicar por quê.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.18203125,
+    "y0": 0.11484375,
     "x1": 0.9555555555555556,
-    "y1": 0.2578125
+    "y1": 0.20546875
   },
-  "faces_checked": 2,
+  "faces_checked": 4,
   "failures": []
 }
