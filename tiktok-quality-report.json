@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4",
-  "overlay": "Essa parte aqui merece mais atenção do que muita conversa por aí.",
+  "video": "B020B86A-7648-4905-A31C-6AD6C347C050.mp4",
+  "overlay": "Existe um motivo para este refrão continuar na cabeça.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.18203125,
+    "y0": 0.174609375,
     "x1": 0.9555555555555556,
-    "y1": 0.2578125
+    "y1": 0.265234375
   },
-  "faces_checked": 6,
+  "faces_checked": 9,
   "failures": []
 }

@@ -1,16 +1,18 @@
 {
-  "started_at": "2026-08-28T02:44:52.014748+00:00",
+  "started_at": "2026-08-28T03:49:16.268204+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
-  "stage": "success",
-  "caption_length": 143,
+  "stage": "confirm_delivery",
+  "caption_length": 128,
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6a90f626b12b8efbe734af75",
-  "initial_status": "sending",
-  "buffer_status": "sent",
-  "sent_at": "2026-08-28T02:46:45.873Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7678908018775395591",
-  "success": true,
-  "finished_at": "2026-08-28T02:46:46.528157+00:00"
+  "post_id": "6a91053db12b8efbe735b632",
+  "initial_status": "error",
+  "buffer_status": "error",
+  "sent_at": null,
+  "external_link": null,
+  "success": false,
+  "error_type": "RuntimeError",
+  "error": "Buffer/TikTok falhou ao publicar: TikTok has detected a large number of posts published through the API for this channel. Wait 24 hours before trying to publish again.",
+  "finished_at": "2026-08-28T03:49:21.783931+00:00"
 }
