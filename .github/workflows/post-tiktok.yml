@@ -52,6 +52,42 @@ jobs:
             exit 0
           fi
 
+          cooldown=$(python3 - <<'PY'
+          import json
+          from datetime import datetime, timedelta, timezone
+          from pathlib import Path
+
+          path = Path("tiktok-diagnostic.json")
+          active = False
+          until = None
+          if path.exists():
+              try:
+                  data = json.loads(path.read_text(encoding="utf-8"))
+                  error = str(data.get("error", "")).lower()
+                  finished = data.get("finished_at")
+                  is_api_limit = (
+                      "wait 24 hours" in error
+                      or "large number of posts published through the api" in error
+                  )
+                  if is_api_limit and finished:
+                      failed_at = datetime.fromisoformat(
+                          str(finished).replace("Z", "+00:00")
+                      ).astimezone(timezone.utc)
+                      until = failed_at + timedelta(hours=24)
+                      active = datetime.now(timezone.utc) < until
+              except Exception:
+                  active = False
+          print("true" if active else "false")
+          if active and until:
+              print(until.isoformat(), file=__import__("sys").stderr)
+          PY
+          )
+          if [ "$cooldown" = "true" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "TikTok em cooldown automático de 24 horas solicitado pela API; nenhuma nova tentativa será feita."
+            exit 0
+          fi
+
           if [ "$EVENT_NAME" = "schedule" ]; then
             recent=$(python3 - <<'PY'
           import json
