@@ -1,8 +1,8 @@
 {
   "video_index": 48,
-  "posts_total": 91,
-  "last_posted_at": "2026-08-28T09:28:24.419073+00:00",
-  "last_video": "C031AA4C-509B-46F6-8480-EB30D15FE161.mp4",
+  "posts_total": 92,
+  "last_posted_at": "2026-08-28T11:34:03Z",
+  "last_video": "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4",
   "last_overlay": "Meu tipo favorito de música é a que faz a gente parar sem perceber.",
   "last_mode": "trial",
   "variant_usage": {
@@ -245,5 +245,6 @@
     "89B35892-2506-4442-BBBD-044049F7C5BE.mp4",
     "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
   ],
-  "last_attempted_video": "C031AA4C-509B-46F6-8480-EB30D15FE161.mp4"
+  "last_attempted_video": "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4",
+  "last_media_id": "17915512143240451"
 }
