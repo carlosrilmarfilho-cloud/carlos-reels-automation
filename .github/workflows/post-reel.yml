@@ -1,10 +1,10 @@
-name: Postar Reel a cada hora
+name: Postar 7 Reels por dia no Instagram
 
 on:
   schedule:
-    # Três oportunidades por hora. O guard abaixo garante no máximo uma publicação
-    # por ciclo e permite recuperar automaticamente se o GitHub perder um cron.
-    - cron: '7,27,47 * * * *'
+    # 08h, 10h, 12h, 14h, 16h, 18h e 20h em Fortaleza/Brasília (UTC-3).
+    # :07, :27 e :47 são apenas oportunidades de recuperação dentro da mesma janela.
+    - cron: '7,27,47 11,13,15,17,19,21,23 * * *'
   workflow_dispatch:
   push:
     paths:
@@ -14,10 +14,7 @@ permissions:
   contents: write
 
 concurrency:
-  # Grupo compartilhado com o TikTok: impede que as duas plataformas escolham
-  # o mesmo vídeo antes de o estado cruzado ser persistido.
   group: instagram-tiktok-publishing
-  # Enfileira a outra plataforma sem cancelar uma publicação em andamento.
   cancel-in-progress: false
 
 jobs:
@@ -34,83 +31,54 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Pré-validar pausa, credenciais e cadência
+      - name: Validar janela, credenciais e duplicação
         id: cadence
         env:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
-          EVENT_NAME: ${{ github.event_name }}
         shell: bash
         run: |
           if [ "$AUTOMATION_PAUSED" = "true" ]; then
             echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "Automação pausada intencionalmente."
             exit 0
           fi
-
           if [ -z "$INSTAGRAM_ACCESS_TOKEN" ]; then
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "Token do Instagram ausente."
             exit 0
           fi
-
-          if [ "$EVENT_NAME" = "schedule" ]; then
-            recent=$(python3 - <<'PY'
+          run=$(python3 - <<'PY'
           import json
           from datetime import datetime, timezone
           from pathlib import Path
-
-          path = Path("state.json")
-          recent = False
+          now = datetime.now(timezone.utc)
+          allowed_hours = {11,13,15,17,19,21,23}
+          if now.hour not in allowed_hours:
+              print('false')
+              raise SystemExit
+          path = Path('state.json')
           if path.exists():
               try:
-                  value = json.loads(path.read_text(encoding="utf-8")).get("last_posted_at")
+                  value = json.loads(path.read_text(encoding='utf-8')).get('last_posted_at')
                   if value:
-                      last = datetime.fromisoformat(str(value).replace("Z", "+00:00")).astimezone(timezone.utc)
-                      age = (datetime.now(timezone.utc) - last).total_seconds()
-                      recent = 0 <= age < 45 * 60
+                      last = datetime.fromisoformat(str(value).replace('Z','+00:00')).astimezone(timezone.utc)
+                      if last.date() == now.date() and last.hour == now.hour:
+                          print('false')
+                          raise SystemExit
+              except SystemExit:
+                  raise
               except Exception:
-                  recent = False
-          print("true" if recent else "false")
+                  pass
+          print('true')
           PY
-            )
-            if [ "$recent" = "true" ]; then
-              echo "run=false" >> "$GITHUB_OUTPUT"
-              echo "Fallback ignorado: já houve publicação nos últimos 45 minutos."
-              exit 0
-            fi
-          fi
-
-          echo "run=true" >> "$GITHUB_OUTPUT"
-
-      - name: Registrar execução
-        if: steps.cadence.outputs.run == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          printf '{"run_id":"%s","started_at":"%s","status":"running"}\n' "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" > run-status.json
-          git config user.name "Carlos Reels Automation"
-          git config user.email "actions@users.noreply.github.com"
-          git add run-status.json
-          git commit -m "Registrar execução $GITHUB_RUN_ID [skip ci]"
-          git pull --rebase origin "$GITHUB_REF_NAME"
-          git push origin HEAD:"$GITHUB_REF_NAME"
+          )
+          echo "run=$run" >> "$GITHUB_OUTPUT"
 
       - name: Verificar ativação
         id: gate
         if: steps.cadence.outputs.run == 'true'
         env:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
-        shell: bash
-        run: |
-          if [ "$AUTOMATION_PAUSED" = "true" ]; then
-            echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "Publicação pausada para correção visual."
-          elif [ -z "$INSTAGRAM_ACCESS_TOKEN" ]; then
-            echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "Token do Instagram ausente."
-          else
-            echo "ready=true" >> "$GITHUB_OUTPUT"
-          fi
+        run: echo "ready=true" >> "$GITHUB_OUTPUT"
 
       - name: Python
         if: steps.gate.outputs.ready == 'true'
@@ -118,7 +86,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Instalar dependências de edição
+      - name: Instalar dependências
         if: steps.gate.outputs.ready == 'true'
         run: |
           sudo apt-get update
@@ -127,7 +95,7 @@ jobs:
           sudo apt-get install -y tesseract-ocr-por tesseract-ocr-eng || true
           pip install -r requirements.txt
 
-      - name: Escolher e baixar um vídeo diferente das outras plataformas
+      - name: Escolher vídeo exclusivo
         id: videos
         if: steps.gate.outputs.ready == 'true'
         shell: bash
@@ -135,80 +103,56 @@ jobs:
           set -e
           rm -rf videos && mkdir -p videos
           gdown "$GDRIVE_FOLDER_URL" --folder --json > /tmp/all-drive-files.json
-          # A execução pode ter sido enfileirada a partir de um commit antigo.
-          # Leia os estados cruzados diretamente da ponta atual da branch.
           git fetch origin "$GITHUB_REF_NAME"
-          git show "origin/$GITHUB_REF_NAME:state_tiktok.json" > /tmp/latest-state-tiktok.json
-          git show "origin/$GITHUB_REF_NAME:state_kwai.json" > /tmp/latest-state-kwai.json
-
+          for f in state_tiktok.json state_instagram_underscore.json state_kwai.json; do
+            git show "origin/$GITHUB_REF_NAME:$f" > "/tmp/$f" 2>/dev/null || true
+          done
           cross=$(python - <<'PY'
           import json
           from pathlib import Path
-          names = []
-          for filename in ("/tmp/latest-state-tiktok.json", "/tmp/latest-state-kwai.json"):
-              path = Path(filename)
-              if path.exists():
+          names=[]
+          for filename in ('/tmp/state_tiktok.json','/tmp/state_instagram_underscore.json','/tmp/state_kwai.json'):
+              p=Path(filename)
+              if p.exists():
                   try:
-                      state = json.loads(path.read_text(encoding="utf-8"))
-                      for key in ("last_video", "last_attempted_video"):
-                          value = str(state.get(key, "")).strip()
-                          if value:
-                              names.append(value)
-                  except Exception:
-                      pass
-          print("|".join(dict.fromkeys(names)))
+                      s=json.loads(p.read_text(encoding='utf-8'))
+                      for key in ('last_video','last_attempted_video'):
+                          v=str(s.get(key,'')).strip()
+                          if v: names.append(v)
+                  except Exception: pass
+          print('|'.join(dict.fromkeys(names)))
           PY
           )
           CROSS_PLATFORM_EXCLUDES="$cross" python select_video.py /tmp/all-drive-files.json > /tmp/selected.json
           count=$(jq -r '.count' /tmp/selected.json)
-          echo "Vídeos únicos disponíveis: $count"
-          if [ "$count" -eq 0 ]; then
-            echo "has_videos=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
+          if [ "$count" -eq 0 ]; then echo "has_videos=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           url=$(jq -r '.url' /tmp/selected.json)
           filename=$(jq -r '.name' /tmp/selected.json)
           idx=$(jq -r '.index' /tmp/selected.json)
-          python - "$filename" <<'PY'
-          import json
-          import sys
-          from pathlib import Path
-
-          path = Path("state.json")
-          state = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
-          state["last_attempted_video"] = sys.argv[1]
-          path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-          PY
-          echo "Selecionado [$((idx+1))/$count]: $filename"
           gdown "$url" -O "videos/$filename"
           echo "has_videos=true" >> "$GITHUB_OUTPUT"
           echo "total_videos=$count" >> "$GITHUB_OUTPUT"
           echo "selected_video_index=$idx" >> "$GITHUB_OUTPUT"
 
-      - name: Ler texto e tema do vídeo
+      - name: Analisar vídeo
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         run: python analyze_video.py
-
-      - name: Aplicar voz autoral e baixar posição da frase
+      - name: Aplicar estilo
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
-        run: python apply_style_overrides.py
-
-      - name: Procurar posição segura adaptativamente
-        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
-        run: python adaptive_placement.py
-
-      - name: Renderizar em alta qualidade, variar texto, legenda e hashtags
+        run: |
+          python apply_style_overrides.py
+          python adaptive_placement.py
+      - name: Renderizar
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:
           TOTAL_VIDEOS: ${{ steps.videos.outputs.total_videos }}
           SELECTED_VIDEO_INDEX: ${{ steps.videos.outputs.selected_video_index }}
         run: python render.py
-
-      - name: Revisar rosto, enquadramento, frase e legenda
+      - name: Revisar qualidade
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         run: python quality_gate.py
 
-      - name: Hospedar vídeo temporário
+      - name: Hospedar vídeo
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -224,7 +168,7 @@ jobs:
           git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git push --force origin media-host
 
-      - name: Publicar Trial Reel no Instagram
+      - name: Publicar Trial Reel
         id: publish
         continue-on-error: true
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
@@ -235,7 +179,7 @@ jobs:
           PUBLIC_VIDEO_URL: https://raw.githubusercontent.com/${{ github.repository }}/media-host/latest.mp4?run=${{ github.run_id }}
         run: python publish.py
 
-      - name: Salvar diagnóstico e estado
+      - name: Salvar estado
         if: always() && steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -249,13 +193,10 @@ jobs:
           printf '{"run_id":"%s","finished_at":"%s","publish_outcome":"%s"}\n' "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.publish.outcome }}" > run-status.json
           git add run-status.json
           if ! git diff --cached --quiet; then
-            git commit -m "Finalizar execução $GITHUB_RUN_ID [skip ci]"
-            git reset --hard HEAD
-            git clean -fd
+            git commit -m "Finalizar Instagram $GITHUB_RUN_ID [skip ci]"
             git pull --rebase origin "$GITHUB_REF_NAME"
             git push origin HEAD:"$GITHUB_REF_NAME"
           fi
-
-      - name: Falhar se a publicação falhou
+      - name: Falhar se publicação falhou
         if: steps.publish.outcome == 'failure'
         run: exit 1
