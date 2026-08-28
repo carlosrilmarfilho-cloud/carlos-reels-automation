@@ -52,12 +52,18 @@ jobs:
               try:
                   d=json.loads(diag.read_text(encoding='utf-8'))
                   err=str(d.get('error','')).lower()
-                  finished=d.get('finished_at')
-                  limited=('wait 24 hours' in err or 'large number of posts published through the api' in err or 'rate limit' in err or 'cooldown' in err)
-                  if limited and finished:
-                      failed=datetime.fromisoformat(str(finished).replace('Z','+00:00')).astimezone(timezone.utc)
-                      if now < failed + timedelta(hours=24):
+                  cooldown_until=d.get('cooldown_until')
+                  if cooldown_until:
+                      until=datetime.fromisoformat(str(cooldown_until).replace('Z','+00:00')).astimezone(timezone.utc)
+                      if now < until:
                           print('false'); raise SystemExit
+                  else:
+                      finished=d.get('finished_at')
+                      limited=('wait 24 hours' in err or 'large number of posts published through the api' in err or 'rate limit' in err)
+                      if limited and finished:
+                          failed=datetime.fromisoformat(str(finished).replace('Z','+00:00')).astimezone(timezone.utc)
+                          if now < failed + timedelta(hours=24):
+                              print('false'); raise SystemExit
               except SystemExit: raise
               except Exception: pass
           state=Path('state_tiktok.json')
