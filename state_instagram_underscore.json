@@ -1,6 +1,6 @@
 {
-  "video_index": 7,
-  "posts_total": 6,
+  "video_index": 8,
+  "posts_total": 7,
   "blocked_videos": [],
   "variant_usage": {
     "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 1,
@@ -8,10 +8,12 @@
     "41EF1F58-C757-4821-8692-EE6110066BFA.mp4": 1,
     "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4": 1,
     "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4": 1,
-    "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4": 1
+    "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4": 1,
+    "83093820-DCDB-4081-BE78-1118698B99C6.mp4": 1
   },
   "recent_overlays": [
     "Tá aí a terapia que você precisa 🪗🎶❤️",
+    "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
@@ -22,14 +24,15 @@
     "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe.",
     "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.",
     "Se te lembrou alguém, um lugar ou uma fase, comenta só uma palavra. Quero ver as histórias que aparecem.",
-    "Tenta ouvir esta parte sem voltar o vídeo. Depois conta se conseguiu."
+    "Tenta ouvir esta parte sem voltar o vídeo. Depois conta se conseguiu.",
+    "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi."
   ],
-  "last_video": "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4",
+  "last_video": "83093820-DCDB-4081-BE78-1118698B99C6.mp4",
   "last_overlay": "Tá aí a terapia que você precisa",
   "last_mode": "trial",
   "last_media_id": "18112266332063101",
-  "last_posted_at": "2026-08-28T19:33:46.413661+00:00",
+  "last_posted_at": "2026-08-28T21:43:53.539833+00:00",
   "last_attempted_video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
-  "last_caption": "Tenta ouvir esta parte sem voltar o vídeo. Depois conta se conseguiu.",
+  "last_caption": "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi.",
   "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil"
 }
