@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: instagram-tiktok-publishing
+  group: tiktok-seven-daily
   cancel-in-progress: false
 
 jobs:
@@ -197,22 +197,30 @@ jobs:
           [ -f state_tiktok.json ] && cp state_tiktok.json "$tmpdir/state_tiktok.json" || true
           [ -f quality-report.json ] && cp quality-report.json "$tmpdir/tiktok-quality-report.json" || true
           printf '{"run_id":"%s","finished_at":"%s","publish_outcome":"%s"}\n' "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.publish.outcome }}" > "$tmpdir/tiktok-run-status.json"
-          git fetch origin "$GITHUB_REF_NAME"
-          git reset --hard "origin/$GITHUB_REF_NAME"
-          [ -f "$tmpdir/tiktok-diagnostic.json" ] && cp "$tmpdir/tiktok-diagnostic.json" tiktok-diagnostic.json || true
-          [ -f "$tmpdir/state_tiktok.json" ] && cp "$tmpdir/state_tiktok.json" state_tiktok.json || true
-          [ -f "$tmpdir/tiktok-quality-report.json" ] && cp "$tmpdir/tiktok-quality-report.json" tiktok-quality-report.json || true
-          cp "$tmpdir/tiktok-run-status.json" tiktok-run-status.json
           git config user.name "Carlos TikTok Automation"
           git config user.email "actions@users.noreply.github.com"
-          git add tiktok-run-status.json
-          [ -f state_tiktok.json ] && git add state_tiktok.json || true
-          [ -f tiktok-diagnostic.json ] && git add tiktok-diagnostic.json || true
-          [ -f tiktok-quality-report.json ] && git add tiktok-quality-report.json || true
-          if ! git diff --cached --quiet; then
+          for attempt in 1 2 3; do
+            git fetch origin "$GITHUB_REF_NAME"
+            git reset --hard "origin/$GITHUB_REF_NAME"
+            [ -f "$tmpdir/tiktok-diagnostic.json" ] && cp "$tmpdir/tiktok-diagnostic.json" tiktok-diagnostic.json || true
+            [ -f "$tmpdir/state_tiktok.json" ] && cp "$tmpdir/state_tiktok.json" state_tiktok.json || true
+            [ -f "$tmpdir/tiktok-quality-report.json" ] && cp "$tmpdir/tiktok-quality-report.json" tiktok-quality-report.json || true
+            cp "$tmpdir/tiktok-run-status.json" tiktok-run-status.json
+            git add tiktok-run-status.json
+            [ -f state_tiktok.json ] && git add state_tiktok.json || true
+            [ -f tiktok-diagnostic.json ] && git add tiktok-diagnostic.json || true
+            [ -f tiktok-quality-report.json ] && git add tiktok-quality-report.json || true
+            if git diff --cached --quiet; then
+              exit 0
+            fi
             git commit -m "Finalizar TikTok $GITHUB_RUN_ID [skip ci]"
-            git push origin HEAD:"$GITHUB_REF_NAME"
-          fi
+            if git push origin HEAD:"$GITHUB_REF_NAME"; then
+              exit 0
+            fi
+            sleep $((attempt * 3))
+          done
+          echo "Falha ao salvar estado após três tentativas." >&2
+          exit 1
       - name: Falhar se publicação falhou
         if: steps.publish.outcome == 'failure'
         run: exit 1
