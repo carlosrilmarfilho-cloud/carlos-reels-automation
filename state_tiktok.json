@@ -1,9 +1,9 @@
 {
-  "video_index": 42,
-  "posts_total": 85,
-  "last_posted_at": "2026-08-28T02:46:45.873Z",
-  "last_video": "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4",
-  "last_overlay": "Essa parte aqui merece mais atenção do que muita conversa por aí.",
+  "video_index": 16,
+  "posts_total": 86,
+  "last_posted_at": "2026-08-29T11:24:17.139Z",
+  "last_video": "71F75039-C662-4FCA-AD77-6433FC9FC4E1.mp4",
+  "last_overlay": "Antes do refrão, teu corpo já sabia a resposta.",
   "last_mode": "buffer_auto_confirmed",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -45,7 +45,7 @@
     "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4": 1,
     "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4": 1,
     "6FFB8681-5089-4A43-8E3C-ED1F0A6BB8D8.mp4": 1,
-    "71F75039-C662-4FCA-AD77-6433FC9FC4E1.mp4": 1,
+    "71F75039-C662-4FCA-AD77-6433FC9FC4E1.mp4": 2,
     "83093820-DCDB-4081-BE78-1118698B99C6.mp4": 1,
     "85F02D78-FE04-447B-A11C-DBD5C74D45A2.mp4": 1,
     "868797B9-A7FB-40EF-9431-ADEA273423C9.mp4": 1,
@@ -53,8 +53,8 @@
     "99069C52-1345-4260-8C4A-C7B611E1BC84.mp4": 1,
     "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4": 1
   },
-  "last_caption": "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?",
-  "last_hashtags": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
+  "last_caption": "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe.",
+  "last_hashtags": "#musica #tiktokbrasil #som #boamusica #brasil",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -136,7 +136,8 @@
     "Se você ficou até aqui, provavelmente não foi por causa do algoritmo.",
     "O trecho certo começa exatamente quando você ia passar.",
     "Escuta o detalhe que transforma este trecho inteiro.",
-    "Essa parte aqui merece mais atenção do que muita conversa por aí."
+    "Essa parte aqui merece mais atenção do que muita conversa por aí.",
+    "Antes do refrão, teu corpo já sabia a resposta."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -219,7 +220,8 @@
     "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.",
     "Alguns refrões continuam trabalhando depois do fim. Este ficou na tua cabeça?",
     "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?",
-    "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?"
+    "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?",
+    "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe."
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -227,8 +229,8 @@
     "89B35892-2506-4442-BBBD-044049F7C5BE.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6a90f626b12b8efbe734af75",
+  "last_buffer_post_id": "6a92c0f573b542df4dd8e287",
   "last_buffer_status": "sent",
-  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7678908018775395591",
+  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7679412537837882644",
   "last_attempted_video": "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4"
 }
