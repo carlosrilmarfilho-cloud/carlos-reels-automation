@@ -1,9 +1,9 @@
 {
-  "video_index": 18,
-  "posts_total": 99,
-  "last_posted_at": "2026-08-29T11:38:34.599584+00:00",
-  "last_video": "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4",
-  "last_overlay": "Reconheceu a voz? Então essa música já fez o trabalho.",
+  "video_index": 19,
+  "posts_total": 100,
+  "last_posted_at": "2026-08-29T13:22:14.349875+00:00",
+  "last_video": "F5F80DA0-ECAC-4B2A-90F3-5D1F3F00E07F.mp4",
+  "last_overlay": "Se a primeira nota prendeu, espera a próxima frase.",
   "last_mode": "trial",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -61,10 +61,11 @@
     "99069C52-1345-4260-8C4A-C7B611E1BC84.mp4": 1,
     "C496D0FE-98A5-4111-89DA-085BB731A6F5.mp4": 1,
     "CEE8A75E-E9A0-4A11-A686-06D90E1184D8.mp4": 1,
-    "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4": 1
+    "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4": 1,
+    "F5F80DA0-ECAC-4B2A-90F3-5D1F3F00E07F.mp4": 1
   },
-  "last_caption": "Tenta ouvir esta parte sem voltar o vídeo. Depois conta se conseguiu.",
-  "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
+  "last_caption": "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.",
+  "last_hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -159,7 +160,8 @@
     "Se essa parte não te pegou, espera o próximo verso antes de julgar.",
     "Ouça com atenção: a próxima linha acerta diferente.",
     "Tenta passar direto depois de ouvir esta parte.",
-    "Reconheceu a voz? Então essa música já fez o trabalho."
+    "Reconheceu a voz? Então essa música já fez o trabalho.",
+    "Se a primeira nota prendeu, espera a próxima frase."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -255,7 +257,8 @@
     "Escuta a próxima linha com atenção. Qual palavra acertou diferente?",
     "Qual detalhe musical fez você parar a rolagem? Escuta outra vez e me diz.",
     "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou.",
-    "Tenta ouvir esta parte sem voltar o vídeo. Depois conta se conseguiu."
+    "Tenta ouvir esta parte sem voltar o vídeo. Depois conta se conseguiu.",
+    "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu."
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
