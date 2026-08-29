@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "CC16C569-E899-45F2-AA46-381A81EE8BE2.mp4",
-  "overlay": "Se a primeira nota prendeu, espera a próxima frase.",
+  "video": "D3390941-13EB-4298-95BC-5C3D430C7685.mp4",
+  "overlay": "Aqui está o segundo em que a música muda tudo.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
     "y0": 0.11484375,
     "x1": 0.9555555555555556,
     "y1": 0.20546875
   },
-  "faces_checked": 10,
+  "faces_checked": 8,
   "failures": []
 }
