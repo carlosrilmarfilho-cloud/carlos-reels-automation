@@ -42,6 +42,8 @@ jobs:
         run: |
           if [ "$AUTOMATION_PAUSED" = "true" ]; then echo "ready=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           if [ -z "$INSTAGRAM_ACCESS_TOKEN" ]; then echo "ready=false" >> "$GITHUB_OUTPUT"; echo "Secret INSTAGRAM_ACCESS_TOKEN_UNDERSCORE ausente."; exit 0; fi
+          git fetch origin "$GITHUB_REF_NAME"
+          git show "origin/$GITHUB_REF_NAME:state_instagram_underscore.json" > /tmp/live-state-underscore.json 2>/dev/null || cp state_instagram_underscore.json /tmp/live-state-underscore.json
           allowed=$(python3 - <<'PY'
           import json
           from datetime import datetime, timezone
@@ -49,7 +51,7 @@ jobs:
           now=datetime.now(timezone.utc)
           if now.hour not in {11,13,15,17,19,21,23}:
               print('false'); raise SystemExit
-          p=Path('state_instagram_underscore.json')
+          p=Path('/tmp/live-state-underscore.json')
           if p.exists():
               try:
                   value=json.loads(p.read_text(encoding='utf-8')).get('last_posted_at')
@@ -148,6 +150,7 @@ jobs:
           python adaptive_placement.py
           python prepare_fixed_instagram.py
       - name: Renderizar frase fixa
+        id: render
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:
           TOTAL_VIDEOS: ${{ steps.videos.outputs.total_videos }}
@@ -173,10 +176,34 @@ jobs:
           git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git push --force origin media-host-underscore
 
+      - name: Revalidar duplicação antes de publicar
+        id: prepublish
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        shell: bash
+        run: |
+          git fetch origin "$GITHUB_REF_NAME"
+          allowed=$(python3 - <<'PY'
+          import json, os, subprocess
+          from datetime import datetime, timezone
+          now=datetime.now(timezone.utc)
+          try:
+              raw=subprocess.check_output(['git','show',f'origin/{os.environ["GITHUB_REF_NAME"]}:state_instagram_underscore.json'],text=True)
+              value=json.loads(raw).get('last_posted_at')
+              if value:
+                  last=datetime.fromisoformat(str(value).replace('Z','+00:00')).astimezone(timezone.utc)
+                  if last.date()==now.date() and last.hour==now.hour:
+                      print('false'); raise SystemExit
+          except SystemExit: raise
+          except Exception: pass
+          print('true')
+          PY
+          )
+          echo "allowed=$allowed" >> "$GITHUB_OUTPUT"
+
       - name: Publicar Trial Reel no @_carlosrilmarfilho
         id: publish
         continue-on-error: true
-        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        if: steps.prepublish.outputs.allowed == 'true'
         env:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN_UNDERSCORE }}
           IG_API_VERSION: v26.0
@@ -191,16 +218,21 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          cp state.json state_instagram_underscore.json
+          save_state=false
+          if [ "${{ steps.publish.outcome }}" = "success" ] || [ "${{ steps.render.outcome }}" = "failure" ]; then
+            cp state.json state_instagram_underscore.json
+            save_state=true
+          fi
           [ -f diagnostic.json ] && cp diagnostic.json diagnostic_instagram_underscore.json || true
           [ -f quality-report.json ] && cp quality-report.json quality-report-instagram-underscore.json || true
           printf '{"run_id":"%s","finished_at":"%s","publish_outcome":"%s"}\\n' "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.publish.outcome }}" > run-status-instagram-underscore.json
           git config user.name "Carlos Reels Automation"
           git config user.email "actions@users.noreply.github.com"
           tmpdir=$(mktemp -d)
-          for file in state_instagram_underscore.json diagnostic_instagram_underscore.json quality-report-instagram-underscore.json run-status-instagram-underscore.json; do
+          for file in diagnostic_instagram_underscore.json quality-report-instagram-underscore.json run-status-instagram-underscore.json; do
             [ -f "$file" ] && cp "$file" "$tmpdir/$file"
           done
+          [ "$save_state" = "true" ] && cp state_instagram_underscore.json "$tmpdir/state_instagram_underscore.json" || true
           for attempt in 1 2 3; do
             git fetch origin "$GITHUB_REF_NAME"
             git reset --hard "origin/$GITHUB_REF_NAME"
