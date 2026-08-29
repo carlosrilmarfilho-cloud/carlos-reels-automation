@@ -46,6 +46,8 @@ jobs:
             echo "Token do Instagram ausente."
             exit 0
           fi
+          git fetch origin "$GITHUB_REF_NAME"
+          git show "origin/$GITHUB_REF_NAME:state.json" > /tmp/live-state.json 2>/dev/null || cp state.json /tmp/live-state.json
           run=$(python3 - <<'PY'
           import json
           from datetime import datetime, timezone
@@ -55,7 +57,7 @@ jobs:
           if now.hour not in allowed_hours:
               print('false')
               raise SystemExit
-          path = Path('state.json')
+          path = Path('/tmp/live-state.json')
           if path.exists():
               try:
                   value = json.loads(path.read_text(encoding='utf-8')).get('last_posted_at')
@@ -143,6 +145,7 @@ jobs:
           python apply_style_overrides.py
           python adaptive_placement.py
       - name: Renderizar
+        id: render
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:
           TOTAL_VIDEOS: ${{ steps.videos.outputs.total_videos }}
@@ -168,10 +171,39 @@ jobs:
           git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git push --force origin media-host
 
+      - name: Revalidar duplicação antes de publicar
+        id: prepublish
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        shell: bash
+        run: |
+          git fetch origin "$GITHUB_REF_NAME"
+          allowed=$(python3 - <<'PY'
+          import json, subprocess
+          from datetime import datetime, timezone
+          now = datetime.now(timezone.utc)
+          try:
+              raw = subprocess.check_output(
+                  ['git', 'show', f'origin/{__import__("os").environ["GITHUB_REF_NAME"]}:state.json'],
+                  text=True,
+              )
+              value = json.loads(raw).get('last_posted_at')
+              if value:
+                  last = datetime.fromisoformat(str(value).replace('Z','+00:00')).astimezone(timezone.utc)
+                  if last.date() == now.date() and last.hour == now.hour:
+                      print('false'); raise SystemExit
+          except SystemExit:
+              raise
+          except Exception:
+              pass
+          print('true')
+          PY
+          )
+          echo "allowed=$allowed" >> "$GITHUB_OUTPUT"
+
       - name: Publicar Trial Reel
         id: publish
         continue-on-error: true
-        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        if: steps.prepublish.outputs.allowed == 'true'
         env:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           IG_API_VERSION: v26.0
@@ -188,9 +220,14 @@ jobs:
           git config user.name "Carlos Reels Automation"
           git config user.email "actions@users.noreply.github.com"
           tmpdir=$(mktemp -d)
-          for file in state.json diagnostic.json quality-report.json; do
+          for file in diagnostic.json quality-report.json; do
             [ -f "$file" ] && cp "$file" "$tmpdir/$file"
           done
+          if [ "${{ steps.publish.outcome }}" = "success" ] && [ -f state.json ]; then
+            cp state.json "$tmpdir/state.json"
+          elif [ "${{ steps.render.outcome }}" = "failure" ] && [ -f state.json ]; then
+            cp state.json "$tmpdir/state.json"
+          fi
           printf '{"run_id":"%s","finished_at":"%s","publish_outcome":"%s"}\\n' "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.publish.outcome }}" > "$tmpdir/run-status.json"
           for attempt in 1 2 3; do
             git fetch origin "$GITHUB_REF_NAME"
