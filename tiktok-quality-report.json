@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "9ACC0CB2-136E-41C6-86F3-F837E3CE5490.mp4",
-  "overlay": "Isso aqui tem cara de música que alguém vai mandar sem explicar nada.",
+  "video": "F651D1BB-D243-438C-BB64-72CC36D73860.mp4",
+  "overlay": "Escuta o detalhe que transforma este trecho inteiro.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.1828125,
+    "y0": 0.175390625,
     "x1": 0.9555555555555556,
-    "y1": 0.25703125
+    "y1": 0.264453125
   },
-  "faces_checked": 8,
+  "faces_checked": 7,
   "failures": []
 }
