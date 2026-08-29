@@ -156,6 +156,7 @@ jobs:
           python apply_style_overrides.py
           python adaptive_placement.py
       - name: Renderizar
+        id: render
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:
           TOTAL_VIDEOS: ${{ steps.videos.outputs.total_videos }}
@@ -200,7 +201,13 @@ jobs:
           set -e
           tmpdir=$(mktemp -d)
           [ -f tiktok-diagnostic.json ] && cp tiktok-diagnostic.json "$tmpdir/tiktok-diagnostic.json" || true
-          [ -f state_tiktok.json ] && cp state_tiktok.json "$tmpdir/state_tiktok.json" || true
+          # Em falha de render, render.py registra o vídeo bloqueado em state.json.
+          # Promova esse estado para impedir que a recuperação tente o mesmo vídeo.
+          if [ "${{ steps.render.outcome }}" = "failure" ] && [ -f state.json ]; then
+            cp state.json "$tmpdir/state_tiktok.json"
+          elif [ -f state_tiktok.json ]; then
+            cp state_tiktok.json "$tmpdir/state_tiktok.json"
+          fi
           [ -f quality-report.json ] && cp quality-report.json "$tmpdir/tiktok-quality-report.json" || true
           printf '{"run_id":"%s","finished_at":"%s","publish_outcome":"%s"}\n' "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.publish.outcome }}" > "$tmpdir/tiktok-run-status.json"
           git config user.name "Carlos TikTok Automation"
