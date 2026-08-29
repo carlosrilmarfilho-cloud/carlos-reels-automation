@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "CA6E6C03-D0B2-46D2-BEFE-E112DE04EF2B.mp4",
-  "overlay": "A canção avisa cedo quando merece chegar ao fim.",
+  "video": "CC16C569-E899-45F2-AA46-381A81EE8BE2.mp4",
+  "overlay": "Se a primeira nota prendeu, espera a próxima frase.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
     "y0": 0.11484375,
     "x1": 0.9555555555555556,
     "y1": 0.20546875
   },
-  "faces_checked": 2,
+  "faces_checked": 10,
   "failures": []
 }
