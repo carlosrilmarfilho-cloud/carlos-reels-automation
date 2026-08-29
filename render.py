@@ -532,7 +532,9 @@ def choose_content(video_name: str, state: dict, analysis: dict) -> tuple[dict, 
     overlay_pool = list(overlays)
     caption_pool = list(captions)
     recent_overlay_values = list(state.get("recent_overlays", []))
-    used_overlays = set(recent_overlay_values)
+    # Evita repetição imediata sem esgotar permanentemente o banco editorial.
+    # Com sete posts diários, 60 itens mantêm mais de oito dias de distância.
+    used_overlays = set(recent_overlay_values[-60:])
     recent_overlay_signatures = {
         overlay_signature(value) for value in recent_overlay_values[-60:]
     }
@@ -545,7 +547,7 @@ def choose_content(video_name: str, state: dict, analysis: dict) -> tuple[dict, 
         and overlay_opening_signature(value) not in recent_overlay_openings
     ]
     recent_caption_values = list(state.get("recent_captions", []))
-    used_captions = set(recent_caption_values)
+    used_captions = set(recent_caption_values[-60:])
     recent_caption_signatures = {
         caption_signature(value) for value in recent_caption_values[-60:]
     }
