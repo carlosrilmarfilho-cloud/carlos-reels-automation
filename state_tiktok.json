@@ -1,5 +1,5 @@
 {
-  "video_index": 19,
+  "video_index": 20,
   "posts_total": 88,
   "last_posted_at": "2026-08-29T15:23:45.839Z",
   "last_video": "9ACC0CB2-136E-41C6-86F3-F837E3CE5490.mp4",
@@ -232,11 +232,12 @@
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
     "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4",
-    "89B35892-2506-4442-BBBD-044049F7C5BE.mp4"
+    "89B35892-2506-4442-BBBD-044049F7C5BE.mp4",
+    "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
   ],
   "last_platform": "tiktok",
   "last_buffer_post_id": "6a92f913463a5d78ec6e6128",
   "last_buffer_status": "sent",
   "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7679474277502061845",
-  "last_attempted_video": "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4"
+  "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
 }
