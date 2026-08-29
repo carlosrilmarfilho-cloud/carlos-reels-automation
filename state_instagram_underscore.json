@@ -1,6 +1,6 @@
 {
-  "video_index": 10,
-  "posts_total": 9,
+  "video_index": 11,
+  "posts_total": 10,
   "blocked_videos": [],
   "variant_usage": {
     "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 1,
@@ -11,10 +11,12 @@
     "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4": 1,
     "83093820-DCDB-4081-BE78-1118698B99C6.mp4": 1,
     "868797B9-A7FB-40EF-9431-ADEA273423C9.mp4": 1,
-    "8DA4425C-CCE2-46B2-9116-2A947856E053.mp4": 1
+    "8DA4425C-CCE2-46B2-9116-2A947856E053.mp4": 1,
+    "B020B86A-7648-4905-A31C-6AD6C347C050.mp4": 1
   },
   "recent_overlays": [
     "Tá aí a terapia que você precisa 🪗🎶❤️",
+    "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
@@ -31,14 +33,15 @@
     "Tenta ouvir esta parte sem voltar o vídeo. Depois conta se conseguiu.",
     "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi.",
     "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas.",
-    "Talvez este fosse o som que faltava no teu dia. Salva para ouvir com calma."
+    "Talvez este fosse o som que faltava no teu dia. Salva para ouvir com calma.",
+    "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?"
   ],
-  "last_video": "8DA4425C-CCE2-46B2-9116-2A947856E053.mp4",
+  "last_video": "B020B86A-7648-4905-A31C-6AD6C347C050.mp4",
   "last_overlay": "Tá aí a terapia que você precisa",
   "last_mode": "trial",
   "last_media_id": "18112266332063101",
-  "last_posted_at": "2026-08-29T11:22:10.950324+00:00",
+  "last_posted_at": "2026-08-29T13:22:16.636994+00:00",
   "last_attempted_video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
-  "last_caption": "Talvez este fosse o som que faltava no teu dia. Salva para ouvir com calma.",
-  "last_hashtags": "#boamusica #reelsbrasil #musica #brasil #reels"
+  "last_caption": "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?",
+  "last_hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento"
 }
