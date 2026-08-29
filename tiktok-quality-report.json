@@ -1,12 +1,12 @@
 {
   "passed": true,
-  "video": "71F75039-C662-4FCA-AD77-6433FC9FC4E1.mp4",
-  "overlay": "Antes do refrão, teu corpo já sabia a resposta.",
+  "video": "913C4B82-A346-496C-846C-243F68ABE625.mp4",
+  "overlay": "Eu ia passar o vídeo. A música claramente tinha outros planos.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.176171875,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.263671875
   },
   "faces_checked": 8,
   "failures": []
