@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "CEE8A75E-E9A0-4A11-A686-06D90E1184D8.mp4",
-  "overlay": "Tenta passar direto depois de ouvir esta parte.",
+  "video": "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4",
+  "overlay": "Reconheceu a voz? Então essa música já fez o trabalho.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.11484375,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.20546875
   },
-  "faces_checked": 8,
+  "faces_checked": 5,
   "failures": []
 }
