@@ -39,6 +39,8 @@ jobs:
         run: |
           if [ "$TIKTOK_AUTOMATION_PAUSED" = "true" ]; then echo "run=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           if [ -z "$BUFFER_API_KEY" ]; then echo "run=false" >> "$GITHUB_OUTPUT"; echo "BUFFER_API_KEY ausente."; exit 0; fi
+          git fetch origin "$GITHUB_REF_NAME"
+          git show "origin/$GITHUB_REF_NAME:state_tiktok.json" > /tmp/live-state-tiktok.json 2>/dev/null || true
           run=$(python3 - <<'PY'
           import json
           from datetime import datetime, timedelta, timezone
@@ -66,7 +68,7 @@ jobs:
                               print('false'); raise SystemExit
               except SystemExit: raise
               except Exception: pass
-          state=Path('state_tiktok.json')
+          state=Path('/tmp/live-state-tiktok.json')
           if state.exists():
               try:
                   value=json.loads(state.read_text(encoding='utf-8')).get('last_posted_at')
@@ -182,10 +184,37 @@ jobs:
           git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git push --force origin media-host-tiktok
 
+      - name: Revalidar janela imediatamente antes da publicação
+        id: prepublish
+        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        shell: bash
+        run: |
+          git fetch origin "$GITHUB_REF_NAME"
+          git show "origin/$GITHUB_REF_NAME:state_tiktok.json" > /tmp/prepublish-state-tiktok.json 2>/dev/null || true
+          allowed=$(python3 - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+          now=datetime.now(timezone.utc)
+          p=Path('/tmp/prepublish-state-tiktok.json')
+          if p.exists():
+              try:
+                  value=json.loads(p.read_text(encoding='utf-8')).get('last_posted_at')
+                  if value:
+                      last=datetime.fromisoformat(str(value).replace('Z','+00:00')).astimezone(timezone.utc)
+                      if last.date()==now.date() and last.hour==now.hour:
+                          print('false'); raise SystemExit
+              except SystemExit: raise
+              except Exception: pass
+          print('true')
+          PY
+          )
+          echo "allowed=$allowed" >> "$GITHUB_OUTPUT"
+
       - name: Publicar automaticamente no TikTok via Buffer
         id: publish
         continue-on-error: true
-        if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
+        if: steps.prepublish.outputs.allowed == 'true'
         env:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
           BUFFER_TIKTOK_CHANNEL_ID: ${{ secrets.BUFFER_TIKTOK_CHANNEL_ID }}
@@ -205,7 +234,7 @@ jobs:
           # Promova esse estado para impedir que a recuperação tente o mesmo vídeo.
           if [ "${{ steps.render.outcome }}" = "failure" ] && [ -f state.json ]; then
             cp state.json "$tmpdir/state_tiktok.json"
-          elif [ -f state_tiktok.json ]; then
+          elif [ "${{ steps.publish.outcome }}" = "success" ] && [ -f state_tiktok.json ]; then
             cp state_tiktok.json "$tmpdir/state_tiktok.json"
           fi
           [ -f quality-report.json ] && cp quality-report.json "$tmpdir/tiktok-quality-report.json" || true
