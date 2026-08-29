@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4",
-  "overlay": "Antes do refrão, teu corpo já sabia a resposta.",
+  "video": "B27F702C-D111-43BF-8EA0-8F9257EC9546.mp4",
+  "overlay": "Se a letra bater diferente, finge que foi só coincidência.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
     "y0": 0.174609375,
     "x1": 0.9555555555555556,
     "y1": 0.265234375
   },
-  "faces_checked": 8,
+  "faces_checked": 1,
   "failures": []
 }
