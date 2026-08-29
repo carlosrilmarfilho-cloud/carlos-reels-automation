@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "B27F702C-D111-43BF-8EA0-8F9257EC9546.mp4",
-  "overlay": "Se a letra bater diferente, finge que foi só coincidência.",
+  "video": "CA6E6C03-D0B2-46D2-BEFE-E112DE04EF2B.mp4",
+  "overlay": "A canção avisa cedo quando merece chegar ao fim.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.11484375,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.20546875
   },
-  "faces_checked": 1,
+  "faces_checked": 2,
   "failures": []
 }
