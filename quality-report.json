@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4",
-  "overlay": "Talvez seja esta parte que você precisava encontrar.",
+  "video": "6FFB8681-5089-4A43-8E3C-ED1F0A6BB8D8.mp4",
+  "overlay": "Presta atenção no instante em que tudo muda de tom.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.7296875,
+    "y0": 0.11484375,
     "x1": 0.9555555555555556,
-    "y1": 0.8203125
+    "y1": 0.20546875
   },
-  "faces_checked": 7,
+  "faces_checked": 10,
   "failures": []
 }
