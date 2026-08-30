@@ -1,11 +1,11 @@
 {
-  "video_index": 3,
-  "posts_total": 19,
+  "video_index": 4,
+  "posts_total": 20,
   "blocked_videos": [],
   "variant_usage": {
     "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 1,
     "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4": 2,
-    "41EF1F58-C757-4821-8692-EE6110066BFA.mp4": 1,
+    "41EF1F58-C757-4821-8692-EE6110066BFA.mp4": 2,
     "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4": 1,
     "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4": 1,
     "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4": 1,
@@ -24,6 +24,7 @@
   },
   "recent_overlays": [
     "Tá aí a terapia que você precisa 🪗🎶❤️",
+    "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
@@ -60,14 +61,15 @@
     "Tem dia que eu posto pra cantar. Em outros, percebo que a música acaba falando com alguém do outro lado.",
     "Presta atenção na mudança de tom. Foi ali que a música te pegou?",
     "A primeira nota fez uma promessa e a próxima cumpriu. Você ouviu até onde?",
-    "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?"
+    "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?",
+    "Eu não quero te convencer a gostar. Só deixa essa parte terminar e decide depois."
   ],
-  "last_video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
+  "last_video": "41EF1F58-C757-4821-8692-EE6110066BFA.mp4",
   "last_overlay": "Tá aí a terapia que você precisa",
   "last_mode": "trial",
   "last_media_id": "18112266332063101",
-  "last_posted_at": "2026-08-30T17:24:11.647091+00:00",
+  "last_posted_at": "2026-08-30T19:23:31.230510+00:00",
   "last_attempted_video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
-  "last_caption": "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?",
+  "last_caption": "Eu não quero te convencer a gostar. Só deixa essa parte terminar e decide depois.",
   "last_hashtags": "#boamusica #reelsbrasil #musica #brasil #reels"
 }
