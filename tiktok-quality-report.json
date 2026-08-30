@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "1287DDFF-011C-4141-B09E-249B63C95F08.mp4",
-  "overlay": "Primeiro vem a batida; depois, a lembrança encontra você.",
+  "video": "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4",
+  "overlay": "Hoje eu só queria cantar. Se virou terapia, foi consequência.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.175,
+    "y0": 0.176171875,
     "x1": 0.9555555555555556,
-    "y1": 0.26458333333333334
+    "y1": 0.263671875
   },
-  "faces_checked": 9,
+  "faces_checked": 7,
   "failures": []
 }
