@@ -1,18 +1,14 @@
 {
-  "started_at": "2026-08-30T15:21:54.259099+00:00",
+  "started_at": "2026-08-30T15:38:29.469702+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "confirm_delivery",
-  "caption_length": 136,
-  "channel_id": "6a8d782bccaf649a671248a9",
-  "channel_name": "carlosrilmarfilho",
   "post_id": "6a944a94d076c0e5835e386d",
-  "initial_status": "sending",
   "buffer_status": "sending",
   "sent_at": null,
   "external_link": null,
   "success": false,
   "error_type": "RuntimeError",
   "error": "Buffer não confirmou publicação no TikTok em 10 minutos; último status: sending",
-  "finished_at": "2026-08-30T15:32:07.901327+00:00"
+  "finished_at": "2026-08-30T15:48:30.443511+00:00"
 }
