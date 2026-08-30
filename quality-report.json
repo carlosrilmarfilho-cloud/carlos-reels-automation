@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "99069C52-1345-4260-8C4A-C7B611E1BC84.mp4",
-  "overlay": "Tem refrão que funciona melhor quando pega a gente desprevenido.",
+  "video": "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4",
+  "overlay": "Repara na letra: ela diz mais do que parece.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.180859375,
+    "y0": 0.174609375,
     "x1": 0.9555555555555556,
-    "y1": 0.258984375
+    "y1": 0.265234375
   },
-  "faces_checked": 4,
+  "faces_checked": 5,
   "failures": []
 }
