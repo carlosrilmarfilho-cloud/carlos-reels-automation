@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4",
-  "overlay": "Foi só a melodia entrar para a rolagem perder a vez.",
+  "video": "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4",
+  "overlay": "Talvez seja esta parte que você precisava encontrar.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.7296875,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.8203125
   },
-  "faces_checked": 11,
+  "faces_checked": 7,
   "failures": []
 }
