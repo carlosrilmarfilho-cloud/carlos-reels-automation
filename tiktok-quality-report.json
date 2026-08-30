@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4",
-  "overlay": "De repente, o vídeo vira só cenário para a música.",
+  "video": "1287DDFF-011C-4141-B09E-249B63C95F08.mp4",
+  "overlay": "Primeiro vem a batida; depois, a lembrança encontra você.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.175,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.26458333333333334
   },
-  "faces_checked": 1,
+  "faces_checked": 9,
   "failures": []
 }

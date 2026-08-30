@@ -1,9 +1,9 @@
 {
-  "video_index": 2,
-  "posts_total": 96,
-  "last_posted_at": "2026-08-30T17:22:53.338Z",
-  "last_video": "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4",
-  "last_overlay": "De repente, o vídeo vira só cenário para a música.",
+  "video_index": 3,
+  "posts_total": 97,
+  "last_posted_at": "2026-08-30T19:22:06.761Z",
+  "last_video": "1287DDFF-011C-4141-B09E-249B63C95F08.mp4",
+  "last_overlay": "Primeiro vem a batida; depois, a lembrança encontra você.",
   "last_mode": "buffer_auto_confirmed",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -61,10 +61,11 @@
     "E33D9A8A-03BC-4BF1-B49C-9DF5A17DC778.mp4": 1,
     "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4": 1,
     "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4": 1,
-    "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 1
+    "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 1,
+    "1287DDFF-011C-4141-B09E-249B63C95F08.mp4": 1
   },
-  "last_caption": "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
-  "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
+  "last_caption": "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou.",
+  "last_hashtags": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -157,7 +158,8 @@
     "Foi só a melodia entrar para a rolagem perder a vez.",
     "Nem precisa conhecer: essa voz faz você ficar.",
     "Poucas notas bastam para entregar uma canção inesquecível.",
-    "De repente, o vídeo vira só cenário para a música."
+    "De repente, o vídeo vira só cenário para a música.",
+    "Primeiro vem a batida; depois, a lembrança encontra você."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -251,7 +253,8 @@
     "Poucas notas entregaram a canção inteira. Qual instrumento você ouviu primeiro?",
     "Escuta a próxima linha com atenção. Qual palavra acertou diferente?",
     "Dez segundos foram suficientes para prender tua atenção? Salva para comparar depois.",
-    "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?"
+    "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
+    "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou."
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -260,8 +263,8 @@
     "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6a946682fd31f7e50b753446",
+  "last_buffer_post_id": "6a948275d58664eabd7b8a7c",
   "last_buffer_status": "sent",
-  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7679876015128202514",
+  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7679906728103693575",
   "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
 }
