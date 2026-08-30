@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4",
-  "overlay": "A cabeça tava em outro lugar até essa voz entrar.",
+  "video": "85F02D78-FE04-447B-A11C-DBD5C74D45A2.mp4",
+  "overlay": "Primeiro vem a batida; depois, a lembrança encontra você.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.1140625,
+    "y0": 0.175390625,
     "x1": 0.9555555555555556,
-    "y1": 0.20572916666666666
+    "y1": 0.264453125
   },
-  "faces_checked": 8,
+  "faces_checked": 3,
   "failures": []
 }
