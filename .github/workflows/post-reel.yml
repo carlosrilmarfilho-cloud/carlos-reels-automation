@@ -106,6 +106,7 @@ jobs:
           rm -rf videos && mkdir -p videos
           gdown "$GDRIVE_FOLDER_URL" --folder --json > /tmp/all-drive-files.json
           git fetch origin "$GITHUB_REF_NAME"
+          git show "origin/$GITHUB_REF_NAME:state.json" > state.json 2>/dev/null || true
           for f in state_tiktok.json state_instagram_underscore.json state_kwai.json; do
             git show "origin/$GITHUB_REF_NAME:$f" > "/tmp/$f" 2>/dev/null || true
           done
