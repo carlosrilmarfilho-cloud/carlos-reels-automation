@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4",
-  "overlay": "Nem precisa conhecer: essa voz faz você ficar.",
+  "video": "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4",
+  "overlay": "Poucas notas bastam para entregar uma canção inesquecível.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.180078125,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.259765625
   },
-  "faces_checked": 8,
+  "faces_checked": 6,
   "failures": []
 }
