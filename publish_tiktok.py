@@ -291,10 +291,58 @@ def wait_until_sent(post_id: str, timeout_seconds: int = 600, interval_seconds: 
     )
 
 
+def persist_confirmed(metadata: dict, hashtags: str, post_id: str, confirmed: dict) -> None:
+    state = dict(metadata["next_state"])
+    state["last_posted_at"] = confirmed.get("sentAt") or datetime.now(timezone.utc).isoformat()
+    state["last_mode"] = "buffer_auto_confirmed"
+    state["last_platform"] = "tiktok"
+    state["last_hashtags"] = hashtags
+    state["last_buffer_post_id"] = post_id
+    state["last_buffer_status"] = confirmed.get("status")
+    state["last_external_link"] = confirmed.get("externalLink")
+    STATE.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    save_diag(
+        stage="success",
+        success=True,
+        post_id=post_id,
+        buffer_status=confirmed.get("status"),
+        sent_at=confirmed.get("sentAt"),
+        external_link=confirmed.get("externalLink"),
+        finished_at=datetime.now(timezone.utc).isoformat(),
+    )
+    print(f"TikTok confirmado como publicado: {post_id}")
+
+
+def pending_post_from_current_window() -> str:
+    if not DIAG.exists():
+        return ""
+    try:
+        previous = json.loads(DIAG.read_text(encoding="utf-8"))
+        post_id = str(previous.get("post_id") or "").strip()
+        status = str(previous.get("buffer_status") or previous.get("initial_status") or "").lower()
+        stamp = previous.get("started_at") or previous.get("finished_at")
+        if not post_id or status not in {"sending", "pending", "processing", "unknown"} or not stamp:
+            return ""
+        started = datetime.fromisoformat(str(stamp).replace("Z", "+00:00")).astimezone(timezone.utc)
+        now = datetime.now(timezone.utc)
+        if started.date() == now.date() and started.hour == now.hour:
+            return post_id
+    except Exception:
+        return ""
+    return ""
+
+
 def main() -> None:
     try:
+        previous_post_id = pending_post_from_current_window()
         metadata = json.loads(META.read_text(encoding="utf-8"))
         caption, hashtags = adapt_caption_for_tiktok(str(metadata["caption"]))
+        if previous_post_id:
+            save_diag(stage="reconcile_pending", post_id=previous_post_id)
+            confirmed = wait_until_sent(previous_post_id)
+            persist_confirmed(metadata, hashtags, previous_post_id, confirmed)
+            return
+
         save_diag(stage="auth", caption_length=len(caption))
         channel_id, channel_name = find_tiktok_channel()
         save_diag(stage="video_public", channel_id=channel_id, channel_name=channel_name)
@@ -307,27 +355,7 @@ def main() -> None:
 
         save_diag(stage="accepted_by_buffer", post_id=post_id, initial_status=post.get("status"))
         confirmed = wait_until_sent(post_id)
-
-        state = dict(metadata["next_state"])
-        state["last_posted_at"] = confirmed.get("sentAt") or datetime.now(timezone.utc).isoformat()
-        state["last_mode"] = "buffer_auto_confirmed"
-        state["last_platform"] = "tiktok"
-        state["last_hashtags"] = hashtags
-        state["last_buffer_post_id"] = post_id
-        state["last_buffer_status"] = confirmed.get("status")
-        state["last_external_link"] = confirmed.get("externalLink")
-        STATE.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
-        save_diag(
-            stage="success",
-            success=True,
-            post_id=post_id,
-            buffer_status=confirmed.get("status"),
-            sent_at=confirmed.get("sentAt"),
-            external_link=confirmed.get("externalLink"),
-            finished_at=datetime.now(timezone.utc).isoformat(),
-        )
-        print(f"TikTok confirmado como publicado: {post_id}")
+        persist_confirmed(metadata, hashtags, post_id, confirmed)
     except Exception as exc:
         save_diag(
             stage=diag.get("stage", "unknown"),
