@@ -1,9 +1,9 @@
 {
-  "video_index": 4,
-  "posts_total": 98,
-  "last_posted_at": "2026-08-30T21:21:37.186Z",
-  "last_video": "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4",
-  "last_overlay": "Hoje eu só queria cantar. Se virou terapia, foi consequência.",
+  "video_index": 5,
+  "posts_total": 99,
+  "last_posted_at": "2026-08-30T23:21:52.333Z",
+  "last_video": "15B0403C-2ECE-4915-B49E-4D477362302F.mp4",
+  "last_overlay": "Presta atenção no instante em que tudo muda de tom.",
   "last_mode": "buffer_auto_confirmed",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -63,10 +63,11 @@
     "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4": 1,
     "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 1,
     "1287DDFF-011C-4141-B09E-249B63C95F08.mp4": 1,
-    "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4": 1
+    "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4": 1,
+    "15B0403C-2ECE-4915-B49E-4D477362302F.mp4": 1
   },
-  "last_caption": "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia.",
-  "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
+  "last_caption": "Presta atenção na mudança de tom. Foi ali que a música te pegou?",
+  "last_hashtags": "#boamusica #tiktokbrasil #musica #brasil #paravoce",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -161,7 +162,8 @@
     "Poucas notas bastam para entregar uma canção inesquecível.",
     "De repente, o vídeo vira só cenário para a música.",
     "Primeiro vem a batida; depois, a lembrança encontra você.",
-    "Hoje eu só queria cantar. Se virou terapia, foi consequência."
+    "Hoje eu só queria cantar. Se virou terapia, foi consequência.",
+    "Presta atenção no instante em que tudo muda de tom."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -257,7 +259,8 @@
     "Dez segundos foram suficientes para prender tua atenção? Salva para comparar depois.",
     "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
     "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou.",
-    "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia."
+    "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia.",
+    "Presta atenção na mudança de tom. Foi ali que a música te pegou?"
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -266,8 +269,8 @@
     "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6a949e77fd31f7e50b78e0d0",
+  "last_buffer_post_id": "6a94baa68cec9460d8b54574",
   "last_buffer_status": "sent",
-  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7679937191602113793",
+  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7679968508234534165",
   "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
 }

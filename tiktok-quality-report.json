@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4",
-  "overlay": "Hoje eu só queria cantar. Se virou terapia, foi consequência.",
+  "video": "15B0403C-2ECE-4915-B49E-4D477362302F.mp4",
+  "overlay": "Presta atenção no instante em que tudo muda de tom.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.176171875,
+    "y0": 0.174609375,
     "x1": 0.9555555555555556,
-    "y1": 0.263671875
+    "y1": 0.265234375
   },
-  "faces_checked": 7,
+  "faces_checked": 1,
   "failures": []
 }
