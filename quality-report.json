@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "6FFB8681-5089-4A43-8E3C-ED1F0A6BB8D8.mp4",
-  "overlay": "Presta atenção no instante em que tudo muda de tom.",
+  "video": "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4",
+  "overlay": "A cabeça tava em outro lugar até essa voz entrar.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.11484375,
+    "y0": 0.1140625,
     "x1": 0.9555555555555556,
-    "y1": 0.20546875
+    "y1": 0.20572916666666666
   },
-  "faces_checked": 10,
+  "faces_checked": 8,
   "failures": []
 }

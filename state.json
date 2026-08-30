@@ -1,9 +1,9 @@
 {
-  "video_index": 8,
-  "posts_total": 107,
-  "last_posted_at": "2026-08-30T13:19:04.033694+00:00",
-  "last_video": "6FFB8681-5089-4A43-8E3C-ED1F0A6BB8D8.mp4",
-  "last_overlay": "Presta atenção no instante em que tudo muda de tom.",
+  "video_index": 9,
+  "posts_total": 108,
+  "last_posted_at": "2026-08-30T15:27:34.003382+00:00",
+  "last_video": "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4",
+  "last_overlay": "A cabeça tava em outro lugar até essa voz entrar.",
   "last_mode": "trial",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -47,7 +47,7 @@
     "71F75039-C662-4FCA-AD77-6433FC9FC4E1.mp4": 1,
     "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1,
     "83093820-DCDB-4081-BE78-1118698B99C6.mp4": 1,
-    "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4": 1,
+    "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4": 2,
     "85F02D78-FE04-447B-A11C-DBD5C74D45A2.mp4": 2,
     "868797B9-A7FB-40EF-9431-ADEA273423C9.mp4": 1,
     "8AD72ED8-DC07-43E7-B8CF-39BCEFB12647.mp4": 2,
@@ -68,8 +68,8 @@
     "0A627F50-DD00-4B7F-ABEA-D695BBBFF108.mp4": 1,
     "131F3617-EC16-4844-8A37-35A986CC598A.mp4": 1
   },
-  "last_caption": "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo.",
-  "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
+  "last_caption": "Alguns refrões continuam trabalhando depois do fim. Este ficou na tua cabeça?",
+  "last_hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -172,7 +172,8 @@
     "Essa virada separa quem ouve de quem sente.",
     "Foi só a melodia entrar para a rolagem perder a vez.",
     "Talvez seja esta parte que você precisava encontrar.",
-    "Presta atenção no instante em que tudo muda de tom."
+    "Presta atenção no instante em que tudo muda de tom.",
+    "A cabeça tava em outro lugar até essa voz entrar."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -276,7 +277,8 @@
     "Tem voz que impressiona pela técnica. Tem voz que prende porque parece verdade. Eu fico com a segunda.",
     "Presta atenção na mudança de tom. Foi ali que a música te pegou?",
     "Se te lembrou alguém, um lugar ou uma fase, comenta só uma palavra. Quero ver as histórias que aparecem.",
-    "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo."
+    "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo.",
+    "Alguns refrões continuam trabalhando depois do fim. Este ficou na tua cabeça?"
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
