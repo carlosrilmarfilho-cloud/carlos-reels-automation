@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4",
-  "overlay": "Tem música que pede replay antes mesmo de terminar.",
+  "video": "F5F80DA0-ECAC-4B2A-90F3-5D1F3F00E07F.mp4",
+  "overlay": "Dá mais dez segundos; essa melodia vai explicar por quê.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.11484375,
+    "y0": 0.174609375,
     "x1": 0.9555555555555556,
-    "y1": 0.20546875
+    "y1": 0.265234375
   },
-  "faces_checked": 6,
+  "faces_checked": 3,
   "failures": []
 }
