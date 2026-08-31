@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "F651D1BB-D243-438C-BB64-72CC36D73860.mp4",
-  "overlay": "A canção avisa cedo quando merece chegar ao fim.",
+  "video": "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4",
+  "overlay": "Alguma coisa nesta interpretação faz a tela esperar.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.176171875,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.263671875
   },
-  "faces_checked": 7,
+  "faces_checked": 5,
   "failures": []
 }

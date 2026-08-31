@@ -1,9 +1,9 @@
 {
-  "video_index": 0,
-  "posts_total": 118,
-  "last_posted_at": "2026-08-31T21:20:48.678670+00:00",
-  "last_video": "F651D1BB-D243-438C-BB64-72CC36D73860.mp4",
-  "last_overlay": "A canção avisa cedo quando merece chegar ao fim.",
+  "video_index": 1,
+  "posts_total": 119,
+  "last_posted_at": "2026-08-31T23:18:38.955237+00:00",
+  "last_video": "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4",
+  "last_overlay": "Alguma coisa nesta interpretação faz a tela esperar.",
   "last_mode": "trial",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -64,13 +64,13 @@
     "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4": 2,
     "F5F80DA0-ECAC-4B2A-90F3-5D1F3F00E07F.mp4": 2,
     "F651D1BB-D243-438C-BB64-72CC36D73860.mp4": 2,
-    "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4": 1,
+    "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4": 2,
     "0A627F50-DD00-4B7F-ABEA-D695BBBFF108.mp4": 1,
     "131F3617-EC16-4844-8A37-35A986CC598A.mp4": 1,
     "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4": 1
   },
-  "last_caption": "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
-  "last_hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
+  "last_caption": "Poucas notas entregaram a canção inteira. Qual instrumento você ouviu primeiro?",
+  "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -184,7 +184,8 @@
     "Um detalhe no arranjo muda toda a história.",
     "Tem música que pede replay antes mesmo de terminar.",
     "Dá mais dez segundos; essa melodia vai explicar por quê.",
-    "A canção avisa cedo quando merece chegar ao fim."
+    "A canção avisa cedo quando merece chegar ao fim.",
+    "Alguma coisa nesta interpretação faz a tela esperar."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -299,7 +300,8 @@
     "Qual foi a última música que fez você esquecer o que tava fazendo por alguns segundos?",
     "Escuta a próxima linha com atenção. Qual palavra acertou diferente?",
     "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?",
-    "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?"
+    "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
+    "Poucas notas entregaram a canção inteira. Qual instrumento você ouviu primeiro?"
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
