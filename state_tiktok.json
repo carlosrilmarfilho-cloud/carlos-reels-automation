@@ -1,9 +1,9 @@
 {
-  "video_index": 7,
-  "posts_total": 101,
-  "last_posted_at": "2026-08-31T13:26:44.530Z",
-  "last_video": "15EA0363-A2B0-4F7C-BB26-BFB45F8454E0.mp4",
-  "last_overlay": "Tenta passar direto depois de ouvir esta parte.",
+  "video_index": 8,
+  "posts_total": 102,
+  "last_posted_at": "2026-08-31T15:34:13.276Z",
+  "last_video": "30620ACB-E217-45FD-9002-E09469B7A763.mp4",
+  "last_overlay": "Existe um motivo para este refrão continuar na cabeça.",
   "last_mode": "buffer_auto_confirmed",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -30,7 +30,7 @@
     "D2D10E96-CCD2-4C0B-96E2-6E4793AFBC5D.mp4": 2,
     "F08AEB30-A4DA-410C-8A40-8EC5C73AFF22.mp4": 2,
     "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4": 1,
-    "30620ACB-E217-45FD-9002-E09469B7A763.mp4": 1,
+    "30620ACB-E217-45FD-9002-E09469B7A763.mp4": 2,
     "30E3E09C-22BC-4D18-B5CC-D5DF595ED34D.mp4": 1,
     "3B39DB0D-7FDF-452E-A0DF-DA9DE006F164.mp4": 1,
     "41EF1F58-C757-4821-8692-EE6110066BFA.mp4": 1,
@@ -68,7 +68,7 @@
     "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4": 1,
     "15EA0363-A2B0-4F7C-BB26-BFB45F8454E0.mp4": 1
   },
-  "last_caption": "Se ficou até o final, escolhe a próxima terapia musical nos comentários.",
+  "last_caption": "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?",
   "last_hashtags": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
@@ -167,7 +167,8 @@
     "Hoje eu só queria cantar. Se virou terapia, foi consequência.",
     "Presta atenção no instante em que tudo muda de tom.",
     "Eu não sei o que essa música te lembra. Em mim, ela mexeu aqui.",
-    "Tenta passar direto depois de ouvir esta parte."
+    "Tenta passar direto depois de ouvir esta parte.",
+    "Existe um motivo para este refrão continuar na cabeça."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -266,7 +267,8 @@
     "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia.",
     "Presta atenção na mudança de tom. Foi ali que a música te pegou?",
     "Você ficou mais dez segundos por causa da voz? Diz qual detalhe decidiu isso.",
-    "Se ficou até o final, escolhe a próxima terapia musical nos comentários."
+    "Se ficou até o final, escolhe a próxima terapia musical nos comentários.",
+    "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?"
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -275,8 +277,8 @@
     "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6a957fa38f11e3932bea576a",
+  "last_buffer_post_id": "6a959c3f7423036b732dc2ca",
   "last_buffer_status": "sent",
-  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7680185982657891605",
+  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7680217641239235858",
   "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
 }
