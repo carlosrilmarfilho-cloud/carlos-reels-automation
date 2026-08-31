@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4",
-  "overlay": "Repara na letra: ela diz mais do que parece.",
+  "video": "B29A925E-34FD-4015-AFD6-5249D690E051.mp4",
+  "overlay": "De repente, o vídeo vira só cenário para a música.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.11484375,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.20546875
   },
-  "faces_checked": 5,
+  "faces_checked": 4,
   "failures": []
 }
