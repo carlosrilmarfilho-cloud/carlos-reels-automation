@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "C496D0FE-98A5-4111-89DA-085BB731A6F5.mp4",
-  "overlay": "Tem música que chega antes da gente saber que tava precisando.",
+  "video": "CEE8A75E-E9A0-4A11-A686-06D90E1184D8.mp4",
+  "overlay": "Um detalhe no arranjo muda toda a história.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.178125,
+    "y0": 0.174609375,
     "x1": 0.9555555555555556,
-    "y1": 0.26171875
+    "y1": 0.265234375
   },
-  "faces_checked": 2,
+  "faces_checked": 7,
   "failures": []
 }
