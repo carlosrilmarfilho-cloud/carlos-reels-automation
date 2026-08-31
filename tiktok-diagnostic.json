@@ -1,16 +1,16 @@
 {
-  "started_at": "2026-08-31T17:21:07.719610+00:00",
+  "started_at": "2026-08-31T19:21:03.513919+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 128,
+  "caption_length": 143,
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6a95b80606e51508ecb036ed",
+  "post_id": "6a95d421d114a43f9e9f1175",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-08-31T17:22:59.277Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7680247139427192071",
+  "sent_at": "2026-08-31T19:22:50.817Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7680277944446553345",
   "success": true,
-  "finished_at": "2026-08-31T17:23:02.911532+00:00"
+  "finished_at": "2026-08-31T19:22:57.280440+00:00"
 }
