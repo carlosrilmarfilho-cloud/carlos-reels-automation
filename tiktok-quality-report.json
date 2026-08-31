@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4",
-  "overlay": "Eu não sei o que essa música te lembra. Em mim, ela mexeu aqui.",
+  "video": "15EA0363-A2B0-4F7C-BB26-BFB45F8454E0.mp4",
+  "overlay": "Tenta passar direto depois de ouvir esta parte.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.178125,
+    "y0": 0.174609375,
     "x1": 0.9555555555555556,
-    "y1": 0.26171875
+    "y1": 0.265234375
   },
-  "faces_checked": 5,
+  "faces_checked": 7,
   "failures": []
 }
