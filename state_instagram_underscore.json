@@ -1,6 +1,6 @@
 {
-  "video_index": 16,
-  "posts_total": 32,
+  "video_index": 0,
+  "posts_total": 33,
   "blocked_videos": [],
   "variant_usage": {
     "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 1,
@@ -18,12 +18,13 @@
     "C190B5D7-D3E6-4B79-B6A6-0C4273F9B526.mp4": 2,
     "D973D64E-09CC-49E9-8335-A84F2FF133D2.mp4": 2,
     "DEEDE00B-CC13-4144-9D07-525AE4FFF31B.mp4": 2,
-    "E049B12F-585F-42D9-BCB4-446DDBF991EF.mp4": 1,
+    "E049B12F-585F-42D9-BCB4-446DDBF991EF.mp4": 2,
     "072B8B62-667D-4C38-8ABA-DAE29B0FA10C.mp4": 1,
     "13ADDC34-C864-4CF1-ADB1-21EB454FA4B7.mp4": 1
   },
   "recent_overlays": [
     "Tá aí a terapia que você precisa 🪗🎶❤️",
+    "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
@@ -86,14 +87,15 @@
     "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou.",
     "Repara no jeito como a letra encontra a melodia. Que frase ficou contigo?",
     "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo.",
-    "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?"
+    "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
+    "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia."
   ],
-  "last_video": "DEEDE00B-CC13-4144-9D07-525AE4FFF31B.mp4",
+  "last_video": "E049B12F-585F-42D9-BCB4-446DDBF991EF.mp4",
   "last_overlay": "Tá aí a terapia que você precisa",
   "last_mode": "trial",
   "last_media_id": "18112266332063101",
-  "last_posted_at": "2026-09-01T15:46:40.365672+00:00",
+  "last_posted_at": "2026-09-01T17:28:32.782013+00:00",
   "last_attempted_video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
-  "last_caption": "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
-  "last_hashtags": "#boamusica #reelsbrasil #musica #brasil #reels"
+  "last_caption": "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia.",
+  "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil"
 }
