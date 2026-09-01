@@ -1,9 +1,9 @@
 {
-  "video_index": 16,
-  "posts_total": 110,
-  "last_posted_at": "2026-09-01T19:33:44.719Z",
-  "last_video": "71F75039-C662-4FCA-AD77-6433FC9FC4E1.mp4",
-  "last_overlay": "Reconheceu a voz? Então essa música já fez o trabalho.",
+  "video_index": 18,
+  "posts_total": 111,
+  "last_posted_at": "2026-09-01T21:34:04.896Z",
+  "last_video": "913C4B82-A346-496C-846C-243F68ABE625.mp4",
+  "last_overlay": "Ouça com atenção: a próxima linha acerta diferente.",
   "last_mode": "buffer_auto_confirmed",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -52,7 +52,7 @@
     "8DA4425C-CCE2-46B2-9116-2A947856E053.mp4": 1,
     "99069C52-1345-4260-8C4A-C7B611E1BC84.mp4": 1,
     "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4": 1,
-    "913C4B82-A346-496C-846C-243F68ABE625.mp4": 1,
+    "913C4B82-A346-496C-846C-243F68ABE625.mp4": 2,
     "9ACC0CB2-136E-41C6-86F3-F837E3CE5490.mp4": 1,
     "B27F702C-D111-43BF-8EA0-8F9257EC9546.mp4": 1,
     "CA6E6C03-D0B2-46D2-BEFE-E112DE04EF2B.mp4": 1,
@@ -68,8 +68,8 @@
     "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4": 1,
     "15EA0363-A2B0-4F7C-BB26-BFB45F8454E0.mp4": 1
   },
-  "last_caption": "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo.",
-  "last_hashtags": "#musica #tiktokbrasil #som #boamusica #brasil",
+  "last_caption": "Alguns refrões continuam trabalhando depois do fim. Este ficou na tua cabeça?",
+  "last_hashtags": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -176,7 +176,8 @@
     "Dá mais dez segundos; essa melodia vai explicar por quê.",
     "Terapia do dia: essa música e cinco minutos sem explicar nada.",
     "Um detalhe no arranjo muda toda a história.",
-    "Reconheceu a voz? Então essa música já fez o trabalho."
+    "Reconheceu a voz? Então essa música já fez o trabalho.",
+    "Ouça com atenção: a próxima linha acerta diferente."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -284,7 +285,8 @@
     "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi.",
     "Tem voz que impressiona pela técnica. Tem voz que prende porque parece verdade. Eu fico com a segunda.",
     "Se você parou a rolagem por causa da voz, me diz qual detalhe te fez ficar.",
-    "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo."
+    "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo.",
+    "Alguns refrões continuam trabalhando depois do fim. Este ficou na tua cabeça?"
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -293,8 +295,8 @@
     "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6a9728298636374aa6448455",
+  "last_buffer_post_id": "6a97446112353bde6222925d",
   "last_buffer_status": "sent",
-  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7680651899351125269",
+  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7680682900702154002",
   "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
 }
