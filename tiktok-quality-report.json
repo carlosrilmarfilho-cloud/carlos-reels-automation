@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "913C4B82-A346-496C-846C-243F68ABE625.mp4",
-  "overlay": "Ouça com atenção: a próxima linha acerta diferente.",
+  "video": "9ACC0CB2-136E-41C6-86F3-F837E3CE5490.mp4",
+  "overlay": "Esse é o tipo de voz que interrompe qualquer distração.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.176171875,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.263671875
   },
-  "faces_checked": 8,
+  "faces_checked": 7,
   "failures": []
 }
