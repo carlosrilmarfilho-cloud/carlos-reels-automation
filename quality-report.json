@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "6FFB8681-5089-4A43-8E3C-ED1F0A6BB8D8.mp4",
-  "overlay": "A música é curta. O tanto de coisa que ela puxa da cabeça não.",
+  "video": "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4",
+  "overlay": "Eu vim cantar. A música resolveu conversar com quem tava ouvindo.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.119140625,
+    "y0": 0.1203125,
     "x1": 0.9555555555555556,
-    "y1": 0.201171875
+    "y1": 0.19947916666666668
   },
-  "faces_checked": 8,
+  "faces_checked": 9,
   "failures": []
 }
