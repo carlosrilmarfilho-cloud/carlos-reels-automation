@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "6AA0991D-5050-4107-A363-6D0C646C5741.mp4",
-  "overlay": "Um detalhe no arranjo muda toda a história.",
+  "video": "71F75039-C662-4FCA-AD77-6433FC9FC4E1.mp4",
+  "overlay": "Reconheceu a voz? Então essa música já fez o trabalho.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
     "y0": 0.174609375,
     "x1": 0.9555555555555556,
     "y1": 0.265234375
   },
-  "faces_checked": 7,
+  "faces_checked": 8,
   "failures": []
 }
