@@ -1,9 +1,9 @@
 {
-  "video_index": 12,
-  "posts_total": 106,
-  "last_posted_at": "2026-08-31T23:22:08.438Z",
-  "last_video": "5E9AA733-82BF-4099-B77F-FDE5F646184F.mp4",
-  "last_overlay": "Tem refrão que funciona melhor quando pega a gente desprevenido.",
+  "video_index": 13,
+  "posts_total": 107,
+  "last_posted_at": "2026-09-01T11:34:53.583Z",
+  "last_video": "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4",
+  "last_overlay": "Dá mais dez segundos; essa melodia vai explicar por quê.",
   "last_mode": "buffer_auto_confirmed",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -39,7 +39,7 @@
     "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4": 2,
     "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4": 1,
     "5E9AA733-82BF-4099-B77F-FDE5F646184F.mp4": 2,
-    "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4": 1,
+    "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4": 2,
     "66DDCAFF-E155-463B-B226-F8270C9B5E3A.mp4": 1,
     "6AA0991D-5050-4107-A363-6D0C646C5741.mp4": 1,
     "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4": 1,
@@ -68,8 +68,8 @@
     "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4": 1,
     "15EA0363-A2B0-4F7C-BB26-BFB45F8454E0.mp4": 1
   },
-  "last_caption": "Qual foi a última música que fez você esquecer o que tava fazendo por alguns segundos?",
-  "last_hashtags": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
+  "last_caption": "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi.",
+  "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -172,7 +172,8 @@
     "Talvez seja esta parte que você precisava encontrar.",
     "Repara na letra: ela diz mais do que parece.",
     "Alguma coisa nesta interpretação faz a tela esperar.",
-    "Tem refrão que funciona melhor quando pega a gente desprevenido."
+    "Tem refrão que funciona melhor quando pega a gente desprevenido.",
+    "Dá mais dez segundos; essa melodia vai explicar por quê."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -276,7 +277,8 @@
     "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas.",
     "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?",
     "Tem dia que eu posto pra cantar. Em outros, percebo que a música acaba falando com alguém do outro lado.",
-    "Qual foi a última música que fez você esquecer o que tava fazendo por alguns segundos?"
+    "Qual foi a última música que fez você esquecer o que tava fazendo por alguns segundos?",
+    "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi."
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -285,8 +287,8 @@
     "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6a960c35814fc696b8e3ec7f",
+  "last_buffer_post_id": "6a96b7ee8955451bba9ba03c",
   "last_buffer_status": "sent",
-  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7680339670290484498",
+  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7680528607055203605",
   "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
 }
