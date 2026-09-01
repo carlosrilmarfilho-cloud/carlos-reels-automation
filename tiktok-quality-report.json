@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4",
-  "overlay": "Dá mais dez segundos; essa melodia vai explicar por quê.",
+  "video": "66DDCAFF-E155-463B-B226-F8270C9B5E3A.mp4",
+  "overlay": "Terapia do dia: essa música e cinco minutos sem explicar nada.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.118359375,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.201953125
   },
-  "faces_checked": 5,
+  "faces_checked": 7,
   "failures": []
 }
