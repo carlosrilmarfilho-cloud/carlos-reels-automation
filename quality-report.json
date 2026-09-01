@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4",
-  "overlay": "O trecho certo começa exatamente quando você ia passar.",
+  "video": "6FFB8681-5089-4A43-8E3C-ED1F0A6BB8D8.mp4",
+  "overlay": "A música é curta. O tanto de coisa que ela puxa da cabeça não.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.730078125,
+    "y0": 0.119140625,
     "x1": 0.9555555555555556,
-    "y1": 0.809765625
+    "y1": 0.201171875
   },
-  "faces_checked": 5,
+  "faces_checked": 8,
   "failures": []
 }
