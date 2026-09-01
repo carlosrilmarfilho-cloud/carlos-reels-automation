@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "0A627F50-DD00-4B7F-ABEA-D695BBBFF108.mp4",
-  "overlay": "Essa foi daquelas que transformam rolagem em pausa.",
+  "video": "131F3617-EC16-4844-8A37-35A986CC598A.mp4",
+  "overlay": "Se essa parte não te pegou, espera o próximo verso antes de julgar.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.17734375,
+    "y0": 0.17890625,
     "x1": 0.9555555555555556,
-    "y1": 0.2625
+    "y1": 0.2609375
   },
-  "faces_checked": 15,
+  "faces_checked": 2,
   "failures": []
 }
