@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4",
-  "overlay": "Alguma coisa nesta interpretação faz a tela esperar.",
+  "video": "0A627F50-DD00-4B7F-ABEA-D695BBBFF108.mp4",
+  "overlay": "Essa foi daquelas que transformam rolagem em pausa.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.176171875,
+    "y0": 0.17734375,
     "x1": 0.9555555555555556,
-    "y1": 0.263671875
+    "y1": 0.2625
   },
-  "faces_checked": 5,
+  "faces_checked": 15,
   "failures": []
 }
