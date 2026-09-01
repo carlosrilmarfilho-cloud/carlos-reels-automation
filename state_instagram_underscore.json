@@ -1,6 +1,6 @@
 {
-  "video_index": 0,
-  "posts_total": 33,
+  "video_index": 1,
+  "posts_total": 34,
   "blocked_videos": [],
   "variant_usage": {
     "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 1,
@@ -19,11 +19,12 @@
     "D973D64E-09CC-49E9-8335-A84F2FF133D2.mp4": 2,
     "DEEDE00B-CC13-4144-9D07-525AE4FFF31B.mp4": 2,
     "E049B12F-585F-42D9-BCB4-446DDBF991EF.mp4": 2,
-    "072B8B62-667D-4C38-8ABA-DAE29B0FA10C.mp4": 1,
+    "072B8B62-667D-4C38-8ABA-DAE29B0FA10C.mp4": 2,
     "13ADDC34-C864-4CF1-ADB1-21EB454FA4B7.mp4": 1
   },
   "recent_overlays": [
     "Tá aí a terapia que você precisa 🪗🎶❤️",
+    "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
@@ -88,14 +89,15 @@
     "Repara no jeito como a letra encontra a melodia. Que frase ficou contigo?",
     "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo.",
     "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
-    "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia."
+    "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia.",
+    "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?"
   ],
-  "last_video": "E049B12F-585F-42D9-BCB4-446DDBF991EF.mp4",
+  "last_video": "072B8B62-667D-4C38-8ABA-DAE29B0FA10C.mp4",
   "last_overlay": "Tá aí a terapia que você precisa",
   "last_mode": "trial",
   "last_media_id": "18112266332063101",
-  "last_posted_at": "2026-09-01T17:28:32.782013+00:00",
+  "last_posted_at": "2026-09-01T19:25:14.658300+00:00",
   "last_attempted_video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
-  "last_caption": "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia.",
-  "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil"
+  "last_caption": "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?",
+  "last_hashtags": "#boamusica #reelsbrasil #musica #brasil #reels"
 }
