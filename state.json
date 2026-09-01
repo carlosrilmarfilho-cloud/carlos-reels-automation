@@ -1,9 +1,9 @@
 {
-  "video_index": 5,
-  "posts_total": 122,
-  "last_posted_at": "2026-09-01T15:44:25.291853+00:00",
-  "last_video": "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4",
-  "last_overlay": "Ouça com atenção: a próxima linha acerta diferente.",
+  "video_index": 6,
+  "posts_total": 123,
+  "last_posted_at": "2026-09-01T17:24:43.983660+00:00",
+  "last_video": "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4",
+  "last_overlay": "O trecho certo começa exatamente quando você ia passar.",
   "last_mode": "trial",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -41,7 +41,7 @@
     "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4": 1,
     "66DDCAFF-E155-463B-B226-F8270C9B5E3A.mp4": 1,
     "6AA0991D-5050-4107-A363-6D0C646C5741.mp4": 1,
-    "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4": 2,
+    "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4": 3,
     "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4": 1,
     "6FFB8681-5089-4A43-8E3C-ED1F0A6BB8D8.mp4": 2,
     "71F75039-C662-4FCA-AD77-6433FC9FC4E1.mp4": 1,
@@ -69,8 +69,8 @@
     "131F3617-EC16-4844-8A37-35A986CC598A.mp4": 2,
     "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4": 1
   },
-  "last_caption": "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi.",
-  "last_hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
+  "last_caption": "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?",
+  "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -188,7 +188,8 @@
     "Alguma coisa nesta interpretação faz a tela esperar.",
     "Essa foi daquelas que transformam rolagem em pausa.",
     "Se essa parte não te pegou, espera o próximo verso antes de julgar.",
-    "Ouça com atenção: a próxima linha acerta diferente."
+    "Ouça com atenção: a próxima linha acerta diferente.",
+    "O trecho certo começa exatamente quando você ia passar."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -307,7 +308,8 @@
     "Poucas notas entregaram a canção inteira. Qual instrumento você ouviu primeiro?",
     "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.",
     "Um pequeno detalhe no arranjo muda a história toda. Você percebeu qual?",
-    "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi."
+    "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi.",
+    "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?"
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
