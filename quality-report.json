@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "99069C52-1345-4260-8C4A-C7B611E1BC84.mp4",
-  "overlay": "Se você ficou até aqui, provavelmente não foi por causa do algoritmo.",
+  "video": "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4",
+  "overlay": "Não sei se é nostalgia, terapia ou só uma música boa. Aceito os três.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.18203125,
+    "y0": 0.17890625,
     "x1": 0.9555555555555556,
-    "y1": 0.2578125
+    "y1": 0.2609375
   },
-  "faces_checked": 6,
+  "faces_checked": 5,
   "failures": []
 }
