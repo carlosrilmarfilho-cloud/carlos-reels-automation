@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4",
-  "overlay": "Não sei se é nostalgia, terapia ou só uma música boa. Aceito os três.",
+  "video": "B29A925E-34FD-4015-AFD6-5249D690E051.mp4",
+  "overlay": "Existe um motivo para este refrão continuar na cabeça.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.17890625,
+    "y0": 0.11484375,
     "x1": 0.9555555555555556,
-    "y1": 0.2609375
+    "y1": 0.20546875
   },
-  "faces_checked": 5,
+  "faces_checked": 4,
   "failures": []
 }
