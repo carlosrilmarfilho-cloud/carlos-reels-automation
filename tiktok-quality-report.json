@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "B27F702C-D111-43BF-8EA0-8F9257EC9546.mp4",
-  "overlay": "Você ia passar, mas esta voz pediu mais dez segundos.",
+  "video": "CA6E6C03-D0B2-46D2-BEFE-E112DE04EF2B.mp4",
+  "overlay": "Tem música que chega antes da gente saber que tava precisando.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.118359375,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.201953125
   },
-  "faces_checked": 2,
+  "faces_checked": 4,
   "failures": []
 }
