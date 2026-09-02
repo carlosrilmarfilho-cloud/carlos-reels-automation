@@ -1,10 +1,10 @@
 {
-  "video_index": 2,
-  "posts_total": 35,
+  "video_index": 3,
+  "posts_total": 36,
   "blocked_videos": [],
   "variant_usage": {
     "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 1,
-    "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4": 2,
+    "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4": 3,
     "41EF1F58-C757-4821-8692-EE6110066BFA.mp4": 2,
     "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4": 2,
     "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4": 2,
@@ -24,6 +24,7 @@
   },
   "recent_overlays": [
     "Tá aí a terapia que você precisa 🪗🎶❤️",
+    "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
@@ -92,14 +93,15 @@
     "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
     "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia.",
     "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?",
-    "O trecho chegou na hora certa ou foi coincidência? Diz o que ele despertou."
+    "O trecho chegou na hora certa ou foi coincidência? Diz o que ele despertou.",
+    "Se você parou a rolagem por causa da voz, me diz qual detalhe te fez ficar."
   ],
-  "last_video": "13ADDC34-C864-4CF1-ADB1-21EB454FA4B7.mp4",
+  "last_video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
   "last_overlay": "Tá aí a terapia que você precisa",
   "last_mode": "trial",
   "last_media_id": "18112266332063101",
-  "last_posted_at": "2026-09-01T21:25:15.975867+00:00",
+  "last_posted_at": "2026-09-02T11:28:20.499517+00:00",
   "last_attempted_video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
-  "last_caption": "O trecho chegou na hora certa ou foi coincidência? Diz o que ele despertou.",
-  "last_hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento"
+  "last_caption": "Se você parou a rolagem por causa da voz, me diz qual detalhe te fez ficar.",
+  "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil"
 }

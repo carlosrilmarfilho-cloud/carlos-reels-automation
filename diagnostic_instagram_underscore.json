@@ -1,11 +1,12 @@
 {
-  "started_at": "2026-09-02T00:01:31.513979+00:00",
+  "started_at": "2026-09-02T11:27:46.084763+00:00",
   "mode": "trial",
-  "stage": "create_container",
+  "stage": "success",
   "username": "_carlosrilmarfilho",
   "ig_id": "28518934861036542",
-  "success": false,
-  "error_type": "RuntimeError",
-  "error": "Instagram API 400: {\"error\": {\"message\": \"User access is restricted\", \"type\": \"OAuthException\", \"code\": 25, \"error_subcode\": 2207050, \"is_transient\": false, \"error_user_title\": \"User is restricted\", \"error_user_msg\": \"The Instagram account is restricted.\", \"fbtrace_id\": \"AQkhLhoqCYT3ntu8W1VhpBe\"}}",
-  "finished_at": "2026-09-02T00:01:34.240780+00:00"
+  "container_id": "17967938043137304",
+  "container_status": "FINISHED",
+  "success": true,
+  "media_id": "17905298691480481",
+  "finished_at": "2026-09-02T11:28:20.500074+00:00"
 }
