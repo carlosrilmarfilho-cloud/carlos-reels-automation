@@ -1,13 +1,13 @@
 {
-  "video_index": 5,
-  "posts_total": 38,
+  "video_index": 6,
+  "posts_total": 39,
   "blocked_videos": [],
   "variant_usage": {
     "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 1,
     "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4": 3,
     "41EF1F58-C757-4821-8692-EE6110066BFA.mp4": 3,
     "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4": 3,
-    "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4": 2,
+    "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4": 3,
     "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4": 2,
     "83093820-DCDB-4081-BE78-1118698B99C6.mp4": 2,
     "868797B9-A7FB-40EF-9431-ADEA273423C9.mp4": 2,
@@ -24,6 +24,7 @@
   },
   "recent_overlays": [
     "Tá aí a terapia que você precisa 🪗🎶❤️",
+    "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
@@ -98,14 +99,15 @@
     "O trecho chegou na hora certa ou foi coincidência? Diz o que ele despertou.",
     "Se você parou a rolagem por causa da voz, me diz qual detalhe te fez ficar.",
     "Talvez este fosse o som que faltava no teu dia. Salva para ouvir com calma.",
-    "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂"
+    "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂",
+    "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi."
   ],
-  "last_video": "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4",
+  "last_video": "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4",
   "last_overlay": "Tá aí a terapia que você precisa",
   "last_mode": "trial",
   "last_media_id": "18112266332063101",
-  "last_posted_at": "2026-09-02T15:32:22.552166+00:00",
+  "last_posted_at": "2026-09-02T17:25:44.189988+00:00",
   "last_attempted_video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
-  "last_caption": "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂",
-  "last_hashtags": "#boamusica #reelsbrasil #musica #brasil #reels"
+  "last_caption": "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi.",
+  "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil"
 }
