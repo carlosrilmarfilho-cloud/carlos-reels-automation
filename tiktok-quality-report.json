@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "E33D9A8A-03BC-4BF1-B49C-9DF5A17DC778.mp4",
-  "overlay": "Nem toda música precisa de contexto. Algumas só precisam de volume.",
+  "video": "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4",
+  "overlay": "Foi só a melodia entrar para a rolagem perder a vez.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.123046875,
+    "y0": 0.174609375,
     "x1": 0.9555555555555556,
-    "y1": 0.197265625
+    "y1": 0.265234375
   },
-  "faces_checked": 6,
+  "faces_checked": 8,
   "failures": []
 }

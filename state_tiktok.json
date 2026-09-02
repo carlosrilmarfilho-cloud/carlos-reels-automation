@@ -1,9 +1,9 @@
 {
-  "video_index": 25,
-  "posts_total": 117,
-  "last_posted_at": "2026-09-02T19:32:26.560Z",
-  "last_video": "E33D9A8A-03BC-4BF1-B49C-9DF5A17DC778.mp4",
-  "last_overlay": "Nem toda música precisa de contexto. Algumas só precisam de volume.",
+  "video_index": 26,
+  "posts_total": 118,
+  "last_posted_at": "2026-09-02T21:32:54.559Z",
+  "last_video": "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4",
+  "last_overlay": "Foi só a melodia entrar para a rolagem perder a vez.",
   "last_mode": "buffer_auto_confirmed",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -59,7 +59,7 @@
     "CC16C569-E899-45F2-AA46-381A81EE8BE2.mp4": 2,
     "D3390941-13EB-4298-95BC-5C3D430C7685.mp4": 2,
     "E33D9A8A-03BC-4BF1-B49C-9DF5A17DC778.mp4": 2,
-    "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4": 1,
+    "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4": 2,
     "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4": 1,
     "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 1,
     "1287DDFF-011C-4141-B09E-249B63C95F08.mp4": 1,
@@ -68,8 +68,8 @@
     "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4": 1,
     "15EA0363-A2B0-4F7C-BB26-BFB45F8454E0.mp4": 1
   },
-  "last_caption": "A primeira nota fez uma promessa e a próxima cumpriu. Você ouviu até onde?",
-  "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
+  "last_caption": "Essa virada também mudou o clima por aí? Marca o momento exato.",
+  "last_hashtags": "#boamusica #tiktokbrasil #musica #brasil #paravoce",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -183,7 +183,8 @@
     "Tem música que chega antes da gente saber que tava precisando.",
     "Tem música que pede replay antes mesmo de terminar.",
     "Não sei se é nostalgia, terapia ou só uma música boa. Aceito os três.",
-    "Nem toda música precisa de contexto. Algumas só precisam de volume."
+    "Nem toda música precisa de contexto. Algumas só precisam de volume.",
+    "Foi só a melodia entrar para a rolagem perder a vez."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -298,7 +299,8 @@
     "Se te lembrou alguém, um lugar ou uma fase, comenta só uma palavra. Quero ver as histórias que aparecem.",
     "Qual detalhe musical fez você parar a rolagem? Escuta outra vez e me diz.",
     "Dez segundos foram suficientes para prender tua atenção? Salva para comparar depois.",
-    "A primeira nota fez uma promessa e a próxima cumpriu. Você ouviu até onde?"
+    "A primeira nota fez uma promessa e a próxima cumpriu. Você ouviu até onde?",
+    "Essa virada também mudou o clima por aí? Marca o momento exato."
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -307,8 +309,8 @@
     "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6a98794c646092244019d421",
+  "last_buffer_post_id": "6a98959964609224401be307",
   "last_buffer_status": "sent",
-  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7681022604869651719",
+  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7681053641016397064",
   "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
 }
