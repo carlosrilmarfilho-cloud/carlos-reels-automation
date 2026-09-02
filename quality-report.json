@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "8AD72ED8-DC07-43E7-B8CF-39BCEFB12647.mp4",
-  "overlay": "Tenta passar direto depois de ouvir esta parte.",
+  "video": "99069C52-1345-4260-8C4A-C7B611E1BC84.mp4",
+  "overlay": "Se você ficou até aqui, provavelmente não foi por causa do algoritmo.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.11484375,
+    "y0": 0.18203125,
     "x1": 0.9555555555555556,
-    "y1": 0.20546875
+    "y1": 0.2578125
   },
-  "faces_checked": 9,
+  "faces_checked": 6,
   "failures": []
 }
