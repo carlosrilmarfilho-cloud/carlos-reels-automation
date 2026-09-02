@@ -1,13 +1,13 @@
 {
-  "started_at": "2026-09-02T21:24:12.316291+00:00",
+  "started_at": "2026-09-02T21:43:30.459844+00:00",
   "mode": "trial",
   "stage": "publish",
   "username": "_carlosrilmarfilho",
   "ig_id": "28518934861036542",
-  "container_id": "17968010676137304",
+  "container_id": "17968012578137304",
   "container_status": "FINISHED",
   "success": false,
   "error_type": "RuntimeError",
-  "error": "Instagram API 500: {\"error\": {\"message\": \"An unexpected error has occurred. Please retry your request later.\", \"type\": \"OAuthException\", \"is_transient\": true, \"code\": 2, \"fbtrace_id\": \"At6hdR5kfnurNLDQqVFW_mj\"}}",
-  "finished_at": "2026-09-02T21:25:28.441697+00:00"
+  "error": "Instagram API 500: {\"error\": {\"message\": \"An unexpected error has occurred. Please retry your request later.\", \"type\": \"OAuthException\", \"is_transient\": true, \"code\": 2, \"fbtrace_id\": \"A4g16G6Ap3OUo5fdJ6mTAro\"}}",
+  "finished_at": "2026-09-02T21:43:59.448144+00:00"
 }
