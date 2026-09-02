@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "85F02D78-FE04-447B-A11C-DBD5C74D45A2.mp4",
-  "overlay": "Nem toda música precisa de contexto. Algumas só precisam de volume.",
+  "video": "8AD72ED8-DC07-43E7-B8CF-39BCEFB12647.mp4",
+  "overlay": "Tenta passar direto depois de ouvir esta parte.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.1828125,
+    "y0": 0.11484375,
     "x1": 0.9555555555555556,
-    "y1": 0.25703125
+    "y1": 0.20546875
   },
-  "faces_checked": 4,
+  "faces_checked": 9,
   "failures": []
 }
