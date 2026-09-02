@@ -1,16 +1,18 @@
 {
-  "started_at": "2026-09-02T13:35:40.248757+00:00",
+  "started_at": "2026-09-02T15:41:56.683122+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
-  "stage": "success",
-  "caption_length": 142,
+  "stage": "confirm_delivery",
+  "caption_length": 137,
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6a98262e52f2a32bd6ce35ff",
+  "post_id": "6a9843c9ed2b0ca1d93fc6ab",
   "initial_status": "sending",
-  "buffer_status": "sent",
-  "sent_at": "2026-09-02T13:43:11.567Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7680932184676683028",
-  "success": true,
-  "finished_at": "2026-09-02T13:43:21.147307+00:00"
+  "buffer_status": "sending",
+  "sent_at": null,
+  "external_link": null,
+  "success": false,
+  "error_type": "RuntimeError",
+  "error": "Buffer não confirmou publicação no TikTok em 10 minutos; último status: sending",
+  "finished_at": "2026-09-02T15:52:19.484962+00:00"
 }
