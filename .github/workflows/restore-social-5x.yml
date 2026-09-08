@@ -1,0 +1,76 @@
+name: Restaurar automacoes sociais 5x dia
+
+on:
+  push:
+    paths:
+      - '.restore-social-5x-trigger'
+
+permissions:
+  contents: write
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Restaurar workflows antigos e ajustar para 5x por dia
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE=d04b80573aaa04dda16a80f0af54f27d60710b2e
+          git show "$BASE:.github/workflows/post-reel.yml" > .github/workflows/post-reel.yml
+          git show "$BASE:.github/workflows/post-reel-underscore.yml" > .github/workflows/post-reel-underscore.yml
+          git show "$BASE:.github/workflows/post-tiktok.yml" > .github/workflows/post-tiktok.yml
+
+          python3 - <<'PY'
+          from pathlib import Path
+
+          replacements = {
+              '.github/workflows/post-reel.yml': [
+                  ('name: Postar 7 Reels por dia no Instagram', 'name: Postar 5 Reels por dia no Instagram'),
+                  ('# 08h, 10h, 12h, 14h, 16h, 18h e 20h em Fortaleza/Brasília (UTC-3).', '# 08h, 11h, 14h, 17h e 20h em Fortaleza/Brasília (UTC-3).'),
+                  ("- cron: '7,27,47 11,13,15,17,19,21,23 * * *'", "- cron: '7,27,47 11,14,17,20,23 * * *'"),
+                  ('group: instagram-main-seven-daily', 'group: instagram-main-five-daily'),
+                  ('allowed_hours = {11,13,15,17,19,21,23}', 'allowed_hours = {11,14,17,20,23}'),
+              ],
+              '.github/workflows/post-reel-underscore.yml': [
+                  ('name: Postar 7 Trial Reels no Instagram com underline', 'name: Postar 5 Trial Reels no Instagram com underline'),
+                  ('# 08h, 10h, 12h, 14h, 16h, 18h e 20h em Fortaleza/Brasília (UTC-3).', '# 08h, 11h, 14h, 17h e 20h em Fortaleza/Brasília (UTC-3).'),
+                  ("- cron: '17,37,57 11,13,15,17,19,21,23 * * *'", "- cron: '17,37,57 11,14,17,20,23 * * *'"),
+                  ('group: instagram-underscore-seven-daily', 'group: instagram-underscore-five-daily'),
+                  ('if now.hour not in {11,13,15,17,19,21,23}:', 'if now.hour not in {11,14,17,20,23}:'),
+              ],
+              '.github/workflows/post-tiktok.yml': [
+                  ('name: Postar 7 TikToks por dia', 'name: Postar 5 TikToks por dia'),
+                  ('# 08h, 10h, 12h, 14h, 16h, 18h e 20h em Fortaleza/Brasília (UTC-3).', '# 08h, 11h, 14h, 17h e 20h em Fortaleza/Brasília (UTC-3).'),
+                  ("- cron: '17,37,57 11,13,15,17,19,21,23 * * *'", "- cron: '17,37,57 11,14,17,20,23 * * *'"),
+                  ('group: tiktok-seven-daily', 'group: tiktok-five-daily'),
+                  ('allowed={11,13,15,17,19,21,23}', 'allowed={11,14,17,20,23}'),
+              ],
+          }
+
+          for filename, pairs in replacements.items():
+              p = Path(filename)
+              text = p.read_text(encoding='utf-8')
+              for old, new in pairs:
+                  if old not in text:
+                      raise SystemExit(f'Expected text not found in {filename}: {old}')
+                  text = text.replace(old, new)
+              p.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Commitar restauracao
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "Carlos Reels Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add .github/workflows/post-reel.yml .github/workflows/post-reel-underscore.yml .github/workflows/post-tiktok.yml
+          git commit -m "Restaurar Instagram e TikTok em 5 posts por dia"
+          git push origin HEAD:${GITHUB_REF_NAME}
