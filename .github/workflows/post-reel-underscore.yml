@@ -88,11 +88,9 @@ jobs:
       - name: Instalar dependências
         if: steps.gate.outputs.ready == 'true'
         run: |
-          # O runner inclui o repositório do Chrome, que às vezes publica índices
-          # inconsistentes. Ele não é necessário para este workflow.
-          for source in /etc/apt/sources.list.d/*; do
-            [ -f "$source" ] && sudo sed -i '/dl\.google\.com/s/^/# /' "$source"
-          done
+          # O runner pode fornecer o repositório do Chrome em formato .list ou .sources.
+          # Ele não é necessário e uma definição malformada impede qualquer apt-get update.
+          sudo rm -f /etc/apt/sources.list.d/google-chrome.list /etc/apt/sources.list.d/google-chrome.sources
           for attempt in 1 2 3; do
             sudo rm -rf /var/lib/apt/lists/*
             if sudo apt-get update; then
