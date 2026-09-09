@@ -15,16 +15,16 @@ raw = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
 valid_ext = {".mp4", ".mov", ".m4v", ".avi", ".mkv"}
 platform = os.environ.get("PLATFORM", "").strip().lower()
 
-# Sete janelas por dia, espalhadas a cada duas horas. Em horário de Brasília/Fortaleza:
-# 08h, 10h, 12h, 14h, 16h, 18h e 20h. O UTC correspondente é fixo porque o Brasil
+# Cinco janelas por dia. Em horário de Brasília/Fortaleza:
+# 08h, 11h, 14h, 17h e 20h. O UTC correspondente é fixo porque o Brasil
 # não usa horário de verão. Workflows podem continuar com oportunidades extras de
-# recuperação; fora dessas sete horas nenhum vídeo é liberado para publicação.
-seven_daily_platforms = {"instagram", "instagram_underscore", "tiktok"}
-target_hours_utc = {11, 13, 15, 17, 19, 21, 23}
-if platform in seven_daily_platforms and datetime.now(timezone.utc).hour not in target_hours_utc:
+# recuperação; fora dessas cinco horas nenhum vídeo é liberado para publicação.
+five_daily_platforms = {"instagram", "instagram_underscore", "tiktok"}
+target_hours_utc = {11, 14, 17, 20, 23}
+if platform in five_daily_platforms and datetime.now(timezone.utc).hour not in target_hours_utc:
     print(json.dumps({
         "count": 0,
-        "reason": "outside_seven_daily_window",
+        "reason": "outside_five_daily_window",
         "platform": platform,
         "target_hours_utc": sorted(target_hours_utc),
     }))
