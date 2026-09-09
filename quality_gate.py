@@ -5,6 +5,7 @@ import subprocess
 from pathlib import Path
 
 from analyze_video import face_and_head_boxes, video_duration
+from differentiate_video import differentiate
 from render import contains_explicit_terms, load_json, overlap_fraction
 
 
@@ -108,9 +109,17 @@ def main() -> None:
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if unique_failures:
         raise SystemExit("Reel bloqueado pela revisão visual: " + "; ".join(unique_failures))
+
+    # Só depois de a versão editorial passar pela revisão visual, gera uma
+    # variação audiovisual exclusiva para Instagram/TikTok. O mesmo reframe é
+    # aplicado ao quadro inteiro (imagem + texto), preservando a relação entre
+    # a frase e os rostos já aprovada acima.
+    variation = differentiate(VIDEO)
+    variation_label = "variação exclusiva aplicada" if variation.get("applied") else "sem variação adicional"
+
     print(
         f"Revisão aprovada: {len(detected_faces)} detecções de rosto verificadas, "
-        "texto compacto e enquadramento preservado"
+        f"texto compacto, enquadramento seguro e {variation_label}"
     )
 
 
