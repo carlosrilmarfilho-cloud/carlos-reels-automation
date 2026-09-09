@@ -25,6 +25,7 @@ jobs:
       GDRIVE_FOLDER_URL: https://drive.google.com/drive/folders/1sVLfUVK2FgssbqEEQeUrrUT5z9WluAin
       TIKTOK_AUTOMATION_PAUSED: 'false'
       PLATFORM: tiktok
+      VIDEO_QUEUE_FILE: video-queue-tiktok.json
     steps:
       - name: Baixar repositório
         uses: actions/checkout@v4
@@ -139,38 +140,24 @@ jobs:
           set -e
           rm -rf videos && mkdir -p videos
           gdown "$GDRIVE_FOLDER_URL" --folder --json > /tmp/all-drive-files.json
-          extra_excludes="$CROSS_PLATFORM_EXCLUDES"
-          for attempt in $(seq 1 100); do
-            CROSS_PLATFORM_EXCLUDES="$extra_excludes" python select_video.py /tmp/all-drive-files.json > /tmp/selected.json
-            count=$(jq -r '.count' /tmp/selected.json)
-            reason=$(jq -r '.reason // empty' /tmp/selected.json)
-            if [ "$count" -eq 0 ]; then
-              jq -n --arg reason "$reason" --arg now "$(date -u +%FT%TZ)" \
-                '{platform:"tiktok",stage:"selection",success:false,error_type:"SourcePoolExhausted",error:$reason,finished_at:$now}' \
-                > tiktok-diagnostic.json
-              echo "has_videos=false" >> "$GITHUB_OUTPUT"
-              exit 0
-            fi
-            url=$(jq -r '.url' /tmp/selected.json)
-            filename=$(jq -r '.name' /tmp/selected.json)
-            drive_id=$(jq -r '.drive_id' /tmp/selected.json)
-            idx=$(jq -r '.index' /tmp/selected.json)
-            rm -rf videos && mkdir -p videos
-            gdown "$url" -O "videos/$filename"
-            sha256=$(sha256sum "videos/$filename" | awk '{print $1}')
-            if jq -e --arg hash "$sha256" '.used_sha256 // [] | index($hash) != null' tiktok-used-ledger.json >/dev/null; then
-              extra_excludes="${extra_excludes:+$extra_excludes|}$filename"
-              continue
-            fi
-            jq -n --arg name "$filename" --arg drive_id "$drive_id" --arg sha256 "$sha256" \
-              '{name:$name,drive_id:$drive_id,sha256:$sha256}' > tiktok-candidate.json
-            echo "has_videos=true" >> "$GITHUB_OUTPUT"
-            echo "total_videos=$count" >> "$GITHUB_OUTPUT"
-            echo "selected_video_index=$idx" >> "$GITHUB_OUTPUT"
+          python select_video.py /tmp/all-drive-files.json > /tmp/selected.json
+          count=$(jq -r '.count' /tmp/selected.json)
+          if [ "$count" -eq 0 ]; then
+            echo "has_videos=false" >> "$GITHUB_OUTPUT"
             exit 0
-          done
-          echo "Nenhum vídeo TikTok inédito após verificação por SHA-256." >&2
-          exit 1
+          fi
+          url=$(jq -r '.url' /tmp/selected.json)
+          filename=$(jq -r '.name' /tmp/selected.json)
+          drive_id=$(jq -r '.drive_id' /tmp/selected.json)
+          idx=$(jq -r '.index' /tmp/selected.json)
+          gdown "$url" -O "videos/$filename"
+          sha256=$(sha256sum "videos/$filename" | awk '{print $1}')
+          jq -n --arg name "$filename" --arg drive_id "$drive_id" --arg sha256 "$sha256" \
+            '{name:$name,drive_id:$drive_id,sha256:$sha256}' > tiktok-candidate.json
+          echo "has_videos=true" >> "$GITHUB_OUTPUT"
+          echo "total_videos=$count" >> "$GITHUB_OUTPUT"
+          echo "selected_video_index=$idx" >> "$GITHUB_OUTPUT"
+          exit 0
 
       - name: Analisar vídeo
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
@@ -214,7 +201,7 @@ jobs:
         run: |
           git fetch origin "$GITHUB_REF_NAME"
           git show "origin/$GITHUB_REF_NAME:state_tiktok.json" > /tmp/prepublish-state-tiktok.json 2>/dev/null || true
-          git show "origin/$GITHUB_REF_NAME:tiktok-used-ledger.json" > /tmp/prepublish-ledger.json 2>/dev/null || true
+          git show "origin/$GITHUB_REF_NAME:$VIDEO_QUEUE_FILE" > /tmp/prepublish-queue.json
           cp tiktok-candidate.json /tmp/prepublish-candidate.json
           allowed=$(python3 - <<'PY'
           import json
@@ -222,16 +209,8 @@ jobs:
           from pathlib import Path
           now=datetime.now(timezone.utc)
           candidate=json.loads(Path('/tmp/prepublish-candidate.json').read_text(encoding='utf-8'))
-          ledger_path=Path('/tmp/prepublish-ledger.json')
-          if not ledger_path.exists():
-              print('false'); raise SystemExit
-          ledger=json.loads(ledger_path.read_text(encoding='utf-8'))
-          used_names=set(map(str, ledger.get('used_video_names', [])))
-          used_ids=set(map(str, ledger.get('used_drive_ids', [])))
-          used_hashes={str(x).lower() for x in ledger.get('used_sha256', [])}
-          if (str(candidate.get('name')) in used_names or
-              str(candidate.get('drive_id')) in used_ids or
-              str(candidate.get('sha256')).lower() in used_hashes):
+          queue=json.loads(Path('/tmp/prepublish-queue.json').read_text(encoding='utf-8')).get('queue') or []
+          if not queue or str(queue[0].get('drive_id')) != str(candidate.get('drive_id')):
               print('false'); raise SystemExit
           p=Path('/tmp/prepublish-state-tiktok.json')
           if p.exists():
@@ -258,6 +237,10 @@ jobs:
           PUBLIC_VIDEO_URL: https://raw.githubusercontent.com/${{ github.repository }}/media-host-tiktok/latest.mp4?run=${{ github.run_id }}
         run: python publish_tiktok.py
 
+      - name: Avançar fila FIFO após confirmação
+        if: steps.publish.outcome == 'success'
+        run: python rotate_video_queue.py "$VIDEO_QUEUE_FILE" tiktok-candidate.json
+
       - name: Salvar estado do TikTok
         if: always() && steps.gate.outputs.ready == 'true'
         env:
@@ -267,6 +250,7 @@ jobs:
           set -e
           tmpdir=$(mktemp -d)
           [ -f tiktok-diagnostic.json ] && cp tiktok-diagnostic.json "$tmpdir/tiktok-diagnostic.json" || true
+          [ -f "$VIDEO_QUEUE_FILE" ] && cp "$VIDEO_QUEUE_FILE" "$tmpdir/$VIDEO_QUEUE_FILE" || true
           # Em falha de render, render.py registra o vídeo bloqueado em state.json.
           # Promova esse estado para impedir que a recuperação tente o mesmo vídeo.
           if [ "${{ steps.render.outcome }}" = "failure" ] && [ -f state.json ]; then
@@ -283,11 +267,12 @@ jobs:
             git fetch origin "$GITHUB_REF_NAME"
             git reset --hard "origin/$GITHUB_REF_NAME"
             [ -f "$tmpdir/tiktok-diagnostic.json" ] && cp "$tmpdir/tiktok-diagnostic.json" tiktok-diagnostic.json || true
+            [ -f "$tmpdir/$VIDEO_QUEUE_FILE" ] && cp "$tmpdir/$VIDEO_QUEUE_FILE" "$VIDEO_QUEUE_FILE" || true
             [ -f "$tmpdir/state_tiktok.json" ] && cp "$tmpdir/state_tiktok.json" state_tiktok.json || true
             [ -f "$tmpdir/tiktok-used-ledger.json" ] && cp "$tmpdir/tiktok-used-ledger.json" tiktok-used-ledger.json || true
             [ -f "$tmpdir/tiktok-quality-report.json" ] && cp "$tmpdir/tiktok-quality-report.json" tiktok-quality-report.json || true
             cp "$tmpdir/tiktok-run-status.json" tiktok-run-status.json
-            git add tiktok-run-status.json
+            git add tiktok-run-status.json "$VIDEO_QUEUE_FILE"
             [ -f state_tiktok.json ] && git add state_tiktok.json || true
             [ -f tiktok-used-ledger.json ] && git add tiktok-used-ledger.json || true
             [ -f tiktok-diagnostic.json ] && git add tiktok-diagnostic.json || true
