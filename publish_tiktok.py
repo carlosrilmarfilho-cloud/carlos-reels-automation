@@ -14,6 +14,8 @@ ROOT = Path(__file__).resolve().parent
 META = ROOT / "metadata.json"
 STATE = ROOT / "state_tiktok.json"
 DIAG = ROOT / "tiktok-diagnostic.json"
+LEDGER = ROOT / "tiktok-used-ledger.json"
+CANDIDATE = ROOT / "tiktok-candidate.json"
 VIDEO_URL = os.environ.get("PUBLIC_VIDEO_URL", "").strip()
 CHANNEL_OVERRIDE = os.environ.get("BUFFER_TIKTOK_CHANNEL_ID", "").strip()
 BUFFER_API = "https://api.buffer.com"
@@ -291,7 +293,43 @@ def wait_until_sent(post_id: str, timeout_seconds: int = 600, interval_seconds: 
     )
 
 
-def persist_confirmed(metadata: dict, hashtags: str, post_id: str, confirmed: dict) -> None:
+def update_used_ledger(candidate: dict, post_id: str, confirmed: dict) -> None:
+    if not LEDGER.exists():
+        raise RuntimeError("Ledger persistente do TikTok ausente; publicação não pode ser confirmada com segurança")
+    ledger = json.loads(LEDGER.read_text(encoding="utf-8"))
+    name = str(candidate.get("name") or "").strip()
+    drive_id = str(candidate.get("drive_id") or "").strip()
+    sha256 = str(candidate.get("sha256") or "").strip().lower()
+    if not name or not drive_id or not re.fullmatch(r"[0-9a-f]{64}", sha256):
+        raise RuntimeError("Identidade forte do vídeo TikTok incompleta (nome, Drive ID ou SHA-256)")
+
+    names = list(dict.fromkeys([*(str(x) for x in ledger.get("used_video_names", [])), name]))
+    drive_ids = list(dict.fromkeys([*(str(x) for x in ledger.get("used_drive_ids", [])), drive_id]))
+    hashes = list(dict.fromkeys([*(str(x).lower() for x in ledger.get("used_sha256", [])), sha256]))
+    records = list(ledger.get("records", []))
+    if not any(str(item.get("buffer_post_id") or "") == post_id for item in records if isinstance(item, dict)):
+        records.append({
+            "name": name,
+            "drive_id": drive_id,
+            "sha256": sha256,
+            "buffer_post_id": post_id,
+            "sent_at": confirmed.get("sentAt") or datetime.now(timezone.utc).isoformat(),
+            "external_link": confirmed.get("externalLink"),
+            "source": "confirmed_buffer_publication",
+        })
+    ledger.update({
+        "version": 1,
+        "updated_at": datetime.now(timezone.utc).isoformat(),
+        "used_video_names": names,
+        "used_drive_ids": drive_ids,
+        "used_sha256": hashes,
+        "records": records,
+    })
+    LEDGER.write_text(json.dumps(ledger, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def persist_confirmed(metadata: dict, hashtags: str, post_id: str, confirmed: dict, candidate: dict) -> None:
+    update_used_ledger(candidate, post_id, confirmed)
     state = dict(metadata["next_state"])
     state["last_posted_at"] = confirmed.get("sentAt") or datetime.now(timezone.utc).isoformat()
     state["last_mode"] = "buffer_auto_confirmed"
@@ -313,7 +351,7 @@ def persist_confirmed(metadata: dict, hashtags: str, post_id: str, confirmed: di
     print(f"TikTok confirmado como publicado: {post_id}")
 
 
-def pending_post_from_current_window() -> str:
+def pending_post_from_current_window() -> dict:
     if not DIAG.exists():
         return ""
     try:
@@ -326,24 +364,39 @@ def pending_post_from_current_window() -> str:
         started = datetime.fromisoformat(str(stamp).replace("Z", "+00:00")).astimezone(timezone.utc)
         now = datetime.now(timezone.utc)
         if started.date() == now.date() and started.hour == now.hour:
-            return post_id
+            return previous
     except Exception:
         return ""
-    return ""
+    return {}
 
 
 def main() -> None:
     try:
-        previous_post_id = pending_post_from_current_window()
+        previous_pending = pending_post_from_current_window()
         metadata = json.loads(META.read_text(encoding="utf-8"))
+        candidate = json.loads(CANDIDATE.read_text(encoding="utf-8"))
         caption, hashtags = adapt_caption_for_tiktok(str(metadata["caption"]))
-        if previous_post_id:
-            save_diag(stage="reconcile_pending", post_id=previous_post_id)
+        if previous_pending:
+            previous_post_id = str(previous_pending["post_id"])
+            previous_candidate = previous_pending.get("source_candidate")
+            previous_metadata = previous_pending.get("metadata_snapshot")
+            previous_hashtags = str(previous_pending.get("hashtags_snapshot") or "")
+            if not isinstance(previous_candidate, dict) or not isinstance(previous_metadata, dict):
+                raise RuntimeError("Envio pendente sem identidade persistida; bloqueado para evitar atribuição ao vídeo errado")
+            save_diag(stage="reconcile_pending", post_id=previous_post_id,
+                      source_candidate=previous_candidate, metadata_snapshot=previous_metadata,
+                      hashtags_snapshot=previous_hashtags)
             confirmed = wait_until_sent(previous_post_id)
-            persist_confirmed(metadata, hashtags, previous_post_id, confirmed)
+            persist_confirmed(previous_metadata, previous_hashtags, previous_post_id, confirmed, previous_candidate)
             return
 
-        save_diag(stage="auth", caption_length=len(caption))
+        save_diag(
+            stage="auth",
+            caption_length=len(caption),
+            source_candidate=candidate,
+            metadata_snapshot=metadata,
+            hashtags_snapshot=hashtags,
+        )
         channel_id, channel_name = find_tiktok_channel()
         save_diag(stage="video_public", channel_id=channel_id, channel_name=channel_name)
         wait_public(VIDEO_URL)
@@ -355,7 +408,7 @@ def main() -> None:
 
         save_diag(stage="accepted_by_buffer", post_id=post_id, initial_status=post.get("status"))
         confirmed = wait_until_sent(post_id)
-        persist_confirmed(metadata, hashtags, post_id, confirmed)
+        persist_confirmed(metadata, hashtags, post_id, confirmed, candidate)
     except Exception as exc:
         save_diag(
             stage=diag.get("stage", "unknown"),
