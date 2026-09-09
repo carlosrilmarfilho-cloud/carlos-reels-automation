@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "F651D1BB-D243-438C-BB64-72CC36D73860.mp4",
-  "overlay": "Você ia passar, mas esta voz pediu mais dez segundos.",
+  "video": "CC16C569-E899-45F2-AA46-381A81EE8BE2.mp4",
+  "overlay": "Eu gosto de música que me faz esquecer por que peguei o celular.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.119140625,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.201171875
   },
-  "faces_checked": 5,
+  "faces_checked": 8,
   "failures": []
 }
