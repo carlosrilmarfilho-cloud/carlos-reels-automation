@@ -250,7 +250,7 @@ jobs:
           for attempt in 1 2 3; do
             git fetch origin "$GITHUB_REF_NAME"
             git reset --hard "origin/$GITHUB_REF_NAME"
-            for file in state.json diagnostic.json quality-report.json run-status.json; do
+            for file in state.json diagnostic.json quality-report.json run-status.json "$VIDEO_QUEUE_FILE"; do
               [ -f "$tmpdir/$file" ] && cp "$tmpdir/$file" "$file"
             done
             git add state.json run-status.json "$VIDEO_QUEUE_FILE"
