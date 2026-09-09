@@ -1,0 +1,571 @@
+{
+  "version": 1,
+  "reconstructed_at": "2026-09-09T18:54:34.775Z",
+  "policy": "No TikTok source reuse while any unused source remains. Legacy history reconstructed conservatively by filename; current and future files also use Drive ID and SHA-256.",
+  "used_video_names": [
+    "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4",
+    "1287DDFF-011C-4141-B09E-249B63C95F08.mp4",
+    "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4",
+    "15B0403C-2ECE-4915-B49E-4D477362302F.mp4",
+    "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4",
+    "15EA0363-A2B0-4F7C-BB26-BFB45F8454E0.mp4",
+    "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
+    "1DB3DA5B-1B12-470E-9C42-CCDB4447E6A7.mp4",
+    "2ebc8c8660e742e188d26e8b3dfbf50f.mov",
+    "30620ACB-E217-45FD-9002-E09469B7A763.mp4",
+    "30E3E09C-22BC-4D18-B5CC-D5DF595ED34D.mp4",
+    "3B39DB0D-7FDF-452E-A0DF-DA9DE006F164.mp4",
+    "41EF1F58-C757-4821-8692-EE6110066BFA.mp4",
+    "44F767A8-9787-45C5-8F6C-8967F60C9463.mp4",
+    "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4",
+    "482d9e1dbe53494ba696c36e4507425c.mov",
+    "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4",
+    "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4",
+    "51820F1B-965B-4136-BB36-91097971313C.mp4",
+    "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4",
+    "5E9AA733-82BF-4099-B77F-FDE5F646184F.mp4",
+    "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4",
+    "61813BBA-E746-4134-BCCD-9E054778C018.mp4",
+    "629ba99319714ee6863fb4c9f58045aa.mov",
+    "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
+    "66DDCAFF-E155-463B-B226-F8270C9B5E3A.mp4",
+    "6AA0991D-5050-4107-A363-6D0C646C5741.mp4",
+    "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4",
+    "6E2A8D85-6BC8-4484-8509-EA2130F9EED9.mp4",
+    "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4",
+    "6FCAA360-CB16-45CA-8738-1AA6C7603517.mp4",
+    "6FFB8681-5089-4A43-8E3C-ED1F0A6BB8D8.mp4",
+    "71F75039-C662-4FCA-AD77-6433FC9FC4E1.mp4",
+    "81BAAFDF-CC1A-430A-8C83-683B5D294AEC.mp4",
+    "8292C05F-B11D-4A7F-BB5D-0D0592D25781.mp4",
+    "83093820-DCDB-4081-BE78-1118698B99C6.mp4",
+    "84D4C644-BEE4-40AB-85DB-722ED3871DCD.mp4",
+    "85F02D78-FE04-447B-A11C-DBD5C74D45A2.mp4",
+    "868797B9-A7FB-40EF-9431-ADEA273423C9.mp4",
+    "8DA4425C-CCE2-46B2-9116-2A947856E053.mp4",
+    "8FF36EB3-1928-4972-A4A9-EBBDE1E61D07.mp4",
+    "913C4B82-A346-496C-846C-243F68ABE625.mp4",
+    "99069C52-1345-4260-8C4A-C7B611E1BC84.mp4",
+    "9ACC0CB2-136E-41C6-86F3-F837E3CE5490.mp4",
+    "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4",
+    "AFE8994E-540E-4730-80F3-CEB9F9140789.mp4",
+    "B27F702C-D111-43BF-8EA0-8F9257EC9546.mp4",
+    "B4D67C9E-7332-4388-ACF7-FE37CF46922D.mp4",
+    "B8276FA2-9886-4E7C-A117-202C25AC3DD8.mp4",
+    "BEFA83C2-61E8-46B4-BE41-14525804E8A3.mp4",
+    "C5C7D2C9-0BC6-4806-8736-6D79750CB9FE.mp4",
+    "CA6E6C03-D0B2-46D2-BEFE-E112DE04EF2B.mp4",
+    "CC16C569-E899-45F2-AA46-381A81EE8BE2.mp4",
+    "D2D10E96-CCD2-4C0B-96E2-6E4793AFBC5D.mp4",
+    "D3390941-13EB-4298-95BC-5C3D430C7685.mp4",
+    "E33D9A8A-03BC-4BF1-B49C-9DF5A17DC778.mp4",
+    "F08AEB30-A4DA-410C-8A40-8EC5C73AFF22.mp4",
+    "F34BCD36-345A-430E-8F5B-D90C30F2957D.mp4",
+    "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4",
+    "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4",
+    "f79bc212495a4a3bba2efe8bc7bba941.mov"
+  ],
+  "used_drive_ids": [
+    "1--x0tggr2Gdw1PfLLaM9Pea4imxRpNN9",
+    "1-1TTKHIHesJMvaFh_80hNBh60bX9jQrW",
+    "10frOMs5IY0mfiePBhzrdNbleb3fAZYh9",
+    "115Ln4do52TojjUWFTmxKBYVFcuzLvL8N",
+    "11GG9tybmwA-7n5BOCtVXVD0R1jT3otgx",
+    "11wHqUeO0Uh1_C5Cjqj18Q9M3yDRBw36c",
+    "127EZ5j_lVnsfY6r_YREtojAvs0WFHZSo",
+    "12t1jUxvZGuKYo-JB3PtvZTR-QkI1dHrh",
+    "13V3DQWH_j5lzCdrwoF2J8DqXwzQWosrk",
+    "14xL6FEerZawz-w3yiXYajU8CwTmsZ5Wi",
+    "15QhyWX2dAED4pW1NvuzF0UkDIGYr3RtG",
+    "16bFfxDzCfEvNk7ElcE8qUfa0n3er9Npe",
+    "175fv5DFbfuQdJ4QDqfOdznGk5B-jdVeF",
+    "17Lc9f6uvGHC1ps7NaZ1q1Gn9N-5W0GXi",
+    "19RHdvmEPMWpG4ljj3AMRvoIhDg3F2acP",
+    "19dtD_mLlc1QWUGsnOxVhqj5Z2Lr5QQLz",
+    "1AhW5RRKrMkc37a9wsRKUmIYbDea5Ad7Q",
+    "1CFJkNgSFEVFcjyiRnYAhTzLw8KHwMqEi",
+    "1CIJn-RGkCUsHhgrSnKwpbOmqypgGWtbA",
+    "1CcRs9g-pFYjckBdz7aMAqDkwPybChTJA",
+    "1F3xYCngZYPJB77c5ugPhIiaupghHC3Fd",
+    "1FnkMmQcodlv-d05RO4oKVHF6bXjHRz42",
+    "1KHiwimkPdP5fjZvwzeo6_raikvjwQM--",
+    "1MdCqDpzkBao5cHOyxuyRcMHYiDEqboog",
+    "1NbvvBhtfBmFrDtCAS1MC1YdQYKxWBHT-",
+    "1PX-QZOoseQ8c2JuvKf9lQxPPCPxeRk0O",
+    "1R2LYxy7Vkm8sviBO-957BhaTF9FRvSr_",
+    "1TGk5j_s1D7paX943cXIdZjH2fxH3AclV",
+    "1TbXKGU1MMsRw0EPDIRr0uzyOE8n_iOY2",
+    "1UTq1Bnuy0TyVDqybUDj2mFESsup6S9GU",
+    "1V1A57_YinNBYlh5yn1HCSh7hbL_XHfy3",
+    "1VK0QVkBZtXlIbGX3aM7Stbcq1x3DYEYB",
+    "1VnJO5vGo_l0eyGDTvKRHDuYHvt887Tja",
+    "1WeYhH_-lNMycnsuz5K3wRGGVeG4nB-78",
+    "1a_0Gw3NSO6v4TGyhbuSG_YShAkHcz7pE",
+    "1cATh8T1i4xZW81W2XSc7INgLekQufEym",
+    "1cR-co9Fw7BHkGeetMtKvOCkhvGM_U0ko",
+    "1cxZDmP-zC9h6gAxLhfah2k6f_S6oDn5d",
+    "1hKKBE8JoYdbgcQyMISIrTtR-5Fd0DLSq",
+    "1mlVnH_Jfpt87p6NcHofhC3Hiv967orFI",
+    "1sDjXehGADFbaDFnfcNqKWreUfQ-vdx-o",
+    "1sRpc8u5xcOizIINGH80mqBFP1nw840JK",
+    "1tPSBEs6jvf8x-WhVOBlaNYH98jftqTa_",
+    "1vzkT_uSD-kV9b8Laeud1o-Vp-bx5QEt2",
+    "1wcwryv7zwu5qBYsATAvzQpWxp_GB67g7",
+    "1y25wW9TztDaRkkVhhdZ3oS7YTkmeufTG",
+    "1ypx-SQ2LbP5ayRtttygaSLpvJxpdPu2l"
+  ],
+  "used_sha256": [],
+  "records": [
+    {
+      "name": "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4",
+      "drive_ids": [
+        "1CFJkNgSFEVFcjyiRnYAhTzLw8KHwMqEi"
+      ],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "1287DDFF-011C-4141-B09E-249B63C95F08.mp4",
+      "drive_ids": [
+        "1TGk5j_s1D7paX943cXIdZjH2fxH3AclV",
+        "1a_0Gw3NSO6v4TGyhbuSG_YShAkHcz7pE"
+      ],
+      "legacy_confirmed_count": 1,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4",
+      "drive_ids": [
+        "10frOMs5IY0mfiePBhzrdNbleb3fAZYh9",
+        "16bFfxDzCfEvNk7ElcE8qUfa0n3er9Npe"
+      ],
+      "legacy_confirmed_count": 1,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "15B0403C-2ECE-4915-B49E-4D477362302F.mp4",
+      "drive_ids": [
+        "19dtD_mLlc1QWUGsnOxVhqj5Z2Lr5QQLz",
+        "1KHiwimkPdP5fjZvwzeo6_raikvjwQM--"
+      ],
+      "legacy_confirmed_count": 1,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4",
+      "drive_ids": [
+        "1VK0QVkBZtXlIbGX3aM7Stbcq1x3DYEYB"
+      ],
+      "legacy_confirmed_count": 1,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "15EA0363-A2B0-4F7C-BB26-BFB45F8454E0.mp4",
+      "drive_ids": [
+        "1CIJn-RGkCUsHhgrSnKwpbOmqypgGWtbA"
+      ],
+      "legacy_confirmed_count": 1,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
+      "drive_ids": [
+        "1UTq1Bnuy0TyVDqybUDj2mFESsup6S9GU"
+      ],
+      "legacy_confirmed_count": 1,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "1DB3DA5B-1B12-470E-9C42-CCDB4447E6A7.mp4",
+      "drive_ids": [],
+      "legacy_confirmed_count": 3,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "2ebc8c8660e742e188d26e8b3dfbf50f.mov",
+      "drive_ids": [],
+      "legacy_confirmed_count": 3,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "30620ACB-E217-45FD-9002-E09469B7A763.mp4",
+      "drive_ids": [
+        "11GG9tybmwA-7n5BOCtVXVD0R1jT3otgx"
+      ],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "30E3E09C-22BC-4D18-B5CC-D5DF595ED34D.mp4",
+      "drive_ids": [
+        "1tPSBEs6jvf8x-WhVOBlaNYH98jftqTa_"
+      ],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "3B39DB0D-7FDF-452E-A0DF-DA9DE006F164.mp4",
+      "drive_ids": [
+        "11wHqUeO0Uh1_C5Cjqj18Q9M3yDRBw36c",
+        "1PX-QZOoseQ8c2JuvKf9lQxPPCPxeRk0O"
+      ],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "41EF1F58-C757-4821-8692-EE6110066BFA.mp4",
+      "drive_ids": [
+        "1vzkT_uSD-kV9b8Laeud1o-Vp-bx5QEt2"
+      ],
+      "legacy_confirmed_count": 1,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "44F767A8-9787-45C5-8F6C-8967F60C9463.mp4",
+      "drive_ids": [],
+      "legacy_confirmed_count": 3,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4",
+      "drive_ids": [
+        "1ypx-SQ2LbP5ayRtttygaSLpvJxpdPu2l"
+      ],
+      "legacy_confirmed_count": 1,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "482d9e1dbe53494ba696c36e4507425c.mov",
+      "drive_ids": [],
+      "legacy_confirmed_count": 3,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4",
+      "drive_ids": [
+        "1NbvvBhtfBmFrDtCAS1MC1YdQYKxWBHT-"
+      ],
+      "legacy_confirmed_count": 1,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4",
+      "drive_ids": [
+        "1WeYhH_-lNMycnsuz5K3wRGGVeG4nB-78"
+      ],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "51820F1B-965B-4136-BB36-91097971313C.mp4",
+      "drive_ids": [],
+      "legacy_confirmed_count": 3,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4",
+      "drive_ids": [
+        "14xL6FEerZawz-w3yiXYajU8CwTmsZ5Wi"
+      ],
+      "legacy_confirmed_count": 1,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "5E9AA733-82BF-4099-B77F-FDE5F646184F.mp4",
+      "drive_ids": [
+        "19RHdvmEPMWpG4ljj3AMRvoIhDg3F2acP"
+      ],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4",
+      "drive_ids": [
+        "1MdCqDpzkBao5cHOyxuyRcMHYiDEqboog"
+      ],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "61813BBA-E746-4134-BCCD-9E054778C018.mp4",
+      "drive_ids": [],
+      "legacy_confirmed_count": 3,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "629ba99319714ee6863fb4c9f58045aa.mov",
+      "drive_ids": [],
+      "legacy_confirmed_count": 3,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
+      "drive_ids": [],
+      "legacy_confirmed_count": 1,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "66DDCAFF-E155-463B-B226-F8270C9B5E3A.mp4",
+      "drive_ids": [
+        "1R2LYxy7Vkm8sviBO-957BhaTF9FRvSr_",
+        "1sRpc8u5xcOizIINGH80mqBFP1nw840JK"
+      ],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "6AA0991D-5050-4107-A363-6D0C646C5741.mp4",
+      "drive_ids": [
+        "13V3DQWH_j5lzCdrwoF2J8DqXwzQWosrk"
+      ],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4",
+      "drive_ids": [
+        "1cATh8T1i4xZW81W2XSc7INgLekQufEym"
+      ],
+      "legacy_confirmed_count": 1,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "6E2A8D85-6BC8-4484-8509-EA2130F9EED9.mp4",
+      "drive_ids": [],
+      "legacy_confirmed_count": 4,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4",
+      "drive_ids": [
+        "12t1jUxvZGuKYo-JB3PtvZTR-QkI1dHrh"
+      ],
+      "legacy_confirmed_count": 1,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "6FCAA360-CB16-45CA-8738-1AA6C7603517.mp4",
+      "drive_ids": [],
+      "legacy_confirmed_count": 3,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "6FFB8681-5089-4A43-8E3C-ED1F0A6BB8D8.mp4",
+      "drive_ids": [
+        "1V1A57_YinNBYlh5yn1HCSh7hbL_XHfy3"
+      ],
+      "legacy_confirmed_count": 1,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "71F75039-C662-4FCA-AD77-6433FC9FC4E1.mp4",
+      "drive_ids": [
+        "17Lc9f6uvGHC1ps7NaZ1q1Gn9N-5W0GXi"
+      ],
+      "legacy_confirmed_count": 3,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "81BAAFDF-CC1A-430A-8C83-683B5D294AEC.mp4",
+      "drive_ids": [],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "8292C05F-B11D-4A7F-BB5D-0D0592D25781.mp4",
+      "drive_ids": [],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "83093820-DCDB-4081-BE78-1118698B99C6.mp4",
+      "drive_ids": [
+        "15QhyWX2dAED4pW1NvuzF0UkDIGYr3RtG",
+        "1sDjXehGADFbaDFnfcNqKWreUfQ-vdx-o"
+      ],
+      "legacy_confirmed_count": 1,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "84D4C644-BEE4-40AB-85DB-722ED3871DCD.mp4",
+      "drive_ids": [],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "85F02D78-FE04-447B-A11C-DBD5C74D45A2.mp4",
+      "drive_ids": [
+        "1cR-co9Fw7BHkGeetMtKvOCkhvGM_U0ko"
+      ],
+      "legacy_confirmed_count": 1,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "868797B9-A7FB-40EF-9431-ADEA273423C9.mp4",
+      "drive_ids": [
+        "1wcwryv7zwu5qBYsATAvzQpWxp_GB67g7"
+      ],
+      "legacy_confirmed_count": 1,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "8DA4425C-CCE2-46B2-9116-2A947856E053.mp4",
+      "drive_ids": [
+        "1FnkMmQcodlv-d05RO4oKVHF6bXjHRz42"
+      ],
+      "legacy_confirmed_count": 1,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "8FF36EB3-1928-4972-A4A9-EBBDE1E61D07.mp4",
+      "drive_ids": [],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "913C4B82-A346-496C-846C-243F68ABE625.mp4",
+      "drive_ids": [
+        "127EZ5j_lVnsfY6r_YREtojAvs0WFHZSo"
+      ],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "99069C52-1345-4260-8C4A-C7B611E1BC84.mp4",
+      "drive_ids": [
+        "1VnJO5vGo_l0eyGDTvKRHDuYHvt887Tja"
+      ],
+      "legacy_confirmed_count": 1,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "9ACC0CB2-136E-41C6-86F3-F837E3CE5490.mp4",
+      "drive_ids": [
+        "1--x0tggr2Gdw1PfLLaM9Pea4imxRpNN9"
+      ],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4",
+      "drive_ids": [
+        "1y25wW9TztDaRkkVhhdZ3oS7YTkmeufTG"
+      ],
+      "legacy_confirmed_count": 1,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "AFE8994E-540E-4730-80F3-CEB9F9140789.mp4",
+      "drive_ids": [],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "B27F702C-D111-43BF-8EA0-8F9257EC9546.mp4",
+      "drive_ids": [
+        "1F3xYCngZYPJB77c5ugPhIiaupghHC3Fd",
+        "1cxZDmP-zC9h6gAxLhfah2k6f_S6oDn5d"
+      ],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "B4D67C9E-7332-4388-ACF7-FE37CF46922D.mp4",
+      "drive_ids": [],
+      "legacy_confirmed_count": 3,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "B8276FA2-9886-4E7C-A117-202C25AC3DD8.mp4",
+      "drive_ids": [],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "BEFA83C2-61E8-46B4-BE41-14525804E8A3.mp4",
+      "drive_ids": [],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "C5C7D2C9-0BC6-4806-8736-6D79750CB9FE.mp4",
+      "drive_ids": [],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "CA6E6C03-D0B2-46D2-BEFE-E112DE04EF2B.mp4",
+      "drive_ids": [
+        "115Ln4do52TojjUWFTmxKBYVFcuzLvL8N"
+      ],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "CC16C569-E899-45F2-AA46-381A81EE8BE2.mp4",
+      "drive_ids": [
+        "175fv5DFbfuQdJ4QDqfOdznGk5B-jdVeF"
+      ],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "D2D10E96-CCD2-4C0B-96E2-6E4793AFBC5D.mp4",
+      "drive_ids": [],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "D3390941-13EB-4298-95BC-5C3D430C7685.mp4",
+      "drive_ids": [
+        "1CcRs9g-pFYjckBdz7aMAqDkwPybChTJA",
+        "1hKKBE8JoYdbgcQyMISIrTtR-5Fd0DLSq"
+      ],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "E33D9A8A-03BC-4BF1-B49C-9DF5A17DC778.mp4",
+      "drive_ids": [
+        "1mlVnH_Jfpt87p6NcHofhC3Hiv967orFI"
+      ],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "F08AEB30-A4DA-410C-8A40-8EC5C73AFF22.mp4",
+      "drive_ids": [],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "F34BCD36-345A-430E-8F5B-D90C30F2957D.mp4",
+      "drive_ids": [],
+      "legacy_confirmed_count": 3,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4",
+      "drive_ids": [
+        "1-1TTKHIHesJMvaFh_80hNBh60bX9jQrW",
+        "1AhW5RRKrMkc37a9wsRKUmIYbDea5Ad7Q"
+      ],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4",
+      "drive_ids": [
+        "1TbXKGU1MMsRw0EPDIRr0uzyOE8n_iOY2"
+      ],
+      "legacy_confirmed_count": 2,
+      "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "f79bc212495a4a3bba2efe8bc7bba941.mov",
+      "drive_ids": [],
+      "legacy_confirmed_count": 3,
+      "source": "state_tiktok.variant_usage"
+    }
+  ]
+}
