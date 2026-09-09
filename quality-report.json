@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "CEE8A75E-E9A0-4A11-A686-06D90E1184D8.mp4",
-  "overlay": "Terapia do dia: essa música e cinco minutos sem explicar nada.",
+  "video": "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4",
+  "overlay": "Isso aqui tem cara de música que alguém vai mandar sem explicar nada.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.178125,
+    "y0": 0.123046875,
     "x1": 0.9555555555555556,
-    "y1": 0.26171875
+    "y1": 0.197265625
   },
-  "faces_checked": 7,
+  "faces_checked": 6,
   "failures": []
 }
