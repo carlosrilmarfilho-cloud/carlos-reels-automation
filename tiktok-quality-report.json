@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4",
-  "overlay": "Nem precisa conhecer: essa voz faz você ficar.",
+  "video": "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4",
+  "overlay": "Isso aqui tem cara de música que alguém vai mandar sem explicar nada.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.1828125,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.25703125
   },
-  "faces_checked": 8,
+  "faces_checked": 2,
   "failures": []
 }
