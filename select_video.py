@@ -45,13 +45,12 @@ preferred = [n for n in PROFILES.get("rotation", []) if n in by_name]
 unknown = sorted([n for n in by_name if n not in preferred])
 ordered_names = preferred + unknown
 
-# Divide estruturalmente a pasta em três conjuntos exclusivos. Assim o mesmo arquivo
-# nunca é escolhido pelo TikTok e pelos dois Instagrams. A divisão é estável pelo nome
-# do arquivo: adicionar vídeos novos não embaralha os já existentes entre plataformas.
+# Os dois Instagrams continuam em conjuntos estruturais exclusivos para não disputar
+# o mesmo arquivo. O TikTok usa a pasta completa com histórico próprio permanente:
+# isso aumenta o pool disponível sem permitir repetição dentro do TikTok.
 platform_bucket = {
     "instagram": 0,
     "instagram_underscore": 1,
-    "tiktok": 2,
 }.get(platform)
 if platform_bucket is not None:
     def bucket_for(name: str) -> int:
@@ -72,8 +71,25 @@ last_video = str(STATE.get("last_video", "")).strip()
 if last_video:
     blocked.add(last_video)
 
-# Mantém também as exclusões cruzadas já fornecidas pelos workflows. Elas são uma
-# proteção adicional; a separação por conjuntos acima é a garantia principal.
+# REGRA CRÍTICA DO TIKTOK:
+# variant_usage é persistido em state_tiktok.json somente após publicação confirmada.
+# Portanto qualquer vídeo com uso > 0 já foi efetivamente publicado no TikTok e fica
+# inelegível enquanto houver vídeos inéditos na pasta. Não reciclar silenciosamente.
+tiktok_used_videos = set()
+if platform == "tiktok":
+    usage = STATE.get("variant_usage", {})
+    if isinstance(usage, dict):
+        for name, count in usage.items():
+            try:
+                if int(count) > 0:
+                    tiktok_used_videos.add(str(name))
+            except (TypeError, ValueError):
+                continue
+    blocked.update(tiktok_used_videos)
+
+# Mantém também as exclusões cruzadas já fornecidas pelos workflows. Elas evitam que
+# o TikTok pegue imediatamente algo que acabou de sair em um Instagram, sem reduzir
+# permanentemente o pool de vídeos inéditos do TikTok.
 for value in os.environ.get("CROSS_PLATFORM_EXCLUDES", "").split("|"):
     value = value.strip()
     if value:
@@ -87,7 +103,14 @@ for step in range(len(ordered_names)):
         name = candidate_name
         break
 else:
-    print(json.dumps({"count": 0, "blocked_count": len(blocked), "platform": platform}))
+    reason = "no_unused_tiktok_videos" if platform == "tiktok" else "all_videos_blocked"
+    print(json.dumps({
+        "count": 0,
+        "reason": reason,
+        "blocked_count": len(blocked),
+        "used_tiktok_count": len(tiktok_used_videos),
+        "platform": platform,
+    }))
     raise SystemExit(0)
 
 selected = by_name[name]
@@ -99,5 +122,6 @@ print(json.dumps({
     "path": selected["path"],
     "platform": platform,
     "platform_bucket": platform_bucket,
+    "used_tiktok_count": len(tiktok_used_videos),
     "cross_platform_excluded": sorted(blocked),
 }, ensure_ascii=False))
