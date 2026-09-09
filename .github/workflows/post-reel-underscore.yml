@@ -25,6 +25,7 @@ jobs:
       GDRIVE_FOLDER_URL: https://drive.google.com/drive/folders/1sVLfUVK2FgssbqEEQeUrrUT5z9WluAin
       AUTOMATION_PAUSED: 'false'
       PLATFORM: instagram_underscore
+      VIDEO_QUEUE_FILE: video-queue-instagram-underscore.json
       FIXED_OVERLAY_TEXT: 'Tá aí a terapia que você precisa'
       EXPECTED_INSTAGRAM_USERNAME: '_carlosrilmarfilho'
 
@@ -143,13 +144,17 @@ jobs:
           print('|'.join(dict.fromkeys(names)))
           PY
           )
-          CROSS_PLATFORM_EXCLUDES="$cross" python select_video.py /tmp/all-drive-files.json > /tmp/selected.json
+          python select_video.py /tmp/all-drive-files.json > /tmp/selected.json
           count=$(jq -r '.count' /tmp/selected.json)
           if [ "$count" -eq 0 ]; then echo "has_videos=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           url=$(jq -r '.url' /tmp/selected.json)
           filename=$(jq -r '.name' /tmp/selected.json)
           idx=$(jq -r '.index' /tmp/selected.json)
+          drive_id=$(jq -r '.drive_id' /tmp/selected.json)
           gdown "$url" -O "videos/$filename"
+          sha256=$(sha256sum "videos/$filename" | awk '{print $1}')
+          jq -n --arg name "$filename" --arg drive_id "$drive_id" --arg sha256 "$sha256" \
+            '{name:$name,drive_id:$drive_id,sha256:$sha256}' > video-queue-candidate.json
           echo "has_videos=true" >> "$GITHUB_OUTPUT"
           echo "total_videos=$count" >> "$GITHUB_OUTPUT"
           echo "selected_video_index=$idx" >> "$GITHUB_OUTPUT"
@@ -196,10 +201,17 @@ jobs:
         shell: bash
         run: |
           git fetch origin "$GITHUB_REF_NAME"
+          git show "origin/$GITHUB_REF_NAME:$VIDEO_QUEUE_FILE" > /tmp/live-video-queue.json
+          cp video-queue-candidate.json /tmp/video-queue-candidate.json
           allowed=$(python3 - <<'PY'
           import json, os, subprocess
+          from pathlib import Path
           from datetime import datetime, timezone
           now=datetime.now(timezone.utc)
+          queue=json.loads(Path('/tmp/live-video-queue.json').read_text(encoding='utf-8')).get('queue') or []
+          candidate=json.loads(Path('/tmp/video-queue-candidate.json').read_text(encoding='utf-8'))
+          if not queue or str(queue[0].get('drive_id')) != str(candidate.get('drive_id')):
+              print('false'); raise SystemExit
           try:
               raw=subprocess.check_output(['git','show',f'origin/{os.environ["GITHUB_REF_NAME"]}:state_instagram_underscore.json'],text=True)
               value=json.loads(raw).get('last_posted_at')
@@ -225,6 +237,10 @@ jobs:
           PUBLIC_VIDEO_URL: https://raw.githubusercontent.com/${{ github.repository }}/media-host-underscore/latest.mp4?run=${{ github.run_id }}
         run: python publish.py
 
+      - name: Avançar fila FIFO após confirmação
+        if: steps.publish.outcome == 'success'
+        run: python rotate_video_queue.py "$VIDEO_QUEUE_FILE" video-queue-candidate.json
+
       - name: Salvar estado separado
         if: always() && steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:
@@ -243,17 +259,17 @@ jobs:
           git config user.name "Carlos Reels Automation"
           git config user.email "actions@users.noreply.github.com"
           tmpdir=$(mktemp -d)
-          for file in diagnostic_instagram_underscore.json quality-report-instagram-underscore.json run-status-instagram-underscore.json; do
+          for file in diagnostic_instagram_underscore.json quality-report-instagram-underscore.json run-status-instagram-underscore.json "$VIDEO_QUEUE_FILE"; do
             [ -f "$file" ] && cp "$file" "$tmpdir/$file"
           done
           [ "$save_state" = "true" ] && cp state_instagram_underscore.json "$tmpdir/state_instagram_underscore.json" || true
           for attempt in 1 2 3; do
             git fetch origin "$GITHUB_REF_NAME"
             git reset --hard "origin/$GITHUB_REF_NAME"
-            for file in state_instagram_underscore.json diagnostic_instagram_underscore.json quality-report-instagram-underscore.json run-status-instagram-underscore.json; do
+            for file in state_instagram_underscore.json diagnostic_instagram_underscore.json quality-report-instagram-underscore.json run-status-instagram-underscore.json "$VIDEO_QUEUE_FILE"; do
               [ -f "$tmpdir/$file" ] && cp "$tmpdir/$file" "$file"
             done
-            git add state_instagram_underscore.json run-status-instagram-underscore.json
+            git add state_instagram_underscore.json run-status-instagram-underscore.json "$VIDEO_QUEUE_FILE"
             [ -f diagnostic_instagram_underscore.json ] && git add diagnostic_instagram_underscore.json || true
             [ -f quality-report-instagram-underscore.json ] && git add quality-report-instagram-underscore.json || true
             if git diff --cached --quiet; then
