@@ -48,6 +48,58 @@ by_name = {}
 for item in by_identity.values():
     by_name.setdefault(item["name"], item)
 
+queue_file_raw = os.environ.get("VIDEO_QUEUE_FILE", "").strip()
+if platform in {"instagram", "instagram_underscore", "tiktok"}:
+    if not queue_file_raw:
+        print(json.dumps({"count": 0, "reason": "platform_fifo_queue_not_configured", "platform": platform}))
+        raise SystemExit(0)
+    queue_path = ROOT / queue_file_raw
+    if not queue_path.exists():
+        print(json.dumps({"count": 0, "reason": "platform_fifo_queue_missing", "platform": platform}))
+        raise SystemExit(0)
+    queue_state = json.loads(queue_path.read_text(encoding="utf-8"))
+    if str(queue_state.get("platform") or "") != platform:
+        raise SystemExit(f"Fila {queue_path.name} pertence a outra plataforma")
+
+    current_by_id = {
+        item["drive_id"]: item for item in by_identity.values() if item.get("drive_id")
+    }
+    synchronized = []
+    seen_ids = set()
+    # Remoções preservam a ordem relativa dos itens restantes.
+    for old in queue_state.get("queue", []):
+        drive_id = str(old.get("drive_id") or "").strip()
+        if drive_id and drive_id in current_by_id and drive_id not in seen_ids:
+            synchronized.append({**old, **current_by_id[drive_id]})
+            seen_ids.add(drive_id)
+    # Novos arquivos entram somente no fim da fila.
+    for drive_id, item in current_by_id.items():
+        if drive_id not in seen_ids:
+            synchronized.append(item)
+            seen_ids.add(drive_id)
+
+    queue_state["queue"] = synchronized
+    queue_state["last_synced_at"] = datetime.now(timezone.utc).isoformat()
+    queue_state["source_count"] = len(synchronized)
+    queue_path.write_text(json.dumps(queue_state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if not synchronized:
+        print(json.dumps({"count": 0, "reason": "fifo_source_pool_empty", "platform": platform}))
+        raise SystemExit(0)
+
+    selected = synchronized[0]
+    print(json.dumps({
+        "count": len(synchronized),
+        "index": 0,
+        "name": selected["name"],
+        "url": selected["url"],
+        "path": selected["path"],
+        "drive_id": selected["drive_id"],
+        "platform": platform,
+        "queue_file": queue_path.name,
+        "fifo_front": True,
+    }, ensure_ascii=False))
+    raise SystemExit(0)
+
 preferred = [n for n in PROFILES.get("rotation", []) if n in by_name]
 ordered_names = preferred + sorted(n for n in by_name if n not in preferred)
 
