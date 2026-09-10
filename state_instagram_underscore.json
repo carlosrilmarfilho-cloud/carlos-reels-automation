@@ -1,7 +1,9 @@
 {
   "video_index": 1,
   "posts_total": 44,
-  "blocked_videos": [],
+  "blocked_videos": [
+    "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
+  ],
   "variant_usage": {
     "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 1,
     "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4": 3,

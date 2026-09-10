@@ -1,12 +1,12 @@
 {
   "passed": true,
-  "video": "71F75039-C662-4FCA-AD77-6433FC9FC4E1.mp4",
-  "overlay": "Tá aí a terapia que você precisa",
+  "video": "CC16C569-E899-45F2-AA46-381A81EE8BE2.mp4",
+  "overlay": "Eu gosto de música que me faz esquecer por que peguei o celular.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.119140625,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.201171875
   },
   "faces_checked": 8,
   "failures": []
