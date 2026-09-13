@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "CC16C569-E899-45F2-AA46-381A81EE8BE2.mp4",
-  "overlay": "Eu gosto de música que me faz esquecer por que peguei o celular.",
+  "video": "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4",
+  "overlay": "Se isso te fez lembrar de alguém, a responsabilidade é do compositor.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.119140625,
+    "y0": 0.048828125,
     "x1": 0.9555555555555556,
-    "y1": 0.201171875
+    "y1": 0.130859375
   },
-  "faces_checked": 8,
+  "faces_checked": 5,
   "failures": []
 }

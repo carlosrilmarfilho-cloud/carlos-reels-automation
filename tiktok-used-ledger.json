@@ -63,7 +63,8 @@
     "F34BCD36-345A-430E-8F5B-D90C30F2957D.mp4",
     "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4",
     "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4",
-    "f79bc212495a4a3bba2efe8bc7bba941.mov"
+    "f79bc212495a4a3bba2efe8bc7bba941.mov",
+    "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
   ],
   "used_drive_ids": [
     "1--x0tggr2Gdw1PfLLaM9Pea4imxRpNN9",
@@ -112,9 +113,12 @@
     "1vzkT_uSD-kV9b8Laeud1o-Vp-bx5QEt2",
     "1wcwryv7zwu5qBYsATAvzQpWxp_GB67g7",
     "1y25wW9TztDaRkkVhhdZ3oS7YTkmeufTG",
-    "1ypx-SQ2LbP5ayRtttygaSLpvJxpdPu2l"
+    "1ypx-SQ2LbP5ayRtttygaSLpvJxpdPu2l",
+    "1jnkwFMUxvNeuN0gum5yajhb8QTSgiX8_"
   ],
-  "used_sha256": [],
+  "used_sha256": [
+    "a4904cc9788a7d149ada091d4cae3b564a74a72706f12aff44e35fecc31d0be3"
+  ],
   "records": [
     {
       "name": "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4",
@@ -566,6 +570,16 @@
       "drive_ids": [],
       "legacy_confirmed_count": 3,
       "source": "state_tiktok.variant_usage"
+    },
+    {
+      "name": "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4",
+      "drive_id": "1jnkwFMUxvNeuN0gum5yajhb8QTSgiX8_",
+      "sha256": "a4904cc9788a7d149ada091d4cae3b564a74a72706f12aff44e35fecc31d0be3",
+      "buffer_post_id": "6aa70ad757098b213382d28d",
+      "sent_at": "2026-09-13T20:44:54.833Z",
+      "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7685123267459321096",
+      "source": "confirmed_buffer_publication"
     }
-  ]
+  ],
+  "updated_at": "2026-09-13T20:44:55.420036+00:00"
 }
