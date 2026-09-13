@@ -11,7 +11,7 @@ def main() -> None:
     fixed = "safe_centers = (0.22, 0.32, 0.66, 0.76)"
     adaptive = (
         "safe_centers = tuple(dict.fromkeys((0.22, 0.32, 0.66, 0.76) + "
-        "tuple(step / 1000 for step in range(160, 811, 5))))"
+        "tuple(step / 1000 for step in range(80, 811, 5))))"
     )
 
     if adaptive in source:
@@ -24,8 +24,8 @@ def main() -> None:
     RENDER.write_text(source, encoding="utf-8")
     print(
         "Posicionamento adaptativo aplicado: mantém 22% como primeira opção e "
-        "procura outras alturas entre 16% e 81% somente quando necessário; "
-        "o bloqueio de sobreposição facial continua inalterado."
+        "procura outras alturas entre 8% e 81% somente quando necessário; "
+        "os limites visuais e o bloqueio de sobreposição facial continuam inalterados."
     )
 
 
