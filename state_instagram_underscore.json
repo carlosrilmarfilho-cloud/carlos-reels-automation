@@ -1,6 +1,6 @@
 {
   "video_index": 1,
-  "posts_total": 44,
+  "posts_total": 45,
   "blocked_videos": [
     "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
   ],
@@ -24,10 +24,12 @@
     "072B8B62-667D-4C38-8ABA-DAE29B0FA10C.mp4": 2,
     "13ADDC34-C864-4CF1-ADB1-21EB454FA4B7.mp4": 2,
     "CC16C569-E899-45F2-AA46-381A81EE8BE2.mp4": 1,
-    "71F75039-C662-4FCA-AD77-6433FC9FC4E1.mp4": 1
+    "71F75039-C662-4FCA-AD77-6433FC9FC4E1.mp4": 1,
+    "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4": 1
   },
   "recent_overlays": [
     "Tá aí a terapia que você precisa 🪗🎶❤️",
+    "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
@@ -114,14 +116,15 @@
     "Poucas notas entregaram a canção inteira. Qual instrumento você ouviu primeiro?",
     "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?",
     "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.",
-    "Presta atenção na mudança de tom. Foi ali que a música te pegou?"
+    "Presta atenção na mudança de tom. Foi ali que a música te pegou?",
+    "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?"
   ],
-  "last_video": "71F75039-C662-4FCA-AD77-6433FC9FC4E1.mp4",
+  "last_video": "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4",
   "last_overlay": "Tá aí a terapia que você precisa",
   "last_mode": "trial",
   "last_media_id": "18112266332063101",
-  "last_posted_at": "2026-09-09T23:22:55.490266+00:00",
+  "last_posted_at": "2026-09-13T20:43:37.508504+00:00",
   "last_attempted_video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
-  "last_caption": "Presta atenção na mudança de tom. Foi ali que a música te pegou?",
+  "last_caption": "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?",
   "last_hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento"
 }
