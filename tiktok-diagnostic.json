@@ -1,9 +1,9 @@
 {
-  "started_at": "2026-09-14T14:33:58.287911+00:00",
+  "started_at": "2026-09-14T14:53:29.655479+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "confirm_delivery",
-  "caption_length": 121,
+  "post_id": "6aa805d9ebcdf9aed5f1cc69",
   "source_candidate": {
     "name": "F651D1BB-D243-438C-BB64-72CC36D73860.mp4",
     "drive_id": "1BMuRHovVdlBg3MvG-lKtCSg36KuhRPn5",
@@ -407,15 +407,11 @@
     }
   },
   "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
-  "channel_id": "6a8d782bccaf649a671248a9",
-  "channel_name": "carlosrilmarfilho",
-  "post_id": "6aa805d9ebcdf9aed5f1cc69",
-  "initial_status": "sending",
   "buffer_status": "sending",
   "sent_at": null,
   "external_link": null,
   "success": false,
   "error_type": "RuntimeError",
-  "error": "Buffer não confirmou publicação no TikTok em 10 minutos; último status: sending",
-  "finished_at": "2026-09-14T14:44:15.232585+00:00"
+  "error": "Buffer API HTTP 429: {\"errors\":[{\"message\":\"Too many requests from this client. Please try again later.\",\"extensions\":{\"code\":\"RATE_LIMIT_EXCEEDED\",\"window\":\"24h\"}}]}",
+  "finished_at": "2026-09-14T14:59:28.322029+00:00"
 }
