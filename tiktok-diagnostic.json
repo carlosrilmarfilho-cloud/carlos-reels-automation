@@ -1,69 +1,81 @@
 {
-  "started_at": "2026-09-13T23:26:48.879213+00:00",
+  "started_at": "2026-09-14T11:30:11.674382+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
-  "stage": "success",
-  "caption_length": 125,
+  "stage": "confirm_delivery",
+  "caption_length": 124,
   "source_candidate": {
-    "name": "D973D64E-09CC-49E9-8335-A84F2FF133D2.mp4",
-    "drive_id": "1TI-ID-S8P6tJJFrRFdAjXqMre1baJ1pJ",
-    "sha256": "809db8ab354a8a09708d95f32a1321041d5ff0ff592f7a49805bd47342255bba"
+    "name": "C190B5D7-D3E6-4B79-B6A6-0C4273F9B526.mp4",
+    "drive_id": "1bApaQneWeM224aLD7d8Gnq0JDZ2Gh0pe",
+    "sha256": "012aab6de93119f07db2c149a67610d13c29bc0f734f841677c33215a2909f93"
   },
   "metadata_snapshot": {
-    "video": "D973D64E-09CC-49E9-8335-A84F2FF133D2.mp4",
+    "video": "C190B5D7-D3E6-4B79-B6A6-0C4273F9B526.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 4,
-    "overlay": "Eu gosto de música que me faz esquecer por que peguei o celular.",
-    "caption": "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe.\n\n#musica #reelsbrasil #som #boamusica #brasil",
+    "variant_index": 3,
+    "overlay": "Se você ficou até aqui, provavelmente não foi por causa do algoritmo.",
+    "caption": "Você ficou mais dez segundos por causa da voz? Diz qual detalhe decidiu isso.\n\n#musica #reelsbrasil #som #boamusica #brasil",
     "hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
     "source_resolution": "2160x3840",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 125,
+      "y0": 466,
       "x1": 1376,
-      "y1": 335
+      "y1": 660
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.048828125,
+      "y0": 0.18203125,
       "x1": 0.9555555555555556,
-      "y1": 0.130859375
+      "y1": 0.2578125
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 898.6666666666666,
-        "y0": 1176.0,
-        "x1": 1336.0,
-        "y1": 1613.3333333333333
+        "x0": 690.6666666666666,
+        "y0": 1365.3333333333333,
+        "x1": 989.3333333333333,
+        "y1": 1664.0
       },
       {
-        "x0": 962.6666666666666,
-        "y0": 1405.3333333333333,
-        "x1": 1274.6666666666665,
-        "y1": 1717.3333333333333
+        "x0": 317.3333333333333,
+        "y0": 1024.0,
+        "x1": 1037.3333333333333,
+        "y1": 1744.0
       },
       {
-        "x0": 234.66666666666666,
-        "y0": 848.0,
-        "x1": 1298.6666666666665,
-        "y1": 1912.0
+        "x0": 397.3333333333333,
+        "y0": 941.3333333333333,
+        "x1": 1264.0,
+        "y1": 1808.0
       },
       {
-        "x0": 258.66666666666663,
-        "y0": 856.0,
-        "x1": 1413.3333333333333,
-        "y1": 2010.6666666666665
+        "x0": 842.6666666666666,
+        "y0": 1306.6666666666665,
+        "x1": 1200.0,
+        "y1": 1664.0
       },
       {
-        "x0": 714.6666666666666,
-        "y0": 1333.3333333333335,
-        "x1": 1080.0,
-        "y1": 1698.6666666666665
+        "x0": 365.3333333333333,
+        "y0": 1018.6666666666666,
+        "x1": 1106.6666666666665,
+        "y1": 1760.0
+      },
+      {
+        "x0": 378.66666666666663,
+        "y0": 1021.3333333333333,
+        "x1": 1191.9999999999998,
+        "y1": 1834.6666666666665
+      },
+      {
+        "x0": 248.0,
+        "y0": 938.6666666666666,
+        "x1": 1160.0,
+        "y1": 1850.6666666666665
       }
     ],
     "visual_rules": {
@@ -74,10 +86,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 122,
-      "last_posted_at": "2026-09-13T20:44:54.833Z",
-      "last_video": "D973D64E-09CC-49E9-8335-A84F2FF133D2.mp4",
-      "last_overlay": "Eu gosto de música que me faz esquecer por que peguei o celular.",
+      "posts_total": 123,
+      "last_posted_at": "2026-09-13T23:28:39.939Z",
+      "last_video": "C190B5D7-D3E6-4B79-B6A6-0C4273F9B526.mp4",
+      "last_overlay": "Se você ficou até aqui, provavelmente não foi por causa do algoritmo.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -142,9 +154,10 @@
         "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4": 1,
         "15EA0363-A2B0-4F7C-BB26-BFB45F8454E0.mp4": 1,
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4": 1,
-        "D973D64E-09CC-49E9-8335-A84F2FF133D2.mp4": 1
+        "D973D64E-09CC-49E9-8335-A84F2FF133D2.mp4": 1,
+        "C190B5D7-D3E6-4B79-B6A6-0C4273F9B526.mp4": 1
       },
-      "last_caption": "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe.",
+      "last_caption": "Você ficou mais dez segundos por causa da voz? Diz qual detalhe decidiu isso.",
       "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
@@ -264,7 +277,8 @@
         "Nem precisa conhecer: essa voz faz você ficar.",
         "Isso aqui tem cara de música que alguém vai mandar sem explicar nada.",
         "Se isso te fez lembrar de alguém, a responsabilidade é do compositor.",
-        "Eu gosto de música que me faz esquecer por que peguei o celular."
+        "Eu gosto de música que me faz esquecer por que peguei o celular.",
+        "Se você ficou até aqui, provavelmente não foi por causa do algoritmo."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -384,7 +398,8 @@
         "Tenta ouvir esta parte sem voltar o vídeo. Depois conta se conseguiu.",
         "Se ficou até o final, escolhe a próxima terapia musical nos comentários.",
         "Eu não quero te convencer a gostar. Só deixa essa parte terminar e decide depois.",
-        "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe."
+        "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe.",
+        "Você ficou mais dez segundos por causa da voz? Diz qual detalhe decidiu isso."
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -394,20 +409,22 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6aa70ad757098b213382d28d",
+      "last_buffer_post_id": "6aa7313cea4032c01498cda6",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7685123267459321096",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7685164989996387601",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
   "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6aa7313cea4032c01498cda6",
+  "post_id": "6aa7dac5c203f46bedc57bc2",
   "initial_status": "sending",
-  "buffer_status": "sent",
-  "sent_at": "2026-09-13T23:28:39.939Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7685164989996387601",
-  "success": true,
-  "finished_at": "2026-09-13T23:28:45.940564+00:00"
+  "buffer_status": "sending",
+  "sent_at": null,
+  "external_link": null,
+  "success": false,
+  "error_type": "RuntimeError",
+  "error": "Buffer não confirmou publicação no TikTok em 10 minutos; último status: sending",
+  "finished_at": "2026-09-14T11:40:24.511313+00:00"
 }
