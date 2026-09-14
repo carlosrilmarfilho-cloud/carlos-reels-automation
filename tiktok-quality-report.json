@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "F651D1BB-D243-438C-BB64-72CC36D73860.mp4",
-  "overlay": "Se a primeira nota prendeu, espera a próxima frase.",
+  "video": "E049B12F-585F-42D9-BCB4-446DDBF991EF.mp4",
+  "overlay": "A cabeça tava em outro lugar até essa voz entrar.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.049609375,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.140234375
   },
-  "faces_checked": 6,
+  "faces_checked": 9,
   "failures": []
 }

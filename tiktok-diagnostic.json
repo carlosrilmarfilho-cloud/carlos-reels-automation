@@ -1,69 +1,87 @@
 {
-  "started_at": "2026-09-14T20:49:37.775615+00:00",
+  "started_at": "2026-09-14T23:27:18.478496+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 121,
+  "caption_length": 128,
   "source_candidate": {
-    "name": "F651D1BB-D243-438C-BB64-72CC36D73860.mp4",
-    "drive_id": "1BMuRHovVdlBg3MvG-lKtCSg36KuhRPn5",
-    "sha256": "ae3053ebafea5008905eb34cc3db5ea10addb1968a410f0d46f160f23d63b475"
+    "name": "E049B12F-585F-42D9-BCB4-446DDBF991EF.mp4",
+    "drive_id": "10TzusgUFxtrQQdYWucxGXGyQk3Qse2DY",
+    "sha256": "aa7bee6d0460d583c134f738c44138dcd752872116898f1964f385f4d8d0c5c4"
   },
   "metadata_snapshot": {
-    "video": "F651D1BB-D243-438C-BB64-72CC36D73860.mp4",
+    "video": "E049B12F-585F-42D9-BCB4-446DDBF991EF.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 18,
-    "overlay": "Se a primeira nota prendeu, espera a próxima frase.",
-    "caption": "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.\n\n#musica #reelsbrasil #som #boamusica #brasil",
-    "hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
+    "variant_index": 2,
+    "overlay": "A cabeça tava em outro lugar até essa voz entrar.",
+    "caption": "Presta atenção na mudança de tom. Foi ali que a música te pegou?\n\n#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
+    "hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
     "source_resolution": "2160x3840",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 447,
+      "y0": 127,
       "x1": 1376,
-      "y1": 679
+      "y1": 359
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.174609375,
+      "y0": 0.049609375,
       "x1": 0.9555555555555556,
-      "y1": 0.265234375
+      "y1": 0.140234375
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 466.66666666666663,
-        "y0": 1354.6666666666665,
-        "x1": 794.6666666666666,
-        "y1": 1682.6666666666665
+        "x0": 157.33333333333331,
+        "y0": 824.0,
+        "x1": 1053.3333333333333,
+        "y1": 1720.0
       },
       {
-        "x0": 496.0,
-        "y0": 954.6666666666666,
-        "x1": 1304.0,
-        "y1": 1762.6666666666665
+        "x0": 250.66666666666666,
+        "y0": 1488.0,
+        "x1": 650.6666666666666,
+        "y1": 1888.0
       },
       {
-        "x0": 570.6666666666666,
-        "y0": 1136.0,
-        "x1": 1197.3333333333333,
-        "y1": 1762.6666666666665
+        "x0": 778.6666666666666,
+        "y0": 1186.6666666666665,
+        "x1": 1072.0,
+        "y1": 1480.0
       },
       {
-        "x0": 1074.6666666666665,
-        "y0": 1224.0,
-        "x1": 1421.3333333333333,
-        "y1": 1570.6666666666665
+        "x0": 170.66666666666666,
+        "y0": 826.6666666666666,
+        "x1": 1069.3333333333333,
+        "y1": 1725.3333333333333
       },
       {
-        "x0": 864.0,
-        "y0": 1184.0,
-        "x1": 1197.3333333333333,
-        "y1": 1517.3333333333333
+        "x0": 1258.6666666666665,
+        "y0": 2309.333333333333,
+        "x1": 1424.0,
+        "y1": 2474.6666666666665
+      },
+      {
+        "x0": 746.6666666666666,
+        "y0": 1245.3333333333333,
+        "x1": 1008.0,
+        "y1": 1506.6666666666665
+      },
+      {
+        "x0": 621.3333333333333,
+        "y0": 1061.3333333333333,
+        "x1": 1154.6666666666665,
+        "y1": 1594.6666666666665
+      },
+      {
+        "x0": 610.6666666666666,
+        "y0": 1037.3333333333333,
+        "x1": 1213.3333333333333,
+        "y1": 1640.0
       }
     ],
     "visual_rules": {
@@ -74,10 +92,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 124,
-      "last_posted_at": "2026-09-14T12:00:02.414Z",
-      "last_video": "F651D1BB-D243-438C-BB64-72CC36D73860.mp4",
-      "last_overlay": "Se a primeira nota prendeu, espera a próxima frase.",
+      "posts_total": 125,
+      "last_posted_at": "2026-09-14T20:51:27.652Z",
+      "last_video": "E049B12F-585F-42D9-BCB4-446DDBF991EF.mp4",
+      "last_overlay": "A cabeça tava em outro lugar até essa voz entrar.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -144,10 +162,11 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4": 1,
         "D973D64E-09CC-49E9-8335-A84F2FF133D2.mp4": 1,
         "C190B5D7-D3E6-4B79-B6A6-0C4273F9B526.mp4": 1,
-        "F651D1BB-D243-438C-BB64-72CC36D73860.mp4": 1
+        "F651D1BB-D243-438C-BB64-72CC36D73860.mp4": 1,
+        "E049B12F-585F-42D9-BCB4-446DDBF991EF.mp4": 1
       },
-      "last_caption": "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.",
-      "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
+      "last_caption": "Presta atenção na mudança de tom. Foi ali que a música te pegou?",
+      "last_hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -268,7 +287,8 @@
         "Se isso te fez lembrar de alguém, a responsabilidade é do compositor.",
         "Eu gosto de música que me faz esquecer por que peguei o celular.",
         "Se você ficou até aqui, provavelmente não foi por causa do algoritmo.",
-        "Se a primeira nota prendeu, espera a próxima frase."
+        "Se a primeira nota prendeu, espera a próxima frase.",
+        "A cabeça tava em outro lugar até essa voz entrar."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -390,7 +410,8 @@
         "Eu não quero te convencer a gostar. Só deixa essa parte terminar e decide depois.",
         "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe.",
         "Você ficou mais dez segundos por causa da voz? Diz qual detalhe decidiu isso.",
-        "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu."
+        "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.",
+        "Presta atenção na mudança de tom. Foi ali que a música te pegou?"
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -400,20 +421,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6aa7dac5c203f46bedc57bc2",
+      "last_buffer_post_id": "6aa85de3fe2ee7ee3d85f472",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7685355173568466193",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7685496036307062036",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
+  "hashtags_snapshot": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6aa85de3fe2ee7ee3d85f472",
+  "post_id": "6aa882d7a283eff81a50af9d",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-14T20:51:27.652Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7685496036307062036",
+  "sent_at": "2026-09-14T23:29:06.248Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7685536647882099989",
   "success": true,
-  "finished_at": "2026-09-14T20:51:32.321566+00:00"
+  "finished_at": "2026-09-14T23:29:10.971176+00:00"
 }
