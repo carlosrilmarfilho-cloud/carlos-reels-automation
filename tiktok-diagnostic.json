@@ -1,81 +1,69 @@
 {
-  "started_at": "2026-09-14T12:00:26.839654+00:00",
+  "started_at": "2026-09-14T14:33:58.287911+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
-  "stage": "success",
-  "post_id": "6aa7dac5c203f46bedc57bc2",
+  "stage": "confirm_delivery",
+  "caption_length": 121,
   "source_candidate": {
-    "name": "C190B5D7-D3E6-4B79-B6A6-0C4273F9B526.mp4",
-    "drive_id": "1bApaQneWeM224aLD7d8Gnq0JDZ2Gh0pe",
-    "sha256": "012aab6de93119f07db2c149a67610d13c29bc0f734f841677c33215a2909f93"
+    "name": "F651D1BB-D243-438C-BB64-72CC36D73860.mp4",
+    "drive_id": "1BMuRHovVdlBg3MvG-lKtCSg36KuhRPn5",
+    "sha256": "ae3053ebafea5008905eb34cc3db5ea10addb1968a410f0d46f160f23d63b475"
   },
   "metadata_snapshot": {
-    "video": "C190B5D7-D3E6-4B79-B6A6-0C4273F9B526.mp4",
+    "video": "F651D1BB-D243-438C-BB64-72CC36D73860.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 3,
-    "overlay": "Se você ficou até aqui, provavelmente não foi por causa do algoritmo.",
-    "caption": "Você ficou mais dez segundos por causa da voz? Diz qual detalhe decidiu isso.\n\n#musica #reelsbrasil #som #boamusica #brasil",
+    "variant_index": 18,
+    "overlay": "Se a primeira nota prendeu, espera a próxima frase.",
+    "caption": "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.\n\n#musica #reelsbrasil #som #boamusica #brasil",
     "hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
     "source_resolution": "2160x3840",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 466,
+      "y0": 447,
       "x1": 1376,
-      "y1": 660
+      "y1": 679
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.18203125,
+      "y0": 0.174609375,
       "x1": 0.9555555555555556,
-      "y1": 0.2578125
+      "y1": 0.265234375
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 690.6666666666666,
-        "y0": 1365.3333333333333,
-        "x1": 989.3333333333333,
-        "y1": 1664.0
+        "x0": 466.66666666666663,
+        "y0": 1354.6666666666665,
+        "x1": 794.6666666666666,
+        "y1": 1682.6666666666665
       },
       {
-        "x0": 317.3333333333333,
-        "y0": 1024.0,
-        "x1": 1037.3333333333333,
-        "y1": 1744.0
+        "x0": 496.0,
+        "y0": 954.6666666666666,
+        "x1": 1304.0,
+        "y1": 1762.6666666666665
       },
       {
-        "x0": 397.3333333333333,
-        "y0": 941.3333333333333,
-        "x1": 1264.0,
-        "y1": 1808.0
+        "x0": 570.6666666666666,
+        "y0": 1136.0,
+        "x1": 1197.3333333333333,
+        "y1": 1762.6666666666665
       },
       {
-        "x0": 842.6666666666666,
-        "y0": 1306.6666666666665,
-        "x1": 1200.0,
-        "y1": 1664.0
+        "x0": 1074.6666666666665,
+        "y0": 1224.0,
+        "x1": 1421.3333333333333,
+        "y1": 1570.6666666666665
       },
       {
-        "x0": 365.3333333333333,
-        "y0": 1018.6666666666666,
-        "x1": 1106.6666666666665,
-        "y1": 1760.0
-      },
-      {
-        "x0": 378.66666666666663,
-        "y0": 1021.3333333333333,
-        "x1": 1191.9999999999998,
-        "y1": 1834.6666666666665
-      },
-      {
-        "x0": 248.0,
-        "y0": 938.6666666666666,
-        "x1": 1160.0,
-        "y1": 1850.6666666666665
+        "x0": 864.0,
+        "y0": 1184.0,
+        "x1": 1197.3333333333333,
+        "y1": 1517.3333333333333
       }
     ],
     "visual_rules": {
@@ -86,10 +74,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 123,
-      "last_posted_at": "2026-09-13T23:28:39.939Z",
-      "last_video": "C190B5D7-D3E6-4B79-B6A6-0C4273F9B526.mp4",
-      "last_overlay": "Se você ficou até aqui, provavelmente não foi por causa do algoritmo.",
+      "posts_total": 124,
+      "last_posted_at": "2026-09-14T12:00:02.414Z",
+      "last_video": "F651D1BB-D243-438C-BB64-72CC36D73860.mp4",
+      "last_overlay": "Se a primeira nota prendeu, espera a próxima frase.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -155,9 +143,10 @@
         "15EA0363-A2B0-4F7C-BB26-BFB45F8454E0.mp4": 1,
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4": 1,
         "D973D64E-09CC-49E9-8335-A84F2FF133D2.mp4": 1,
-        "C190B5D7-D3E6-4B79-B6A6-0C4273F9B526.mp4": 1
+        "C190B5D7-D3E6-4B79-B6A6-0C4273F9B526.mp4": 1,
+        "F651D1BB-D243-438C-BB64-72CC36D73860.mp4": 1
       },
-      "last_caption": "Você ficou mais dez segundos por causa da voz? Diz qual detalhe decidiu isso.",
+      "last_caption": "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.",
       "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
@@ -278,7 +267,8 @@
         "Isso aqui tem cara de música que alguém vai mandar sem explicar nada.",
         "Se isso te fez lembrar de alguém, a responsabilidade é do compositor.",
         "Eu gosto de música que me faz esquecer por que peguei o celular.",
-        "Se você ficou até aqui, provavelmente não foi por causa do algoritmo."
+        "Se você ficou até aqui, provavelmente não foi por causa do algoritmo.",
+        "Se a primeira nota prendeu, espera a próxima frase."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -399,7 +389,8 @@
         "Se ficou até o final, escolhe a próxima terapia musical nos comentários.",
         "Eu não quero te convencer a gostar. Só deixa essa parte terminar e decide depois.",
         "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe.",
-        "Você ficou mais dez segundos por causa da voz? Diz qual detalhe decidiu isso."
+        "Você ficou mais dez segundos por causa da voz? Diz qual detalhe decidiu isso.",
+        "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu."
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -409,16 +400,22 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6aa7313cea4032c01498cda6",
+      "last_buffer_post_id": "6aa7dac5c203f46bedc57bc2",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7685164989996387601",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7685355173568466193",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
   "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
-  "buffer_status": "sent",
-  "sent_at": "2026-09-14T12:00:02.414Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7685355173568466193",
-  "success": true,
-  "finished_at": "2026-09-14T12:00:28.012643+00:00"
+  "channel_id": "6a8d782bccaf649a671248a9",
+  "channel_name": "carlosrilmarfilho",
+  "post_id": "6aa805d9ebcdf9aed5f1cc69",
+  "initial_status": "sending",
+  "buffer_status": "sending",
+  "sent_at": null,
+  "external_link": null,
+  "success": false,
+  "error_type": "RuntimeError",
+  "error": "Buffer não confirmou publicação no TikTok em 10 minutos; último status: sending",
+  "finished_at": "2026-09-14T14:44:15.232585+00:00"
 }

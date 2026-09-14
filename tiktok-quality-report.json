@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "C190B5D7-D3E6-4B79-B6A6-0C4273F9B526.mp4",
-  "overlay": "Se você ficou até aqui, provavelmente não foi por causa do algoritmo.",
+  "video": "F651D1BB-D243-438C-BB64-72CC36D73860.mp4",
+  "overlay": "Se a primeira nota prendeu, espera a próxima frase.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.18203125,
+    "y0": 0.174609375,
     "x1": 0.9555555555555556,
-    "y1": 0.2578125
+    "y1": 0.265234375
   },
-  "faces_checked": 7,
+  "faces_checked": 5,
   "failures": []
 }
