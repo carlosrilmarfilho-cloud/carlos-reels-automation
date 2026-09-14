@@ -351,28 +351,29 @@ def persist_confirmed(metadata: dict, hashtags: str, post_id: str, confirmed: di
     print(f"TikTok confirmado como publicado: {post_id}")
 
 
-def pending_post_from_current_window() -> dict:
+def pending_post_for_reconciliation() -> dict:
+    """Return any unresolved Buffer delivery, regardless of publication window.
+
+    Once Buffer accepts a post, its ID remains authoritative until Buffer reports
+    either sent or error. Keeping this reconciliation global prevents a delayed
+    send from being recreated in a later slot.
+    """
     if not DIAG.exists():
-        return ""
+        return {}
     try:
         previous = json.loads(DIAG.read_text(encoding="utf-8"))
         post_id = str(previous.get("post_id") or "").strip()
         status = str(previous.get("buffer_status") or previous.get("initial_status") or "").lower()
-        stamp = previous.get("started_at") or previous.get("finished_at")
-        if not post_id or status not in {"sending", "pending", "processing", "unknown"} or not stamp:
-            return ""
-        started = datetime.fromisoformat(str(stamp).replace("Z", "+00:00")).astimezone(timezone.utc)
-        now = datetime.now(timezone.utc)
-        if started.date() == now.date() and started.hour == now.hour:
+        if post_id and status in {"sending", "pending", "processing", "unknown"}:
             return previous
     except Exception:
-        return ""
+        return {}
     return {}
 
 
 def main() -> None:
     try:
-        previous_pending = pending_post_from_current_window()
+        previous_pending = pending_post_for_reconciliation()
         metadata = json.loads(META.read_text(encoding="utf-8"))
         candidate = json.loads(CANDIDATE.read_text(encoding="utf-8"))
         caption, hashtags = adapt_caption_for_tiktok(str(metadata["caption"]))
