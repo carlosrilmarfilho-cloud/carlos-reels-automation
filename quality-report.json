@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4",
-  "overlay": "Repara na letra: ela diz mais do que parece.",
+  "video": "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4",
+  "overlay": "Eu não sei o que essa música te lembra. Em mim, ela mexeu aqui.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.178125,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.26171875
   },
-  "faces_checked": 8,
+  "faces_checked": 1,
   "failures": []
 }
