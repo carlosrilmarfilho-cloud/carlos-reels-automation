@@ -1,8 +1,8 @@
 {
-  "started_at": "2026-09-14T20:30:52.915384+00:00",
+  "started_at": "2026-09-14T20:49:37.775615+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
-  "stage": "auth",
+  "stage": "success",
   "caption_length": 121,
   "source_candidate": {
     "name": "F651D1BB-D243-438C-BB64-72CC36D73860.mp4",
@@ -407,8 +407,13 @@
     }
   },
   "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
-  "success": false,
-  "error_type": "RuntimeError",
-  "error": "Buffer API HTTP 429: {\"errors\":[{\"message\":\"Too many requests from this client. Please try again later.\",\"extensions\":{\"code\":\"RATE_LIMIT_EXCEEDED\",\"window\":\"24h\"}}]}",
-  "finished_at": "2026-09-14T20:30:53.055372+00:00"
+  "channel_id": "6a8d782bccaf649a671248a9",
+  "channel_name": "carlosrilmarfilho",
+  "post_id": "6aa85de3fe2ee7ee3d85f472",
+  "initial_status": "sending",
+  "buffer_status": "sent",
+  "sent_at": "2026-09-14T20:51:27.652Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7685496036307062036",
+  "success": true,
+  "finished_at": "2026-09-14T20:51:32.321566+00:00"
 }
