@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-09-14T18:03:54.686204+00:00",
+  "started_at": "2026-09-14T20:30:52.915384+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "auth",
@@ -410,5 +410,5 @@
   "success": false,
   "error_type": "RuntimeError",
   "error": "Buffer API HTTP 429: {\"errors\":[{\"message\":\"Too many requests from this client. Please try again later.\",\"extensions\":{\"code\":\"RATE_LIMIT_EXCEEDED\",\"window\":\"24h\"}}]}",
-  "finished_at": "2026-09-14T18:03:55.129521+00:00"
+  "finished_at": "2026-09-14T20:30:53.055372+00:00"
 }
