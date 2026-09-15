@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4",
-  "overlay": "Antes do refrão, teu corpo já sabia a resposta.",
+  "video": "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4",
+  "overlay": "Existe um motivo para este refrão continuar na cabeça.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
     "y0": 0.049609375,
     "x1": 0.9555555555555556,
     "y1": 0.140234375
   },
-  "faces_checked": 5,
+  "faces_checked": 6,
   "failures": []
 }
