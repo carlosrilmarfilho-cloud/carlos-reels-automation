@@ -1,69 +1,87 @@
 {
-  "started_at": "2026-09-15T20:27:09.883647+00:00",
+  "started_at": "2026-09-15T23:26:14.019089+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 122,
+  "caption_length": 120,
   "source_candidate": {
-    "name": "B29A925E-34FD-4015-AFD6-5249D690E051.mp4",
-    "drive_id": "1qAVQhOnsBfeYeeltPGPHBTLn73neL0Rv",
-    "sha256": "a9e9c3f282878a0c10486b0beed8318dc1153a3303ced7be997b390a154505c3"
+    "name": "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4",
+    "drive_id": "1vhTsbz6gBwOKK28XZjGqyD0NpoSrGF4z",
+    "sha256": "e1e07a0c21ce5572767dcc96e92ada8e3d333d371d95fdbaa3cd79e19053d55b"
   },
   "metadata_snapshot": {
-    "video": "B29A925E-34FD-4015-AFD6-5249D690E051.mp4",
+    "video": "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 9,
-    "overlay": "Eu vim cantar. A música resolveu conversar com quem tava ouvindo.",
-    "caption": "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi.\n\n#musica #reelsbrasil #som #boamusica #brasil",
+    "variant_index": 0,
+    "overlay": "A voz entrou e minha atenção desistiu de ir embora.",
+    "caption": "Repara no jeito como a letra encontra a melodia. Que frase ficou contigo?\n\n#musica #reelsbrasil #som #boamusica #brasil",
     "hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
     "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 116,
+      "y0": 447,
       "x1": 1376,
-      "y1": 320
+      "y1": 679
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.0453125,
+      "y0": 0.174609375,
       "x1": 0.9555555555555556,
-      "y1": 0.125
+      "y1": 0.265234375
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 488.0,
-        "y0": 1288.0,
-        "x1": 848.0,
+        "x0": 101.33333333333334,
+        "y0": 1728.0,
+        "x1": 493.33333333333337,
+        "y1": 2120.0
+      },
+      {
+        "x0": 970.6666666666666,
+        "y0": 1360.0,
+        "x1": 1314.6666666666667,
+        "y1": 1704.0
+      },
+      {
+        "x0": 162.66666666666666,
+        "y0": 2237.333333333333,
+        "x1": 314.6666666666667,
+        "y1": 2389.3333333333335
+      },
+      {
+        "x0": 954.6666666666667,
+        "y0": 1362.6666666666667,
+        "x1": 1253.3333333333333,
+        "y1": 1661.3333333333333
+      },
+      {
+        "x0": 242.66666666666666,
+        "y0": 914.6666666666667,
+        "x1": 1210.6666666666667,
+        "y1": 1882.6666666666667
+      },
+      {
+        "x0": 928.0000000000001,
+        "y0": 1328.0,
+        "x1": 1248.0,
         "y1": 1648.0
       },
       {
-        "x0": 114.66666666666667,
-        "y0": 848.0,
-        "x1": 1394.6666666666667,
-        "y1": 2128.0
+        "x0": 437.3333333333333,
+        "y0": 1032.0,
+        "x1": 1309.3333333333333,
+        "y1": 1904.0
       },
       {
-        "x0": 624.0,
-        "y0": 1200.0,
-        "x1": 1304.0,
-        "y1": 1880.0
-      },
-      {
-        "x0": 226.66666666666669,
-        "y0": 968.0,
-        "x1": 1338.6666666666665,
-        "y1": 2080.0
-      },
-      {
-        "x0": 45.33333333333333,
-        "y0": 877.3333333333334,
-        "x1": 1176.0,
-        "y1": 2008.0
+        "x0": 66.66666666666666,
+        "y0": 1645.3333333333333,
+        "x1": 503.99999999999994,
+        "y1": 2082.666666666667
       }
     ],
     "visual_rules": {
@@ -74,10 +92,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 129,
-      "last_posted_at": "2026-09-15T17:28:17.949Z",
-      "last_video": "B29A925E-34FD-4015-AFD6-5249D690E051.mp4",
-      "last_overlay": "Eu vim cantar. A música resolveu conversar com quem tava ouvindo.",
+      "posts_total": 130,
+      "last_posted_at": "2026-09-15T20:28:58.989Z",
+      "last_video": "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4",
+      "last_overlay": "A voz entrou e minha atenção desistiu de ir embora.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -149,9 +167,10 @@
         "CEE8A75E-E9A0-4A11-A686-06D90E1184D8.mp4": 1,
         "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4": 1,
         "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4": 1,
-        "B29A925E-34FD-4015-AFD6-5249D690E051.mp4": 1
+        "B29A925E-34FD-4015-AFD6-5249D690E051.mp4": 1,
+        "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4": 1
       },
-      "last_caption": "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi.",
+      "last_caption": "Repara no jeito como a letra encontra a melodia. Que frase ficou contigo?",
       "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
@@ -278,7 +297,8 @@
         "A canção avisa cedo quando merece chegar ao fim.",
         "Antes do refrão, teu corpo já sabia a resposta.",
         "Existe um motivo para este refrão continuar na cabeça.",
-        "Eu vim cantar. A música resolveu conversar com quem tava ouvindo."
+        "Eu vim cantar. A música resolveu conversar com quem tava ouvindo.",
+        "A voz entrou e minha atenção desistiu de ir embora."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -405,7 +425,8 @@
         "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia.",
         "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou.",
         "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?",
-        "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi."
+        "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi.",
+        "Repara no jeito como a letra encontra a melodia. Que frase ficou contigo?"
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -415,20 +436,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6aa97fc5fe8e8c34e184c4b8",
+      "last_buffer_post_id": "6aa9aa1f1ce3c3fe00cd8881",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7685814766610173192",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7685861295190510864",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
   "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6aa9aa1f1ce3c3fe00cd8881",
+  "post_id": "6aa9d418501861120db06838",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-15T20:28:58.989Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7685861295190510864",
+  "sent_at": "2026-09-15T23:28:03.380Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7685907479078685972",
   "success": true,
-  "finished_at": "2026-09-15T20:29:03.912411+00:00"
+  "finished_at": "2026-09-15T23:28:09.064029+00:00"
 }
