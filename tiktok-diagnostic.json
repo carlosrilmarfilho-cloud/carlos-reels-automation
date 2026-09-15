@@ -1,93 +1,69 @@
 {
-  "started_at": "2026-09-15T17:26:27.012259+00:00",
+  "started_at": "2026-09-15T20:27:09.883647+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
   "caption_length": 122,
   "source_candidate": {
-    "name": "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4",
-    "drive_id": "1yy9HvV3uMG70FLN0B7yK6zR8x_e3XGCb",
-    "sha256": "7073eccf594b1159138e6985d07cebef928d786660d976c05ceefe85004aa138"
+    "name": "B29A925E-34FD-4015-AFD6-5249D690E051.mp4",
+    "drive_id": "1qAVQhOnsBfeYeeltPGPHBTLn73neL0Rv",
+    "sha256": "a9e9c3f282878a0c10486b0beed8318dc1153a3303ced7be997b390a154505c3"
   },
   "metadata_snapshot": {
-    "video": "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4",
+    "video": "B29A925E-34FD-4015-AFD6-5249D690E051.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 18,
-    "overlay": "Existe um motivo para este refrão continuar na cabeça.",
-    "caption": "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?\n\n#musica #reelsbrasil #som #boamusica #brasil",
+    "variant_index": 9,
+    "overlay": "Eu vim cantar. A música resolveu conversar com quem tava ouvindo.",
+    "caption": "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi.\n\n#musica #reelsbrasil #som #boamusica #brasil",
     "hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
     "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 127,
+      "y0": 116,
       "x1": 1376,
-      "y1": 359
+      "y1": 320
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.049609375,
+      "y0": 0.0453125,
       "x1": 0.9555555555555556,
-      "y1": 0.140234375
+      "y1": 0.125
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 176.0,
-        "y0": 794.6666666666667,
-        "x1": 1007.9999999999999,
-        "y1": 1626.6666666666665
+        "x0": 488.0,
+        "y0": 1288.0,
+        "x1": 848.0,
+        "y1": 1648.0
       },
       {
-        "x0": 936.0,
-        "y0": 1661.3333333333333,
-        "x1": 1301.3333333333333,
-        "y1": 2026.6666666666665
+        "x0": 114.66666666666667,
+        "y0": 848.0,
+        "x1": 1394.6666666666667,
+        "y1": 2128.0
       },
       {
-        "x0": 186.66666666666666,
-        "y0": 2314.6666666666665,
-        "x1": 314.6666666666667,
-        "y1": 2442.666666666667
+        "x0": 624.0,
+        "y0": 1200.0,
+        "x1": 1304.0,
+        "y1": 1880.0
       },
       {
-        "x0": 293.3333333333333,
-        "y0": 845.3333333333333,
-        "x1": 1061.3333333333333,
-        "y1": 1613.3333333333335
+        "x0": 226.66666666666669,
+        "y0": 968.0,
+        "x1": 1338.6666666666665,
+        "y1": 2080.0
       },
       {
-        "x0": 69.33333333333333,
-        "y0": 1922.6666666666667,
-        "x1": 194.66666666666666,
-        "y1": 2048.0
-      },
-      {
-        "x0": 384.0,
-        "y0": 850.6666666666666,
-        "x1": 1192.0,
-        "y1": 1658.6666666666667
-      },
-      {
-        "x0": 216.0,
-        "y0": 2370.6666666666665,
-        "x1": 352.0,
-        "y1": 2506.6666666666665
-      },
-      {
-        "x0": 290.6666666666667,
-        "y0": 816.0,
-        "x1": 1080.0,
-        "y1": 1605.3333333333333
-      },
-      {
-        "x0": 133.33333333333331,
-        "y0": 928.0,
-        "x1": 1029.3333333333333,
-        "y1": 1824.0
+        "x0": 45.33333333333333,
+        "y0": 877.3333333333334,
+        "x1": 1176.0,
+        "y1": 2008.0
       }
     ],
     "visual_rules": {
@@ -98,10 +74,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 128,
-      "last_posted_at": "2026-09-15T14:31:57.366Z",
-      "last_video": "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4",
-      "last_overlay": "Existe um motivo para este refrão continuar na cabeça.",
+      "posts_total": 129,
+      "last_posted_at": "2026-09-15T17:28:17.949Z",
+      "last_video": "B29A925E-34FD-4015-AFD6-5249D690E051.mp4",
+      "last_overlay": "Eu vim cantar. A música resolveu conversar com quem tava ouvindo.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -172,9 +148,10 @@
         "E049B12F-585F-42D9-BCB4-446DDBF991EF.mp4": 1,
         "CEE8A75E-E9A0-4A11-A686-06D90E1184D8.mp4": 1,
         "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4": 1,
-        "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4": 1
+        "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4": 1,
+        "B29A925E-34FD-4015-AFD6-5249D690E051.mp4": 1
       },
-      "last_caption": "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?",
+      "last_caption": "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi.",
       "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
@@ -300,7 +277,8 @@
         "A cabeça tava em outro lugar até essa voz entrar.",
         "A canção avisa cedo quando merece chegar ao fim.",
         "Antes do refrão, teu corpo já sabia a resposta.",
-        "Existe um motivo para este refrão continuar na cabeça."
+        "Existe um motivo para este refrão continuar na cabeça.",
+        "Eu vim cantar. A música resolveu conversar com quem tava ouvindo."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -426,7 +404,8 @@
         "Presta atenção na mudança de tom. Foi ali que a música te pegou?",
         "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia.",
         "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou.",
-        "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?"
+        "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?",
+        "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi."
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -436,20 +415,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6aa95664db6e5196edfafc82",
+      "last_buffer_post_id": "6aa97fc5fe8e8c34e184c4b8",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7685769125565598977",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7685814766610173192",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
   "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6aa97fc5fe8e8c34e184c4b8",
+  "post_id": "6aa9aa1f1ce3c3fe00cd8881",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-15T17:28:17.949Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7685814766610173192",
+  "sent_at": "2026-09-15T20:28:58.989Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7685861295190510864",
   "success": true,
-  "finished_at": "2026-09-15T17:28:22.573170+00:00"
+  "finished_at": "2026-09-15T20:29:03.912411+00:00"
 }
