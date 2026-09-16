@@ -1,63 +1,87 @@
 {
-  "started_at": "2026-09-16T20:27:44.936301+00:00",
+  "started_at": "2026-09-16T23:25:15.041557+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 139,
+  "caption_length": 132,
   "source_candidate": {
-    "name": "C031AA4C-509B-46F6-8480-EB30D15FE161.mp4",
-    "drive_id": "1C7JOg2jgajt-hQW06WRAxv4l423A6ztv",
-    "sha256": "05cbba4a01561e3c6805a9c0a022a15a2d1731a219dd90e02e66c25b15507919"
+    "name": "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4",
+    "drive_id": "1EbR7jQ0xHD8LUSWGo4oNCkXPqlSEW9as",
+    "sha256": "051f481729440ff54e557968f4ee44477a2a04ecc7d1f23d95b0f794cbe40b03"
   },
   "metadata_snapshot": {
-    "video": "C031AA4C-509B-46F6-8480-EB30D15FE161.mp4",
+    "video": "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 13,
-    "overlay": "Poucas notas bastam para entregar uma canção inesquecível.",
-    "caption": "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?\n\n#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
+    "variant_index": 0,
+    "overlay": "Tem som que você escuta. E tem som que muda teu jeito de ficar quieto.",
+    "caption": "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂\n\n#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
     "hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
     "source_resolution": "1080x1920",
     "render_resolution": "1080x1920",
     "overlay_rect_px": {
       "x0": 48,
-      "y0": 346,
+      "y0": 89,
       "x1": 1032,
-      "y1": 498
+      "y1": 333
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.18020833333333333,
+      "y0": 0.04635416666666667,
       "x1": 0.9555555555555556,
-      "y1": 0.259375
+      "y1": 0.1734375
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 54.0,
-        "y0": 696.0,
-        "x1": 672.0,
-        "y1": 1314.0
+        "x0": 84.0,
+        "y0": 776.0,
+        "x1": 764.0,
+        "y1": 1456.0
       },
       {
-        "x0": 36.0,
-        "y0": 712.0,
-        "x1": 622.0,
-        "y1": 1298.0
+        "x0": 526.0,
+        "y0": 896.0,
+        "x1": 828.0,
+        "y1": 1198.0
       },
       {
-        "x0": 92.0,
-        "y0": 804.0,
-        "x1": 642.0,
-        "y1": 1354.0
+        "x0": 238.0,
+        "y0": 588.0,
+        "x1": 978.0,
+        "y1": 1328.0
       },
       {
-        "x0": 138.0,
-        "y0": 764.0,
-        "x1": 734.0,
-        "y1": 1360.0
+        "x0": 334.0,
+        "y0": 644.0,
+        "x1": 1002.0,
+        "y1": 1312.0
+      },
+      {
+        "x0": 704.0,
+        "y0": 930.0,
+        "x1": 910.0,
+        "y1": 1136.0
+      },
+      {
+        "x0": 140.0,
+        "y0": 642.0,
+        "x1": 870.0,
+        "y1": 1372.0
+      },
+      {
+        "x0": 618.0,
+        "y0": 912.0,
+        "x1": 736.0,
+        "y1": 1030.0
+      },
+      {
+        "x0": 544.0,
+        "y0": 750.0,
+        "x1": 644.0,
+        "y1": 850.0
       }
     ],
     "visual_rules": {
@@ -68,10 +92,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 134,
-      "last_posted_at": "2026-09-16T17:27:39.064Z",
-      "last_video": "C031AA4C-509B-46F6-8480-EB30D15FE161.mp4",
-      "last_overlay": "Poucas notas bastam para entregar uma canção inesquecível.",
+      "posts_total": 135,
+      "last_posted_at": "2026-09-16T20:29:32.043Z",
+      "last_video": "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4",
+      "last_overlay": "Tem som que você escuta. E tem som que muda teu jeito de ficar quieto.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -148,9 +172,10 @@
         "131F3617-EC16-4844-8A37-35A986CC598A.mp4": 1,
         "B020B86A-7648-4905-A31C-6AD6C347C050.mp4": 1,
         "13ADDC34-C864-4CF1-ADB1-21EB454FA4B7.mp4": 1,
-        "C031AA4C-509B-46F6-8480-EB30D15FE161.mp4": 1
+        "C031AA4C-509B-46F6-8480-EB30D15FE161.mp4": 1,
+        "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4": 1
       },
-      "last_caption": "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
+      "last_caption": "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂",
       "last_hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
@@ -282,7 +307,8 @@
         "A música é curta. O tanto de coisa que ela puxa da cabeça não.",
         "Meu tipo favorito de música é a que faz a gente parar sem perceber.",
         "Talvez seja esta parte que você precisava encontrar.",
-        "Poucas notas bastam para entregar uma canção inesquecível."
+        "Poucas notas bastam para entregar uma canção inesquecível.",
+        "Tem som que você escuta. E tem som que muda teu jeito de ficar quieto."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -414,7 +440,8 @@
         "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?",
         "Se você parou a rolagem por causa da voz, me diz qual detalhe te fez ficar.",
         "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas.",
-        "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?"
+        "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
+        "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂"
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -424,20 +451,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6aaad123ac5727150ae8f977",
+      "last_buffer_post_id": "6aaafbc2fccf7a0787d0af3c",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686185608049331473",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686232505481039121",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
   "hashtags_snapshot": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6aaafbc2fccf7a0787d0af3c",
+  "post_id": "6aab255cdc8e7acd21d3979a",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-16T20:29:32.043Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686232505481039121",
+  "sent_at": "2026-09-16T23:27:00.209Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686278280378567954",
   "success": true,
-  "finished_at": "2026-09-16T20:29:38.732743+00:00"
+  "finished_at": "2026-09-16T23:27:07.815751+00:00"
 }
