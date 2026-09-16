@@ -1,9 +1,9 @@
 {
   "video_index": 1,
-  "posts_total": 133,
-  "last_posted_at": "2026-09-16T17:27:39.064Z",
-  "last_video": "13ADDC34-C864-4CF1-ADB1-21EB454FA4B7.mp4",
-  "last_overlay": "Talvez seja esta parte que você precisava encontrar.",
+  "posts_total": 134,
+  "last_posted_at": "2026-09-16T20:29:32.043Z",
+  "last_video": "C031AA4C-509B-46F6-8480-EB30D15FE161.mp4",
+  "last_overlay": "Poucas notas bastam para entregar uma canção inesquecível.",
   "last_mode": "buffer_auto_confirmed",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -79,10 +79,11 @@
     "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4": 1,
     "131F3617-EC16-4844-8A37-35A986CC598A.mp4": 1,
     "B020B86A-7648-4905-A31C-6AD6C347C050.mp4": 1,
-    "13ADDC34-C864-4CF1-ADB1-21EB454FA4B7.mp4": 1
+    "13ADDC34-C864-4CF1-ADB1-21EB454FA4B7.mp4": 1,
+    "C031AA4C-509B-46F6-8480-EB30D15FE161.mp4": 1
   },
-  "last_caption": "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas.",
-  "last_hashtags": "#boamusica #tiktokbrasil #musica #brasil #paravoce",
+  "last_caption": "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
+  "last_hashtags": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -212,7 +213,8 @@
     "A voz entrou e minha atenção desistiu de ir embora.",
     "A música é curta. O tanto de coisa que ela puxa da cabeça não.",
     "Meu tipo favorito de música é a que faz a gente parar sem perceber.",
-    "Talvez seja esta parte que você precisava encontrar."
+    "Talvez seja esta parte que você precisava encontrar.",
+    "Poucas notas bastam para entregar uma canção inesquecível."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -343,7 +345,8 @@
     "Repara no jeito como a letra encontra a melodia. Que frase ficou contigo?",
     "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?",
     "Se você parou a rolagem por causa da voz, me diz qual detalhe te fez ficar.",
-    "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas."
+    "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas.",
+    "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?"
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -353,8 +356,8 @@
     "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6aaad123ac5727150ae8f977",
+  "last_buffer_post_id": "6aaafbc2fccf7a0787d0af3c",
   "last_buffer_status": "sent",
-  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686185608049331473",
+  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686232505481039121",
   "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
 }

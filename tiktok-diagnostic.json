@@ -1,69 +1,63 @@
 {
-  "started_at": "2026-09-16T17:25:52.523513+00:00",
+  "started_at": "2026-09-16T20:27:44.936301+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 133,
+  "caption_length": 139,
   "source_candidate": {
-    "name": "13ADDC34-C864-4CF1-ADB1-21EB454FA4B7.mp4",
-    "drive_id": "1aMux81w4vsQhgbQYa03R8A_2zeswWRyD",
-    "sha256": "058ff9dfc261f6aefe63c451627c8575395f72777f7d07833f092fc3e452b82d"
+    "name": "C031AA4C-509B-46F6-8480-EB30D15FE161.mp4",
+    "drive_id": "1C7JOg2jgajt-hQW06WRAxv4l423A6ztv",
+    "sha256": "05cbba4a01561e3c6805a9c0a022a15a2d1731a219dd90e02e66c25b15507919"
   },
   "metadata_snapshot": {
-    "video": "13ADDC34-C864-4CF1-ADB1-21EB454FA4B7.mp4",
+    "video": "C031AA4C-509B-46F6-8480-EB30D15FE161.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 19,
-    "overlay": "Talvez seja esta parte que você precisava encontrar.",
-    "caption": "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas.\n\n#boamusica #reelsbrasil #musica #brasil #reels",
-    "hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
-    "source_resolution": "1440x2560",
-    "render_resolution": "1440x2560",
+    "variant_index": 13,
+    "overlay": "Poucas notas bastam para entregar uma canção inesquecível.",
+    "caption": "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?\n\n#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
+    "hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
+    "source_resolution": "1080x1920",
+    "render_resolution": "1080x1920",
     "overlay_rect_px": {
-      "x0": 64,
-      "y0": 447,
-      "x1": 1376,
-      "y1": 679
+      "x0": 48,
+      "y0": 346,
+      "x1": 1032,
+      "y1": 498
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.174609375,
+      "y0": 0.18020833333333333,
       "x1": 0.9555555555555556,
-      "y1": 0.265234375
+      "y1": 0.259375
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 741.3333333333334,
-        "y0": 1178.6666666666665,
-        "x1": 1154.6666666666665,
-        "y1": 1592.0
+        "x0": 54.0,
+        "y0": 696.0,
+        "x1": 672.0,
+        "y1": 1314.0
       },
       {
-        "x0": 800.0,
-        "y0": 2234.6666666666665,
-        "x1": 984.0,
-        "y1": 2418.666666666667
+        "x0": 36.0,
+        "y0": 712.0,
+        "x1": 622.0,
+        "y1": 1298.0
       },
       {
-        "x0": 338.6666666666667,
-        "y0": 1146.6666666666667,
-        "x1": 1072.0,
-        "y1": 1880.0
+        "x0": 92.0,
+        "y0": 804.0,
+        "x1": 642.0,
+        "y1": 1354.0
       },
       {
-        "x0": 989.3333333333333,
-        "y0": 1285.3333333333333,
-        "x1": 1314.6666666666667,
-        "y1": 1610.6666666666665
-      },
-      {
-        "x0": 296.0,
-        "y0": 917.3333333333334,
-        "x1": 1304.0,
-        "y1": 1925.3333333333333
+        "x0": 138.0,
+        "y0": 764.0,
+        "x1": 734.0,
+        "y1": 1360.0
       }
     ],
     "visual_rules": {
@@ -74,10 +68,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 133,
-      "last_posted_at": "2026-09-16T14:31:06.636Z",
-      "last_video": "13ADDC34-C864-4CF1-ADB1-21EB454FA4B7.mp4",
-      "last_overlay": "Talvez seja esta parte que você precisava encontrar.",
+      "posts_total": 134,
+      "last_posted_at": "2026-09-16T17:27:39.064Z",
+      "last_video": "C031AA4C-509B-46F6-8480-EB30D15FE161.mp4",
+      "last_overlay": "Poucas notas bastam para entregar uma canção inesquecível.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -153,10 +147,11 @@
         "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4": 1,
         "131F3617-EC16-4844-8A37-35A986CC598A.mp4": 1,
         "B020B86A-7648-4905-A31C-6AD6C347C050.mp4": 1,
-        "13ADDC34-C864-4CF1-ADB1-21EB454FA4B7.mp4": 1
+        "13ADDC34-C864-4CF1-ADB1-21EB454FA4B7.mp4": 1,
+        "C031AA4C-509B-46F6-8480-EB30D15FE161.mp4": 1
       },
-      "last_caption": "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas.",
-      "last_hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
+      "last_caption": "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
+      "last_hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -286,7 +281,8 @@
         "A voz entrou e minha atenção desistiu de ir embora.",
         "A música é curta. O tanto de coisa que ela puxa da cabeça não.",
         "Meu tipo favorito de música é a que faz a gente parar sem perceber.",
-        "Talvez seja esta parte que você precisava encontrar."
+        "Talvez seja esta parte que você precisava encontrar.",
+        "Poucas notas bastam para entregar uma canção inesquecível."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -417,7 +413,8 @@
         "Repara no jeito como a letra encontra a melodia. Que frase ficou contigo?",
         "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?",
         "Se você parou a rolagem por causa da voz, me diz qual detalhe te fez ficar.",
-        "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas."
+        "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas.",
+        "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?"
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -427,20 +424,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6aaaa7bcb0187eb43bbe3d87",
+      "last_buffer_post_id": "6aaad123ac5727150ae8f977",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686140174866189575",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686185608049331473",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#boamusica #tiktokbrasil #musica #brasil #paravoce",
+  "hashtags_snapshot": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6aaad123ac5727150ae8f977",
+  "post_id": "6aaafbc2fccf7a0787d0af3c",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-16T17:27:39.064Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686185608049331473",
+  "sent_at": "2026-09-16T20:29:32.043Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686232505481039121",
   "success": true,
-  "finished_at": "2026-09-16T17:27:47.792007+00:00"
+  "finished_at": "2026-09-16T20:29:38.732743+00:00"
 }

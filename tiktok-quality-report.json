@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "13ADDC34-C864-4CF1-ADB1-21EB454FA4B7.mp4",
-  "overlay": "Talvez seja esta parte que você precisava encontrar.",
+  "video": "C031AA4C-509B-46F6-8480-EB30D15FE161.mp4",
+  "overlay": "Poucas notas bastam para entregar uma canção inesquecível.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.18020833333333333,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.259375
   },
-  "faces_checked": 3,
+  "faces_checked": 5,
   "failures": []
 }
