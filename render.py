@@ -244,7 +244,7 @@ def fit_text(
     text: str,
     max_width: int,
     target_width: int,
-    max_lines: int = 2,
+    max_lines: int = 3,
 ) -> tuple[ImageFont.FreeTypeFont, list[str], int]:
     font_path = find_font()
     scale = target_width / 1080
@@ -259,7 +259,7 @@ def fit_text(
     font = ImageFont.truetype(font_path, size=minimum_size)
     lines = textwrap.wrap(text, width=34)
     if len(lines) > max_lines:
-        raise RuntimeError("Frase não cabe em duas linhas sem cobrir a imagem")
+        raise RuntimeError(f"Frase não cabe em {max_lines} linhas sem cobrir a imagem")
     return font, lines, int(font.size * 1.18)
 
 
