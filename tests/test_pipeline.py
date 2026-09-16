@@ -69,6 +69,20 @@ class LayoutRulesTests(unittest.TestCase):
         self.assertTrue(faces)
         self.assertLessEqual(render.overlap_fraction(rect, faces[0]), 0.035)
 
+    def test_long_overlay_uses_third_line_without_exceeding_height_limit(self):
+        image = render.Image.new("RGBA", (1080, 1920), (0, 0, 0, 0))
+        draw = render.ImageDraw.Draw(image)
+        font, lines, line_height = render.fit_text(
+            draw,
+            "A vida fora ensina independência e cobra presença em momentos que você perde.",
+            768,
+            1080,
+        )
+        box_height = line_height * len(lines) + 40
+        self.assertLessEqual(len(lines), 3)
+        self.assertLessEqual(box_height / 1920, 0.145)
+        self.assertGreaterEqual(font.size, 36)
+
     def test_render_preserves_full_frame(self):
         source = (ROOT / "render.py").read_text(encoding="utf-8")
         self.assertIn("force_original_aspect_ratio=decrease", source)
