@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "1287DDFF-011C-4141-B09E-249B63C95F08.mp4",
-  "overlay": "A cabeça tava em outro lugar até essa voz entrar.",
+  "video": "0153EEA9-9518-41CD-A36E-1EF25BE33B6A.mp4",
+  "overlay": "Tem terapia que começa com 'me conta'. A minha hoje começou com play.",
   "overlay_rect_norm": {
-    "x0": 0.044444444444444446,
-    "y0": 0.17395833333333333,
-    "x1": 0.9555555555555556,
-    "y1": 0.265625
+    "x0": 0.1527777777777778,
+    "y0": 0.1578125,
+    "x1": 0.9125,
+    "y1": 0.28359375
   },
-  "faces_checked": 8,
+  "faces_checked": 10,
   "failures": []
 }
