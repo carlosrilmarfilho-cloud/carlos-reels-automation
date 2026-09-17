@@ -405,7 +405,10 @@ def plan_overlay(
         )
         obstacles = mapped_faces
     else:
-        safe_centers = (0.13, 0.25, 0.68, 0.78)
+        # Inclui uma faixa inferior adicional para vídeos em que o rosto ocupa
+        # quase todo o quadro. A validação de sobreposição abaixo continua
+        # obrigatória, portanto o texto só usa essa faixa quando ela está livre.
+        safe_centers = (0.13, 0.25, 0.68, 0.78, 0.84)
         for center_ratio in safe_centers:
             center_y = target_height * center_ratio
             candidates.append(
@@ -419,7 +422,9 @@ def plan_overlay(
         obstacles = mapped_heads or mapped_faces
 
     top_limit = target_height * 0.045
-    bottom_limit = target_height * 0.84
+    # Até 90% mantém margem inferior e permite aproveitar a área livre
+    # abaixo de cabeças altas sem recortar nem redimensionar o vídeo.
+    bottom_limit = target_height * 0.90
     chosen = None
     for candidate in candidates:
         if candidate["y0"] < top_limit or candidate["y1"] > bottom_limit:
