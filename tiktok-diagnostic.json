@@ -1,81 +1,93 @@
 {
-  "started_at": "2026-09-17T20:28:49.166597+00:00",
+  "started_at": "2026-09-17T23:23:17.242681+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 139,
+  "caption_length": 144,
   "source_candidate": {
-    "name": "0A627F50-DD00-4B7F-ABEA-D695BBBFF108.mp4",
-    "drive_id": "1zoZPpV3LA3oA0oCPMWOuSKGPkk9UM-rr",
-    "sha256": "95cde6d8ab93946291c76b5367835d3346bd791ed69eee2cec8b302ed0be3057"
+    "name": "DEDE7A1D-CC8A-4E05-8583-4917112E42FD.mp4",
+    "drive_id": "1dpwKK9bhBIKDcfMZlKTdfKNsEwnJs1Gq",
+    "sha256": "2321f292971831aff4fbc2f9411608b8b5b19896738858bf925dffb5daac9b21"
   },
   "metadata_snapshot": {
-    "video": "0A627F50-DD00-4B7F-ABEA-D695BBBFF108.mp4",
+    "video": "DEDE7A1D-CC8A-4E05-8583-4917112E42FD.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 0,
-    "overlay": "Essa foi daquelas que transformam rolagem em pausa.",
-    "caption": "Talvez este fosse o som que faltava no teu dia. Salva para ouvir com calma.\n\n#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
+    "variant_index": 3,
+    "overlay": "Essa parte aqui merece mais atenção do que muita conversa por aí.",
+    "caption": "Eu gosto quando a música segura a pessoa sem precisar inventar efeito, texto ou promessa. Só a música mesmo.\n\n#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
     "hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
     "source_resolution": "2160x3840",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 402,
+      "y0": 121,
       "x1": 1376,
-      "y1": 724
+      "y1": 443
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.15703125,
+      "y0": 0.047265625,
       "x1": 0.9555555555555556,
-      "y1": 0.2828125
+      "y1": 0.173046875
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 384.0,
-        "y0": 976.0,
-        "x1": 1098.6666666666665,
-        "y1": 1690.6666666666665
+        "x0": 232.0,
+        "y0": 917.3333333333333,
+        "x1": 994.6666666666666,
+        "y1": 1680.0
       },
       {
-        "x0": 688.0,
-        "y0": 1130.6666666666665,
-        "x1": 1048.0,
-        "y1": 1490.6666666666665
+        "x0": 160.0,
+        "y0": 842.6666666666666,
+        "x1": 984.0,
+        "y1": 1666.6666666666665
       },
       {
-        "x0": 624.0,
-        "y0": 2072.0,
-        "x1": 792.0,
-        "y1": 2240.0
+        "x0": 218.66666666666666,
+        "y0": 904.0,
+        "x1": 933.3333333333333,
+        "y1": 1618.6666666666665
       },
       {
-        "x0": 925.3333333333333,
-        "y0": 1106.6666666666665,
-        "x1": 1130.6666666666665,
-        "y1": 1311.9999999999998
+        "x0": 784.0,
+        "y0": 1874.6666666666665,
+        "x1": 981.3333333333333,
+        "y1": 2072.0
       },
       {
-        "x0": 408.0,
-        "y0": 1034.6666666666665,
-        "x1": 1200.0,
-        "y1": 1826.6666666666665
+        "x0": 1013.3333333333333,
+        "y0": 2378.6666666666665,
+        "x1": 1157.3333333333333,
+        "y1": 2522.6666666666665
       },
       {
-        "x0": 613.3333333333333,
-        "y0": 2013.3333333333333,
-        "x1": 773.3333333333335,
-        "y1": 2173.333333333333
+        "x0": 64.0,
+        "y0": 762.6666666666666,
+        "x1": 1184.0,
+        "y1": 1882.6666666666665
       },
       {
-        "x0": 704.0,
-        "y0": 1333.3333333333335,
-        "x1": 877.3333333333333,
-        "y1": 1506.6666666666665
+        "x0": 250.66666666666666,
+        "y0": 784.0,
+        "x1": 1242.6666666666665,
+        "y1": 1776.0
+      },
+      {
+        "x0": 736.0,
+        "y0": 1050.6666666666665,
+        "x1": 1181.3333333333333,
+        "y1": 1496.0
+      },
+      {
+        "x0": 245.33333333333331,
+        "y0": 845.3333333333333,
+        "x1": 1138.6666666666665,
+        "y1": 1738.6666666666665
       }
     ],
     "visual_rules": {
@@ -86,10 +98,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 139,
-      "last_posted_at": "2026-09-17T17:28:24.499Z",
-      "last_video": "0A627F50-DD00-4B7F-ABEA-D695BBBFF108.mp4",
-      "last_overlay": "Essa foi daquelas que transformam rolagem em pausa.",
+      "posts_total": 140,
+      "last_posted_at": "2026-09-17T20:30:37.785Z",
+      "last_video": "DEDE7A1D-CC8A-4E05-8583-4917112E42FD.mp4",
+      "last_overlay": "Essa parte aqui merece mais atenção do que muita conversa por aí.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -171,9 +183,10 @@
         "0153EEA9-9518-41CD-A36E-1EF25BE33B6A.mp4": 1,
         "89B35892-2506-4442-BBBD-044049F7C5BE.mp4": 1,
         "C496D0FE-98A5-4111-89DA-085BB731A6F5.mp4": 1,
-        "0A627F50-DD00-4B7F-ABEA-D695BBBFF108.mp4": 1
+        "0A627F50-DD00-4B7F-ABEA-D695BBBFF108.mp4": 1,
+        "DEDE7A1D-CC8A-4E05-8583-4917112E42FD.mp4": 1
       },
-      "last_caption": "Talvez este fosse o som que faltava no teu dia. Salva para ouvir com calma.",
+      "last_caption": "Eu gosto quando a música segura a pessoa sem precisar inventar efeito, texto ou promessa. Só a música mesmo.",
       "last_hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
@@ -310,7 +323,8 @@
         "Não resolveu minha vida. Mas melhorou bastante os próximos minutos.",
         "Se essa parte não te pegou, espera o próximo verso antes de julgar.",
         "Tem dia que a melhor decisão é só deixar a música terminar.",
-        "Essa foi daquelas que transformam rolagem em pausa."
+        "Essa foi daquelas que transformam rolagem em pausa.",
+        "Essa parte aqui merece mais atenção do que muita conversa por aí."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -447,7 +461,8 @@
         "Qual música você usa quando não tá com vontade de ouvir conselho de ninguém?",
         "Um pequeno detalhe no arranjo muda a história toda. Você percebeu qual?",
         "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?",
-        "Talvez este fosse o som que faltava no teu dia. Salva para ouvir com calma."
+        "Talvez este fosse o som que faltava no teu dia. Salva para ouvir com calma.",
+        "Eu gosto quando a música segura a pessoa sem precisar inventar efeito, texto ou promessa. Só a música mesmo."
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -457,20 +472,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6aac22ccf277a0ad6efd484f",
+      "last_buffer_post_id": "6aac4d82dcb28d1897df46f1",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686556977316613396",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686603922240245013",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
   "hashtags_snapshot": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6aac4d82dcb28d1897df46f1",
+  "post_id": "6aac766665c55f731e765da0",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-17T20:30:37.785Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686603922240245013",
+  "sent_at": "2026-09-17T23:25:05.165Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686648868582231314",
   "success": true,
-  "finished_at": "2026-09-17T20:30:43.657158+00:00"
+  "finished_at": "2026-09-17T23:25:09.741393+00:00"
 }
