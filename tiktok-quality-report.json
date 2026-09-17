@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4",
-  "overlay": "Tem som que você escuta. E tem som que muda teu jeito de ficar quieto.",
+  "video": "0153EEA9-9518-41CD-A36E-1EF25BE33B6A.mp4",
+  "overlay": "Não resolveu minha vida. Mas melhorou bastante os próximos minutos.",
   "overlay_rect_norm": {
-    "x0": 0.044444444444444446,
-    "y0": 0.04635416666666667,
-    "x1": 0.9555555555555556,
-    "y1": 0.1734375
+    "x0": 0.1527777777777778,
+    "y0": 0.16015625,
+    "x1": 0.9125,
+    "y1": 0.28359375
   },
-  "faces_checked": 9,
+  "faces_checked": 10,
   "failures": []
 }
