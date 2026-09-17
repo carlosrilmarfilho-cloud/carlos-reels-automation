@@ -8,10 +8,10 @@ RENDER = ROOT / "render.py"
 
 def main() -> None:
     source = RENDER.read_text(encoding="utf-8")
-    fixed = "safe_centers = (0.22, 0.32, 0.66, 0.76)"
+    fixed = "safe_centers = (0.22, 0.32, 0.66, 0.76, 0.84)"
     adaptive = (
-        "safe_centers = tuple(dict.fromkeys((0.22, 0.32, 0.66, 0.76) + "
-        "tuple(step / 1000 for step in range(80, 811, 5))))"
+        "safe_centers = tuple(dict.fromkeys((0.22, 0.32, 0.66, 0.76, 0.84) + "
+        "tuple(step / 1000 for step in range(80, 841, 5))))"
     )
 
     if adaptive in source:
@@ -24,7 +24,7 @@ def main() -> None:
     RENDER.write_text(source, encoding="utf-8")
     print(
         "Posicionamento adaptativo aplicado: mantém 22% como primeira opção e "
-        "procura outras alturas entre 8% e 81% somente quando necessário; "
+        "procura outras alturas entre 8% e 84% somente quando necessário; "
         "os limites visuais e o bloqueio de sobreposição facial continuam inalterados."
     )
 
