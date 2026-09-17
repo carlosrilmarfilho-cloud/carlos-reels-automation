@@ -1,117 +1,87 @@
 {
-  "started_at": "2026-09-17T11:26:43.322335+00:00",
+  "started_at": "2026-09-17T14:30:18.161352+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
-  "stage": "success",
-  "caption_length": 133,
+  "stage": "confirm_delivery",
+  "caption_length": 135,
   "source_candidate": {
-    "name": "0153EEA9-9518-41CD-A36E-1EF25BE33B6A.mp4",
-    "drive_id": "1sjBe5WNWjpQJlVBG0li3fRKl94PU6xNW",
-    "sha256": "31fab74874a0468dfadce1983ab6cb1371a9d9dda1c2046e5b729109c65efd32"
+    "name": "89B35892-2506-4442-BBBD-044049F7C5BE.mp4",
+    "drive_id": "1sce-1IQu6gDtuUB9601cpMmvyQwVZcoL",
+    "sha256": "e1979072366f0622295960397bbedb8aad143d6aa091a5521c73d88f0e0de922"
   },
   "metadata_snapshot": {
-    "video": "0153EEA9-9518-41CD-A36E-1EF25BE33B6A.mp4",
+    "video": "89B35892-2506-4442-BBBD-044049F7C5BE.mp4",
     "video_index": 0,
     "total_videos": 82,
-    "theme": "musica_terapia",
-    "source_text_detected": "Essa é a terapia que tu precisa",
+    "theme": "generic",
+    "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 3,
-    "overlay": "Não resolveu minha vida. Mas melhorou bastante os próximos minutos.",
-    "caption": "Qual música você usa quando não tá com vontade de ouvir conselho de ninguém?\n\n#musicabrasileira #musica #som #reelsbrasil #musicaboa",
-    "hashtags": "#musicabrasileira #musica #som #reelsbrasil #musicaboa",
-    "source_resolution": "1440x2560",
+    "variant_index": 0,
+    "overlay": "Se essa parte não te pegou, espera o próximo verso antes de julgar.",
+    "caption": "Um pequeno detalhe no arranjo muda a história toda. Você percebeu qual?\n\n#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
+    "hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
+    "source_resolution": "2160x3840",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
-      "x0": 220,
-      "y0": 410,
-      "x1": 1314,
-      "y1": 726
+      "x0": 64,
+      "y0": 121,
+      "x1": 1376,
+      "y1": 443
     },
     "overlay_rect_norm": {
-      "x0": 0.1527777777777778,
-      "y0": 0.16015625,
-      "x1": 0.9125,
-      "y1": 0.28359375
+      "x0": 0.044444444444444446,
+      "y0": 0.047265625,
+      "x1": 0.9555555555555556,
+      "y1": 0.173046875
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 426.66666666666663,
-        "y0": 906.6666666666667,
-        "x1": 1245.3333333333333,
-        "y1": 1725.3333333333333
+        "x0": 360.0,
+        "y0": 1016.0,
+        "x1": 1272.0,
+        "y1": 1928.0
       },
       {
-        "x0": 285.33333333333337,
-        "y0": 920.0,
-        "x1": 1050.6666666666667,
-        "y1": 1685.3333333333333
+        "x0": 976.0,
+        "y0": 2338.6666666666665,
+        "x1": 1168.0,
+        "y1": 2530.6666666666665
       },
       {
-        "x0": 1218.6666666666667,
-        "y0": 2120.0,
-        "x1": 1373.3333333333333,
-        "y1": 2274.6666666666665
+        "x0": 869.3333333333333,
+        "y0": 2256.0,
+        "x1": 1040.0,
+        "y1": 2426.6666666666665
       },
       {
-        "x0": 285.33333333333337,
-        "y0": 901.3333333333334,
-        "x1": 1149.3333333333333,
-        "y1": 1765.3333333333333
+        "x0": 162.66666666666666,
+        "y0": 1752.0,
+        "x1": 362.66666666666663,
+        "y1": 1952.0
       },
       {
-        "x0": 616.0,
-        "y0": 1074.6666666666667,
-        "x1": 1114.6666666666665,
-        "y1": 1573.3333333333335
+        "x0": 72.0,
+        "y0": 722.6666666666666,
+        "x1": 1333.3333333333333,
+        "y1": 1984.0
       },
       {
-        "x0": 1205.3333333333333,
-        "y0": 2136.0,
-        "x1": 1346.6666666666667,
-        "y1": 2277.333333333333
+        "x0": 415.9999999999999,
+        "y0": 2200.0,
+        "x1": 698.6666666666666,
+        "y1": 2482.6666666666665
       },
       {
-        "x0": 258.6666666666667,
-        "y0": 930.6666666666666,
-        "x1": 1037.3333333333333,
-        "y1": 1709.3333333333335
+        "x0": 1010.6666666666666,
+        "y0": 957.3333333333333,
+        "x1": 1221.3333333333333,
+        "y1": 1168.0
       },
       {
-        "x0": 152.0,
-        "y0": 1538.6666666666667,
-        "x1": 325.3333333333333,
-        "y1": 1712.0
-      },
-      {
-        "x0": 1240.0,
-        "y0": 2117.333333333333,
-        "x1": 1400.0,
-        "y1": 2277.333333333333
-      },
-      {
-        "x0": 421.3333333333333,
-        "y0": 941.3333333333334,
-        "x1": 1181.3333333333335,
-        "y1": 1701.3333333333333
-      },
-      {
-        "x0": 1224.0,
-        "y0": 2154.6666666666665,
-        "x1": 1368.0,
-        "y1": 2298.666666666667
-      },
-      {
-        "x0": 368.0,
-        "y0": 890.6666666666666,
-        "x1": 1208.0,
-        "y1": 1730.6666666666665
-      },
-      {
-        "x0": 224.0,
-        "y0": 869.3333333333334,
-        "x1": 1069.3333333333333,
-        "y1": 1714.6666666666667
+        "x0": 970.6666666666666,
+        "y0": 2274.6666666666665,
+        "x1": 1154.6666666666665,
+        "y1": 2458.6666666666665
       }
     ],
     "visual_rules": {
@@ -122,10 +92,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 136,
-      "last_posted_at": "2026-09-16T23:27:00.209Z",
-      "last_video": "0153EEA9-9518-41CD-A36E-1EF25BE33B6A.mp4",
-      "last_overlay": "Não resolveu minha vida. Mas melhorou bastante os próximos minutos.",
+      "posts_total": 137,
+      "last_posted_at": "2026-09-17T11:28:37.336Z",
+      "last_video": "89B35892-2506-4442-BBBD-044049F7C5BE.mp4",
+      "last_overlay": "Se essa parte não te pegou, espera o próximo verso antes de julgar.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -204,10 +174,11 @@
         "13ADDC34-C864-4CF1-ADB1-21EB454FA4B7.mp4": 1,
         "C031AA4C-509B-46F6-8480-EB30D15FE161.mp4": 1,
         "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4": 1,
-        "0153EEA9-9518-41CD-A36E-1EF25BE33B6A.mp4": 1
+        "0153EEA9-9518-41CD-A36E-1EF25BE33B6A.mp4": 1,
+        "89B35892-2506-4442-BBBD-044049F7C5BE.mp4": 1
       },
-      "last_caption": "Qual música você usa quando não tá com vontade de ouvir conselho de ninguém?",
-      "last_hashtags": "#musicabrasileira #musica #som #reelsbrasil #musicaboa",
+      "last_caption": "Um pequeno detalhe no arranjo muda a história toda. Você percebeu qual?",
+      "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -340,7 +311,8 @@
         "Talvez seja esta parte que você precisava encontrar.",
         "Poucas notas bastam para entregar uma canção inesquecível.",
         "Tem som que você escuta. E tem som que muda teu jeito de ficar quieto.",
-        "Não resolveu minha vida. Mas melhorou bastante os próximos minutos."
+        "Não resolveu minha vida. Mas melhorou bastante os próximos minutos.",
+        "Se essa parte não te pegou, espera o próximo verso antes de julgar."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -474,7 +446,8 @@
         "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas.",
         "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
         "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂",
-        "Qual música você usa quando não tá com vontade de ouvir conselho de ninguém?"
+        "Qual música você usa quando não tá com vontade de ouvir conselho de ninguém?",
+        "Um pequeno detalhe no arranjo muda a história toda. Você percebeu qual?"
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -484,20 +457,22 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6aab255cdc8e7acd21d3979a",
+      "last_buffer_post_id": "6aabce7d7bafaeaeade34ee1",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686278280378567954",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686464238478560519",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#musicabrasileira #musica #som #tiktokbrasil #musicaboa",
+  "hashtags_snapshot": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6aabce7d7bafaeaeade34ee1",
+  "post_id": "6aabf97b83868cb1933ac9c8",
   "initial_status": "sending",
-  "buffer_status": "sent",
-  "sent_at": "2026-09-17T11:28:37.336Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686464238478560519",
-  "success": true,
-  "finished_at": "2026-09-17T11:28:44.478361+00:00"
+  "buffer_status": "sending",
+  "sent_at": null,
+  "external_link": null,
+  "success": false,
+  "error_type": "RuntimeError",
+  "error": "Buffer não confirmou publicação no TikTok em 10 minutos; último status: sending",
+  "finished_at": "2026-09-17T14:40:33.184740+00:00"
 }

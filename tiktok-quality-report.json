@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "0153EEA9-9518-41CD-A36E-1EF25BE33B6A.mp4",
-  "overlay": "Não resolveu minha vida. Mas melhorou bastante os próximos minutos.",
+  "video": "89B35892-2506-4442-BBBD-044049F7C5BE.mp4",
+  "overlay": "Se essa parte não te pegou, espera o próximo verso antes de julgar.",
   "overlay_rect_norm": {
-    "x0": 0.1527777777777778,
-    "y0": 0.16015625,
-    "x1": 0.9125,
-    "y1": 0.28359375
+    "x0": 0.044444444444444446,
+    "y0": 0.047265625,
+    "x1": 0.9555555555555556,
+    "y1": 0.173046875
   },
-  "faces_checked": 10,
+  "faces_checked": 7,
   "failures": []
 }
