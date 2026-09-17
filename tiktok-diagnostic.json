@@ -1,87 +1,51 @@
 {
-  "started_at": "2026-09-17T14:47:22.229428+00:00",
+  "started_at": "2026-09-17T17:26:34.882024+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "post_id": "6aabf97b83868cb1933ac9c8",
+  "caption_length": 121,
   "source_candidate": {
-    "name": "89B35892-2506-4442-BBBD-044049F7C5BE.mp4",
-    "drive_id": "1sce-1IQu6gDtuUB9601cpMmvyQwVZcoL",
-    "sha256": "e1979072366f0622295960397bbedb8aad143d6aa091a5521c73d88f0e0de922"
+    "name": "C496D0FE-98A5-4111-89DA-085BB731A6F5.mp4",
+    "drive_id": "1qxV9N3t4gu9lPELMoFjDOyNIzXH3jK2x",
+    "sha256": "e60f030f1d4cec35c9dad514fab12835e15de4d8b4a3d9f240af924ee8aad75a"
   },
   "metadata_snapshot": {
-    "video": "89B35892-2506-4442-BBBD-044049F7C5BE.mp4",
+    "video": "C496D0FE-98A5-4111-89DA-085BB731A6F5.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
     "variant_index": 0,
-    "overlay": "Se essa parte não te pegou, espera o próximo verso antes de julgar.",
-    "caption": "Um pequeno detalhe no arranjo muda a história toda. Você percebeu qual?\n\n#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
-    "hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
-    "source_resolution": "2160x3840",
+    "overlay": "Tem dia que a melhor decisão é só deixar a música terminar.",
+    "caption": "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?\n\n#musica #reelsbrasil #som #boamusica #brasil",
+    "hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
+    "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 121,
+      "y0": 447,
       "x1": 1376,
-      "y1": 443
+      "y1": 679
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.047265625,
+      "y0": 0.174609375,
       "x1": 0.9555555555555556,
-      "y1": 0.173046875
+      "y1": 0.265234375
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 360.0,
-        "y0": 1016.0,
-        "x1": 1272.0,
-        "y1": 1928.0
+        "x0": 458.6666666666667,
+        "y0": 1709.3333333333335,
+        "x1": 616.0,
+        "y1": 1866.6666666666665
       },
       {
-        "x0": 976.0,
-        "y0": 2338.6666666666665,
-        "x1": 1168.0,
-        "y1": 2530.6666666666665
-      },
-      {
-        "x0": 869.3333333333333,
-        "y0": 2256.0,
-        "x1": 1040.0,
-        "y1": 2426.6666666666665
-      },
-      {
-        "x0": 162.66666666666666,
-        "y0": 1752.0,
-        "x1": 362.66666666666663,
-        "y1": 1952.0
-      },
-      {
-        "x0": 72.0,
-        "y0": 722.6666666666666,
-        "x1": 1333.3333333333333,
-        "y1": 1984.0
-      },
-      {
-        "x0": 415.9999999999999,
-        "y0": 2200.0,
-        "x1": 698.6666666666666,
-        "y1": 2482.6666666666665
-      },
-      {
-        "x0": 1010.6666666666666,
-        "y0": 957.3333333333333,
-        "x1": 1221.3333333333333,
-        "y1": 1168.0
-      },
-      {
-        "x0": 970.6666666666666,
-        "y0": 2274.6666666666665,
-        "x1": 1154.6666666666665,
-        "y1": 2458.6666666666665
+        "x0": 18.666666666666668,
+        "y0": 1402.6666666666667,
+        "x1": 376.0,
+        "y1": 1760.0
       }
     ],
     "visual_rules": {
@@ -92,10 +56,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 137,
-      "last_posted_at": "2026-09-17T11:28:37.336Z",
-      "last_video": "89B35892-2506-4442-BBBD-044049F7C5BE.mp4",
-      "last_overlay": "Se essa parte não te pegou, espera o próximo verso antes de julgar.",
+      "posts_total": 138,
+      "last_posted_at": "2026-09-17T14:41:35.173Z",
+      "last_video": "C496D0FE-98A5-4111-89DA-085BB731A6F5.mp4",
+      "last_overlay": "Tem dia que a melhor decisão é só deixar a música terminar.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -175,10 +139,11 @@
         "C031AA4C-509B-46F6-8480-EB30D15FE161.mp4": 1,
         "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4": 1,
         "0153EEA9-9518-41CD-A36E-1EF25BE33B6A.mp4": 1,
-        "89B35892-2506-4442-BBBD-044049F7C5BE.mp4": 1
+        "89B35892-2506-4442-BBBD-044049F7C5BE.mp4": 1,
+        "C496D0FE-98A5-4111-89DA-085BB731A6F5.mp4": 1
       },
-      "last_caption": "Um pequeno detalhe no arranjo muda a história toda. Você percebeu qual?",
-      "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
+      "last_caption": "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?",
+      "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -312,7 +277,8 @@
         "Poucas notas bastam para entregar uma canção inesquecível.",
         "Tem som que você escuta. E tem som que muda teu jeito de ficar quieto.",
         "Não resolveu minha vida. Mas melhorou bastante os próximos minutos.",
-        "Se essa parte não te pegou, espera o próximo verso antes de julgar."
+        "Se essa parte não te pegou, espera o próximo verso antes de julgar.",
+        "Tem dia que a melhor decisão é só deixar a música terminar."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -447,7 +413,8 @@
         "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
         "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂",
         "Qual música você usa quando não tá com vontade de ouvir conselho de ninguém?",
-        "Um pequeno detalhe no arranjo muda a história toda. Você percebeu qual?"
+        "Um pequeno detalhe no arranjo muda a história toda. Você percebeu qual?",
+        "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?"
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -457,16 +424,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6aabce7d7bafaeaeade34ee1",
+      "last_buffer_post_id": "6aabf97b83868cb1933ac9c8",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686464238478560519",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686511664807611669",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
+  "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
+  "channel_id": "6a8d782bccaf649a671248a9",
+  "channel_name": "carlosrilmarfilho",
+  "post_id": "6aac22ccf277a0ad6efd484f",
+  "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-17T14:41:35.173Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686511664807611669",
+  "sent_at": "2026-09-17T17:28:24.499Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686556977316613396",
   "success": true,
-  "finished_at": "2026-09-17T14:47:22.629860+00:00"
+  "finished_at": "2026-09-17T17:28:27.596433+00:00"
 }
