@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4",
-  "overlay": "Se a letra bater diferente, finge que foi só coincidência.",
+  "video": "8DA4425C-CCE2-46B2-9116-2A947856E053.mp4",
+  "overlay": "Esse é o tipo de voz que interrompe qualquer distração.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.15703125,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.2828125
   },
-  "faces_checked": 6,
+  "faces_checked": 4,
   "failures": []
 }
