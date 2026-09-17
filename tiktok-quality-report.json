@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "C496D0FE-98A5-4111-89DA-085BB731A6F5.mp4",
-  "overlay": "Tem dia que a melhor decisão é só deixar a música terminar.",
+  "video": "0A627F50-DD00-4B7F-ABEA-D695BBBFF108.mp4",
+  "overlay": "Essa foi daquelas que transformam rolagem em pausa.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.15703125,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.2828125
   },
-  "faces_checked": 2,
+  "faces_checked": 15,
   "failures": []
 }
