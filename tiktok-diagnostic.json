@@ -1,51 +1,57 @@
 {
-  "started_at": "2026-09-18T14:28:10.223021+00:00",
+  "started_at": "2026-09-18T17:25:50.582074+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 121,
+  "caption_length": 119,
   "source_candidate": {
-    "name": "DEEDE00B-CC13-4144-9D07-525AE4FFF31B.mp4",
-    "drive_id": "1inklPBSvxgNvk_GgqBFICLZcDEKysg2d",
-    "sha256": "736ccc141b0c36cea893ce429c05ed909109d51a4eba7515263660aa04f98fc9"
+    "name": "F5F80DA0-ECAC-4B2A-90F3-5D1F3F00E07F.mp4",
+    "drive_id": "1quDOVjwdelWrc3UzbPF4cUdA99bUGPV8",
+    "sha256": "8db9c470caa4ce0aa44c36af14377a4343f8f175eeec57a806b48d6cecd5a6c4"
   },
   "metadata_snapshot": {
-    "video": "DEEDE00B-CC13-4144-9D07-525AE4FFF31B.mp4",
+    "video": "F5F80DA0-ECAC-4B2A-90F3-5D1F3F00E07F.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 0,
-    "overlay": "Essa virada separa quem ouve de quem sente.",
-    "caption": "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.\n\n#musica #reelsbrasil #som #boamusica #brasil",
-    "hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
+    "variant_index": 9,
+    "overlay": "Hoje eu só queria cantar. Se virou terapia, foi consequência.",
+    "caption": "Escuta a próxima linha com atenção. Qual palavra acertou diferente?\n\n#boamusica #reelsbrasil #musica #brasil #reels",
+    "hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
     "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 2034,
+      "y0": 402,
       "x1": 1376,
-      "y1": 2266
+      "y1": 724
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.79453125,
+      "y0": 0.15703125,
       "x1": 0.9555555555555556,
-      "y1": 0.88515625
+      "y1": 0.2828125
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 445.3333333333333,
-        "y0": 1194.6666666666667,
-        "x1": 786.6666666666666,
+        "x0": 530.6666666666666,
+        "y0": 1120.0,
+        "x1": 946.6666666666667,
         "y1": 1536.0
       },
       {
-        "x0": 264.0,
-        "y0": 781.3333333333334,
-        "x1": 1328.0,
-        "y1": 1845.3333333333333
+        "x0": 816.0,
+        "y0": 1136.0,
+        "x1": 1074.6666666666667,
+        "y1": 1394.6666666666667
+      },
+      {
+        "x0": 1032.0,
+        "y0": 1034.6666666666667,
+        "x1": 1397.3333333333333,
+        "y1": 1400.0
       }
     ],
     "visual_rules": {
@@ -56,10 +62,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 142,
-      "last_posted_at": "2026-09-18T11:31:37.874Z",
-      "last_video": "DEEDE00B-CC13-4144-9D07-525AE4FFF31B.mp4",
-      "last_overlay": "Essa virada separa quem ouve de quem sente.",
+      "posts_total": 143,
+      "last_posted_at": "2026-09-18T14:32:49.851Z",
+      "last_video": "F5F80DA0-ECAC-4B2A-90F3-5D1F3F00E07F.mp4",
+      "last_overlay": "Hoje eu só queria cantar. Se virou terapia, foi consequência.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -144,10 +150,11 @@
         "0A627F50-DD00-4B7F-ABEA-D695BBBFF108.mp4": 1,
         "DEDE7A1D-CC8A-4E05-8583-4917112E42FD.mp4": 1,
         "072B8B62-667D-4C38-8ABA-DAE29B0FA10C.mp4": 1,
-        "DEEDE00B-CC13-4144-9D07-525AE4FFF31B.mp4": 1
+        "DEEDE00B-CC13-4144-9D07-525AE4FFF31B.mp4": 1,
+        "F5F80DA0-ECAC-4B2A-90F3-5D1F3F00E07F.mp4": 1
       },
-      "last_caption": "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.",
-      "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
+      "last_caption": "Escuta a próxima linha com atenção. Qual palavra acertou diferente?",
+      "last_hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -286,7 +293,8 @@
         "Essa foi daquelas que transformam rolagem em pausa.",
         "Essa parte aqui merece mais atenção do que muita conversa por aí.",
         "Um detalhe no arranjo muda toda a história.",
-        "Essa virada separa quem ouve de quem sente."
+        "Essa virada separa quem ouve de quem sente.",
+        "Hoje eu só queria cantar. Se virou terapia, foi consequência."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -426,7 +434,8 @@
         "Talvez este fosse o som que faltava no teu dia. Salva para ouvir com calma.",
         "Eu gosto quando a música segura a pessoa sem precisar inventar efeito, texto ou promessa. Só a música mesmo.",
         "Tenta ouvir esta parte sem voltar o vídeo. Depois conta se conseguiu.",
-        "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu."
+        "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.",
+        "Escuta a próxima linha com atenção. Qual palavra acertou diferente?"
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -436,20 +445,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6aad20540785d24e873d9334",
+      "last_buffer_post_id": "6aad4a7baf6af53ceac3cfe4",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686835765438942485",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686882199030942994",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
+  "hashtags_snapshot": "#boamusica #tiktokbrasil #musica #brasil #paravoce",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6aad4a7baf6af53ceac3cfe4",
+  "post_id": "6aad74209f49d0351ae7edbb",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-18T14:32:49.851Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686882199030942994",
+  "sent_at": "2026-09-18T17:27:43.027Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686927861449592085",
   "success": true,
-  "finished_at": "2026-09-18T14:32:55.529789+00:00"
+  "finished_at": "2026-09-18T17:27:44.117761+00:00"
 }

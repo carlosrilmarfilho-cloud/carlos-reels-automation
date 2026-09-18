@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "DEEDE00B-CC13-4144-9D07-525AE4FFF31B.mp4",
-  "overlay": "Essa virada separa quem ouve de quem sente.",
+  "video": "F5F80DA0-ECAC-4B2A-90F3-5D1F3F00E07F.mp4",
+  "overlay": "Hoje eu só queria cantar. Se virou terapia, foi consequência.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.79453125,
+    "y0": 0.15703125,
     "x1": 0.9555555555555556,
-    "y1": 0.88515625
+    "y1": 0.2828125
   },
-  "faces_checked": 2,
+  "faces_checked": 4,
   "failures": []
 }
