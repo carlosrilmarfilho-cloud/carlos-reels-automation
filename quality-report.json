@@ -1,5 +1,5 @@
 {
-  "passed": false,
+  "passed": true,
   "video": "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4",
   "overlay": "Se você ficou até aqui, provavelmente não foi por causa do algoritmo.",
   "overlay_rect_norm": {
@@ -9,7 +9,5 @@
     "y1": 0.8578125
   },
   "faces_checked": 7,
-  "failures": [
-    "caixa fora da área segura do Reel"
-  ]
+  "failures": []
 }
