@@ -1,9 +1,9 @@
 {
   "video_index": 1,
-  "posts_total": 144,
-  "last_posted_at": "2026-09-18T20:29:21.641Z",
-  "last_video": "8AD72ED8-DC07-43E7-B8CF-39BCEFB12647.mp4",
-  "last_overlay": "O trecho certo começa exatamente quando você ia passar.",
+  "posts_total": 145,
+  "last_posted_at": "2026-09-18T23:28:29.133Z",
+  "last_video": "B89D4621-D215-47E8-9A36-12932B93D041.mp4",
+  "last_overlay": "Escuta o detalhe que transforma este trecho inteiro.",
   "last_mode": "buffer_auto_confirmed",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -90,10 +90,11 @@
     "072B8B62-667D-4C38-8ABA-DAE29B0FA10C.mp4": 1,
     "DEEDE00B-CC13-4144-9D07-525AE4FFF31B.mp4": 1,
     "F5F80DA0-ECAC-4B2A-90F3-5D1F3F00E07F.mp4": 1,
-    "8AD72ED8-DC07-43E7-B8CF-39BCEFB12647.mp4": 1
+    "8AD72ED8-DC07-43E7-B8CF-39BCEFB12647.mp4": 1,
+    "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1
   },
-  "last_caption": "Qual foi a última música que fez você esquecer o que tava fazendo por alguns segundos?",
-  "last_hashtags": "#boamusica #tiktokbrasil #musica #brasil #paravoce",
+  "last_caption": "Se ficou até o final, escolhe a próxima terapia musical nos comentários.",
+  "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -234,7 +235,8 @@
     "Um detalhe no arranjo muda toda a história.",
     "Essa virada separa quem ouve de quem sente.",
     "Hoje eu só queria cantar. Se virou terapia, foi consequência.",
-    "O trecho certo começa exatamente quando você ia passar."
+    "O trecho certo começa exatamente quando você ia passar.",
+    "Escuta o detalhe que transforma este trecho inteiro."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -376,7 +378,8 @@
     "Tenta ouvir esta parte sem voltar o vídeo. Depois conta se conseguiu.",
     "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.",
     "Escuta a próxima linha com atenção. Qual palavra acertou diferente?",
-    "Qual foi a última música que fez você esquecer o que tava fazendo por alguns segundos?"
+    "Qual foi a última música que fez você esquecer o que tava fazendo por alguns segundos?",
+    "Se ficou até o final, escolhe a próxima terapia musical nos comentários."
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -386,8 +389,8 @@
     "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6aad9eb298827948876471c5",
+  "last_buffer_post_id": "6aadc8af9882794887682338",
   "last_buffer_status": "sent",
-  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686974692732783890",
+  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7687020788947373320",
   "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
 }
