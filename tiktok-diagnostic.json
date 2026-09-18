@@ -1,63 +1,51 @@
 {
-  "started_at": "2026-09-18T11:28:19.384261+00:00",
+  "started_at": "2026-09-18T14:28:10.223021+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
   "caption_length": 121,
   "source_candidate": {
-    "name": "072B8B62-667D-4C38-8ABA-DAE29B0FA10C.mp4",
-    "drive_id": "1ARmaqYgFcWbD40FM-i9aUGFNoLGX0EwC",
-    "sha256": "af2c6ea68cf78c22efb5c34647358bbb44d236c34cd3f8d75a026e13ee0d94ba"
+    "name": "DEEDE00B-CC13-4144-9D07-525AE4FFF31B.mp4",
+    "drive_id": "1inklPBSvxgNvk_GgqBFICLZcDEKysg2d",
+    "sha256": "736ccc141b0c36cea893ce429c05ed909109d51a4eba7515263660aa04f98fc9"
   },
   "metadata_snapshot": {
-    "video": "072B8B62-667D-4C38-8ABA-DAE29B0FA10C.mp4",
+    "video": "DEEDE00B-CC13-4144-9D07-525AE4FFF31B.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 19,
-    "overlay": "Um detalhe no arranjo muda toda a história.",
-    "caption": "Tenta ouvir esta parte sem voltar o vídeo. Depois conta se conseguiu.\n\n#boamusica #reelsbrasil #musica #brasil #reels",
-    "hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
+    "variant_index": 0,
+    "overlay": "Essa virada separa quem ouve de quem sente.",
+    "caption": "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.\n\n#musica #reelsbrasil #som #boamusica #brasil",
+    "hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
     "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 447,
+      "y0": 2034,
       "x1": 1376,
-      "y1": 679
+      "y1": 2266
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.174609375,
+      "y0": 0.79453125,
       "x1": 0.9555555555555556,
-      "y1": 0.265234375
+      "y1": 0.88515625
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 650.6666666666666,
-        "y0": 1069.3333333333335,
-        "x1": 1202.6666666666665,
-        "y1": 1621.3333333333333
+        "x0": 445.3333333333333,
+        "y0": 1194.6666666666667,
+        "x1": 786.6666666666666,
+        "y1": 1536.0
       },
       {
-        "x0": 493.33333333333337,
-        "y0": 986.6666666666667,
-        "x1": 1293.3333333333333,
-        "y1": 1786.6666666666665
-      },
-      {
-        "x0": 866.6666666666666,
-        "y0": 1181.3333333333335,
-        "x1": 1133.3333333333335,
-        "y1": 1448.0
-      },
-      {
-        "x0": 410.6666666666667,
-        "y0": 1016.0,
-        "x1": 1048.0,
-        "y1": 1653.3333333333335
+        "x0": 264.0,
+        "y0": 781.3333333333334,
+        "x1": 1328.0,
+        "y1": 1845.3333333333333
       }
     ],
     "visual_rules": {
@@ -68,10 +56,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 141,
-      "last_posted_at": "2026-09-17T23:25:05.165Z",
-      "last_video": "072B8B62-667D-4C38-8ABA-DAE29B0FA10C.mp4",
-      "last_overlay": "Um detalhe no arranjo muda toda a história.",
+      "posts_total": 142,
+      "last_posted_at": "2026-09-18T11:31:37.874Z",
+      "last_video": "DEEDE00B-CC13-4144-9D07-525AE4FFF31B.mp4",
+      "last_overlay": "Essa virada separa quem ouve de quem sente.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -155,10 +143,11 @@
         "C496D0FE-98A5-4111-89DA-085BB731A6F5.mp4": 1,
         "0A627F50-DD00-4B7F-ABEA-D695BBBFF108.mp4": 1,
         "DEDE7A1D-CC8A-4E05-8583-4917112E42FD.mp4": 1,
-        "072B8B62-667D-4C38-8ABA-DAE29B0FA10C.mp4": 1
+        "072B8B62-667D-4C38-8ABA-DAE29B0FA10C.mp4": 1,
+        "DEEDE00B-CC13-4144-9D07-525AE4FFF31B.mp4": 1
       },
-      "last_caption": "Tenta ouvir esta parte sem voltar o vídeo. Depois conta se conseguiu.",
-      "last_hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
+      "last_caption": "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.",
+      "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -296,7 +285,8 @@
         "Tem dia que a melhor decisão é só deixar a música terminar.",
         "Essa foi daquelas que transformam rolagem em pausa.",
         "Essa parte aqui merece mais atenção do que muita conversa por aí.",
-        "Um detalhe no arranjo muda toda a história."
+        "Um detalhe no arranjo muda toda a história.",
+        "Essa virada separa quem ouve de quem sente."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -435,7 +425,8 @@
         "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?",
         "Talvez este fosse o som que faltava no teu dia. Salva para ouvir com calma.",
         "Eu gosto quando a música segura a pessoa sem precisar inventar efeito, texto ou promessa. Só a música mesmo.",
-        "Tenta ouvir esta parte sem voltar o vídeo. Depois conta se conseguiu."
+        "Tenta ouvir esta parte sem voltar o vídeo. Depois conta se conseguiu.",
+        "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu."
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -445,20 +436,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6aac766665c55f731e765da0",
+      "last_buffer_post_id": "6aad20540785d24e873d9334",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686648868582231314",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686835765438942485",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#boamusica #tiktokbrasil #musica #brasil #paravoce",
+  "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6aad20540785d24e873d9334",
+  "post_id": "6aad4a7baf6af53ceac3cfe4",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-18T11:31:37.874Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686835765438942485",
+  "sent_at": "2026-09-18T14:32:49.851Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7686882199030942994",
   "success": true,
-  "finished_at": "2026-09-18T11:31:41.039620+00:00"
+  "finished_at": "2026-09-18T14:32:55.529789+00:00"
 }

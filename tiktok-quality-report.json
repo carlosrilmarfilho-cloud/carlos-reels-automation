@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "072B8B62-667D-4C38-8ABA-DAE29B0FA10C.mp4",
-  "overlay": "Um detalhe no arranjo muda toda a história.",
+  "video": "DEEDE00B-CC13-4144-9D07-525AE4FFF31B.mp4",
+  "overlay": "Essa virada separa quem ouve de quem sente.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.79453125,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.88515625
   },
-  "faces_checked": 4,
+  "faces_checked": 2,
   "failures": []
 }
