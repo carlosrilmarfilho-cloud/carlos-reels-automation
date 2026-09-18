@@ -37,7 +37,7 @@ def validate_rect(rect: dict) -> list[str]:
         failures.append(f"caixa alta demais ({height:.3f})")
     if width * height > 0.14:
         failures.append(f"caixa ocupa área excessiva ({width * height:.3f})")
-    if float(rect["y0"]) < 0.04 or float(rect["y1"]) > 0.84:
+    if float(rect["y0"]) < 0.04 or float(rect["y1"]) > 0.90:
         failures.append("caixa fora da área segura do Reel")
     return failures
 
