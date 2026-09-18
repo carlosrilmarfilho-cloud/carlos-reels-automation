@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4",
-  "overlay": "Se você ficou até aqui, provavelmente não foi por causa do algoritmo.",
+  "video": "072B8B62-667D-4C38-8ABA-DAE29B0FA10C.mp4",
+  "overlay": "Presta atenção no instante em que tudo muda de tom.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.73203125,
+    "y0": 0.174609375,
     "x1": 0.9555555555555556,
-    "y1": 0.8578125
+    "y1": 0.265234375
   },
-  "faces_checked": 7,
+  "faces_checked": 6,
   "failures": []
 }
