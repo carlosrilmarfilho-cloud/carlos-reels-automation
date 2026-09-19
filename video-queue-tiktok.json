@@ -6,14 +6,6 @@
   "policy": "Persistent FIFO: select front; rotate to end only after confirmed platform publication; append new Drive IDs; remove missing IDs preserving relative order.",
   "queue": [
     {
-      "drive_id": "1PVtAi2UtAk4zQVuLdwaRkZ-Kxu3bhnIH",
-      "name": "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4",
-      "source_url": "https://drive.google.com/file/d/1PVtAi2UtAk4zQVuLdwaRkZ-Kxu3bhnIH/view?usp=drivesdk",
-      "source_size": "40836384",
-      "url": "https://drive.google.com/uc?id=1PVtAi2UtAk4zQVuLdwaRkZ-Kxu3bhnIH",
-      "path": "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4"
-    },
-    {
       "drive_id": "1nvME7B5XUsyM1YufdYs4fHUebrsxjz3v",
       "name": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4",
       "source_url": "https://drive.google.com/file/d/1nvME7B5XUsyM1YufdYs4fHUebrsxjz3v/view?usp=drivesdk",
@@ -685,14 +677,23 @@
       "url": "https://drive.google.com/uc?id=12yfMVfy63nkHA37A2MW4bv5cJunyw6N1",
       "path": "B89D4621-D215-47E8-9A36-12932B93D041.mp4",
       "sha256": "519bb964c6ab52dc00cf6bba5893ada466867e57e11125eb9e8cf228352d03e0"
+    },
+    {
+      "drive_id": "1PVtAi2UtAk4zQVuLdwaRkZ-Kxu3bhnIH",
+      "name": "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4",
+      "source_url": "https://drive.google.com/file/d/1PVtAi2UtAk4zQVuLdwaRkZ-Kxu3bhnIH/view?usp=drivesdk",
+      "source_size": "40836384",
+      "url": "https://drive.google.com/uc?id=1PVtAi2UtAk4zQVuLdwaRkZ-Kxu3bhnIH",
+      "path": "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4",
+      "sha256": "b0f48ca6ced8d6b3d54aa669b9022614670d1ddf26a1894b52d0af607a3a71b8"
     }
   ],
-  "completed_rotations": 25,
+  "completed_rotations": 26,
   "last_confirmed": {
-    "confirmed_at": "2026-09-18T23:28:31.400642+00:00",
-    "drive_id": "12yfMVfy63nkHA37A2MW4bv5cJunyw6N1",
-    "name": "B89D4621-D215-47E8-9A36-12932B93D041.mp4",
-    "sha256": "519bb964c6ab52dc00cf6bba5893ada466867e57e11125eb9e8cf228352d03e0"
+    "confirmed_at": "2026-09-19T11:27:23.607476+00:00",
+    "drive_id": "1PVtAi2UtAk4zQVuLdwaRkZ-Kxu3bhnIH",
+    "name": "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4",
+    "sha256": "b0f48ca6ced8d6b3d54aa669b9022614670d1ddf26a1894b52d0af607a3a71b8"
   },
   "history": [
     {
@@ -844,9 +845,15 @@
       "drive_id": "12yfMVfy63nkHA37A2MW4bv5cJunyw6N1",
       "name": "B89D4621-D215-47E8-9A36-12932B93D041.mp4",
       "sha256": "519bb964c6ab52dc00cf6bba5893ada466867e57e11125eb9e8cf228352d03e0"
+    },
+    {
+      "confirmed_at": "2026-09-19T11:27:23.607476+00:00",
+      "drive_id": "1PVtAi2UtAk4zQVuLdwaRkZ-Kxu3bhnIH",
+      "name": "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4",
+      "sha256": "b0f48ca6ced8d6b3d54aa669b9022614670d1ddf26a1894b52d0af607a3a71b8"
     }
   ],
-  "last_synced_at": "2026-09-18T23:23:59.748721+00:00",
+  "last_synced_at": "2026-09-19T11:23:22.130178+00:00",
   "source_count": 82,
-  "updated_at": "2026-09-18T23:28:31.400642+00:00"
+  "updated_at": "2026-09-19T11:27:23.607476+00:00"
 }

@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "B89D4621-D215-47E8-9A36-12932B93D041.mp4",
-  "overlay": "Escuta o detalhe que transforma este trecho inteiro.",
+  "video": "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4",
+  "overlay": "Terapia do dia: essa música e cinco minutos sem explicar nada.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.15703125,
+    "y0": 0.803125,
     "x1": 0.9555555555555556,
-    "y1": 0.2828125
+    "y1": 0.8765625
   },
-  "faces_checked": 5,
+  "faces_checked": 6,
   "failures": []
 }
