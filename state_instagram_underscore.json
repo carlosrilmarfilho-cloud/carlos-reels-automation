@@ -1,6 +1,6 @@
 {
   "video_index": 1,
-  "posts_total": 74,
+  "posts_total": 75,
   "blocked_videos": [
     "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
   ],
@@ -54,10 +54,12 @@
     "89B35892-2506-4442-BBBD-044049F7C5BE.mp4": 1,
     "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4": 1,
     "99069C52-1345-4260-8C4A-C7B611E1BC84.mp4": 1,
-    "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4": 1
+    "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4": 1,
+    "C496D0FE-98A5-4111-89DA-085BB731A6F5.mp4": 1
   },
   "recent_overlays": [
     "Tá aí a terapia que você precisa 🪗🎶❤️",
+    "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
@@ -204,14 +206,15 @@
     "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
     "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou.",
     "Eu não quero te convencer a gostar. Só deixa essa parte terminar e decide depois.",
-    "Qual foi a última música que fez você esquecer o que tava fazendo por alguns segundos?"
+    "Qual foi a última música que fez você esquecer o que tava fazendo por alguns segundos?",
+    "Se ficou até o final, escolhe a próxima terapia musical nos comentários."
   ],
-  "last_video": "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4",
+  "last_video": "C496D0FE-98A5-4111-89DA-085BB731A6F5.mp4",
   "last_overlay": "Tá aí a terapia que você precisa",
   "last_mode": "trial",
   "last_media_id": "18112266332063101",
-  "last_posted_at": "2026-09-19T17:32:38.532474+00:00",
+  "last_posted_at": "2026-09-19T20:33:55.346656+00:00",
   "last_attempted_video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
-  "last_caption": "Qual foi a última música que fez você esquecer o que tava fazendo por alguns segundos?",
+  "last_caption": "Se ficou até o final, escolhe a próxima terapia musical nos comentários.",
   "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil"
 }
