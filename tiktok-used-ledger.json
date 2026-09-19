@@ -165,7 +165,8 @@
     "1slY0at0K4j-nBoZiN0Mze6ZKFFl1KeQQ",
     "12yfMVfy63nkHA37A2MW4bv5cJunyw6N1",
     "1PVtAi2UtAk4zQVuLdwaRkZ-Kxu3bhnIH",
-    "1nvME7B5XUsyM1YufdYs4fHUebrsxjz3v"
+    "1nvME7B5XUsyM1YufdYs4fHUebrsxjz3v",
+    "1wXoJRvGeoTL9ACKCQyxRFqkDMuNX2YA3"
   ],
   "used_sha256": [
     "a4904cc9788a7d149ada091d4cae3b564a74a72706f12aff44e35fecc31d0be3",
@@ -889,7 +890,16 @@
       "sent_at": "2026-09-19T14:28:19.887Z",
       "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7687252730523634965",
       "source": "confirmed_buffer_publication"
+    },
+    {
+      "name": "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4",
+      "drive_id": "1wXoJRvGeoTL9ACKCQyxRFqkDMuNX2YA3",
+      "sha256": "7073eccf594b1159138e6985d07cebef928d786660d976c05ceefe85004aa138",
+      "buffer_post_id": "6aaec56365e5b8cd5b3bcea1",
+      "sent_at": "2026-09-19T17:26:38.226Z",
+      "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7687298695242566933",
+      "source": "confirmed_buffer_publication"
     }
   ],
-  "updated_at": "2026-09-19T14:28:23.377316+00:00"
+  "updated_at": "2026-09-19T17:26:43.569351+00:00"
 }

@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4",
-  "overlay": "Reconheceu a voz? Então essa música já fez o trabalho.",
+  "video": "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4",
+  "overlay": "Eu ia passar o vídeo. A música claramente tinha outros planos.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.0484375,
+    "y0": 0.047265625,
     "x1": 0.9555555555555556,
-    "y1": 0.121875
+    "y1": 0.173046875
   },
-  "faces_checked": 6,
+  "faces_checked": 7,
   "failures": []
 }
