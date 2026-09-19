@@ -1,6 +1,6 @@
 {
   "video_index": 1,
-  "posts_total": 72,
+  "posts_total": 73,
   "blocked_videos": [
     "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
   ],
@@ -52,10 +52,12 @@
     "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4": 1,
     "0153EEA9-9518-41CD-A36E-1EF25BE33B6A.mp4": 1,
     "89B35892-2506-4442-BBBD-044049F7C5BE.mp4": 1,
-    "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4": 1
+    "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4": 1,
+    "99069C52-1345-4260-8C4A-C7B611E1BC84.mp4": 1
   },
   "recent_overlays": [
     "Tá aí a terapia que você precisa 🪗🎶❤️",
+    "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
@@ -198,14 +200,15 @@
     "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas.",
     "Tem som que organiza o humor sem explicar absolutamente nada. Essa entra na tua lista?",
     "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
-    "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou."
+    "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou.",
+    "Eu não quero te convencer a gostar. Só deixa essa parte terminar e decide depois."
   ],
-  "last_video": "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4",
+  "last_video": "99069C52-1345-4260-8C4A-C7B611E1BC84.mp4",
   "last_overlay": "Tá aí a terapia que você precisa",
   "last_mode": "trial",
   "last_media_id": "18112266332063101",
-  "last_posted_at": "2026-09-19T11:34:30.831076+00:00",
+  "last_posted_at": "2026-09-19T14:32:10.166872+00:00",
   "last_attempted_video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
-  "last_caption": "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou.",
+  "last_caption": "Eu não quero te convencer a gostar. Só deixa essa parte terminar e decide depois.",
   "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil"
 }
