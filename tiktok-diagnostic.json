@@ -1,87 +1,75 @@
 {
-  "started_at": "2026-09-19T11:25:31.936210+00:00",
+  "started_at": "2026-09-19T14:26:28.911225+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 131,
+  "caption_length": 111,
   "source_candidate": {
-    "name": "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4",
-    "drive_id": "1PVtAi2UtAk4zQVuLdwaRkZ-Kxu3bhnIH",
-    "sha256": "b0f48ca6ced8d6b3d54aa669b9022614670d1ddf26a1894b52d0af607a3a71b8"
+    "name": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4",
+    "drive_id": "1nvME7B5XUsyM1YufdYs4fHUebrsxjz3v",
+    "sha256": "3b856089ebddee59ceb3ba848ccaa2efde6948c682008778a6e950df2aa5cc47"
   },
   "metadata_snapshot": {
-    "video": "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4",
+    "video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 0,
-    "overlay": "Terapia do dia: essa música e cinco minutos sem explicar nada.",
-    "caption": "Dez segundos foram suficientes para prender tua atenção? Salva para comparar depois.\n\n#musica #reelsbrasil #som #boamusica #brasil",
+    "variant_index": 11,
+    "overlay": "Reconheceu a voz? Então essa música já fez o trabalho.",
+    "caption": "Presta atenção na mudança de tom. Foi ali que a música te pegou?\n\n#musica #reelsbrasil #som #boamusica #brasil",
     "hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
     "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 2056,
+      "y0": 124,
       "x1": 1376,
-      "y1": 2244
+      "y1": 312
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.803125,
+      "y0": 0.0484375,
       "x1": 0.9555555555555556,
-      "y1": 0.8765625
+      "y1": 0.121875
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 581.3333333333334,
-        "y0": 1050.6666666666665,
-        "x1": 714.6666666666666,
-        "y1": 1184.0
+        "x0": 656.0,
+        "y0": 866.6666666666667,
+        "x1": 989.3333333333333,
+        "y1": 1200.0
       },
       {
-        "x0": 754.6666666666666,
-        "y0": 1173.3333333333333,
-        "x1": 1202.6666666666665,
-        "y1": 1621.3333333333333
+        "x0": 744.0000000000001,
+        "y0": 1141.3333333333335,
+        "x1": 1040.0,
+        "y1": 1437.3333333333333
       },
       {
-        "x0": 618.6666666666666,
-        "y0": 1098.6666666666665,
-        "x1": 776.0,
-        "y1": 1256.0
+        "x0": 96.0,
+        "y0": 765.3333333333333,
+        "x1": 1274.6666666666667,
+        "y1": 1944.0
       },
       {
-        "x0": 1152.0,
-        "y0": 1000.0,
-        "x1": 1272.0,
-        "y1": 1120.0
-      },
-      {
-        "x0": 207.99999999999997,
-        "y0": 704.0,
-        "x1": 1250.6666666666665,
-        "y1": 1746.6666666666665
-      },
-      {
-        "x0": 525.3333333333334,
-        "y0": 1202.6666666666667,
-        "x1": 698.6666666666666,
-        "y1": 1376.0
-      },
-      {
-        "x0": 253.33333333333334,
-        "y0": 1032.0,
-        "x1": 941.3333333333333,
-        "y1": 1720.0
-      },
-      {
-        "x0": 645.3333333333333,
-        "y0": 1232.0,
-        "x1": 936.0,
+        "x0": 530.6666666666666,
+        "y0": 1216.0,
+        "x1": 837.3333333333334,
         "y1": 1522.6666666666667
+      },
+      {
+        "x0": 37.333333333333336,
+        "y0": 725.3333333333333,
+        "x1": 1341.3333333333333,
+        "y1": 2029.3333333333335
+      },
+      {
+        "x0": 213.33333333333331,
+        "y0": 1120.0,
+        "x1": 378.66666666666663,
+        "y1": 1285.3333333333333
       }
     ],
     "visual_rules": {
@@ -92,10 +80,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 146,
-      "last_posted_at": "2026-09-18T23:28:29.133Z",
-      "last_video": "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4",
-      "last_overlay": "Terapia do dia: essa música e cinco minutos sem explicar nada.",
+      "posts_total": 147,
+      "last_posted_at": "2026-09-19T11:27:20.921Z",
+      "last_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4",
+      "last_overlay": "Reconheceu a voz? Então essa música já fez o trabalho.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -165,7 +153,7 @@
         "F651D1BB-D243-438C-BB64-72CC36D73860.mp4": 1,
         "E049B12F-585F-42D9-BCB4-446DDBF991EF.mp4": 1,
         "CEE8A75E-E9A0-4A11-A686-06D90E1184D8.mp4": 1,
-        "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4": 1,
+        "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4": 2,
         "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4": 1,
         "B29A925E-34FD-4015-AFD6-5249D690E051.mp4": 1,
         "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4": 1,
@@ -186,7 +174,7 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "Dez segundos foram suficientes para prender tua atenção? Salva para comparar depois.",
+      "last_caption": "Presta atenção na mudança de tom. Foi ali que a música te pegou?",
       "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
@@ -330,7 +318,8 @@
         "Hoje eu só queria cantar. Se virou terapia, foi consequência.",
         "O trecho certo começa exatamente quando você ia passar.",
         "Escuta o detalhe que transforma este trecho inteiro.",
-        "Terapia do dia: essa música e cinco minutos sem explicar nada."
+        "Terapia do dia: essa música e cinco minutos sem explicar nada.",
+        "Reconheceu a voz? Então essa música já fez o trabalho."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -474,7 +463,8 @@
         "Escuta a próxima linha com atenção. Qual palavra acertou diferente?",
         "Qual foi a última música que fez você esquecer o que tava fazendo por alguns segundos?",
         "Se ficou até o final, escolhe a próxima terapia musical nos comentários.",
-        "Dez segundos foram suficientes para prender tua atenção? Salva para comparar depois."
+        "Dez segundos foram suficientes para prender tua atenção? Salva para comparar depois.",
+        "Presta atenção na mudança de tom. Foi ali que a música te pegou?"
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -484,20 +474,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6aadc8af9882794887682338",
+      "last_buffer_post_id": "6aae712ef4364554a89aebb2",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7687020788947373320",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7687206109416869140",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
   "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6aae712ef4364554a89aebb2",
+  "post_id": "6aae9b97076fd8348fcbb1d7",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-19T11:27:20.921Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7687206109416869140",
+  "sent_at": "2026-09-19T14:28:19.887Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7687252730523634965",
   "success": true,
-  "finished_at": "2026-09-19T11:27:23.560062+00:00"
+  "finished_at": "2026-09-19T14:28:23.378489+00:00"
 }
