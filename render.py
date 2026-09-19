@@ -245,11 +245,14 @@ def fit_text(
     max_width: int,
     target_width: int,
     max_lines: int = 3,
+    start_size_base: int = 58,
 ) -> tuple[ImageFont.FreeTypeFont, list[str], int]:
     font_path = find_font()
     scale = target_width / 1080
-    start_size = max(44, int(58 * scale))
-    minimum_size = max(30, int(36 * scale))
+    # Em quadros muito ocupados, plan_overlay pode iniciar com uma fonte menor
+    # para caber em uma faixa realmente livre, sem encostar no rosto ou cabeça.
+    start_size = max(40, int(start_size_base * scale))
+    minimum_size = max(30, int(34 * scale))
     for size in range(start_size, minimum_size - 1, -2):
         font = ImageFont.truetype(font_path, size=size)
         lines = wrap_for_font(draw, text, font, max_width)
@@ -368,11 +371,21 @@ def plan_overlay(
         source_rect = None
         x0, x1 = side_margin, target_width - side_margin
 
+    # Quando uma cabeça ocupa quase toda a largura e deixa apenas uma faixa
+    # superior estreita, reduzimos somente o tamanho inicial do texto. A caixa
+    # continua sujeita aos mesmos limites e ao bloqueio obrigatório de sobreposição.
+    crowded_head = any(
+        (box["x1"] - box["x0"]) >= target_width * 0.88
+        and box["y0"] >= target_height * 0.10
+        and box["y0"] <= target_height * 0.24
+        for box in mapped_heads
+    )
     font, lines, line_height = fit_text(
         draw,
         text,
         int(x1 - x0) - horizontal_padding * 2,
         target_width,
+        start_size_base=44 if crowded_head else 58,
     )
     box_height = line_height * len(lines) + vertical_padding * 2
     if box_height > target_height * 0.145:
