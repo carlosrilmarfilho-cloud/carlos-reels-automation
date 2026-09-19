@@ -1,9 +1,9 @@
 {
   "video_index": 1,
-  "posts_total": 160,
-  "last_posted_at": "2026-09-18T20:22:48.197312+00:00",
-  "last_video": "E33D9A8A-03BC-4BF1-B49C-9DF5A17DC778.mp4",
-  "last_overlay": "Reconheceu a voz? Então essa música já fez o trabalho.",
+  "posts_total": 161,
+  "last_posted_at": "2026-09-19T11:20:33.249394+00:00",
+  "last_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4",
+  "last_overlay": "Escuta o detalhe que transforma este trecho inteiro.",
   "last_mode": "trial",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -77,7 +77,7 @@
     "15EA0363-A2B0-4F7C-BB26-BFB45F8454E0.mp4": 1,
     "E049B12F-585F-42D9-BCB4-446DDBF991EF.mp4": 1,
     "CA6E6C03-D0B2-46D2-BEFE-E112DE04EF2B.mp4": 1,
-    "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4": 1,
+    "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4": 2,
     "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4": 1,
     "15B0403C-2ECE-4915-B49E-4D477362302F.mp4": 1,
     "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4": 1,
@@ -94,8 +94,8 @@
     "DEEDE00B-CC13-4144-9D07-525AE4FFF31B.mp4": 1,
     "E33D9A8A-03BC-4BF1-B49C-9DF5A17DC778.mp4": 1
   },
-  "last_caption": "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
-  "last_hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
+  "last_caption": "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?",
+  "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -251,7 +251,8 @@
     "Se você ficou até aqui, provavelmente não foi por causa do algoritmo.",
     "Presta atenção no instante em que tudo muda de tom.",
     "Essa foi daquelas que transformam rolagem em pausa.",
-    "Reconheceu a voz? Então essa música já fez o trabalho."
+    "Reconheceu a voz? Então essa música já fez o trabalho.",
+    "Escuta o detalhe que transforma este trecho inteiro."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -408,7 +409,8 @@
     "Se você parou a rolagem por causa da voz, me diz qual detalhe te fez ficar.",
     "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂",
     "Qual foi a última música que fez você esquecer o que tava fazendo por alguns segundos?",
-    "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?"
+    "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
+    "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?"
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
