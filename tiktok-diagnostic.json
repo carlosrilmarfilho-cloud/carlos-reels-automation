@@ -1,87 +1,57 @@
 {
-  "started_at": "2026-09-19T23:25:01.877671+00:00",
+  "started_at": "2026-09-20T11:25:37.386674+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 142,
+  "caption_length": 120,
   "source_candidate": {
-    "name": "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4",
-    "drive_id": "1XZPOOrPJ5roUPWSA50T_j9ppWt9uCIHM",
-    "sha256": "e1e07a0c21ce5572767dcc96e92ada8e3d333d371d95fdbaa3cd79e19053d55b"
+    "name": "131F3617-EC16-4844-8A37-35A986CC598A.mp4",
+    "drive_id": "1AINZcHuUwlePxcLQyTs_FEdMYe_dtBQD",
+    "sha256": "622d083597370c85a475eecdddaa5621d1de263d5d9684f4a66e88484eaa499b"
   },
   "metadata_snapshot": {
-    "video": "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4",
+    "video": "131F3617-EC16-4844-8A37-35A986CC598A.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 0,
-    "overlay": "Se a letra bater diferente, finge que foi só coincidência.",
-    "caption": "Se te lembrou alguém, um lugar ou uma fase, comenta só uma palavra. Quero ver as histórias que aparecem.\n\n#musica #reelsbrasil #som #boamusica #brasil",
+    "variant_index": 3,
+    "overlay": "Eu gosto de música que me faz esquecer por que peguei o celular.",
+    "caption": "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou.\n\n#musica #reelsbrasil #som #boamusica #brasil",
     "hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
     "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 447,
+      "y0": 402,
       "x1": 1376,
-      "y1": 679
+      "y1": 724
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.174609375,
+      "y0": 0.15703125,
       "x1": 0.9555555555555556,
-      "y1": 0.265234375
+      "y1": 0.2828125
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 101.33333333333334,
-        "y0": 1728.0,
-        "x1": 493.33333333333337,
-        "y1": 2120.0
+        "x0": 709.3333333333334,
+        "y0": 1258.6666666666665,
+        "x1": 874.6666666666666,
+        "y1": 1424.0
       },
       {
-        "x0": 970.6666666666666,
-        "y0": 1360.0,
-        "x1": 1314.6666666666667,
-        "y1": 1704.0
+        "x0": 181.33333333333331,
+        "y0": 1053.3333333333333,
+        "x1": 949.3333333333333,
+        "y1": 1821.3333333333333
       },
       {
-        "x0": 162.66666666666666,
-        "y0": 2237.333333333333,
-        "x1": 314.6666666666667,
-        "y1": 2389.3333333333335
-      },
-      {
-        "x0": 954.6666666666667,
-        "y0": 1362.6666666666667,
-        "x1": 1253.3333333333333,
-        "y1": 1661.3333333333333
-      },
-      {
-        "x0": 242.66666666666666,
-        "y0": 914.6666666666667,
-        "x1": 1210.6666666666667,
-        "y1": 1882.6666666666667
-      },
-      {
-        "x0": 928.0000000000001,
-        "y0": 1328.0,
-        "x1": 1248.0,
-        "y1": 1648.0
-      },
-      {
-        "x0": 437.3333333333333,
-        "y0": 1032.0,
-        "x1": 1309.3333333333333,
-        "y1": 1904.0
-      },
-      {
-        "x0": 66.66666666666666,
-        "y0": 1645.3333333333333,
-        "x1": 503.99999999999994,
-        "y1": 2082.666666666667
+        "x0": 605.3333333333334,
+        "y0": 1144.0,
+        "x1": 1378.6666666666665,
+        "y1": 1917.3333333333333
       }
     ],
     "visual_rules": {
@@ -92,10 +62,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 150,
-      "last_posted_at": "2026-09-19T20:27:48.180Z",
-      "last_video": "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4",
-      "last_overlay": "Se a letra bater diferente, finge que foi só coincidência.",
+      "posts_total": 151,
+      "last_posted_at": "2026-09-19T23:26:49.523Z",
+      "last_video": "131F3617-EC16-4844-8A37-35A986CC598A.mp4",
+      "last_overlay": "Eu gosto de música que me faz esquecer por que peguei o celular.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -169,7 +139,7 @@
         "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4": 2,
         "B29A925E-34FD-4015-AFD6-5249D690E051.mp4": 2,
         "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4": 2,
-        "131F3617-EC16-4844-8A37-35A986CC598A.mp4": 1,
+        "131F3617-EC16-4844-8A37-35A986CC598A.mp4": 2,
         "B020B86A-7648-4905-A31C-6AD6C347C050.mp4": 1,
         "13ADDC34-C864-4CF1-ADB1-21EB454FA4B7.mp4": 1,
         "C031AA4C-509B-46F6-8480-EB30D15FE161.mp4": 1,
@@ -186,7 +156,7 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "Se te lembrou alguém, um lugar ou uma fase, comenta só uma palavra. Quero ver as histórias que aparecem.",
+      "last_caption": "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou.",
       "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
@@ -334,7 +304,8 @@
         "Reconheceu a voz? Então essa música já fez o trabalho.",
         "Eu ia passar o vídeo. A música claramente tinha outros planos.",
         "Tem música que chega antes da gente saber que tava precisando.",
-        "Se a letra bater diferente, finge que foi só coincidência."
+        "Se a letra bater diferente, finge que foi só coincidência.",
+        "Eu gosto de música que me faz esquecer por que peguei o celular."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -482,7 +453,8 @@
         "Presta atenção na mudança de tom. Foi ali que a música te pegou?",
         "Alguns refrões continuam trabalhando depois do fim. Este ficou na tua cabeça?",
         "Poucas notas entregaram a canção inteira. Qual instrumento você ouviu primeiro?",
-        "Se te lembrou alguém, um lugar ou uma fase, comenta só uma palavra. Quero ver as histórias que aparecem."
+        "Se te lembrou alguém, um lugar ou uma fase, comenta só uma palavra. Quero ver as histórias que aparecem.",
+        "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou."
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -492,20 +464,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6aaeefd84594e3153f4014ce",
+      "last_buffer_post_id": "6aaf19d06e039ccbc827fb59",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7687345366009761044",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7687391491706064135",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
   "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6aaf19d06e039ccbc827fb59",
+  "post_id": "6aafc2b28d048c06b4034c52",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-19T23:26:49.523Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7687391491706064135",
+  "sent_at": "2026-09-20T11:27:25.132Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7687577197649022215",
   "success": true,
-  "finished_at": "2026-09-19T23:26:56.654896+00:00"
+  "finished_at": "2026-09-20T11:27:31.202991+00:00"
 }

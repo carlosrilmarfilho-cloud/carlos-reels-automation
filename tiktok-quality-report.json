@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4",
-  "overlay": "Se a letra bater diferente, finge que foi só coincidência.",
+  "video": "131F3617-EC16-4844-8A37-35A986CC598A.mp4",
+  "overlay": "Eu gosto de música que me faz esquecer por que peguei o celular.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.15703125,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.2828125
   },
-  "faces_checked": 7,
+  "faces_checked": 2,
   "failures": []
 }
