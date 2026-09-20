@@ -1,6 +1,6 @@
 {
   "video_index": 1,
-  "posts_total": 77,
+  "posts_total": 78,
   "blocked_videos": [
     "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
   ],
@@ -57,10 +57,12 @@
     "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4": 1,
     "C496D0FE-98A5-4111-89DA-085BB731A6F5.mp4": 1,
     "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4": 1,
-    "0A627F50-DD00-4B7F-ABEA-D695BBBFF108.mp4": 1
+    "0A627F50-DD00-4B7F-ABEA-D695BBBFF108.mp4": 1,
+    "DEDE7A1D-CC8A-4E05-8583-4917112E42FD.mp4": 1
   },
   "recent_overlays": [
     "Tá aí a terapia que você precisa 🪗🎶❤️",
+    "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
@@ -213,14 +215,15 @@
     "Qual foi a última música que fez você esquecer o que tava fazendo por alguns segundos?",
     "Se ficou até o final, escolhe a próxima terapia musical nos comentários.",
     "Tem voz que impressiona pela técnica. Tem voz que prende porque parece verdade. Eu fico com a segunda.",
-    "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia."
+    "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia.",
+    "Se te lembrou alguém, um lugar ou uma fase, comenta só uma palavra. Quero ver as histórias que aparecem."
   ],
-  "last_video": "0A627F50-DD00-4B7F-ABEA-D695BBBFF108.mp4",
+  "last_video": "DEDE7A1D-CC8A-4E05-8583-4917112E42FD.mp4",
   "last_overlay": "Tá aí a terapia que você precisa",
   "last_mode": "trial",
   "last_media_id": "18112266332063101",
-  "last_posted_at": "2026-09-20T11:31:50.972137+00:00",
+  "last_posted_at": "2026-09-20T14:32:22.085124+00:00",
   "last_attempted_video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
-  "last_caption": "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia.",
-  "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil"
+  "last_caption": "Se te lembrou alguém, um lugar ou uma fase, comenta só uma palavra. Quero ver as histórias que aparecem.",
+  "last_hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento"
 }
