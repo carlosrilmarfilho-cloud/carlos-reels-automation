@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "13ADDC34-C864-4CF1-ADB1-21EB454FA4B7.mp4",
-  "overlay": "Essa virada separa quem ouve de quem sente.",
+  "video": "D3390941-13EB-4298-95BC-5C3D430C7685.mp4",
+  "overlay": "Foi só a melodia entrar para a rolagem perder a vez.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.049609375,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.140234375
   },
-  "faces_checked": 4,
+  "faces_checked": 8,
   "failures": []
 }
