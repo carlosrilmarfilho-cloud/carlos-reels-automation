@@ -2,9 +2,9 @@ name: Postar 5 Reels por dia no Instagram
 
 on:
   schedule:
-    # 08h, 11h, 14h, 17h e 20h em Fortaleza/Brasília (UTC-3).
-    # :07, :27 e :47 são apenas oportunidades de recuperação dentro da mesma janela.
-    - cron: '7,27,47 11,14,17,20,23 * * *'
+    # O gate interno só permite 08h, 11h, 14h, 17h e 20h BRT e deduplica por janela.
+    # O cron contínuo fornece recuperação contra atrasos do agendador do GitHub.
+    - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
   push:
     paths:
