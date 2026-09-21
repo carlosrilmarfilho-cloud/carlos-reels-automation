@@ -3,8 +3,8 @@ name: Postar 5 TikToks por dia
 on:
   schedule:
     # O gate interno só permite 08h, 11h, 14h, 17h e 20h BRT e deduplica por janela.
-    # O cron contínuo fornece recuperação contra atrasos do agendador do GitHub.
-    - cron: '2,17,32,47 * * * *'
+    # O cron a cada 5 minutos fornece recuperação contra atrasos do agendador do GitHub.
+    - cron: '2,7,12,17,22,27,32,37,42,47,52,57 * * * *'
   workflow_dispatch:
   push:
     paths:
