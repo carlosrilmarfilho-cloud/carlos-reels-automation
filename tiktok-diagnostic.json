@@ -1,87 +1,69 @@
 {
-  "started_at": "2026-09-21T17:09:29.453125+00:00",
+  "started_at": "2026-09-21T20:08:35.873884+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 128,
+  "caption_length": 120,
   "source_candidate": {
-    "name": "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4",
-    "drive_id": "16QYQAhjz48p-wIbv8Vj0Z5lHPs1p3Ckb",
-    "sha256": "051f481729440ff54e557968f4ee44477a2a04ecc7d1f23d95b0f794cbe40b03"
+    "name": "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4",
+    "drive_id": "12t1jUxvZGuKYo-JB3PtvZTR-QkI1dHrh",
+    "sha256": "aefd32d322c6c4089860dcf513edf3c20ca97da20e6e9ebe1d6dc0cbf6bdac4b"
   },
   "metadata_snapshot": {
-    "video": "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4",
+    "video": "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 7,
-    "overlay": "Eu vim cantar. A música resolveu conversar com quem tava ouvindo.",
-    "caption": "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas.\n\n#musica #reelsbrasil #som #boamusica #brasil",
+    "variant_index": 6,
+    "overlay": "Isso aqui tem cara de música que alguém vai mandar sem explicar nada.",
+    "caption": "Qual detalhe musical fez você parar a rolagem? Escuta outra vez e me diz.\n\n#musica #reelsbrasil #som #boamusica #brasil",
     "hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
-    "source_resolution": "1080x1920",
-    "render_resolution": "1080x1920",
+    "source_resolution": "2160x3840",
+    "render_resolution": "1440x2560",
     "overlay_rect_px": {
-      "x0": 48,
-      "y0": 92,
-      "x1": 1032,
-      "y1": 234
+      "x0": 64,
+      "y0": 402,
+      "x1": 1376,
+      "y1": 724
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.04791666666666667,
+      "y0": 0.15703125,
       "x1": 0.9555555555555556,
-      "y1": 0.121875
+      "y1": 0.2828125
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 84.0,
-        "y0": 776.0,
-        "x1": 764.0,
-        "y1": 1456.0
+        "x0": 944.0,
+        "y0": 1280.0,
+        "x1": 1269.3333333333333,
+        "y1": 1605.3333333333333
       },
       {
-        "x0": 526.0,
-        "y0": 896.0,
-        "x1": 828.0,
-        "y1": 1198.0
+        "x0": 437.3333333333333,
+        "y0": 1176.0,
+        "x1": 1021.3333333333333,
+        "y1": 1760.0
       },
       {
-        "x0": 238.0,
-        "y0": 588.0,
-        "x1": 978.0,
-        "y1": 1328.0
+        "x0": 565.3333333333333,
+        "y0": 1194.6666666666665,
+        "x1": 1056.0,
+        "y1": 1685.3333333333333
       },
       {
-        "x0": 334.0,
-        "y0": 644.0,
-        "x1": 1002.0,
-        "y1": 1312.0
+        "x0": 445.3333333333333,
+        "y0": 1064.0,
+        "x1": 1069.3333333333333,
+        "y1": 1688.0
       },
       {
-        "x0": 704.0,
-        "y0": 930.0,
-        "x1": 910.0,
-        "y1": 1136.0
-      },
-      {
-        "x0": 140.0,
-        "y0": 642.0,
-        "x1": 870.0,
-        "y1": 1372.0
-      },
-      {
-        "x0": 618.0,
-        "y0": 912.0,
-        "x1": 736.0,
-        "y1": 1030.0
-      },
-      {
-        "x0": 544.0,
-        "y0": 750.0,
-        "x1": 644.0,
-        "y1": 850.0
+        "x0": 554.6666666666666,
+        "y0": 1229.3333333333333,
+        "x1": 968.0000000000001,
+        "y1": 1642.6666666666665
       }
     ],
     "visual_rules": {
@@ -92,10 +74,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 155,
-      "last_posted_at": "2026-09-21T11:21:25.898Z",
-      "last_video": "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4",
-      "last_overlay": "Eu vim cantar. A música resolveu conversar com quem tava ouvindo.",
+      "posts_total": 156,
+      "last_posted_at": "2026-09-21T17:11:14.657Z",
+      "last_video": "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4",
+      "last_overlay": "Isso aqui tem cara de música que alguém vai mandar sem explicar nada.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -135,7 +117,7 @@
         "66DDCAFF-E155-463B-B226-F8270C9B5E3A.mp4": 2,
         "6AA0991D-5050-4107-A363-6D0C646C5741.mp4": 2,
         "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4": 1,
-        "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4": 1,
+        "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4": 2,
         "6FFB8681-5089-4A43-8E3C-ED1F0A6BB8D8.mp4": 1,
         "71F75039-C662-4FCA-AD77-6433FC9FC4E1.mp4": 3,
         "83093820-DCDB-4081-BE78-1118698B99C6.mp4": 1,
@@ -186,7 +168,7 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas.",
+      "last_caption": "Qual detalhe musical fez você parar a rolagem? Escuta outra vez e me diz.",
       "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
@@ -339,7 +321,8 @@
         "Aqui está o segundo em que a música muda tudo.",
         "De repente, o vídeo vira só cenário para a música.",
         "Você ia passar, mas esta voz pediu mais dez segundos.",
-        "Eu vim cantar. A música resolveu conversar com quem tava ouvindo."
+        "Eu vim cantar. A música resolveu conversar com quem tava ouvindo.",
+        "Isso aqui tem cara de música que alguém vai mandar sem explicar nada."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -492,7 +475,8 @@
         "A primeira nota fez uma promessa e a próxima cumpriu. Você ouviu até onde?",
         "Essa entrou na categoria: não precisava ouvir hoje, mas ainda bem que ouvi.",
         "Tem dia que eu posto pra cantar. Em outros, percebo que a música acaba falando com alguém do outro lado.",
-        "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas."
+        "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas.",
+        "Qual detalhe musical fez você parar a rolagem? Escuta outra vez e me diz."
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -502,20 +486,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6ab112c472aeda4693ee78e5",
+      "last_buffer_post_id": "6ab164ca9d554f7b28a32153",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7687946705018555655",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7688036879240891668",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
   "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6ab164ca9d554f7b28a32153",
+  "post_id": "6ab18ec7d49759cdac79064e",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-21T17:11:14.657Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7688036879240891668",
+  "sent_at": "2026-09-21T20:10:27.300Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7688083076089433365",
   "success": true,
-  "finished_at": "2026-09-21T17:11:22.963155+00:00"
+  "finished_at": "2026-09-21T20:10:32.161196+00:00"
 }

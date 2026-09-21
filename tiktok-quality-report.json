@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4",
-  "overlay": "Eu vim cantar. A música resolveu conversar com quem tava ouvindo.",
+  "video": "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4",
+  "overlay": "Isso aqui tem cara de música que alguém vai mandar sem explicar nada.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.04791666666666667,
+    "y0": 0.15703125,
     "x1": 0.9555555555555556,
-    "y1": 0.121875
+    "y1": 0.2828125
   },
-  "faces_checked": 8,
+  "faces_checked": 6,
   "failures": []
 }
