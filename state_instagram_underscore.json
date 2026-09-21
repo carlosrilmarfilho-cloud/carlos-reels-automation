@@ -1,6 +1,6 @@
 {
   "video_index": 1,
-  "posts_total": 82,
+  "posts_total": 83,
   "blocked_videos": [
     "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
   ],
@@ -62,10 +62,12 @@
     "913C4B82-A346-496C-846C-243F68ABE625.mp4": 1,
     "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4": 1,
     "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4": 1,
-    "6AA0991D-5050-4107-A363-6D0C646C5741.mp4": 1
+    "6AA0991D-5050-4107-A363-6D0C646C5741.mp4": 1,
+    "F5F80DA0-ECAC-4B2A-90F3-5D1F3F00E07F.mp4": 1
   },
   "recent_overlays": [
     "Tá aí a terapia que você precisa 🪗🎶❤️",
+    "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
     "Tá aí a terapia que você precisa",
@@ -228,14 +230,15 @@
     "Poucas notas entregaram a canção inteira. Qual instrumento você ouviu primeiro?",
     "Qual detalhe musical fez você parar a rolagem? Escuta outra vez e me diz.",
     "Presta atenção na mudança de tom. Foi ali que a música te pegou?",
-    "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?"
+    "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?",
+    "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe."
   ],
-  "last_video": "6AA0991D-5050-4107-A363-6D0C646C5741.mp4",
+  "last_video": "F5F80DA0-ECAC-4B2A-90F3-5D1F3F00E07F.mp4",
   "last_overlay": "Tá aí a terapia que você precisa",
   "last_mode": "trial",
   "last_media_id": "18112266332063101",
-  "last_posted_at": "2026-09-21T17:11:46.105817+00:00",
+  "last_posted_at": "2026-09-21T20:07:16.028030+00:00",
   "last_attempted_video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
-  "last_caption": "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?",
-  "last_hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento"
+  "last_caption": "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe.",
+  "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil"
 }
