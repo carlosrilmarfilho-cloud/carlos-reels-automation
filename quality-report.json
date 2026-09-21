@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "9ACC0CB2-136E-41C6-86F3-F837E3CE5490.mp4",
-  "overlay": "Aqui está o segundo em que a música muda tudo.",
+  "video": "30620ACB-E217-45FD-9002-E09469B7A763.mp4",
+  "overlay": "Tem refrão que funciona melhor quando pega a gente desprevenido.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.15703125,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.2828125
   },
-  "faces_checked": 7,
+  "faces_checked": 5,
   "failures": []
 }
