@@ -1,12 +1,12 @@
 {
   "passed": true,
-  "video": "71F75039-C662-4FCA-AD77-6433FC9FC4E1.mp4",
-  "overlay": "Tem música que pede replay antes mesmo de terminar.",
+  "video": "30E3E09C-22BC-4D18-B5CC-D5DF595ED34D.mp4",
+  "overlay": "Eu não sei o que essa música te lembra. Em mim, ela mexeu aqui.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.15703125,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.2828125
   },
   "faces_checked": 8,
   "failures": []
