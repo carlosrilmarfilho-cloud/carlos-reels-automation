@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4",
-  "overlay": "Primeiro vem a batida; depois, a lembrança encontra você.",
+  "video": "9ACC0CB2-136E-41C6-86F3-F837E3CE5490.mp4",
+  "overlay": "Aqui está o segundo em que a música muda tudo.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.15703125,
+    "y0": 0.174609375,
     "x1": 0.9555555555555556,
-    "y1": 0.2828125
+    "y1": 0.265234375
   },
-  "faces_checked": 8,
+  "faces_checked": 7,
   "failures": []
 }
