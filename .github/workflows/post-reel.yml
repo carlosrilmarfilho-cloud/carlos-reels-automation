@@ -3,8 +3,8 @@ name: Postar 5 Reels por dia no Instagram
 on:
   schedule:
     # O gate interno só permite 08h, 11h, 14h, 17h e 20h BRT e deduplica por janela.
-    # O cron contínuo fornece recuperação contra atrasos do agendador do GitHub.
-    - cron: '7,22,37,52 * * * *'
+    # O cron a cada 5 minutos fornece recuperação contra atrasos do agendador do GitHub.
+    - cron: '3,8,13,18,23,28,33,38,43,48,53,58 * * * *'
   workflow_dispatch:
   push:
     paths:
