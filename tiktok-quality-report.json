@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "C031AA4C-509B-46F6-8480-EB30D15FE161.mp4",
-  "overlay": "Você ia passar, mas esta voz pediu mais dez segundos.",
+  "video": "83705997-8DD6-40D1-9CE9-E5AD69108BA7.mp4",
+  "overlay": "Eu vim cantar. A música resolveu conversar com quem tava ouvindo.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.17395833333333333,
+    "y0": 0.04791666666666667,
     "x1": 0.9555555555555556,
-    "y1": 0.265625
+    "y1": 0.121875
   },
-  "faces_checked": 5,
+  "faces_checked": 8,
   "failures": []
 }
