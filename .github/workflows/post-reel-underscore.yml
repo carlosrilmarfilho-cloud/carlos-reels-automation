@@ -2,9 +2,9 @@ name: Postar 5 Trial Reels no Instagram com underline
 
 on:
   schedule:
-    # 08h, 11h, 14h, 17h e 20h em Fortaleza/Brasília (UTC-3).
-    # :17, :37 e :57 são apenas oportunidades de recuperação dentro da mesma janela.
-    - cron: '17,37,57 11,14,17,20,23 * * *'
+    # O gate interno só permite 08h, 11h, 14h, 17h e 20h BRT e deduplica por janela.
+    # O cron contínuo fornece recuperação contra atrasos do agendador do GitHub.
+    - cron: '12,27,42,57 * * * *'
   workflow_dispatch:
   push:
     paths:
