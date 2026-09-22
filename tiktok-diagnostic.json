@@ -1,75 +1,93 @@
 {
-  "started_at": "2026-09-22T11:30:57.525181+00:00",
+  "started_at": "2026-09-22T14:54:40.326057+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
-  "stage": "success",
-  "caption_length": 121,
+  "stage": "confirm_delivery",
+  "caption_length": 127,
   "source_candidate": {
-    "name": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
-    "drive_id": "1UTq1Bnuy0TyVDqybUDj2mFESsup6S9GU",
-    "sha256": "6f79a88d3f341d99c30c18550319ef708f6bd02f57c2ed128e156cf78e2e692b"
+    "name": "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4",
+    "drive_id": "10frOMs5IY0mfiePBhzrdNbleb3fAZYh9",
+    "sha256": "4069af8f7e1897bdb4ad653ac8125a84c20c466f60aaa294834d53c98a9837c8"
   },
   "metadata_snapshot": {
-    "video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
+    "video": "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 0,
-    "overlay": "Primeiro vem a batida; depois, a lembrança encontra você.",
-    "caption": "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia.\n\n#musica #reelsbrasil #som #boamusica #brasil",
-    "hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
+    "variant_index": 9,
+    "overlay": "Tem música que pede replay antes mesmo de terminar.",
+    "caption": "Talvez este fosse o som que faltava no teu dia. Salva para ouvir com calma.\n\n#boamusica #reelsbrasil #musica #brasil #reels",
+    "hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
     "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 121,
+      "y0": 447,
       "x1": 1376,
-      "y1": 443
+      "y1": 679
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.047265625,
+      "y0": 0.174609375,
       "x1": 0.9555555555555556,
-      "y1": 0.173046875
+      "y1": 0.265234375
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 224.0,
-        "y0": 893.3333333333333,
-        "x1": 984.0,
+        "x0": 226.66666666666669,
+        "y0": 965.3333333333333,
+        "x1": 994.6666666666667,
+        "y1": 1733.3333333333335
+      },
+      {
+        "x0": 66.66666666666666,
+        "y0": 973.3333333333333,
+        "x1": 744.0000000000001,
+        "y1": 1650.6666666666665
+      },
+      {
+        "x0": 138.66666666666666,
+        "y0": 1466.6666666666665,
+        "x1": 349.3333333333333,
+        "y1": 1677.3333333333333
+      },
+      {
+        "x0": 146.66666666666666,
+        "y0": 869.3333333333334,
+        "x1": 930.6666666666666,
         "y1": 1653.3333333333335
       },
       {
-        "x0": 541.3333333333334,
-        "y0": 1229.3333333333335,
-        "x1": 919.9999999999999,
-        "y1": 1608.0
+        "x0": 245.33333333333331,
+        "y0": 1274.6666666666667,
+        "x1": 589.3333333333334,
+        "y1": 1618.6666666666667
       },
       {
-        "x0": 290.6666666666667,
-        "y0": 1002.6666666666666,
-        "x1": 1160.0,
-        "y1": 1872.0
+        "x0": 103.99999999999999,
+        "y0": 1520.0,
+        "x1": 370.6666666666667,
+        "y1": 1786.6666666666665
       },
       {
-        "x0": 378.66666666666663,
-        "y0": 877.3333333333334,
-        "x1": 1322.6666666666667,
-        "y1": 1821.3333333333333
+        "x0": 362.66666666666663,
+        "y0": 1368.0,
+        "x1": 533.3333333333333,
+        "y1": 1538.6666666666667
       },
       {
-        "x0": 909.3333333333334,
-        "y0": 1245.3333333333333,
-        "x1": 1280.0,
-        "y1": 1616.0
+        "x0": 325.3333333333333,
+        "y0": 893.3333333333333,
+        "x1": 1056.0,
+        "y1": 1624.0
       },
       {
-        "x0": 391.99999999999994,
-        "y0": 957.3333333333334,
-        "x1": 1128.0,
-        "y1": 1693.3333333333335
+        "x0": 408.0,
+        "y0": 906.6666666666667,
+        "x1": 1162.6666666666667,
+        "y1": 1661.3333333333333
       }
     ],
     "visual_rules": {
@@ -80,10 +98,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 158,
-      "last_posted_at": "2026-09-21T23:19:15.737Z",
-      "last_video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
-      "last_overlay": "Primeiro vem a batida; depois, a lembrança encontra você.",
+      "posts_total": 159,
+      "last_posted_at": "2026-09-22T11:33:36.729Z",
+      "last_video": "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4",
+      "last_overlay": "Tem música que pede replay antes mesmo de terminar.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -143,7 +161,7 @@
         "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4": 2,
         "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 2,
         "1287DDFF-011C-4141-B09E-249B63C95F08.mp4": 1,
-        "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4": 1,
+        "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4": 2,
         "15B0403C-2ECE-4915-B49E-4D477362302F.mp4": 1,
         "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4": 1,
         "15EA0363-A2B0-4F7C-BB26-BFB45F8454E0.mp4": 2,
@@ -174,8 +192,8 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia.",
-      "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
+      "last_caption": "Talvez este fosse o som que faltava no teu dia. Salva para ouvir com calma.",
+      "last_hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -330,7 +348,8 @@
         "Eu vim cantar. A música resolveu conversar com quem tava ouvindo.",
         "Isso aqui tem cara de música que alguém vai mandar sem explicar nada.",
         "A cabeça tava em outro lugar até essa voz entrar.",
-        "Primeiro vem a batida; depois, a lembrança encontra você."
+        "Primeiro vem a batida; depois, a lembrança encontra você.",
+        "Tem música que pede replay antes mesmo de terminar."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -486,7 +505,8 @@
         "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas.",
         "Qual detalhe musical fez você parar a rolagem? Escuta outra vez e me diz.",
         "Tem voz que impressiona pela técnica. Tem voz que prende porque parece verdade. Eu fico com a segunda.",
-        "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia."
+        "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia.",
+        "Talvez este fosse o som que faltava no teu dia. Salva para ouvir com calma."
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -496,20 +516,22 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6ab1bb0a1177eabccaf1ba4a",
+      "last_buffer_post_id": "6ab266f25cfcad806a3aee5c",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7688131494966988049",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7688320834733231377",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
+  "hashtags_snapshot": "#boamusica #tiktokbrasil #musica #brasil #paravoce",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6ab266f25cfcad806a3aee5c",
+  "post_id": "6ab296b1dae2e648e5d8173d",
   "initial_status": "sending",
-  "buffer_status": "sent",
-  "sent_at": "2026-09-22T11:33:36.729Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7688320834733231377",
-  "success": true,
-  "finished_at": "2026-09-22T11:33:41.236185+00:00"
+  "buffer_status": "sending",
+  "sent_at": null,
+  "external_link": null,
+  "success": false,
+  "error_type": "RuntimeError",
+  "error": "Buffer não confirmou publicação no TikTok em 10 minutos; último status: sending",
+  "finished_at": "2026-09-22T15:04:54.553222+00:00"
 }
