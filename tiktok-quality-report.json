@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "15B0403C-2ECE-4915-B49E-4D477362302F.mp4",
-  "overlay": "Presta atenção no instante em que tudo muda de tom.",
+  "video": "1287DDFF-011C-4141-B09E-249B63C95F08.mp4",
+  "overlay": "Eu não sei o que essa música te lembra. Em mim, ela mexeu aqui.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.04635416666666667,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.1734375
   },
-  "faces_checked": 2,
+  "faces_checked": 7,
   "failures": []
 }
