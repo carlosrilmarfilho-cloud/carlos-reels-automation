@@ -1,9 +1,9 @@
 {
   "video_index": 1,
-  "posts_total": 159,
-  "last_posted_at": "2026-09-22T16:08:38.063Z",
-  "last_video": "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4",
-  "last_overlay": "Tem música que pede replay antes mesmo de terminar.",
+  "posts_total": 160,
+  "last_posted_at": "2026-09-22T20:18:52.055Z",
+  "last_video": "15B0403C-2ECE-4915-B49E-4D477362302F.mp4",
+  "last_overlay": "Presta atenção no instante em que tudo muda de tom.",
   "last_mode": "buffer_auto_confirmed",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -64,7 +64,7 @@
     "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 2,
     "1287DDFF-011C-4141-B09E-249B63C95F08.mp4": 1,
     "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4": 2,
-    "15B0403C-2ECE-4915-B49E-4D477362302F.mp4": 1,
+    "15B0403C-2ECE-4915-B49E-4D477362302F.mp4": 2,
     "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4": 1,
     "15EA0363-A2B0-4F7C-BB26-BFB45F8454E0.mp4": 2,
     "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4": 1,
@@ -94,7 +94,7 @@
     "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
     "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
   },
-  "last_caption": "Talvez este fosse o som que faltava no teu dia. Salva para ouvir com calma.",
+  "last_caption": "Eu gosto quando a música segura a pessoa sem precisar inventar efeito, texto ou promessa. Só a música mesmo.",
   "last_hashtags": "#boamusica #tiktokbrasil #musica #brasil #paravoce",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
@@ -251,7 +251,8 @@
     "Isso aqui tem cara de música que alguém vai mandar sem explicar nada.",
     "A cabeça tava em outro lugar até essa voz entrar.",
     "Primeiro vem a batida; depois, a lembrança encontra você.",
-    "Tem música que pede replay antes mesmo de terminar."
+    "Tem música que pede replay antes mesmo de terminar.",
+    "Presta atenção no instante em que tudo muda de tom."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -408,7 +409,8 @@
     "Qual detalhe musical fez você parar a rolagem? Escuta outra vez e me diz.",
     "Tem voz que impressiona pela técnica. Tem voz que prende porque parece verdade. Eu fico com a segunda.",
     "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia.",
-    "Talvez este fosse o som que faltava no teu dia. Salva para ouvir com calma."
+    "Talvez este fosse o som que faltava no teu dia. Salva para ouvir com calma.",
+    "Eu gosto quando a música segura a pessoa sem precisar inventar efeito, texto ou promessa. Só a música mesmo."
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -418,8 +420,8 @@
     "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6ab296b1dae2e648e5d8173d",
+  "last_buffer_post_id": "6ab2e241d98e7b46aec67886",
   "last_buffer_status": "sent",
-  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7688388710529764628",
+  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7688456282772114704",
   "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
 }
