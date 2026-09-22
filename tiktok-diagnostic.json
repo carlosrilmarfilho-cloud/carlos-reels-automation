@@ -1,9 +1,9 @@
 {
-  "started_at": "2026-09-22T14:54:40.326057+00:00",
+  "started_at": "2026-09-22T17:35:42.814552+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
-  "stage": "confirm_delivery",
-  "caption_length": 127,
+  "stage": "success",
+  "post_id": "6ab296b1dae2e648e5d8173d",
   "source_candidate": {
     "name": "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4",
     "drive_id": "10frOMs5IY0mfiePBhzrdNbleb3fAZYh9",
@@ -523,15 +523,9 @@
     }
   },
   "hashtags_snapshot": "#boamusica #tiktokbrasil #musica #brasil #paravoce",
-  "channel_id": "6a8d782bccaf649a671248a9",
-  "channel_name": "carlosrilmarfilho",
-  "post_id": "6ab296b1dae2e648e5d8173d",
-  "initial_status": "sending",
-  "buffer_status": "sending",
-  "sent_at": null,
-  "external_link": null,
-  "success": false,
-  "error_type": "RuntimeError",
-  "error": "Buffer não confirmou publicação no TikTok em 10 minutos; último status: sending",
-  "finished_at": "2026-09-22T15:04:54.553222+00:00"
+  "buffer_status": "sent",
+  "sent_at": "2026-09-22T16:08:38.063Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7688388710529764628",
+  "success": true,
+  "finished_at": "2026-09-22T17:35:52.096082+00:00"
 }
