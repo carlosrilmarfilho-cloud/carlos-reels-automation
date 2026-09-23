@@ -1,9 +1,9 @@
 {
-  "started_at": "2026-09-22T23:16:36.989592+00:00",
+  "started_at": "2026-09-23T11:21:49.861491+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
-  "stage": "confirm_delivery",
-  "caption_length": 139,
+  "stage": "success",
+  "post_id": "6ab30c56340f92dcbe187e12",
   "source_candidate": {
     "name": "1287DDFF-011C-4141-B09E-249B63C95F08.mp4",
     "drive_id": "1TGk5j_s1D7paX943cXIdZjH2fxH3AclV",
@@ -527,15 +527,9 @@
     }
   },
   "hashtags_snapshot": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
-  "channel_id": "6a8d782bccaf649a671248a9",
-  "channel_name": "carlosrilmarfilho",
-  "post_id": "6ab30c56340f92dcbe187e12",
-  "initial_status": "sending",
-  "buffer_status": "sending",
-  "sent_at": null,
-  "external_link": null,
-  "success": false,
-  "error_type": "RuntimeError",
-  "error": "Buffer não confirmou publicação no TikTok em 10 minutos; último status: sending",
-  "finished_at": "2026-09-22T23:26:53.908241+00:00"
+  "buffer_status": "sent",
+  "sent_at": "2026-09-22T23:51:27.277Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7688507637079526677",
+  "success": true,
+  "finished_at": "2026-09-23T11:21:50.047321+00:00"
 }
