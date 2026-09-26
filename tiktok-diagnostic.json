@@ -1,87 +1,69 @@
 {
-  "started_at": "2026-09-26T20:03:39.468865+00:00",
+  "started_at": "2026-09-26T23:44:38.336564+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 139,
+  "caption_length": 132,
   "source_candidate": {
-    "name": "99069C52-1345-4260-8C4A-C7B611E1BC84.mp4",
-    "drive_id": "1VnJO5vGo_l0eyGDTvKRHDuYHvt887Tja",
-    "sha256": "5cba19519c43ecea7b1b500226ff35e2e3382c3c9956078f1b9c7caca05be72f"
+    "name": "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4",
+    "drive_id": "1VK0QVkBZtXlIbGX3aM7Stbcq1x3DYEYB",
+    "sha256": "b03e2108980ec98405dc52874921bcd8a10167c346a17f5094c2a47d29f44b1c"
   },
   "metadata_snapshot": {
-    "video": "99069C52-1345-4260-8C4A-C7B611E1BC84.mp4",
+    "video": "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 23,
-    "overlay": "Alguma coisa nesta interpretação faz a tela esperar.",
-    "caption": "Se você parou a rolagem por causa da voz, me diz qual detalhe te fez ficar.\n\n#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
-    "hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
-    "source_resolution": "2160x3840",
+    "variant_index": 0,
+    "overlay": "Repara na letra: ela diz mais do que parece.",
+    "caption": "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂\n\n#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
+    "hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
+    "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 402,
+      "y0": 447,
       "x1": 1376,
-      "y1": 724
+      "y1": 679
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.15703125,
+      "y0": 0.174609375,
       "x1": 0.9555555555555556,
-      "y1": 0.2828125
+      "y1": 0.265234375
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 922.6666666666666,
-        "y0": 1573.3333333333333,
-        "x1": 1058.6666666666665,
-        "y1": 1709.3333333333333
+        "x0": 850.6666666666667,
+        "y0": 1136.0,
+        "x1": 1224.0,
+        "y1": 1509.3333333333335
       },
       {
-        "x0": 384.0,
-        "y0": 1117.3333333333333,
-        "x1": 1061.3333333333333,
-        "y1": 1794.6666666666665
+        "x0": 952.0,
+        "y0": 976.0,
+        "x1": 1272.0,
+        "y1": 1296.0
       },
       {
-        "x0": 309.3333333333333,
-        "y0": 1093.3333333333333,
-        "x1": 1160.0,
-        "y1": 1944.0
+        "x0": 744.0000000000001,
+        "y0": 880.0,
+        "x1": 1112.0,
+        "y1": 1248.0
       },
       {
-        "x0": 146.66666666666666,
-        "y0": 1002.6666666666666,
-        "x1": 1136.0,
-        "y1": 1992.0
+        "x0": 418.6666666666667,
+        "y0": 1128.0,
+        "x1": 634.6666666666667,
+        "y1": 1344.0
       },
       {
-        "x0": 586.6666666666666,
-        "y0": 1274.6666666666665,
-        "x1": 738.6666666666666,
-        "y1": 1426.6666666666665
-      },
-      {
-        "x0": 1256.0,
-        "y0": 1973.3333333333333,
-        "x1": 1402.6666666666665,
-        "y1": 2120.0
-      },
-      {
-        "x0": 360.0,
-        "y0": 1053.3333333333333,
-        "x1": 594.6666666666666,
-        "y1": 1288.0
-      },
-      {
-        "x0": 525.3333333333333,
-        "y0": 1104.0,
-        "x1": 893.3333333333333,
-        "y1": 1472.0
+        "x0": 1210.6666666666667,
+        "y0": 1234.6666666666667,
+        "x1": 1376.0,
+        "y1": 1400.0
       }
     ],
     "visual_rules": {
@@ -92,10 +74,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 164,
-      "last_posted_at": "2026-09-26T17:15:24.974Z",
-      "last_video": "99069C52-1345-4260-8C4A-C7B611E1BC84.mp4",
-      "last_overlay": "Alguma coisa nesta interpretação faz a tela esperar.",
+      "posts_total": 165,
+      "last_posted_at": "2026-09-26T20:05:29.665Z",
+      "last_video": "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4",
+      "last_overlay": "Repara na letra: ela diz mais do que parece.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -157,7 +139,7 @@
         "1287DDFF-011C-4141-B09E-249B63C95F08.mp4": 2,
         "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4": 2,
         "15B0403C-2ECE-4915-B49E-4D477362302F.mp4": 2,
-        "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4": 1,
+        "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4": 2,
         "15EA0363-A2B0-4F7C-BB26-BFB45F8454E0.mp4": 2,
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4": 1,
         "D973D64E-09CC-49E9-8335-A84F2FF133D2.mp4": 1,
@@ -186,8 +168,8 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "Se você parou a rolagem por causa da voz, me diz qual detalhe te fez ficar.",
-      "last_hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
+      "last_caption": "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂",
+      "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -348,7 +330,8 @@
         "Eu não sei o que essa música te lembra. Em mim, ela mexeu aqui.",
         "Tenta passar direto depois de ouvir esta parte.",
         "Poucas notas bastam para entregar uma canção inesquecível.",
-        "Alguma coisa nesta interpretação faz a tela esperar."
+        "Alguma coisa nesta interpretação faz a tela esperar.",
+        "Repara na letra: ela diz mais do que parece."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -510,7 +493,8 @@
         "O trecho chegou na hora certa ou foi coincidência? Diz o que ele despertou.",
         "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?",
         "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?",
-        "Se você parou a rolagem por causa da voz, me diz qual detalhe te fez ficar."
+        "Se você parou a rolagem por causa da voz, me diz qual detalhe te fez ficar.",
+        "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂"
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -520,20 +504,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6ab7fd3e9f89edbefe79516d",
+      "last_buffer_post_id": "6ab8251f4b4b9f2c1c56c785",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7689893391961705749",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7689937221599628551",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
+  "hashtags_snapshot": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6ab8251f4b4b9f2c1c56c785",
+  "post_id": "6ab858e89f89edbefe828cd4",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-26T20:05:29.665Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7689937221599628551",
+  "sent_at": "2026-09-26T23:46:36.343Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7689993795177336065",
   "success": true,
-  "finished_at": "2026-09-26T20:05:34.930707+00:00"
+  "finished_at": "2026-09-26T23:46:43.560549+00:00"
 }
