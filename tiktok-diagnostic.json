@@ -1,63 +1,57 @@
 {
-  "started_at": "2026-09-26T14:02:24.688047+00:00",
+  "started_at": "2026-09-26T17:13:32.724844+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 122,
+  "caption_length": 138,
   "source_candidate": {
-    "name": "83093820-DCDB-4081-BE78-1118698B99C6.mp4",
-    "drive_id": "15QhyWX2dAED4pW1NvuzF0UkDIGYr3RtG",
-    "sha256": "ffc6c7e72d294aa34fcad3bd5594064852e158b4ee8e1d4f0f29ed3a08a98b72"
+    "name": "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4",
+    "drive_id": "1y25wW9TztDaRkkVhhdZ3oS7YTkmeufTG",
+    "sha256": "21e5b7537ee103b02adadca49217ecac04a021345ff1661eabee4a2edd04fa8e"
   },
   "metadata_snapshot": {
-    "video": "83093820-DCDB-4081-BE78-1118698B99C6.mp4",
+    "video": "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 0,
-    "overlay": "Tenta passar direto depois de ouvir esta parte.",
-    "caption": "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?\n\n#musica #reelsbrasil #som #boamusica #brasil",
-    "hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
+    "variant_index": 12,
+    "overlay": "Poucas notas bastam para entregar uma canção inesquecível.",
+    "caption": "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?\n\n#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
+    "hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
     "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 447,
+      "y0": 402,
       "x1": 1376,
-      "y1": 679
+      "y1": 724
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.174609375,
+      "y0": 0.15703125,
       "x1": 0.9555555555555556,
-      "y1": 0.265234375
+      "y1": 0.2828125
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 330.6666666666667,
-        "y0": 1344.0,
-        "x1": 810.6666666666667,
-        "y1": 1824.0
+        "x0": 565.3333333333334,
+        "y0": 1472.0,
+        "x1": 813.3333333333333,
+        "y1": 1720.0
       },
       {
-        "x0": 362.66666666666663,
-        "y0": 1304.0,
-        "x1": 941.3333333333333,
-        "y1": 1882.6666666666667
+        "x0": 493.33333333333337,
+        "y0": 960.0,
+        "x1": 922.6666666666666,
+        "y1": 1389.3333333333335
       },
       {
-        "x0": 637.3333333333334,
-        "y0": 1418.6666666666667,
-        "x1": 952.0,
-        "y1": 1733.3333333333335
-      },
-      {
-        "x0": 418.6666666666667,
-        "y0": 1357.3333333333333,
-        "x1": 864.0,
-        "y1": 1802.6666666666667
+        "x0": 450.66666666666663,
+        "y0": 1002.6666666666666,
+        "x1": 1010.6666666666666,
+        "y1": 1562.6666666666667
       }
     ],
     "visual_rules": {
@@ -68,10 +62,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 162,
-      "last_posted_at": "2026-09-22T23:51:27.277Z",
-      "last_video": "83093820-DCDB-4081-BE78-1118698B99C6.mp4",
-      "last_overlay": "Tenta passar direto depois de ouvir esta parte.",
+      "posts_total": 163,
+      "last_posted_at": "2026-09-26T14:07:25.697Z",
+      "last_video": "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4",
+      "last_overlay": "Poucas notas bastam para entregar uma canção inesquecível.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -119,7 +113,7 @@
         "868797B9-A7FB-40EF-9431-ADEA273423C9.mp4": 1,
         "8DA4425C-CCE2-46B2-9116-2A947856E053.mp4": 1,
         "99069C52-1345-4260-8C4A-C7B611E1BC84.mp4": 1,
-        "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4": 1,
+        "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4": 2,
         "913C4B82-A346-496C-846C-243F68ABE625.mp4": 2,
         "9ACC0CB2-136E-41C6-86F3-F837E3CE5490.mp4": 2,
         "B27F702C-D111-43BF-8EA0-8F9257EC9546.mp4": 2,
@@ -162,8 +156,8 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?",
-      "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
+      "last_caption": "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?",
+      "last_hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -322,7 +316,8 @@
         "Tem música que pede replay antes mesmo de terminar.",
         "Presta atenção no instante em que tudo muda de tom.",
         "Eu não sei o que essa música te lembra. Em mim, ela mexeu aqui.",
-        "Tenta passar direto depois de ouvir esta parte."
+        "Tenta passar direto depois de ouvir esta parte.",
+        "Poucas notas bastam para entregar uma canção inesquecível."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -482,7 +477,8 @@
         "Talvez este fosse o som que faltava no teu dia. Salva para ouvir com calma.",
         "Eu gosto quando a música segura a pessoa sem precisar inventar efeito, texto ou promessa. Só a música mesmo.",
         "O trecho chegou na hora certa ou foi coincidência? Diz o que ele despertou.",
-        "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?"
+        "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?",
+        "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?"
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -492,20 +488,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6ab30c56340f92dcbe187e12",
+      "last_buffer_post_id": "6ab7d073ccccb9429c2f2a16",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7688507637079526677",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7689844829831875860",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
+  "hashtags_snapshot": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6ab7d073ccccb9429c2f2a16",
+  "post_id": "6ab7fd3e9f89edbefe79516d",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-26T14:07:25.697Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7689844829831875860",
+  "sent_at": "2026-09-26T17:15:24.974Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7689893391961705749",
   "success": true,
-  "finished_at": "2026-09-26T14:07:33.430706+00:00"
+  "finished_at": "2026-09-26T17:15:26.799090+00:00"
 }
