@@ -1,9 +1,9 @@
 {
   "video_index": 1,
-  "posts_total": 163,
-  "last_posted_at": "2026-09-26T17:15:24.974Z",
-  "last_video": "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4",
-  "last_overlay": "Poucas notas bastam para entregar uma canção inesquecível.",
+  "posts_total": 164,
+  "last_posted_at": "2026-09-26T20:05:29.665Z",
+  "last_video": "99069C52-1345-4260-8C4A-C7B611E1BC84.mp4",
+  "last_overlay": "Alguma coisa nesta interpretação faz a tela esperar.",
   "last_mode": "buffer_auto_confirmed",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -50,7 +50,7 @@
     "85F02D78-FE04-447B-A11C-DBD5C74D45A2.mp4": 1,
     "868797B9-A7FB-40EF-9431-ADEA273423C9.mp4": 1,
     "8DA4425C-CCE2-46B2-9116-2A947856E053.mp4": 1,
-    "99069C52-1345-4260-8C4A-C7B611E1BC84.mp4": 1,
+    "99069C52-1345-4260-8C4A-C7B611E1BC84.mp4": 2,
     "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4": 2,
     "913C4B82-A346-496C-846C-243F68ABE625.mp4": 2,
     "9ACC0CB2-136E-41C6-86F3-F837E3CE5490.mp4": 2,
@@ -94,7 +94,7 @@
     "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
     "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
   },
-  "last_caption": "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?",
+  "last_caption": "Se você parou a rolagem por causa da voz, me diz qual detalhe te fez ficar.",
   "last_hashtags": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
@@ -255,7 +255,8 @@
     "Presta atenção no instante em que tudo muda de tom.",
     "Eu não sei o que essa música te lembra. Em mim, ela mexeu aqui.",
     "Tenta passar direto depois de ouvir esta parte.",
-    "Poucas notas bastam para entregar uma canção inesquecível."
+    "Poucas notas bastam para entregar uma canção inesquecível.",
+    "Alguma coisa nesta interpretação faz a tela esperar."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -416,7 +417,8 @@
     "Eu gosto quando a música segura a pessoa sem precisar inventar efeito, texto ou promessa. Só a música mesmo.",
     "O trecho chegou na hora certa ou foi coincidência? Diz o que ele despertou.",
     "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?",
-    "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?"
+    "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?",
+    "Se você parou a rolagem por causa da voz, me diz qual detalhe te fez ficar."
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -426,8 +428,8 @@
     "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6ab7fd3e9f89edbefe79516d",
+  "last_buffer_post_id": "6ab8251f4b4b9f2c1c56c785",
   "last_buffer_status": "sent",
-  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7689893391961705749",
+  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7689937221599628551",
   "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
 }
