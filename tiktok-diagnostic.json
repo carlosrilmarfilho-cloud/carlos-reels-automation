@@ -1,93 +1,63 @@
 {
-  "started_at": "2026-09-23T11:21:49.861491+00:00",
+  "started_at": "2026-09-26T14:02:24.688047+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "post_id": "6ab30c56340f92dcbe187e12",
+  "caption_length": 122,
   "source_candidate": {
-    "name": "1287DDFF-011C-4141-B09E-249B63C95F08.mp4",
-    "drive_id": "1TGk5j_s1D7paX943cXIdZjH2fxH3AclV",
-    "sha256": "96aaf6872f14215c0879d3aa3ee3c6f7e9d1557cd03bc08a679c3e611f502ce6"
+    "name": "83093820-DCDB-4081-BE78-1118698B99C6.mp4",
+    "drive_id": "15QhyWX2dAED4pW1NvuzF0UkDIGYr3RtG",
+    "sha256": "ffc6c7e72d294aa34fcad3bd5594064852e158b4ee8e1d4f0f29ed3a08a98b72"
   },
   "metadata_snapshot": {
-    "video": "1287DDFF-011C-4141-B09E-249B63C95F08.mp4",
+    "video": "83093820-DCDB-4081-BE78-1118698B99C6.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
     "variant_index": 0,
-    "overlay": "Eu não sei o que essa música te lembra. Em mim, ela mexeu aqui.",
-    "caption": "O trecho chegou na hora certa ou foi coincidência? Diz o que ele despertou.\n\n#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
-    "hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
-    "source_resolution": "1080x1920",
-    "render_resolution": "1080x1920",
+    "overlay": "Tenta passar direto depois de ouvir esta parte.",
+    "caption": "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?\n\n#musica #reelsbrasil #som #boamusica #brasil",
+    "hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
+    "source_resolution": "1440x2560",
+    "render_resolution": "1440x2560",
     "overlay_rect_px": {
-      "x0": 48,
-      "y0": 89,
-      "x1": 1032,
-      "y1": 333
+      "x0": 64,
+      "y0": 447,
+      "x1": 1376,
+      "y1": 679
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.04635416666666667,
+      "y0": 0.174609375,
       "x1": 0.9555555555555556,
-      "y1": 0.1734375
+      "y1": 0.265234375
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 40.0,
-        "y0": 766.0,
-        "x1": 724.0,
-        "y1": 1450.0
+        "x0": 330.6666666666667,
+        "y0": 1344.0,
+        "x1": 810.6666666666667,
+        "y1": 1824.0
       },
       {
-        "x0": 28.0,
-        "y0": 768.0,
-        "x1": 722.0,
-        "y1": 1462.0
+        "x0": 362.66666666666663,
+        "y0": 1304.0,
+        "x1": 941.3333333333333,
+        "y1": 1882.6666666666667
       },
       {
-        "x0": 740.0,
-        "y0": 1410.0,
-        "x1": 884.0,
-        "y1": 1554.0
+        "x0": 637.3333333333334,
+        "y0": 1418.6666666666667,
+        "x1": 952.0,
+        "y1": 1733.3333333333335
       },
       {
-        "x0": 84.0,
-        "y0": 706.0,
-        "x1": 844.0,
-        "y1": 1466.0
-      },
-      {
-        "x0": 380.0,
-        "y0": 1024.0,
-        "x1": 618.0,
-        "y1": 1262.0
-      },
-      {
-        "x0": 44.0,
-        "y0": 806.0,
-        "x1": 752.0,
-        "y1": 1514.0
-      },
-      {
-        "x0": 6.0,
-        "y0": 732.0,
-        "x1": 794.0,
-        "y1": 1520.0
-      },
-      {
-        "x0": 66.0,
-        "y0": 734.0,
-        "x1": 858.0,
-        "y1": 1526.0
-      },
-      {
-        "x0": 90.0,
-        "y0": 750.0,
-        "x1": 914.0,
-        "y1": 1574.0
+        "x0": 418.6666666666667,
+        "y0": 1357.3333333333333,
+        "x1": 864.0,
+        "y1": 1802.6666666666667
       }
     ],
     "visual_rules": {
@@ -98,10 +68,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 161,
-      "last_posted_at": "2026-09-22T20:18:52.055Z",
-      "last_video": "1287DDFF-011C-4141-B09E-249B63C95F08.mp4",
-      "last_overlay": "Eu não sei o que essa música te lembra. Em mim, ela mexeu aqui.",
+      "posts_total": 162,
+      "last_posted_at": "2026-09-22T23:51:27.277Z",
+      "last_video": "83093820-DCDB-4081-BE78-1118698B99C6.mp4",
+      "last_overlay": "Tenta passar direto depois de ouvir esta parte.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -144,7 +114,7 @@
         "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4": 2,
         "6FFB8681-5089-4A43-8E3C-ED1F0A6BB8D8.mp4": 1,
         "71F75039-C662-4FCA-AD77-6433FC9FC4E1.mp4": 3,
-        "83093820-DCDB-4081-BE78-1118698B99C6.mp4": 1,
+        "83093820-DCDB-4081-BE78-1118698B99C6.mp4": 2,
         "85F02D78-FE04-447B-A11C-DBD5C74D45A2.mp4": 1,
         "868797B9-A7FB-40EF-9431-ADEA273423C9.mp4": 1,
         "8DA4425C-CCE2-46B2-9116-2A947856E053.mp4": 1,
@@ -192,8 +162,8 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "O trecho chegou na hora certa ou foi coincidência? Diz o que ele despertou.",
-      "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
+      "last_caption": "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?",
+      "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -351,7 +321,8 @@
         "Primeiro vem a batida; depois, a lembrança encontra você.",
         "Tem música que pede replay antes mesmo de terminar.",
         "Presta atenção no instante em que tudo muda de tom.",
-        "Eu não sei o que essa música te lembra. Em mim, ela mexeu aqui."
+        "Eu não sei o que essa música te lembra. Em mim, ela mexeu aqui.",
+        "Tenta passar direto depois de ouvir esta parte."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -510,7 +481,8 @@
         "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia.",
         "Talvez este fosse o som que faltava no teu dia. Salva para ouvir com calma.",
         "Eu gosto quando a música segura a pessoa sem precisar inventar efeito, texto ou promessa. Só a música mesmo.",
-        "O trecho chegou na hora certa ou foi coincidência? Diz o que ele despertou."
+        "O trecho chegou na hora certa ou foi coincidência? Diz o que ele despertou.",
+        "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?"
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -520,16 +492,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6ab2e241d98e7b46aec67886",
+      "last_buffer_post_id": "6ab30c56340f92dcbe187e12",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7688456282772114704",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7688507637079526677",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
+  "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
+  "channel_id": "6a8d782bccaf649a671248a9",
+  "channel_name": "carlosrilmarfilho",
+  "post_id": "6ab7d073ccccb9429c2f2a16",
+  "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-22T23:51:27.277Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7688507637079526677",
+  "sent_at": "2026-09-26T14:07:25.697Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7689844829831875860",
   "success": true,
-  "finished_at": "2026-09-23T11:21:50.047321+00:00"
+  "finished_at": "2026-09-26T14:07:33.430706+00:00"
 }
