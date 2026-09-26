@@ -1,9 +1,10 @@
-name: Kwai a cada hora
+name: Watchdog de publicação e Kwai
 
 on:
   schedule:
-    # Uma publicação por hora. Minuto 52 evita encostar nas execuções do Instagram (:07) e TikTok (:37).
-    - cron: '52 * * * *'
+    # O watchdog usa o cron que o GitHub vem entregando e só despacha publicadores
+    # quando falta confirmação dentro de uma das cinco horas oficiais (UTC).
+    - cron: '7,19,31,43,55 * * * *'
   workflow_dispatch:
   push:
     paths:
@@ -17,6 +18,62 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  recover-publishing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Baixar estado mais recente
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Despachar somente alvos sem confirmação na janela
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin "$GITHUB_REF_NAME"
+          git reset --hard "origin/$GITHUB_REF_NAME"
+          targets=$(python3 - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          now = datetime.now(timezone.utc)
+          if now.hour not in {11, 14, 17, 20, 23}:
+              raise SystemExit
+
+          targets = (
+              ("post-reel.yml", "state.json"),
+              ("post-reel-underscore.yml", "state_instagram_underscore.json"),
+              ("post-tiktok.yml", "state_tiktok.json"),
+          )
+          for workflow, filename in targets:
+              confirmed = False
+              path = Path(filename)
+              if path.exists():
+                  try:
+                      value = json.loads(path.read_text(encoding="utf-8")).get("last_posted_at")
+                      if value:
+                          last = datetime.fromisoformat(str(value).replace("Z", "+00:00")).astimezone(timezone.utc)
+                          confirmed = last.date() == now.date() and last.hour == now.hour
+                  except Exception:
+                      pass
+              if not confirmed:
+                  print(workflow)
+          PY
+          )
+          if [ -z "$targets" ]; then
+            echo "Todos os alvos já têm publicação confirmada nesta janela."
+            exit 0
+          fi
+          while IFS= read -r workflow; do
+            [ -n "$workflow" ] || continue
+            echo "Recuperando $workflow"
+            gh workflow run "$workflow" --ref "$GITHUB_REF_NAME"
+          done <<< "$targets"
+
   publish:
     runs-on: ubuntu-latest
     timeout-minutes: 30
