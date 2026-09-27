@@ -1,99 +1,99 @@
 {
-  "started_at": "2026-09-27T20:06:09.191358+00:00",
+  "started_at": "2026-09-27T23:22:34.698128+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 129,
+  "caption_length": 121,
   "source_candidate": {
-    "name": "41EF1F58-C757-4821-8692-EE6110066BFA.mp4",
-    "drive_id": "1vzkT_uSD-kV9b8Laeud1o-Vp-bx5QEt2",
-    "sha256": "c404e44dcc7a9be46cdb5b0584846bd58eb6a2d91689842b3c2d25b111048d4d"
+    "name": "868797B9-A7FB-40EF-9431-ADEA273423C9.mp4",
+    "drive_id": "1wcwryv7zwu5qBYsATAvzQpWxp_GB67g7",
+    "sha256": "1cc11eeb8203026442fa3cf8bccef4c84a2b5daabcbcca333146c9b6ad1d0a25"
   },
   "metadata_snapshot": {
-    "video": "41EF1F58-C757-4821-8692-EE6110066BFA.mp4",
+    "video": "868797B9-A7FB-40EF-9431-ADEA273423C9.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 23,
-    "overlay": "Um detalhe no arranjo muda toda a história.",
-    "caption": "Alguns refrões continuam trabalhando depois do fim. Este ficou na tua cabeça?\n\n#boamusica #reelsbrasil #musica #brasil #reels",
-    "hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
+    "variant_index": 12,
+    "overlay": "Hoje eu só queria cantar. Se virou terapia, foi consequência.",
+    "caption": "A primeira nota fez uma promessa e a próxima cumpriu. Você ouviu até onde?\n\n#musica #reelsbrasil #som #boamusica #brasil",
+    "hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
     "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 124,
+      "y0": 121,
       "x1": 1376,
-      "y1": 312
+      "y1": 443
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.0484375,
+      "y0": 0.047265625,
       "x1": 0.9555555555555556,
-      "y1": 0.121875
+      "y1": 0.173046875
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 328.0,
-        "y0": 1026.6666666666667,
-        "x1": 1296.0,
-        "y1": 1994.6666666666667
+        "x0": 264.0,
+        "y0": 893.3333333333333,
+        "x1": 1130.6666666666667,
+        "y1": 1760.0
       },
       {
-        "x0": 1213.3333333333333,
-        "y0": 1474.6666666666667,
-        "x1": 1432.0,
-        "y1": 1693.3333333333335
+        "x0": 1229.3333333333335,
+        "y0": 2280.0,
+        "x1": 1370.6666666666667,
+        "y1": 2421.333333333333
       },
       {
-        "x0": 925.3333333333334,
-        "y0": 749.3333333333334,
-        "x1": 1152.0,
-        "y1": 976.0
+        "x0": 197.33333333333334,
+        "y0": 866.6666666666667,
+        "x1": 1002.6666666666666,
+        "y1": 1672.0
       },
       {
-        "x0": 272.0,
-        "y0": 842.6666666666666,
-        "x1": 1325.3333333333333,
-        "y1": 1896.0
+        "x0": 245.33333333333331,
+        "y0": 853.3333333333333,
+        "x1": 1229.3333333333335,
+        "y1": 1837.3333333333333
       },
       {
-        "x0": 10.666666666666668,
-        "y0": 1829.3333333333335,
-        "x1": 466.6666666666667,
-        "y1": 2285.3333333333335
+        "x0": 677.3333333333334,
+        "y0": 1138.6666666666665,
+        "x1": 1048.0,
+        "y1": 1509.3333333333335
       },
       {
-        "x0": 186.66666666666666,
-        "y0": 1872.0,
-        "x1": 349.3333333333333,
-        "y1": 2034.6666666666667
+        "x0": 192.0,
+        "y0": 1610.6666666666665,
+        "x1": 376.0,
+        "y1": 1794.6666666666667
       },
       {
-        "x0": 280.0,
-        "y0": 896.0,
-        "x1": 1186.6666666666667,
-        "y1": 1802.6666666666667
+        "x0": 578.6666666666666,
+        "y0": 1096.0,
+        "x1": 957.3333333333334,
+        "y1": 1474.6666666666667
       },
       {
-        "x0": 1293.3333333333333,
-        "y0": 2384.0,
-        "x1": 1432.0,
-        "y1": 2522.666666666667
+        "x0": 306.6666666666667,
+        "y0": 853.3333333333333,
+        "x1": 1160.0,
+        "y1": 1706.6666666666665
       },
       {
-        "x0": 797.3333333333334,
-        "y0": 1037.3333333333333,
-        "x1": 1256.0,
-        "y1": 1496.0
+        "x0": 1037.3333333333333,
+        "y0": 1600.0,
+        "x1": 1408.0,
+        "y1": 1970.6666666666665
       },
       {
-        "x0": 517.3333333333334,
-        "y0": 1122.6666666666667,
-        "x1": 1186.6666666666667,
-        "y1": 1792.0
+        "x0": 773.3333333333334,
+        "y0": 1200.0,
+        "x1": 1104.0,
+        "y1": 1530.6666666666665
       }
     ],
     "visual_rules": {
@@ -104,10 +104,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 169,
-      "last_posted_at": "2026-09-27T17:14:05.400Z",
-      "last_video": "41EF1F58-C757-4821-8692-EE6110066BFA.mp4",
-      "last_overlay": "Um detalhe no arranjo muda toda a história.",
+      "posts_total": 170,
+      "last_posted_at": "2026-09-27T20:07:59.206Z",
+      "last_video": "868797B9-A7FB-40EF-9431-ADEA273423C9.mp4",
+      "last_overlay": "Hoje eu só queria cantar. Se virou terapia, foi consequência.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -152,7 +152,7 @@
         "71F75039-C662-4FCA-AD77-6433FC9FC4E1.mp4": 3,
         "83093820-DCDB-4081-BE78-1118698B99C6.mp4": 2,
         "85F02D78-FE04-447B-A11C-DBD5C74D45A2.mp4": 1,
-        "868797B9-A7FB-40EF-9431-ADEA273423C9.mp4": 1,
+        "868797B9-A7FB-40EF-9431-ADEA273423C9.mp4": 2,
         "8DA4425C-CCE2-46B2-9116-2A947856E053.mp4": 2,
         "99069C52-1345-4260-8C4A-C7B611E1BC84.mp4": 2,
         "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4": 2,
@@ -198,8 +198,8 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "Alguns refrões continuam trabalhando depois do fim. Este ficou na tua cabeça?",
-      "last_hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
+      "last_caption": "A primeira nota fez uma promessa e a próxima cumpriu. Você ouviu até onde?",
+      "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -365,7 +365,8 @@
         "Foi só a melodia entrar para a rolagem perder a vez.",
         "Tem refrão que funciona melhor quando pega a gente desprevenido.",
         "Dá mais dez segundos; essa melodia vai explicar por quê.",
-        "Um detalhe no arranjo muda toda a história."
+        "Um detalhe no arranjo muda toda a história.",
+        "Hoje eu só queria cantar. Se virou terapia, foi consequência."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -532,7 +533,8 @@
         "Você ficou mais dez segundos por causa da voz? Diz qual detalhe decidiu isso.",
         "Se ficou até o final, escolhe a próxima terapia musical nos comentários.",
         "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
-        "Alguns refrões continuam trabalhando depois do fim. Este ficou na tua cabeça?"
+        "Alguns refrões continuam trabalhando depois do fim. Este ficou na tua cabeça?",
+        "A primeira nota fez uma promessa e a próxima cumpriu. Você ouviu até onde?"
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -542,20 +544,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6ab94e7454f1e60c7e73989e",
+      "last_buffer_post_id": "6ab9773236a0dcfcb3e31202",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690264144850898197",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690308944870280468",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#boamusica #tiktokbrasil #musica #brasil #paravoce",
+  "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6ab9773236a0dcfcb3e31202",
+  "post_id": "6ab9a53b70ec211d1d2baee9",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-27T20:07:59.206Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690308944870280468",
+  "sent_at": "2026-09-27T23:24:25.395Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690359514532482310",
   "success": true,
-  "finished_at": "2026-09-27T20:08:02.141844+00:00"
+  "finished_at": "2026-09-27T23:24:27.482461+00:00"
 }
