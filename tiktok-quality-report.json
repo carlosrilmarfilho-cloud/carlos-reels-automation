@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4",
-  "overlay": "Foi só a melodia entrar para a rolagem perder a vez.",
+  "video": "8DA4425C-CCE2-46B2-9116-2A947856E053.mp4",
+  "overlay": "Tem refrão que funciona melhor quando pega a gente desprevenido.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.15703125,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.2828125
   },
-  "faces_checked": 8,
+  "faces_checked": 7,
   "failures": []
 }
