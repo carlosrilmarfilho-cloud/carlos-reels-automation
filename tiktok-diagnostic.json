@@ -1,81 +1,63 @@
 {
-  "started_at": "2026-09-27T14:12:55.364223+00:00",
+  "started_at": "2026-09-27T17:12:19.491392+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 136,
+  "caption_length": 127,
   "source_candidate": {
-    "name": "8DA4425C-CCE2-46B2-9116-2A947856E053.mp4",
-    "drive_id": "1FnkMmQcodlv-d05RO4oKVHF6bXjHRz42",
-    "sha256": "af84cdb50c36735923fe7a08c7aeca028eb07d414e5cf7fba91e4f27ec80e452"
+    "name": "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4",
+    "drive_id": "1NbvvBhtfBmFrDtCAS1MC1YdQYKxWBHT-",
+    "sha256": "d530f1765de33dc3e4cbbe7e2b8d62b35f1facb14b6b095486b4bdd738117a40"
   },
   "metadata_snapshot": {
-    "video": "8DA4425C-CCE2-46B2-9116-2A947856E053.mp4",
+    "video": "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
     "variant_index": 0,
-    "overlay": "Tem refrão que funciona melhor quando pega a gente desprevenido.",
-    "caption": "Se ficou até o final, escolhe a próxima terapia musical nos comentários.\n\n#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
-    "hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
+    "overlay": "Dá mais dez segundos; essa melodia vai explicar por quê.",
+    "caption": "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?\n\n#boamusica #reelsbrasil #musica #brasil #reels",
+    "hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
     "source_resolution": "2160x3840",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 402,
+      "y0": 447,
       "x1": 1376,
-      "y1": 724
+      "y1": 679
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.15703125,
+      "y0": 0.174609375,
       "x1": 0.9555555555555556,
-      "y1": 0.2828125
+      "y1": 0.265234375
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 805.3333333333333,
-        "y0": 1248.0,
-        "x1": 1189.3333333333333,
-        "y1": 1632.0
+        "x0": 477.3333333333333,
+        "y0": 1005.3333333333333,
+        "x1": 1426.6666666666665,
+        "y1": 1954.6666666666665
       },
       {
-        "x0": 778.6666666666666,
-        "y0": 2162.6666666666665,
-        "x1": 997.3333333333331,
-        "y1": 2381.333333333333
+        "x0": 816.0,
+        "y0": 1362.6666666666667,
+        "x1": 1133.3333333333335,
+        "y1": 1680.0
       },
       {
-        "x0": 765.3333333333333,
-        "y0": 1117.3333333333333,
-        "x1": 904.0,
-        "y1": 1256.0
+        "x0": 861.3333333333333,
+        "y0": 1242.6666666666665,
+        "x1": 1245.3333333333333,
+        "y1": 1626.6666666666665
       },
       {
-        "x0": 320.0,
-        "y0": 949.3333333333333,
-        "x1": 1282.6666666666665,
-        "y1": 1912.0
-      },
-      {
-        "x0": 565.3333333333333,
-        "y0": 1018.6666666666666,
-        "x1": 1413.3333333333333,
-        "y1": 1866.6666666666665
-      },
-      {
-        "x0": 778.6666666666666,
-        "y0": 1224.0,
-        "x1": 1146.6666666666665,
-        "y1": 1592.0
-      },
-      {
-        "x0": 242.66666666666666,
-        "y0": 1634.6666666666665,
-        "x1": 370.66666666666663,
-        "y1": 1762.6666666666665
+        "x0": 381.3333333333333,
+        "y0": 1584.0,
+        "x1": 666.6666666666666,
+        "y1": 1869.3333333333333
       }
     ],
     "visual_rules": {
@@ -86,10 +68,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 167,
-      "last_posted_at": "2026-09-27T11:16:38.554Z",
-      "last_video": "8DA4425C-CCE2-46B2-9116-2A947856E053.mp4",
-      "last_overlay": "Tem refrão que funciona melhor quando pega a gente desprevenido.",
+      "posts_total": 168,
+      "last_posted_at": "2026-09-27T14:14:42.575Z",
+      "last_video": "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4",
+      "last_overlay": "Dá mais dez segundos; essa melodia vai explicar por quê.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -121,7 +103,7 @@
         "3B39DB0D-7FDF-452E-A0DF-DA9DE006F164.mp4": 2,
         "41EF1F58-C757-4821-8692-EE6110066BFA.mp4": 1,
         "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4": 1,
-        "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4": 1,
+        "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4": 2,
         "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4": 2,
         "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4": 2,
         "5E9AA733-82BF-4099-B77F-FDE5F646184F.mp4": 2,
@@ -180,8 +162,8 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "Se ficou até o final, escolhe a próxima terapia musical nos comentários.",
-      "last_hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
+      "last_caption": "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
+      "last_hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -345,7 +327,8 @@
         "Alguma coisa nesta interpretação faz a tela esperar.",
         "Repara na letra: ela diz mais do que parece.",
         "Foi só a melodia entrar para a rolagem perder a vez.",
-        "Tem refrão que funciona melhor quando pega a gente desprevenido."
+        "Tem refrão que funciona melhor quando pega a gente desprevenido.",
+        "Dá mais dez segundos; essa melodia vai explicar por quê."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -510,7 +493,8 @@
         "Se você parou a rolagem por causa da voz, me diz qual detalhe te fez ficar.",
         "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂",
         "Você ficou mais dez segundos por causa da voz? Diz qual detalhe decidiu isso.",
-        "Se ficou até o final, escolhe a próxima terapia musical nos comentários."
+        "Se ficou até o final, escolhe a próxima terapia musical nos comentários.",
+        "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?"
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -520,20 +504,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6ab8faa436a0dcfcb3d1d823",
+      "last_buffer_post_id": "6ab9246854f1e60c7e6df374",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690171863087074561",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690217890674527496",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
+  "hashtags_snapshot": "#boamusica #tiktokbrasil #musica #brasil #paravoce",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6ab9246854f1e60c7e6df374",
+  "post_id": "6ab94e7454f1e60c7e73989e",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-27T14:14:42.575Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690217890674527496",
+  "sent_at": "2026-09-27T17:14:05.400Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690264144850898197",
   "success": true,
-  "finished_at": "2026-09-27T14:14:47.699216+00:00"
+  "finished_at": "2026-09-27T17:14:13.138891+00:00"
 }

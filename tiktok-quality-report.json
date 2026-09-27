@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "8DA4425C-CCE2-46B2-9116-2A947856E053.mp4",
-  "overlay": "Tem refrão que funciona melhor quando pega a gente desprevenido.",
+  "video": "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4",
+  "overlay": "Dá mais dez segundos; essa melodia vai explicar por quê.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.15703125,
+    "y0": 0.174609375,
     "x1": 0.9555555555555556,
-    "y1": 0.2828125
+    "y1": 0.265234375
   },
-  "faces_checked": 7,
+  "faces_checked": 3,
   "failures": []
 }
