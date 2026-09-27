@@ -1,25 +1,25 @@
 {
-  "started_at": "2026-09-26T23:44:38.336564+00:00",
+  "started_at": "2026-09-27T11:14:43.461646+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 132,
+  "caption_length": 129,
   "source_candidate": {
-    "name": "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4",
-    "drive_id": "1VK0QVkBZtXlIbGX3aM7Stbcq1x3DYEYB",
-    "sha256": "b03e2108980ec98405dc52874921bcd8a10167c346a17f5094c2a47d29f44b1c"
+    "name": "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4",
+    "drive_id": "14xL6FEerZawz-w3yiXYajU8CwTmsZ5Wi",
+    "sha256": "4686c41625afec313c34ec3b22e8c6407860acc44642d2b9f290ccb9700fce8f"
   },
   "metadata_snapshot": {
-    "video": "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4",
+    "video": "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 0,
-    "overlay": "Repara na letra: ela diz mais do que parece.",
-    "caption": "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂\n\n#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
-    "hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
+    "variant_index": 18,
+    "overlay": "Foi só a melodia entrar para a rolagem perder a vez.",
+    "caption": "Você ficou mais dez segundos por causa da voz? Diz qual detalhe decidiu isso.\n\n#boamusica #reelsbrasil #musica #brasil #reels",
+    "hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
     "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
@@ -36,34 +36,58 @@
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 850.6666666666667,
-        "y0": 1136.0,
-        "x1": 1224.0,
-        "y1": 1509.3333333333335
+        "x0": 544.0,
+        "y0": 1133.3333333333333,
+        "x1": 1392.0,
+        "y1": 1981.3333333333333
       },
       {
-        "x0": 952.0,
-        "y0": 976.0,
-        "x1": 1272.0,
-        "y1": 1296.0
+        "x0": 474.66666666666663,
+        "y0": 1069.3333333333335,
+        "x1": 1264.0,
+        "y1": 1858.6666666666667
       },
       {
-        "x0": 744.0000000000001,
-        "y0": 880.0,
-        "x1": 1112.0,
-        "y1": 1248.0
+        "x0": 552.0,
+        "y0": 1493.3333333333335,
+        "x1": 781.3333333333334,
+        "y1": 1722.6666666666667
       },
       {
-        "x0": 418.6666666666667,
-        "y0": 1128.0,
-        "x1": 634.6666666666667,
-        "y1": 1344.0
+        "x0": 117.33333333333334,
+        "y0": 2408.0,
+        "x1": 253.33333333333334,
+        "y1": 2544.0
       },
       {
-        "x0": 1210.6666666666667,
-        "y0": 1234.6666666666667,
-        "x1": 1376.0,
-        "y1": 1400.0
+        "x0": 517.3333333333334,
+        "y0": 978.6666666666666,
+        "x1": 1362.6666666666667,
+        "y1": 1824.0
+      },
+      {
+        "x0": 941.3333333333333,
+        "y0": 1224.0,
+        "x1": 1314.6666666666667,
+        "y1": 1597.3333333333333
+      },
+      {
+        "x0": 152.0,
+        "y0": 2384.0,
+        "x1": 312.0,
+        "y1": 2544.0
+      },
+      {
+        "x0": 997.3333333333333,
+        "y0": 1256.0,
+        "x1": 1280.0,
+        "y1": 1538.6666666666667
+      },
+      {
+        "x0": 970.6666666666666,
+        "y0": 1253.3333333333333,
+        "x1": 1261.3333333333333,
+        "y1": 1544.0
       }
     ],
     "visual_rules": {
@@ -74,10 +98,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 165,
-      "last_posted_at": "2026-09-26T20:05:29.665Z",
-      "last_video": "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4",
-      "last_overlay": "Repara na letra: ela diz mais do que parece.",
+      "posts_total": 166,
+      "last_posted_at": "2026-09-26T23:46:36.343Z",
+      "last_video": "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4",
+      "last_overlay": "Foi só a melodia entrar para a rolagem perder a vez.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -111,7 +135,7 @@
         "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4": 1,
         "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4": 1,
         "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4": 2,
-        "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4": 1,
+        "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4": 2,
         "5E9AA733-82BF-4099-B77F-FDE5F646184F.mp4": 2,
         "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4": 2,
         "66DDCAFF-E155-463B-B226-F8270C9B5E3A.mp4": 2,
@@ -168,8 +192,8 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂",
-      "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
+      "last_caption": "Você ficou mais dez segundos por causa da voz? Diz qual detalhe decidiu isso.",
+      "last_hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -331,7 +355,8 @@
         "Tenta passar direto depois de ouvir esta parte.",
         "Poucas notas bastam para entregar uma canção inesquecível.",
         "Alguma coisa nesta interpretação faz a tela esperar.",
-        "Repara na letra: ela diz mais do que parece."
+        "Repara na letra: ela diz mais do que parece.",
+        "Foi só a melodia entrar para a rolagem perder a vez."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -494,7 +519,8 @@
         "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?",
         "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?",
         "Se você parou a rolagem por causa da voz, me diz qual detalhe te fez ficar.",
-        "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂"
+        "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂",
+        "Você ficou mais dez segundos por causa da voz? Diz qual detalhe decidiu isso."
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -504,20 +530,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6ab8251f4b4b9f2c1c56c785",
+      "last_buffer_post_id": "6ab858e89f89edbefe828cd4",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7689937221599628551",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7689993795177336065",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
+  "hashtags_snapshot": "#boamusica #tiktokbrasil #musica #brasil #paravoce",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6ab858e89f89edbefe828cd4",
+  "post_id": "6ab8faa436a0dcfcb3d1d823",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-26T23:46:36.343Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7689993795177336065",
+  "sent_at": "2026-09-27T11:16:38.554Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690171863087074561",
   "success": true,
-  "finished_at": "2026-09-26T23:46:43.560549+00:00"
+  "finished_at": "2026-09-27T11:16:46.087263+00:00"
 }
