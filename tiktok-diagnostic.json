@@ -1,63 +1,99 @@
 {
-  "started_at": "2026-09-27T17:12:19.491392+00:00",
+  "started_at": "2026-09-27T20:06:09.191358+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 127,
+  "caption_length": 129,
   "source_candidate": {
-    "name": "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4",
-    "drive_id": "1NbvvBhtfBmFrDtCAS1MC1YdQYKxWBHT-",
-    "sha256": "d530f1765de33dc3e4cbbe7e2b8d62b35f1facb14b6b095486b4bdd738117a40"
+    "name": "41EF1F58-C757-4821-8692-EE6110066BFA.mp4",
+    "drive_id": "1vzkT_uSD-kV9b8Laeud1o-Vp-bx5QEt2",
+    "sha256": "c404e44dcc7a9be46cdb5b0584846bd58eb6a2d91689842b3c2d25b111048d4d"
   },
   "metadata_snapshot": {
-    "video": "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4",
+    "video": "41EF1F58-C757-4821-8692-EE6110066BFA.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 0,
-    "overlay": "Dá mais dez segundos; essa melodia vai explicar por quê.",
-    "caption": "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?\n\n#boamusica #reelsbrasil #musica #brasil #reels",
+    "variant_index": 23,
+    "overlay": "Um detalhe no arranjo muda toda a história.",
+    "caption": "Alguns refrões continuam trabalhando depois do fim. Este ficou na tua cabeça?\n\n#boamusica #reelsbrasil #musica #brasil #reels",
     "hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
-    "source_resolution": "2160x3840",
+    "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 447,
+      "y0": 124,
       "x1": 1376,
-      "y1": 679
+      "y1": 312
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.174609375,
+      "y0": 0.0484375,
       "x1": 0.9555555555555556,
-      "y1": 0.265234375
+      "y1": 0.121875
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 477.3333333333333,
-        "y0": 1005.3333333333333,
-        "x1": 1426.6666666666665,
-        "y1": 1954.6666666666665
+        "x0": 328.0,
+        "y0": 1026.6666666666667,
+        "x1": 1296.0,
+        "y1": 1994.6666666666667
       },
       {
-        "x0": 816.0,
-        "y0": 1362.6666666666667,
-        "x1": 1133.3333333333335,
-        "y1": 1680.0
+        "x0": 1213.3333333333333,
+        "y0": 1474.6666666666667,
+        "x1": 1432.0,
+        "y1": 1693.3333333333335
       },
       {
-        "x0": 861.3333333333333,
-        "y0": 1242.6666666666665,
-        "x1": 1245.3333333333333,
-        "y1": 1626.6666666666665
+        "x0": 925.3333333333334,
+        "y0": 749.3333333333334,
+        "x1": 1152.0,
+        "y1": 976.0
       },
       {
-        "x0": 381.3333333333333,
-        "y0": 1584.0,
-        "x1": 666.6666666666666,
-        "y1": 1869.3333333333333
+        "x0": 272.0,
+        "y0": 842.6666666666666,
+        "x1": 1325.3333333333333,
+        "y1": 1896.0
+      },
+      {
+        "x0": 10.666666666666668,
+        "y0": 1829.3333333333335,
+        "x1": 466.6666666666667,
+        "y1": 2285.3333333333335
+      },
+      {
+        "x0": 186.66666666666666,
+        "y0": 1872.0,
+        "x1": 349.3333333333333,
+        "y1": 2034.6666666666667
+      },
+      {
+        "x0": 280.0,
+        "y0": 896.0,
+        "x1": 1186.6666666666667,
+        "y1": 1802.6666666666667
+      },
+      {
+        "x0": 1293.3333333333333,
+        "y0": 2384.0,
+        "x1": 1432.0,
+        "y1": 2522.666666666667
+      },
+      {
+        "x0": 797.3333333333334,
+        "y0": 1037.3333333333333,
+        "x1": 1256.0,
+        "y1": 1496.0
+      },
+      {
+        "x0": 517.3333333333334,
+        "y0": 1122.6666666666667,
+        "x1": 1186.6666666666667,
+        "y1": 1792.0
       }
     ],
     "visual_rules": {
@@ -68,10 +104,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 168,
-      "last_posted_at": "2026-09-27T14:14:42.575Z",
-      "last_video": "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4",
-      "last_overlay": "Dá mais dez segundos; essa melodia vai explicar por quê.",
+      "posts_total": 169,
+      "last_posted_at": "2026-09-27T17:14:05.400Z",
+      "last_video": "41EF1F58-C757-4821-8692-EE6110066BFA.mp4",
+      "last_overlay": "Um detalhe no arranjo muda toda a história.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -101,7 +137,7 @@
         "30620ACB-E217-45FD-9002-E09469B7A763.mp4": 2,
         "30E3E09C-22BC-4D18-B5CC-D5DF595ED34D.mp4": 2,
         "3B39DB0D-7FDF-452E-A0DF-DA9DE006F164.mp4": 2,
-        "41EF1F58-C757-4821-8692-EE6110066BFA.mp4": 1,
+        "41EF1F58-C757-4821-8692-EE6110066BFA.mp4": 2,
         "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4": 1,
         "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4": 2,
         "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4": 2,
@@ -162,7 +198,7 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
+      "last_caption": "Alguns refrões continuam trabalhando depois do fim. Este ficou na tua cabeça?",
       "last_hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
@@ -328,7 +364,8 @@
         "Repara na letra: ela diz mais do que parece.",
         "Foi só a melodia entrar para a rolagem perder a vez.",
         "Tem refrão que funciona melhor quando pega a gente desprevenido.",
-        "Dá mais dez segundos; essa melodia vai explicar por quê."
+        "Dá mais dez segundos; essa melodia vai explicar por quê.",
+        "Um detalhe no arranjo muda toda a história."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -494,7 +531,8 @@
         "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂",
         "Você ficou mais dez segundos por causa da voz? Diz qual detalhe decidiu isso.",
         "Se ficou até o final, escolhe a próxima terapia musical nos comentários.",
-        "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?"
+        "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
+        "Alguns refrões continuam trabalhando depois do fim. Este ficou na tua cabeça?"
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -504,20 +542,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6ab9246854f1e60c7e6df374",
+      "last_buffer_post_id": "6ab94e7454f1e60c7e73989e",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690217890674527496",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690264144850898197",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
   "hashtags_snapshot": "#boamusica #tiktokbrasil #musica #brasil #paravoce",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6ab94e7454f1e60c7e73989e",
+  "post_id": "6ab9773236a0dcfcb3e31202",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-27T17:14:05.400Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690264144850898197",
+  "sent_at": "2026-09-27T20:07:59.206Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690308944870280468",
   "success": true,
-  "finished_at": "2026-09-27T17:14:13.138891+00:00"
+  "finished_at": "2026-09-27T20:08:02.141844+00:00"
 }
