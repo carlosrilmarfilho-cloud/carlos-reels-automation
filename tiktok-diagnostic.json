@@ -1,63 +1,99 @@
 {
-  "started_at": "2026-09-28T14:56:48.765670+00:00",
+  "started_at": "2026-09-28T17:31:48.014189+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "post_id": "6aba7c78c62b374cee984503",
+  "caption_length": 143,
   "source_candidate": {
-    "name": "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4",
-    "drive_id": "1ypx-SQ2LbP5ayRtttygaSLpvJxpdPu2l",
-    "sha256": "7397c125808d75d90241bffc822ba4a0dece8734b399328f9c083466f251a5f5"
+    "name": "6FFB8681-5089-4A43-8E3C-ED1F0A6BB8D8.mp4",
+    "drive_id": "1V1A57_YinNBYlh5yn1HCSh7hbL_XHfy3",
+    "sha256": "b53f82053ebeb3ffecfa303b1b7d618656e81dd44b10c3da520f7b12b648cb08"
   },
   "metadata_snapshot": {
-    "video": "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4",
+    "video": "6FFB8681-5089-4A43-8E3C-ED1F0A6BB8D8.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
     "variant_index": 0,
-    "overlay": "Ouça com atenção: a próxima linha acerta diferente.",
-    "caption": "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe.\n\n#boamusica #reelsbrasil #musica #brasil #reels",
-    "hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
+    "overlay": "Esse é o tipo de voz que interrompe qualquer distração.",
+    "caption": "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?\n\n#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
+    "hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
     "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 447,
+      "y0": 124,
       "x1": 1376,
-      "y1": 679
+      "y1": 312
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.174609375,
+      "y0": 0.0484375,
       "x1": 0.9555555555555556,
-      "y1": 0.265234375
+      "y1": 0.121875
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 608.0,
-        "y0": 1154.6666666666667,
-        "x1": 730.6666666666666,
-        "y1": 1277.3333333333333
+        "x0": 245.33333333333331,
+        "y0": 816.0,
+        "x1": 1117.3333333333333,
+        "y1": 1688.0
       },
       {
-        "x0": 221.33333333333334,
-        "y0": 957.3333333333334,
-        "x1": 1048.0,
-        "y1": 1784.0
+        "x0": 282.6666666666667,
+        "y0": 885.3333333333333,
+        "x1": 1117.3333333333333,
+        "y1": 1720.0
       },
       {
-        "x0": 797.3333333333334,
-        "y0": 1144.0,
-        "x1": 1037.3333333333333,
-        "y1": 1384.0
+        "x0": 954.6666666666667,
+        "y0": 2192.0,
+        "x1": 1152.0,
+        "y1": 2389.3333333333335
       },
       {
-        "x0": 770.6666666666667,
-        "y0": 1226.6666666666667,
-        "x1": 1141.3333333333335,
-        "y1": 1597.3333333333333
+        "x0": 181.33333333333331,
+        "y0": 968.0,
+        "x1": 917.3333333333334,
+        "y1": 1704.0
+      },
+      {
+        "x0": 213.33333333333331,
+        "y0": 2360.0,
+        "x1": 362.66666666666663,
+        "y1": 2509.3333333333335
+      },
+      {
+        "x0": 229.33333333333334,
+        "y0": 829.3333333333334,
+        "x1": 1208.0,
+        "y1": 1808.0
+      },
+      {
+        "x0": 341.33333333333337,
+        "y0": 885.3333333333333,
+        "x1": 1194.6666666666667,
+        "y1": 1738.6666666666667
+      },
+      {
+        "x0": 192.0,
+        "y0": 880.0,
+        "x1": 1058.6666666666667,
+        "y1": 1746.6666666666665
+      },
+      {
+        "x0": 1242.6666666666665,
+        "y0": 2109.3333333333335,
+        "x1": 1392.0,
+        "y1": 2258.666666666667
+      },
+      {
+        "x0": 285.33333333333337,
+        "y0": 869.3333333333334,
+        "x1": 1160.0,
+        "y1": 1744.0
       }
     ],
     "visual_rules": {
@@ -68,10 +104,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 172,
-      "last_posted_at": "2026-09-28T11:22:02.938Z",
-      "last_video": "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4",
-      "last_overlay": "Ouça com atenção: a próxima linha acerta diferente.",
+      "posts_total": 173,
+      "last_posted_at": "2026-09-28T15:04:05.405Z",
+      "last_video": "6FFB8681-5089-4A43-8E3C-ED1F0A6BB8D8.mp4",
+      "last_overlay": "Esse é o tipo de voz que interrompe qualquer distração.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -112,7 +148,7 @@
         "6AA0991D-5050-4107-A363-6D0C646C5741.mp4": 2,
         "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4": 2,
         "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4": 2,
-        "6FFB8681-5089-4A43-8E3C-ED1F0A6BB8D8.mp4": 1,
+        "6FFB8681-5089-4A43-8E3C-ED1F0A6BB8D8.mp4": 2,
         "71F75039-C662-4FCA-AD77-6433FC9FC4E1.mp4": 3,
         "83093820-DCDB-4081-BE78-1118698B99C6.mp4": 2,
         "85F02D78-FE04-447B-A11C-DBD5C74D45A2.mp4": 1,
@@ -162,8 +198,8 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe.",
-      "last_hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
+      "last_caption": "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?",
+      "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -332,7 +368,8 @@
         "Um detalhe no arranjo muda toda a história.",
         "Hoje eu só queria cantar. Se virou terapia, foi consequência.",
         "Essa virada separa quem ouve de quem sente.",
-        "Ouça com atenção: a próxima linha acerta diferente."
+        "Ouça com atenção: a próxima linha acerta diferente.",
+        "Esse é o tipo de voz que interrompe qualquer distração."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -502,7 +539,8 @@
         "Alguns refrões continuam trabalhando depois do fim. Este ficou na tua cabeça?",
         "A primeira nota fez uma promessa e a próxima cumpriu. Você ouviu até onde?",
         "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo.",
-        "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe."
+        "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe.",
+        "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?"
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -512,16 +550,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6aba4d673c577104b144fda9",
+      "last_buffer_post_id": "6aba7c78c62b374cee984503",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690544471678799156",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690596244107840775",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#boamusica #tiktokbrasil #musica #brasil #paravoce",
+  "hashtags_snapshot": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
+  "channel_id": "6a8d782bccaf649a671248a9",
+  "channel_name": "carlosrilmarfilho",
+  "post_id": "6abaa4850b9d13a08baa9b82",
+  "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-28T15:04:05.405Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690596244107840775",
+  "sent_at": "2026-09-28T17:33:37.129Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690640272597781781",
   "success": true,
-  "finished_at": "2026-09-28T15:04:07.281202+00:00"
+  "finished_at": "2026-09-28T17:33:40.691840+00:00"
 }
