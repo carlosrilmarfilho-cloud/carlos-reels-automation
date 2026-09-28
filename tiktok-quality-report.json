@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "6FFB8681-5089-4A43-8E3C-ED1F0A6BB8D8.mp4",
-  "overlay": "Esse é o tipo de voz que interrompe qualquer distração.",
+  "video": "85F02D78-FE04-447B-A11C-DBD5C74D45A2.mp4",
+  "overlay": "Essa foi daquelas que transformam rolagem em pausa.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.0484375,
+    "y0": 0.047265625,
     "x1": 0.9555555555555556,
-    "y1": 0.121875
+    "y1": 0.173046875
   },
-  "faces_checked": 12,
+  "faces_checked": 4,
   "failures": []
 }
