@@ -1,9 +1,9 @@
 {
   "video_index": 1,
-  "posts_total": 174,
-  "last_posted_at": "2026-09-28T20:07:54.469Z",
-  "last_video": "85F02D78-FE04-447B-A11C-DBD5C74D45A2.mp4",
-  "last_overlay": "Essa foi daquelas que transformam rolagem em pausa.",
+  "posts_total": 175,
+  "last_posted_at": "2026-09-28T23:37:59.397Z",
+  "last_video": "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4",
+  "last_overlay": "Se você ficou até aqui, provavelmente não foi por causa do algoritmo.",
   "last_mode": "buffer_auto_confirmed",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -63,7 +63,7 @@
     "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4": 2,
     "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 2,
     "1287DDFF-011C-4141-B09E-249B63C95F08.mp4": 2,
-    "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4": 2,
+    "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4": 3,
     "15B0403C-2ECE-4915-B49E-4D477362302F.mp4": 2,
     "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4": 2,
     "15EA0363-A2B0-4F7C-BB26-BFB45F8454E0.mp4": 2,
@@ -94,7 +94,7 @@
     "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
     "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
   },
-  "last_caption": "Qual foi a última música que fez você esquecer o que tava fazendo por alguns segundos?",
+  "last_caption": "Escuta a próxima linha com atenção. Qual palavra acertou diferente?",
   "last_hashtags": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
@@ -266,7 +266,8 @@
     "Essa virada separa quem ouve de quem sente.",
     "Ouça com atenção: a próxima linha acerta diferente.",
     "Esse é o tipo de voz que interrompe qualquer distração.",
-    "Essa foi daquelas que transformam rolagem em pausa."
+    "Essa foi daquelas que transformam rolagem em pausa.",
+    "Se você ficou até aqui, provavelmente não foi por causa do algoritmo."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -438,7 +439,8 @@
     "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo.",
     "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe.",
     "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?",
-    "Qual foi a última música que fez você esquecer o que tava fazendo por alguns segundos?"
+    "Qual foi a última música que fez você esquecer o que tava fazendo por alguns segundos?",
+    "Escuta a próxima linha com atenção. Qual palavra acertou diferente?"
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -448,8 +450,8 @@
     "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6abac8aee571d2128ece8248",
+  "last_buffer_post_id": "6abaf9ec320ca548b4d16003",
   "last_buffer_status": "sent",
-  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690680012541922567",
+  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690734132850117908",
   "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
 }
