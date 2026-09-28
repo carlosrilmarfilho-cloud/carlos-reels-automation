@@ -1,69 +1,63 @@
 {
-  "started_at": "2026-09-28T11:20:05.615447+00:00",
+  "started_at": "2026-09-28T14:40:55.252127+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
-  "stage": "success",
-  "caption_length": 142,
+  "stage": "confirm_delivery",
+  "caption_length": 130,
   "source_candidate": {
-    "name": "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4",
-    "drive_id": "1cATh8T1i4xZW81W2XSc7INgLekQufEym",
-    "sha256": "fdb795c0bfe4a84c3a19393d2ab096a795c69536cb99a28ccfc4a5ab7e41c142"
+    "name": "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4",
+    "drive_id": "1ypx-SQ2LbP5ayRtttygaSLpvJxpdPu2l",
+    "sha256": "7397c125808d75d90241bffc822ba4a0dece8734b399328f9c083466f251a5f5"
   },
   "metadata_snapshot": {
-    "video": "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4",
+    "video": "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 15,
-    "overlay": "Essa virada separa quem ouve de quem sente.",
-    "caption": "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo.\n\n#musica #reelsbrasil #som #boamusica #brasil",
-    "hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
+    "variant_index": 0,
+    "overlay": "Ouça com atenção: a próxima linha acerta diferente.",
+    "caption": "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe.\n\n#boamusica #reelsbrasil #musica #brasil #reels",
+    "hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
     "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 2056,
+      "y0": 447,
       "x1": 1376,
-      "y1": 2244
+      "y1": 679
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.803125,
+      "y0": 0.174609375,
       "x1": 0.9555555555555556,
-      "y1": 0.8765625
+      "y1": 0.265234375
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 733.3333333333334,
-        "y0": 1157.3333333333333,
-        "x1": 1216.0,
-        "y1": 1640.0
+        "x0": 608.0,
+        "y0": 1154.6666666666667,
+        "x1": 730.6666666666666,
+        "y1": 1277.3333333333333
       },
       {
-        "x0": 570.6666666666667,
-        "y0": 994.6666666666667,
-        "x1": 954.6666666666667,
-        "y1": 1378.6666666666667
+        "x0": 221.33333333333334,
+        "y0": 957.3333333333334,
+        "x1": 1048.0,
+        "y1": 1784.0
       },
       {
-        "x0": 314.6666666666667,
-        "y0": 773.3333333333333,
-        "x1": 1245.3333333333333,
-        "y1": 1704.0
+        "x0": 797.3333333333334,
+        "y0": 1144.0,
+        "x1": 1037.3333333333333,
+        "y1": 1384.0
       },
       {
-        "x0": 840.0,
-        "y0": 1136.0,
-        "x1": 1104.0,
-        "y1": 1400.0
-      },
-      {
-        "x0": 256.0,
-        "y0": 626.6666666666666,
-        "x1": 1314.6666666666667,
-        "y1": 1685.3333333333333
+        "x0": 770.6666666666667,
+        "y0": 1226.6666666666667,
+        "x1": 1141.3333333333335,
+        "y1": 1597.3333333333333
       }
     ],
     "visual_rules": {
@@ -74,10 +68,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 171,
-      "last_posted_at": "2026-09-27T23:24:25.395Z",
-      "last_video": "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4",
-      "last_overlay": "Essa virada separa quem ouve de quem sente.",
+      "posts_total": 172,
+      "last_posted_at": "2026-09-28T11:22:02.938Z",
+      "last_video": "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4",
+      "last_overlay": "Ouça com atenção: a próxima linha acerta diferente.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -108,7 +102,7 @@
         "30E3E09C-22BC-4D18-B5CC-D5DF595ED34D.mp4": 2,
         "3B39DB0D-7FDF-452E-A0DF-DA9DE006F164.mp4": 2,
         "41EF1F58-C757-4821-8692-EE6110066BFA.mp4": 2,
-        "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4": 1,
+        "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4": 2,
         "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4": 2,
         "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4": 2,
         "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4": 2,
@@ -168,8 +162,8 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo.",
-      "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
+      "last_caption": "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe.",
+      "last_hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -337,7 +331,8 @@
         "Dá mais dez segundos; essa melodia vai explicar por quê.",
         "Um detalhe no arranjo muda toda a história.",
         "Hoje eu só queria cantar. Se virou terapia, foi consequência.",
-        "Essa virada separa quem ouve de quem sente."
+        "Essa virada separa quem ouve de quem sente.",
+        "Ouça com atenção: a próxima linha acerta diferente."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -506,7 +501,8 @@
         "Mesmo sem conhecer a música, essa interpretação segura. O que te fez ficar?",
         "Alguns refrões continuam trabalhando depois do fim. Este ficou na tua cabeça?",
         "A primeira nota fez uma promessa e a próxima cumpriu. Você ouviu até onde?",
-        "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo."
+        "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo.",
+        "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe."
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -516,20 +512,22 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6ab9a53b70ec211d1d2baee9",
+      "last_buffer_post_id": "6aba4d673c577104b144fda9",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690359514532482310",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690544471678799156",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
+  "hashtags_snapshot": "#boamusica #tiktokbrasil #musica #brasil #paravoce",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6aba4d673c577104b144fda9",
+  "post_id": "6aba7c78c62b374cee984503",
   "initial_status": "sending",
-  "buffer_status": "sent",
-  "sent_at": "2026-09-28T11:22:02.938Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690544471678799156",
-  "success": true,
-  "finished_at": "2026-09-28T11:22:11.218833+00:00"
+  "buffer_status": "sending",
+  "sent_at": null,
+  "external_link": null,
+  "success": false,
+  "error_type": "RuntimeError",
+  "error": "Buffer não confirmou publicação no TikTok em 10 minutos; último status: sending",
+  "finished_at": "2026-09-28T14:51:16.792870+00:00"
 }
