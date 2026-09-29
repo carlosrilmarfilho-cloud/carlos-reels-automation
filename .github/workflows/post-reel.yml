@@ -51,20 +51,22 @@ jobs:
           git show "origin/$GITHUB_REF_NAME:state.json" > /tmp/live-state.json 2>/dev/null || cp state.json /tmp/live-state.json
           run=$(python3 - <<'PY'
           import json
-          from datetime import datetime, timezone
+          from datetime import datetime, timedelta, timezone
           from pathlib import Path
           now = datetime.now(timezone.utc)
-          allowed_hours = {11,14,17,20,23}
-          if now.hour not in allowed_hours:
+          official_hours = {11,14,17,20,23}
+          anchor = now if now.hour in official_hours else now - timedelta(hours=1)
+          if anchor.hour not in official_hours or (now.hour not in official_hours and now.minute >= 30):
               print('false')
               raise SystemExit
+          slot_date, slot_hour = anchor.date(), anchor.hour
           path = Path('/tmp/live-state.json')
           if path.exists():
               try:
                   value = json.loads(path.read_text(encoding='utf-8')).get('last_posted_at')
                   if value:
                       last = datetime.fromisoformat(str(value).replace('Z','+00:00')).astimezone(timezone.utc)
-                      if last.date() == now.date() and last.hour == now.hour:
+                      if last.date() == slot_date and last.hour == slot_hour:
                           print('false')
                           raise SystemExit
               except SystemExit:
@@ -189,8 +191,14 @@ jobs:
           allowed=$(python3 - <<'PY'
           import json, subprocess
           from pathlib import Path
-          from datetime import datetime, timezone
+          from datetime import datetime, timedelta, timezone
           now = datetime.now(timezone.utc)
+          official_hours = {11,14,17,20,23}
+          anchor = now if now.hour in official_hours else now - timedelta(hours=1)
+          if anchor.hour not in official_hours or (now.hour not in official_hours and now.minute >= 30):
+              print('false')
+              raise SystemExit
+          slot_date, slot_hour = anchor.date(), anchor.hour
           queue=json.loads(Path('/tmp/live-video-queue.json').read_text(encoding='utf-8')).get('queue') or []
           candidate=json.loads(Path('/tmp/video-queue-candidate.json').read_text(encoding='utf-8'))
           if not queue or str(queue[0].get('drive_id')) != str(candidate.get('drive_id')):
@@ -203,7 +211,7 @@ jobs:
               value = json.loads(raw).get('last_posted_at')
               if value:
                   last = datetime.fromisoformat(str(value).replace('Z','+00:00')).astimezone(timezone.utc)
-                  if last.date() == now.date() and last.hour == now.hour:
+                  if last.date() == slot_date and last.hour == slot_hour:
                       print('false'); raise SystemExit
           except SystemExit:
               raise
