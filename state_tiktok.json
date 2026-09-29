@@ -1,9 +1,9 @@
 {
   "video_index": 1,
-  "posts_total": 176,
-  "last_posted_at": "2026-09-29T12:28:50.704Z",
-  "last_video": "15B0403C-2ECE-4915-B49E-4D477362302F.mp4",
-  "last_overlay": "O trecho certo começa exatamente quando você ia passar.",
+  "posts_total": 177,
+  "last_posted_at": "2026-09-29T14:20:41.070Z",
+  "last_video": "1287DDFF-011C-4141-B09E-249B63C95F08.mp4",
+  "last_overlay": "Não sei se é nostalgia, terapia ou só uma música boa. Aceito os três.",
   "last_mode": "buffer_auto_confirmed",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -62,7 +62,7 @@
     "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4": 2,
     "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4": 2,
     "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 2,
-    "1287DDFF-011C-4141-B09E-249B63C95F08.mp4": 2,
+    "1287DDFF-011C-4141-B09E-249B63C95F08.mp4": 3,
     "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4": 3,
     "15B0403C-2ECE-4915-B49E-4D477362302F.mp4": 3,
     "15C68491-FD8D-4EB0-9605-0C90FD8B2596.mp4": 2,
@@ -94,8 +94,8 @@
     "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
     "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
   },
-  "last_caption": "Presta atenção na mudança de tom. Foi ali que a música te pegou?",
-  "last_hashtags": "#musica #tiktokbrasil #som #boamusica #brasil",
+  "last_caption": "Um pequeno detalhe no arranjo muda a história toda. Você percebeu qual?",
+  "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -268,7 +268,8 @@
     "Esse é o tipo de voz que interrompe qualquer distração.",
     "Essa foi daquelas que transformam rolagem em pausa.",
     "Se você ficou até aqui, provavelmente não foi por causa do algoritmo.",
-    "O trecho certo começa exatamente quando você ia passar."
+    "O trecho certo começa exatamente quando você ia passar.",
+    "Não sei se é nostalgia, terapia ou só uma música boa. Aceito os três."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -442,7 +443,8 @@
     "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?",
     "Qual foi a última música que fez você esquecer o que tava fazendo por alguns segundos?",
     "Escuta a próxima linha com atenção. Qual palavra acertou diferente?",
-    "Presta atenção na mudança de tom. Foi ali que a música te pegou?"
+    "Presta atenção na mudança de tom. Foi ali que a música te pegou?",
+    "Um pequeno detalhe no arranjo muda a história toda. Você percebeu qual?"
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -452,8 +454,8 @@
     "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6abbae98768dc9fa1612a530",
+  "last_buffer_post_id": "6abbc8bd86767996fcb6fdec",
   "last_buffer_status": "sent",
-  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690932797954886932",
+  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690961435693698310",
   "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
 }

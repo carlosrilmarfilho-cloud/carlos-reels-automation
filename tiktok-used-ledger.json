@@ -1177,7 +1177,16 @@
       "sent_at": "2026-09-29T12:28:50.704Z",
       "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690932797954886932",
       "source": "confirmed_buffer_publication"
+    },
+    {
+      "name": "1287DDFF-011C-4141-B09E-249B63C95F08.mp4",
+      "drive_id": "1a_0Gw3NSO6v4TGyhbuSG_YShAkHcz7pE",
+      "sha256": "96aaf6872f14215c0879d3aa3ee3c6f7e9d1557cd03bc08a679c3e611f502ce6",
+      "buffer_post_id": "6abbc8bd86767996fcb6fdec",
+      "sent_at": "2026-09-29T14:20:41.070Z",
+      "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7690961435693698310",
+      "source": "confirmed_buffer_publication"
     }
   ],
-  "updated_at": "2026-09-29T12:28:56.591322+00:00"
+  "updated_at": "2026-09-29T14:20:42.157521+00:00"
 }
