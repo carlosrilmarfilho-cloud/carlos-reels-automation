@@ -38,12 +38,16 @@ jobs:
           git reset --hard "origin/$GITHUB_REF_NAME"
           targets=$(python3 - <<'PY'
           import json
-          from datetime import datetime, timezone
+          from datetime import datetime, timedelta, timezone
           from pathlib import Path
 
           now = datetime.now(timezone.utc)
-          if now.hour not in {11, 14, 17, 20, 23}:
+          official_hours = {11,14,17,20,23}
+          anchor = now if now.hour in official_hours else now - timedelta(hours=1)
+          if anchor.hour not in official_hours or (now.hour not in official_hours and now.minute >= 30):
+              print('false')
               raise SystemExit
+          slot_date, slot_hour = anchor.date(), anchor.hour
 
           targets = (
               ("post-reel.yml", "state.json"),
@@ -58,7 +62,7 @@ jobs:
                       value = json.loads(path.read_text(encoding="utf-8")).get("last_posted_at")
                       if value:
                           last = datetime.fromisoformat(str(value).replace("Z", "+00:00")).astimezone(timezone.utc)
-                          confirmed = last.date() == now.date() and last.hour == now.hour
+                          confirmed = last.date() == slot_date and last.hour == slot_hour
                   except Exception:
                       pass
               if not confirmed:
