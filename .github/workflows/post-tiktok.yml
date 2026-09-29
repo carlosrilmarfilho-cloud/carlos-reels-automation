@@ -47,9 +47,11 @@ jobs:
           from datetime import datetime, timedelta, timezone
           from pathlib import Path
           now=datetime.now(timezone.utc)
-          allowed={11,14,17,20,23}
-          if now.hour not in allowed:
+          official={11,14,17,20,23}
+          anchor=now if now.hour in official else now-timedelta(hours=1)
+          if anchor.hour not in official or (now.hour not in official and now.minute>=30):
               print('false'); raise SystemExit
+          slot_date,slot_hour=anchor.date(),anchor.hour
           diag=Path('tiktok-diagnostic.json')
           if diag.exists():
               try:
@@ -75,7 +77,7 @@ jobs:
                   value=json.loads(state.read_text(encoding='utf-8')).get('last_posted_at')
                   if value:
                       last=datetime.fromisoformat(str(value).replace('Z','+00:00')).astimezone(timezone.utc)
-                      if last.date()==now.date() and last.hour==now.hour:
+                      if last.date()==slot_date and last.hour==slot_hour:
                           print('false'); raise SystemExit
               except SystemExit: raise
               except Exception: pass
@@ -205,9 +207,14 @@ jobs:
           cp tiktok-candidate.json /tmp/prepublish-candidate.json
           allowed=$(python3 - <<'PY'
           import json
-          from datetime import datetime, timezone
+          from datetime import datetime, timedelta, timezone
           from pathlib import Path
           now=datetime.now(timezone.utc)
+          official={11,14,17,20,23}
+          anchor=now if now.hour in official else now-timedelta(hours=1)
+          if anchor.hour not in official or (now.hour not in official and now.minute>=30):
+              print('false'); raise SystemExit
+          slot_date,slot_hour=anchor.date(),anchor.hour
           candidate=json.loads(Path('/tmp/prepublish-candidate.json').read_text(encoding='utf-8'))
           queue=json.loads(Path('/tmp/prepublish-queue.json').read_text(encoding='utf-8')).get('queue') or []
           if not queue or str(queue[0].get('drive_id')) != str(candidate.get('drive_id')):
@@ -218,7 +225,7 @@ jobs:
                   value=json.loads(p.read_text(encoding='utf-8')).get('last_posted_at')
                   if value:
                       last=datetime.fromisoformat(str(value).replace('Z','+00:00')).astimezone(timezone.utc)
-                      if last.date()==now.date() and last.hour==now.hour:
+                      if last.date()==slot_date and last.hour==slot_hour:
                           print('false'); raise SystemExit
               except SystemExit: raise
               except Exception: pass
