@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "83093820-DCDB-4081-BE78-1118698B99C6.mp4",
-  "overlay": "Nem toda música precisa de contexto. Algumas só precisam de volume.",
+  "video": "CC16C569-E899-45F2-AA46-381A81EE8BE2.mp4",
+  "overlay": "Tem som que você escuta. E tem som que muda teu jeito de ficar quieto.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.15703125,
+    "y0": 0.0484375,
     "x1": 0.9555555555555556,
-    "y1": 0.2828125
+    "y1": 0.121875
   },
-  "faces_checked": 4,
+  "faces_checked": 10,
   "failures": []
 }
