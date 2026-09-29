@@ -45,7 +45,6 @@ jobs:
           official_hours = {11,14,17,20,23}
           anchor = now if now.hour in official_hours else now - timedelta(hours=1)
           if anchor.hour not in official_hours or (now.hour not in official_hours and now.minute >= 30):
-              print('false')
               raise SystemExit
           slot_date, slot_hour = anchor.date(), anchor.hour
 
