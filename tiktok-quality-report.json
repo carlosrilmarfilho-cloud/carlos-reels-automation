@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "CC16C569-E899-45F2-AA46-381A81EE8BE2.mp4",
-  "overlay": "Tem som que você escuta. E tem som que muda teu jeito de ficar quieto.",
+  "video": "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4",
+  "overlay": "Nem precisa conhecer: essa voz faz você ficar.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.0484375,
+    "y0": 0.174609375,
     "x1": 0.9555555555555556,
-    "y1": 0.121875
+    "y1": 0.265234375
   },
-  "faces_checked": 10,
+  "faces_checked": 9,
   "failures": []
 }

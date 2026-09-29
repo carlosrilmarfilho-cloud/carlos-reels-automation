@@ -1,111 +1,75 @@
 {
-  "started_at": "2026-09-29T20:24:09.992850+00:00",
+  "started_at": "2026-09-29T23:06:17.284709+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 115,
+  "caption_length": 125,
   "source_candidate": {
-    "name": "CC16C569-E899-45F2-AA46-381A81EE8BE2.mp4",
-    "drive_id": "175fv5DFbfuQdJ4QDqfOdznGk5B-jdVeF",
-    "sha256": "c70a4218af70b80f0c0a245b1495697878d68aedceb318cdba860e28873aa473"
+    "name": "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4",
+    "drive_id": "1TbXKGU1MMsRw0EPDIRr0uzyOE8n_iOY2",
+    "sha256": "9f3709b06b09818b9ad6c17a1cc1780ce86b01aa44458502673b28875b5db74c"
   },
   "metadata_snapshot": {
-    "video": "CC16C569-E899-45F2-AA46-381A81EE8BE2.mp4",
+    "video": "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 9,
-    "overlay": "Tem som que você escuta. E tem som que muda teu jeito de ficar quieto.",
-    "caption": "Essa virada também mudou o clima por aí? Marca o momento exato.\n\n#boamusica #reelsbrasil #musica #brasil #reels",
+    "variant_index": 0,
+    "overlay": "Nem precisa conhecer: essa voz faz você ficar.",
+    "caption": "Qual detalhe musical fez você parar a rolagem? Escuta outra vez e me diz.\n\n#boamusica #reelsbrasil #musica #brasil #reels",
     "hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
     "source_resolution": "2160x3840",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 124,
+      "y0": 447,
       "x1": 1376,
-      "y1": 312
+      "y1": 679
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.0484375,
+      "y0": 0.174609375,
       "x1": 0.9555555555555556,
-      "y1": 0.121875
+      "y1": 0.265234375
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 317.3333333333333,
-        "y0": 984.0,
-        "x1": 1050.6666666666665,
-        "y1": 1717.3333333333333
+        "x0": 504.0,
+        "y0": 1104.0,
+        "x1": 1029.3333333333333,
+        "y1": 1629.3333333333333
       },
       {
-        "x0": 1141.3333333333333,
-        "y0": 1256.0,
-        "x1": 1352.0,
-        "y1": 1466.6666666666665
+        "x0": 480.0,
+        "y0": 1112.0,
+        "x1": 1104.0,
+        "y1": 1736.0
       },
       {
-        "x0": 202.66666666666666,
-        "y0": 2098.6666666666665,
-        "x1": 346.66666666666663,
-        "y1": 2242.6666666666665
+        "x0": 453.3333333333333,
+        "y0": 1165.3333333333333,
+        "x1": 1072.0,
+        "y1": 1784.0
       },
       {
-        "x0": 154.66666666666666,
-        "y0": 834.6666666666666,
-        "x1": 1162.6666666666667,
-        "y1": 1842.6666666666665
+        "x0": 320.0,
+        "y0": 1192.0,
+        "x1": 1005.3333333333333,
+        "y1": 1877.3333333333333
       },
       {
-        "x0": 970.6666666666666,
-        "y0": 1848.0,
-        "x1": 1381.3333333333333,
-        "y1": 2258.6666666666665
+        "x0": 485.3333333333333,
+        "y0": 1800.0,
+        "x1": 629.3333333333333,
+        "y1": 1944.0
       },
       {
-        "x0": 600.0,
-        "y0": 2162.6666666666665,
-        "x1": 818.6666666666666,
-        "y1": 2381.333333333333
-      },
-      {
-        "x0": 218.66666666666666,
-        "y0": 1005.3333333333333,
-        "x1": 896.0,
-        "y1": 1682.6666666666665
-      },
-      {
-        "x0": 906.6666666666666,
-        "y0": 1736.0,
-        "x1": 1285.3333333333333,
-        "y1": 2114.6666666666665
-      },
-      {
-        "x0": 362.66666666666663,
-        "y0": 946.6666666666666,
-        "x1": 1229.3333333333333,
-        "y1": 1813.3333333333333
-      },
-      {
-        "x0": 818.6666666666666,
-        "y0": 1093.3333333333333,
-        "x1": 1157.3333333333333,
-        "y1": 1432.0
-      },
-      {
-        "x0": 157.33333333333331,
-        "y0": 2170.6666666666665,
-        "x1": 336.0,
-        "y1": 2349.333333333333
-      },
-      {
-        "x0": 312.0,
-        "y0": 856.0,
-        "x1": 1250.6666666666665,
-        "y1": 1794.6666666666665
+        "x0": 352.0,
+        "y0": 1813.3333333333333,
+        "x1": 496.0,
+        "y1": 1957.3333333333333
       }
     ],
     "visual_rules": {
@@ -116,10 +80,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 179,
-      "last_posted_at": "2026-09-29T17:51:37.562Z",
-      "last_video": "CC16C569-E899-45F2-AA46-381A81EE8BE2.mp4",
-      "last_overlay": "Tem som que você escuta. E tem som que muda teu jeito de ficar quieto.",
+      "posts_total": 180,
+      "last_posted_at": "2026-09-29T20:26:03.651Z",
+      "last_video": "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4",
+      "last_overlay": "Nem precisa conhecer: essa voz faz você ficar.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -176,7 +140,7 @@
         "D3390941-13EB-4298-95BC-5C3D430C7685.mp4": 2,
         "E33D9A8A-03BC-4BF1-B49C-9DF5A17DC778.mp4": 2,
         "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4": 2,
-        "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4": 2,
+        "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4": 3,
         "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 2,
         "1287DDFF-011C-4141-B09E-249B63C95F08.mp4": 3,
         "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4": 3,
@@ -210,7 +174,7 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "Essa virada também mudou o clima por aí? Marca o momento exato.",
+      "last_caption": "Qual detalhe musical fez você parar a rolagem? Escuta outra vez e me diz.",
       "last_hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
@@ -387,7 +351,8 @@
         "O trecho certo começa exatamente quando você ia passar.",
         "Não sei se é nostalgia, terapia ou só uma música boa. Aceito os três.",
         "Nem toda música precisa de contexto. Algumas só precisam de volume.",
-        "Tem som que você escuta. E tem som que muda teu jeito de ficar quieto."
+        "Tem som que você escuta. E tem som que muda teu jeito de ficar quieto.",
+        "Nem precisa conhecer: essa voz faz você ficar."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -564,7 +529,8 @@
         "Presta atenção na mudança de tom. Foi ali que a música te pegou?",
         "Um pequeno detalhe no arranjo muda a história toda. Você percebeu qual?",
         "Eu não quero te convencer a gostar. Só deixa essa parte terminar e decide depois.",
-        "Essa virada também mudou o clima por aí? Marca o momento exato."
+        "Essa virada também mudou o clima por aí? Marca o momento exato.",
+        "Qual detalhe musical fez você parar a rolagem? Escuta outra vez e me diz."
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -574,20 +540,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6abbfa3f9340de4c73611c6a",
+      "last_buffer_post_id": "6abc1e6b3b1eb12e6e362aa3",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7691015971141586196",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7691055451512917300",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
   "hashtags_snapshot": "#boamusica #tiktokbrasil #musica #brasil #paravoce",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6abc1e6b3b1eb12e6e362aa3",
+  "post_id": "6abc446b3b1eb12e6e3a71bf",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-29T20:26:03.651Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7691055451512917300",
+  "sent_at": "2026-09-29T23:08:08.598Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7691097541126966549",
   "success": true,
-  "finished_at": "2026-09-29T20:26:13.460205+00:00"
+  "finished_at": "2026-09-29T23:08:12.015931+00:00"
 }
