@@ -5,7 +5,7 @@ import json
 import os
 import re
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -18,7 +18,13 @@ valid_ext = {".mp4", ".mov", ".m4v", ".avi", ".mkv"}
 platform = os.environ.get("PLATFORM", "").strip().lower()
 
 target_hours_utc = {11, 14, 17, 20, 23}
-if platform in {"instagram", "instagram_underscore", "tiktok"} and datetime.now(timezone.utc).hour not in target_hours_utc:
+now_utc = datetime.now(timezone.utc)
+slot_anchor = now_utc if now_utc.hour in target_hours_utc else now_utc - timedelta(hours=1)
+inside_bounded_window = (
+    slot_anchor.hour in target_hours_utc
+    and (now_utc.hour in target_hours_utc or now_utc.minute < 30)
+)
+if platform in {"instagram", "instagram_underscore", "tiktok"} and not inside_bounded_window:
     print(json.dumps({"count": 0, "reason": "outside_five_daily_window", "platform": platform}))
     raise SystemExit(0)
 
