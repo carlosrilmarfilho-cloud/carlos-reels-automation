@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4",
-  "overlay": "A música é curta. O tanto de coisa que ela puxa da cabeça não.",
+  "video": "5E9AA733-82BF-4099-B77F-FDE5F646184F.mp4",
+  "overlay": "Se a primeira nota prendeu, espera a próxima frase.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.15703125,
+    "y0": 0.174609375,
     "x1": 0.9555555555555556,
-    "y1": 0.2828125
+    "y1": 0.265234375
   },
-  "faces_checked": 3,
+  "faces_checked": 7,
   "failures": []
 }
