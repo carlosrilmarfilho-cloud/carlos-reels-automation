@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4",
-  "overlay": "Nem precisa conhecer: essa voz faz você ficar.",
+  "video": "30E3E09C-22BC-4D18-B5CC-D5DF595ED34D.mp4",
+  "overlay": "Antes do refrão, teu corpo já sabia a resposta.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
     "y0": 0.174609375,
     "x1": 0.9555555555555556,
     "y1": 0.265234375
   },
-  "faces_checked": 9,
+  "faces_checked": 8,
   "failures": []
 }

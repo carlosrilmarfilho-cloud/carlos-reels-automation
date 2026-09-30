@@ -1,25 +1,25 @@
 {
-  "started_at": "2026-09-29T23:06:17.284709+00:00",
+  "started_at": "2026-09-30T11:27:26.052477+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 125,
+  "caption_length": 133,
   "source_candidate": {
-    "name": "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4",
-    "drive_id": "1TbXKGU1MMsRw0EPDIRr0uzyOE8n_iOY2",
-    "sha256": "9f3709b06b09818b9ad6c17a1cc1780ce86b01aa44458502673b28875b5db74c"
+    "name": "30E3E09C-22BC-4D18-B5CC-D5DF595ED34D.mp4",
+    "drive_id": "1tPSBEs6jvf8x-WhVOBlaNYH98jftqTa_",
+    "sha256": "da06fff0e82234e86f07b774b51f9466588ada43e43219429ce7a5988355d383"
   },
   "metadata_snapshot": {
-    "video": "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4",
+    "video": "30E3E09C-22BC-4D18-B5CC-D5DF595ED34D.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 0,
-    "overlay": "Nem precisa conhecer: essa voz faz você ficar.",
-    "caption": "Qual detalhe musical fez você parar a rolagem? Escuta outra vez e me diz.\n\n#boamusica #reelsbrasil #musica #brasil #reels",
-    "hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
+    "variant_index": 16,
+    "overlay": "Antes do refrão, teu corpo já sabia a resposta.",
+    "caption": "Tenta ouvir esta parte sem voltar o vídeo. Depois conta se conseguiu.\n\n#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
+    "hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
     "source_resolution": "2160x3840",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
@@ -36,40 +36,58 @@
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 504.0,
-        "y0": 1104.0,
-        "x1": 1029.3333333333333,
-        "y1": 1629.3333333333333
+        "x0": 592.0,
+        "y0": 1597.3333333333333,
+        "x1": 1122.6666666666665,
+        "y1": 2128.0
       },
       {
-        "x0": 480.0,
-        "y0": 1112.0,
-        "x1": 1104.0,
-        "y1": 1736.0
-      },
-      {
-        "x0": 453.3333333333333,
-        "y0": 1165.3333333333333,
-        "x1": 1072.0,
-        "y1": 1784.0
-      },
-      {
-        "x0": 320.0,
-        "y0": 1192.0,
-        "x1": 1005.3333333333333,
-        "y1": 1877.3333333333333
-      },
-      {
-        "x0": 485.3333333333333,
-        "y0": 1800.0,
-        "x1": 629.3333333333333,
-        "y1": 1944.0
+        "x0": 864.0,
+        "y0": 1373.3333333333333,
+        "x1": 1002.6666666666666,
+        "y1": 1512.0
       },
       {
         "x0": 352.0,
-        "y0": 1813.3333333333333,
-        "x1": 496.0,
-        "y1": 1957.3333333333333
+        "y0": 1024.0,
+        "x1": 1045.3333333333333,
+        "y1": 1717.3333333333333
+      },
+      {
+        "x0": 624.0,
+        "y0": 1336.0,
+        "x1": 808.0,
+        "y1": 1520.0
+      },
+      {
+        "x0": 864.0,
+        "y0": 1181.3333333333333,
+        "x1": 1093.3333333333333,
+        "y1": 1410.6666666666665
+      },
+      {
+        "x0": 330.66666666666663,
+        "y0": 1610.6666666666665,
+        "x1": 509.3333333333333,
+        "y1": 1789.3333333333333
+      },
+      {
+        "x0": 410.66666666666663,
+        "y0": 1085.3333333333333,
+        "x1": 1098.6666666666665,
+        "y1": 1773.3333333333333
+      },
+      {
+        "x0": 645.3333333333333,
+        "y0": 1354.6666666666665,
+        "x1": 874.6666666666666,
+        "y1": 1584.0
+      },
+      {
+        "x0": 1120.0,
+        "y0": 1600.0,
+        "x1": 1266.6666666666665,
+        "y1": 1746.6666666666665
       }
     ],
     "visual_rules": {
@@ -80,10 +98,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 180,
-      "last_posted_at": "2026-09-29T20:26:03.651Z",
-      "last_video": "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4",
-      "last_overlay": "Nem precisa conhecer: essa voz faz você ficar.",
+      "posts_total": 181,
+      "last_posted_at": "2026-09-29T23:08:08.598Z",
+      "last_video": "30E3E09C-22BC-4D18-B5CC-D5DF595ED34D.mp4",
+      "last_overlay": "Antes do refrão, teu corpo já sabia a resposta.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -111,7 +129,7 @@
         "F08AEB30-A4DA-410C-8A40-8EC5C73AFF22.mp4": 2,
         "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4": 2,
         "30620ACB-E217-45FD-9002-E09469B7A763.mp4": 2,
-        "30E3E09C-22BC-4D18-B5CC-D5DF595ED34D.mp4": 2,
+        "30E3E09C-22BC-4D18-B5CC-D5DF595ED34D.mp4": 3,
         "3B39DB0D-7FDF-452E-A0DF-DA9DE006F164.mp4": 2,
         "41EF1F58-C757-4821-8692-EE6110066BFA.mp4": 2,
         "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4": 2,
@@ -174,8 +192,8 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "Qual detalhe musical fez você parar a rolagem? Escuta outra vez e me diz.",
-      "last_hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
+      "last_caption": "Tenta ouvir esta parte sem voltar o vídeo. Depois conta se conseguiu.",
+      "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -352,7 +370,8 @@
         "Não sei se é nostalgia, terapia ou só uma música boa. Aceito os três.",
         "Nem toda música precisa de contexto. Algumas só precisam de volume.",
         "Tem som que você escuta. E tem som que muda teu jeito de ficar quieto.",
-        "Nem precisa conhecer: essa voz faz você ficar."
+        "Nem precisa conhecer: essa voz faz você ficar.",
+        "Antes do refrão, teu corpo já sabia a resposta."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -530,7 +549,8 @@
         "Um pequeno detalhe no arranjo muda a história toda. Você percebeu qual?",
         "Eu não quero te convencer a gostar. Só deixa essa parte terminar e decide depois.",
         "Essa virada também mudou o clima por aí? Marca o momento exato.",
-        "Qual detalhe musical fez você parar a rolagem? Escuta outra vez e me diz."
+        "Qual detalhe musical fez você parar a rolagem? Escuta outra vez e me diz.",
+        "Tenta ouvir esta parte sem voltar o vídeo. Depois conta se conseguiu."
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -540,20 +560,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6abc1e6b3b1eb12e6e362aa3",
+      "last_buffer_post_id": "6abc446b3b1eb12e6e3a71bf",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7691055451512917300",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7691097541126966549",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#boamusica #tiktokbrasil #musica #brasil #paravoce",
+  "hashtags_snapshot": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6abc446b3b1eb12e6e3a71bf",
+  "post_id": "6abcf21f14a5d43cb47d7d7b",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-29T23:08:08.598Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7691097541126966549",
+  "sent_at": "2026-09-30T11:31:16.139Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7691288544366710037",
   "success": true,
-  "finished_at": "2026-09-29T23:08:12.015931+00:00"
+  "finished_at": "2026-09-30T11:31:20.186105+00:00"
 }
