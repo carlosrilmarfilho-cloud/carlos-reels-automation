@@ -1,69 +1,63 @@
 {
-  "started_at": "2026-09-30T17:13:03.796633+00:00",
+  "started_at": "2026-09-30T20:25:48.679008+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 138,
+  "caption_length": 147,
   "source_candidate": {
-    "name": "30620ACB-E217-45FD-9002-E09469B7A763.mp4",
-    "drive_id": "11GG9tybmwA-7n5BOCtVXVD0R1jT3otgx",
-    "sha256": "dd2c50aa7b67dc6e01abb560a3d14d9848bffb199fd395f18d392ca350315f7d"
+    "name": "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4",
+    "drive_id": "1MdCqDpzkBao5cHOyxuyRcMHYiDEqboog",
+    "sha256": "a69a9e67a10bc52996daddff676f0227697f7837126ce48ddac9179ccafc2153"
   },
   "metadata_snapshot": {
-    "video": "30620ACB-E217-45FD-9002-E09469B7A763.mp4",
+    "video": "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 4,
-    "overlay": "A cabeça tava em outro lugar até essa voz entrar.",
-    "caption": "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia.\n\n#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
-    "hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
+    "variant_index": 9,
+    "overlay": "A música é curta. O tanto de coisa que ela puxa da cabeça não.",
+    "caption": "Tem voz que impressiona pela técnica. Tem voz que prende porque parece verdade. Eu fico com a segunda.\n\n#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
+    "hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
     "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 447,
+      "y0": 402,
       "x1": 1376,
-      "y1": 679
+      "y1": 724
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.174609375,
+      "y0": 0.15703125,
       "x1": 0.9555555555555556,
-      "y1": 0.265234375
+      "y1": 0.2828125
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 786.6666666666666,
-        "y0": 1578.6666666666667,
-        "x1": 928.0000000000001,
-        "y1": 1720.0
+        "x0": 266.66666666666663,
+        "y0": 1120.0,
+        "x1": 936.0,
+        "y1": 1789.3333333333335
       },
       {
-        "x0": 389.3333333333333,
-        "y0": 1245.3333333333333,
-        "x1": 770.6666666666667,
-        "y1": 1626.6666666666665
+        "x0": 344.0,
+        "y0": 1122.6666666666667,
+        "x1": 1213.3333333333333,
+        "y1": 1992.0
       },
       {
-        "x0": 701.3333333333334,
-        "y0": 1258.6666666666665,
-        "x1": 997.3333333333333,
-        "y1": 1554.6666666666667
+        "x0": 624.0,
+        "y0": 1453.3333333333335,
+        "x1": 952.0,
+        "y1": 1781.3333333333333
       },
       {
-        "x0": 706.6666666666667,
-        "y0": 1181.3333333333335,
-        "x1": 1048.0,
-        "y1": 1522.6666666666667
-      },
-      {
-        "x0": 928.0000000000001,
-        "y0": 2301.333333333333,
-        "x1": 1160.0,
-        "y1": 2533.3333333333335
+        "x0": 274.6666666666667,
+        "y0": 1904.0,
+        "x1": 485.3333333333333,
+        "y1": 2114.6666666666665
       }
     ],
     "visual_rules": {
@@ -74,10 +68,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 183,
-      "last_posted_at": "2026-09-30T14:18:39.000Z",
-      "last_video": "30620ACB-E217-45FD-9002-E09469B7A763.mp4",
-      "last_overlay": "A cabeça tava em outro lugar até essa voz entrar.",
+      "posts_total": 184,
+      "last_posted_at": "2026-09-30T17:14:55.656Z",
+      "last_video": "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4",
+      "last_overlay": "A música é curta. O tanto de coisa que ela puxa da cabeça não.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -113,7 +107,7 @@
         "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4": 2,
         "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4": 2,
         "5E9AA733-82BF-4099-B77F-FDE5F646184F.mp4": 2,
-        "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4": 2,
+        "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4": 3,
         "66DDCAFF-E155-463B-B226-F8270C9B5E3A.mp4": 2,
         "6AA0991D-5050-4107-A363-6D0C646C5741.mp4": 2,
         "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4": 2,
@@ -168,8 +162,8 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia.",
-      "last_hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
+      "last_caption": "Tem voz que impressiona pela técnica. Tem voz que prende porque parece verdade. Eu fico com a segunda.",
+      "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -349,7 +343,8 @@
         "Nem precisa conhecer: essa voz faz você ficar.",
         "Antes do refrão, teu corpo já sabia a resposta.",
         "Se isso te fez lembrar de alguém, a responsabilidade é do compositor.",
-        "A cabeça tava em outro lugar até essa voz entrar."
+        "A cabeça tava em outro lugar até essa voz entrar.",
+        "A música é curta. O tanto de coisa que ela puxa da cabeça não."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -530,7 +525,8 @@
         "Qual detalhe musical fez você parar a rolagem? Escuta outra vez e me diz.",
         "Tenta ouvir esta parte sem voltar o vídeo. Depois conta se conseguiu.",
         "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?",
-        "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia."
+        "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia.",
+        "Tem voz que impressiona pela técnica. Tem voz que prende porque parece verdade. Eu fico com a segunda."
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -540,20 +536,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6abd19cc9d430e122390e2b8",
+      "last_buffer_post_id": "6abd432258e50b242171ddae",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7691332146455252230",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7691377610437201173",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
+  "hashtags_snapshot": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6abd432258e50b242171ddae",
+  "post_id": "6abd704ef245fa4cd5309798",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-30T17:14:55.656Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7691377610437201173",
+  "sent_at": "2026-09-30T20:27:40.515Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7691427010408713478",
   "success": true,
-  "finished_at": "2026-09-30T17:14:59.258884+00:00"
+  "finished_at": "2026-09-30T20:27:41.533760+00:00"
 }

@@ -225,7 +225,8 @@
     "9f3709b06b09818b9ad6c17a1cc1780ce86b01aa44458502673b28875b5db74c",
     "da06fff0e82234e86f07b774b51f9466588ada43e43219429ce7a5988355d383",
     "0116e782728fe33ad0389ed134ab384162c845c5456d2f8437840a2c56db2321",
-    "dd2c50aa7b67dc6e01abb560a3d14d9848bffb199fd395f18d392ca350315f7d"
+    "dd2c50aa7b67dc6e01abb560a3d14d9848bffb199fd395f18d392ca350315f7d",
+    "a69a9e67a10bc52996daddff676f0227697f7837126ce48ddac9179ccafc2153"
   ],
   "records": [
     {
@@ -1245,7 +1246,16 @@
       "sent_at": "2026-09-30T17:14:55.656Z",
       "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7691377610437201173",
       "source": "confirmed_buffer_publication"
+    },
+    {
+      "name": "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4",
+      "drive_id": "1MdCqDpzkBao5cHOyxuyRcMHYiDEqboog",
+      "sha256": "a69a9e67a10bc52996daddff676f0227697f7837126ce48ddac9179ccafc2153",
+      "buffer_post_id": "6abd704ef245fa4cd5309798",
+      "sent_at": "2026-09-30T20:27:40.515Z",
+      "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7691427010408713478",
+      "source": "confirmed_buffer_publication"
     }
   ],
-  "updated_at": "2026-09-30T17:14:59.257362+00:00"
+  "updated_at": "2026-09-30T20:27:41.532107+00:00"
 }
