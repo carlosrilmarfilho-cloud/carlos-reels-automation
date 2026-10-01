@@ -1,93 +1,51 @@
 {
-  "started_at": "2026-09-30T23:12:39.961282+00:00",
+  "started_at": "2026-10-01T21:24:03.779605+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
   "caption_length": 138,
   "source_candidate": {
-    "name": "5E9AA733-82BF-4099-B77F-FDE5F646184F.mp4",
-    "drive_id": "19RHdvmEPMWpG4ljj3AMRvoIhDg3F2acP",
-    "sha256": "8f41dd0c549071c4e77dd5885a51c6b07e35f6f134b955275854c2baa6183ea1"
+    "name": "CA6E6C03-D0B2-46D2-BEFE-E112DE04EF2B.mp4",
+    "drive_id": "115Ln4do52TojjUWFTmxKBYVFcuzLvL8N",
+    "sha256": "1138de49db27af90092c9c35964fbede4279cd3eba450cddefaa57f03f360cd4"
   },
   "metadata_snapshot": {
-    "video": "5E9AA733-82BF-4099-B77F-FDE5F646184F.mp4",
+    "video": "CA6E6C03-D0B2-46D2-BEFE-E112DE04EF2B.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 0,
-    "overlay": "Se a primeira nota prendeu, espera a próxima frase.",
-    "caption": "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?\n\n#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
-    "hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
-    "source_resolution": "2160x3840",
+    "variant_index": 1,
+    "overlay": "Eu ia passar o vídeo. A música claramente tinha outros planos.",
+    "caption": "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.\n\n#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
+    "hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
+    "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 447,
+      "y0": 121,
       "x1": 1376,
-      "y1": 679
+      "y1": 443
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.174609375,
+      "y0": 0.047265625,
       "x1": 0.9555555555555556,
-      "y1": 0.265234375
+      "y1": 0.173046875
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 248.0,
-        "y0": 1210.6666666666665,
-        "x1": 720.0,
-        "y1": 1682.6666666666665
+        "x0": 706.6666666666667,
+        "y0": 1160.0,
+        "x1": 1093.3333333333335,
+        "y1": 1546.6666666666665
       },
       {
-        "x0": 866.6666666666666,
-        "y0": 1245.3333333333333,
-        "x1": 1328.0,
-        "y1": 1706.6666666666665
-      },
-      {
-        "x0": 114.66666666666666,
-        "y0": 2077.333333333333,
-        "x1": 354.66666666666663,
-        "y1": 2317.333333333333
-      },
-      {
-        "x0": 528.0,
-        "y0": 1306.6666666666665,
-        "x1": 872.0,
-        "y1": 1650.6666666666665
-      },
-      {
-        "x0": 589.3333333333333,
-        "y0": 1538.6666666666665,
-        "x1": 890.6666666666666,
-        "y1": 1840.0
-      },
-      {
-        "x0": 149.33333333333331,
-        "y0": 938.6666666666666,
-        "x1": 1181.3333333333333,
-        "y1": 1970.6666666666665
-      },
-      {
-        "x0": 965.3333333333333,
-        "y0": 1064.0,
-        "x1": 1293.3333333333333,
-        "y1": 1392.0
-      },
-      {
-        "x0": 829.3333333333333,
-        "y0": 1082.6666666666665,
-        "x1": 1232.0,
-        "y1": 1485.3333333333333
-      },
-      {
-        "x0": 130.66666666666666,
-        "y0": 2053.333333333333,
-        "x1": 373.3333333333333,
-        "y1": 2296.0
+        "x0": 309.3333333333333,
+        "y0": 848.0,
+        "x1": 1226.6666666666667,
+        "y1": 1765.3333333333333
       }
     ],
     "visual_rules": {
@@ -98,10 +56,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 185,
-      "last_posted_at": "2026-09-30T20:27:40.515Z",
-      "last_video": "5E9AA733-82BF-4099-B77F-FDE5F646184F.mp4",
-      "last_overlay": "Se a primeira nota prendeu, espera a próxima frase.",
+      "posts_total": 186,
+      "last_posted_at": "2026-09-30T23:14:28.339Z",
+      "last_video": "CA6E6C03-D0B2-46D2-BEFE-E112DE04EF2B.mp4",
+      "last_overlay": "Eu ia passar o vídeo. A música claramente tinha outros planos.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -153,7 +111,7 @@
         "913C4B82-A346-496C-846C-243F68ABE625.mp4": 2,
         "9ACC0CB2-136E-41C6-86F3-F837E3CE5490.mp4": 3,
         "B27F702C-D111-43BF-8EA0-8F9257EC9546.mp4": 2,
-        "CA6E6C03-D0B2-46D2-BEFE-E112DE04EF2B.mp4": 2,
+        "CA6E6C03-D0B2-46D2-BEFE-E112DE04EF2B.mp4": 3,
         "CC16C569-E899-45F2-AA46-381A81EE8BE2.mp4": 3,
         "D3390941-13EB-4298-95BC-5C3D430C7685.mp4": 2,
         "E33D9A8A-03BC-4BF1-B49C-9DF5A17DC778.mp4": 2,
@@ -192,8 +150,8 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?",
-      "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
+      "last_caption": "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.",
+      "last_hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -375,7 +333,8 @@
         "Se isso te fez lembrar de alguém, a responsabilidade é do compositor.",
         "A cabeça tava em outro lugar até essa voz entrar.",
         "A música é curta. O tanto de coisa que ela puxa da cabeça não.",
-        "Se a primeira nota prendeu, espera a próxima frase."
+        "Se a primeira nota prendeu, espera a próxima frase.",
+        "Eu ia passar o vídeo. A música claramente tinha outros planos."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -558,7 +517,8 @@
         "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?",
         "A melodia entrou e a tela perdeu a pressa. Envia para quem também pararia.",
         "Tem voz que impressiona pela técnica. Tem voz que prende porque parece verdade. Eu fico com a segunda.",
-        "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?"
+        "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?",
+        "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu."
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -568,20 +528,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6abd704ef245fa4cd5309798",
+      "last_buffer_post_id": "6abd97699b58fd09c05ca519",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7691427010408713478",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7691470071171943681",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
+  "hashtags_snapshot": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6abd97699b58fd09c05ca519",
+  "post_id": "6abecf7545400a0e30fb4659",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-09-30T23:14:28.339Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7691470071171943681",
+  "sent_at": "2026-10-01T21:25:55.164Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7691813161015528756",
   "success": true,
-  "finished_at": "2026-09-30T23:14:33.993906+00:00"
+  "finished_at": "2026-10-01T21:25:56.532125+00:00"
 }
