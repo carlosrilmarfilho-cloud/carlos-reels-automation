@@ -1,12 +1,12 @@
 {
   "passed": true,
-  "video": "5E9AA733-82BF-4099-B77F-FDE5F646184F.mp4",
-  "overlay": "Se a primeira nota prendeu, espera a próxima frase.",
+  "video": "1C33CEDA-7E73-4873-B1C7-5D2ADC318915.mp4",
+  "overlay": "Tenta passar direto depois de ouvir esta parte.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.79453125,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.88515625
   },
   "faces_checked": 7,
   "failures": []
