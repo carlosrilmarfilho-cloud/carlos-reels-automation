@@ -1,69 +1,105 @@
 {
-  "started_at": "2026-10-02T21:15:13.645149+00:00",
+  "started_at": "2026-10-02T18:23:38.915367+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 120,
+  "caption_length": 132,
   "source_candidate": {
-    "name": "66DDCAFF-E155-463B-B226-F8270C9B5E3A.mp4",
-    "drive_id": "1sRpc8u5xcOizIINGH80mqBFP1nw840JK",
-    "sha256": "cec699d2917d7b84c3bbd97c3cf49c8208127a7c1e88a264fbaeb441ad71ea2d"
+    "name": "3B39DB0D-7FDF-452E-A0DF-DA9DE006F164.mp4",
+    "drive_id": "1PX-QZOoseQ8c2JuvKf9lQxPPCPxeRk0O",
+    "sha256": "832c8bcbb6fbb4f74c50ba2c73ded43c86cca3168ad5b1612c63ba84d99e8ffa"
   },
   "metadata_snapshot": {
-    "video": "66DDCAFF-E155-463B-B226-F8270C9B5E3A.mp4",
+    "video": "3B39DB0D-7FDF-452E-A0DF-DA9DE006F164.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 14,
-    "overlay": "Escuta o detalhe que transforma este trecho inteiro.",
-    "caption": "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou.\n\n#musica #reelsbrasil #som #boamusica #brasil",
-    "hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
-    "source_resolution": "1440x2560",
+    "variant_index": 0,
+    "overlay": "A canção avisa cedo quando merece chegar ao fim.",
+    "caption": "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂\n\n#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
+    "hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
+    "source_resolution": "2160x3840",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 121,
+      "y0": 447,
       "x1": 1376,
-      "y1": 443
+      "y1": 679
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.047265625,
+      "y0": 0.174609375,
       "x1": 0.9555555555555556,
-      "y1": 0.173046875
+      "y1": 0.265234375
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 464.00000000000006,
+        "x0": 434.66666666666663,
+        "y0": 922.6666666666666,
+        "x1": 1232.0,
+        "y1": 1720.0
+      },
+      {
+        "x0": 309.3333333333333,
+        "y0": 930.6666666666666,
+        "x1": 1034.6666666666665,
+        "y1": 1656.0
+      },
+      {
+        "x0": 1221.3333333333333,
+        "y0": 2120.0,
+        "x1": 1376.0,
+        "y1": 2274.6666666666665
+      },
+      {
+        "x0": 293.3333333333333,
+        "y0": 917.3333333333333,
+        "x1": 1138.6666666666665,
+        "y1": 1762.6666666666665
+      },
+      {
+        "x0": 1208.0,
+        "y0": 2138.6666666666665,
+        "x1": 1349.3333333333333,
+        "y1": 2280.0
+      },
+      {
+        "x0": 264.0,
         "y0": 938.6666666666666,
-        "x1": 1370.6666666666667,
-        "y1": 1845.3333333333333
+        "x1": 1032.0,
+        "y1": 1706.6666666666665
       },
       {
-        "x0": 285.33333333333337,
-        "y0": 866.6666666666667,
-        "x1": 1189.3333333333335,
-        "y1": 1770.6666666666665
+        "x0": 413.3333333333333,
+        "y0": 938.6666666666666,
+        "x1": 1184.0,
+        "y1": 1709.3333333333333
       },
       {
-        "x0": 520.0,
-        "y0": 914.6666666666667,
-        "x1": 1352.0,
-        "y1": 1746.6666666666665
+        "x0": 1224.0,
+        "y0": 2152.0,
+        "x1": 1373.3333333333333,
+        "y1": 2301.333333333333
       },
       {
-        "x0": 408.0,
-        "y0": 912.0,
-        "x1": 1306.6666666666667,
-        "y1": 1810.6666666666665
+        "x0": 378.66666666666663,
+        "y0": 901.3333333333333,
+        "x1": 1202.6666666666665,
+        "y1": 1725.3333333333333
       },
       {
-        "x0": 288.0,
-        "y0": 1018.6666666666666,
-        "x1": 1197.3333333333333,
-        "y1": 1928.0
+        "x0": 1208.0,
+        "y0": 2133.333333333333,
+        "x1": 1362.6666666666665,
+        "y1": 2288.0
+      },
+      {
+        "x0": 221.33333333333331,
+        "y0": 880.0,
+        "x1": 1056.0,
+        "y1": 1714.6666666666665
       }
     ],
     "visual_rules": {
@@ -74,10 +110,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 188,
-      "last_posted_at": "2026-10-02T18:25:24.232Z",
-      "last_video": "66DDCAFF-E155-463B-B226-F8270C9B5E3A.mp4",
-      "last_overlay": "Escuta o detalhe que transforma este trecho inteiro.",
+      "posts_total": 187,
+      "last_posted_at": "2026-10-01T21:25:55.164Z",
+      "last_video": "3B39DB0D-7FDF-452E-A0DF-DA9DE006F164.mp4",
+      "last_overlay": "A canção avisa cedo quando merece chegar ao fim.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -114,7 +150,7 @@
         "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4": 2,
         "5E9AA733-82BF-4099-B77F-FDE5F646184F.mp4": 3,
         "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4": 3,
-        "66DDCAFF-E155-463B-B226-F8270C9B5E3A.mp4": 3,
+        "66DDCAFF-E155-463B-B226-F8270C9B5E3A.mp4": 2,
         "6AA0991D-5050-4107-A363-6D0C646C5741.mp4": 2,
         "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4": 2,
         "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4": 2,
@@ -168,8 +204,8 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou.",
-      "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
+      "last_caption": "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂",
+      "last_hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -353,8 +389,7 @@
         "A música é curta. O tanto de coisa que ela puxa da cabeça não.",
         "Se a primeira nota prendeu, espera a próxima frase.",
         "Eu ia passar o vídeo. A música claramente tinha outros planos.",
-        "A canção avisa cedo quando merece chegar ao fim.",
-        "Escuta o detalhe que transforma este trecho inteiro."
+        "A canção avisa cedo quando merece chegar ao fim."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -539,8 +574,7 @@
         "Tem voz que impressiona pela técnica. Tem voz que prende porque parece verdade. Eu fico com a segunda.",
         "Uma canção boa avisa cedo que merece o final. Esta avisou em qual momento?",
         "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.",
-        "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂",
-        "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou."
+        "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂"
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -550,20 +584,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6abff6ac918015097ad3d4e2",
+      "last_buffer_post_id": "6abecf7545400a0e30fb4659",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692137932802559253",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7691813161015528756",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
+  "hashtags_snapshot": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6ac01ee37d2f797785859e0e",
+  "post_id": "6abff6ac918015097ad3d4e2",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-10-02T21:16:58.646Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692182141312109876",
+  "sent_at": "2026-10-02T18:25:24.232Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692137932802559253",
   "success": true,
-  "finished_at": "2026-10-02T21:17:07.329137+00:00"
+  "finished_at": "2026-10-02T18:25:32.237120+00:00"
 }
