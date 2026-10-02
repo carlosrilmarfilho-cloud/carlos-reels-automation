@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "CA6E6C03-D0B2-46D2-BEFE-E112DE04EF2B.mp4",
-  "overlay": "Eu ia passar o vídeo. A música claramente tinha outros planos.",
+  "video": "3B39DB0D-7FDF-452E-A0DF-DA9DE006F164.mp4",
+  "overlay": "A canção avisa cedo quando merece chegar ao fim.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.047265625,
+    "y0": 0.174609375,
     "x1": 0.9555555555555556,
-    "y1": 0.173046875
+    "y1": 0.265234375
   },
-  "faces_checked": 2,
+  "faces_checked": 16,
   "failures": []
 }
