@@ -246,11 +246,14 @@ jobs:
           git config user.name "Carlos Reels Automation"
           git config user.email "actions@users.noreply.github.com"
           tmpdir=$(mktemp -d)
-          for file in diagnostic.json quality-report.json "$VIDEO_QUEUE_FILE"; do
-            [ -f "$file" ] && cp "$file" "$tmpdir/$file"
-          done
+          if [ "${{ steps.publish.outcome }}" != "skipped" ]; then
+            for file in diagnostic.json quality-report.json; do
+              [ -f "$file" ] && cp "$file" "$tmpdir/$file"
+            done
+          fi
           if [ "${{ steps.publish.outcome }}" = "success" ] && [ -f state.json ]; then
             cp state.json "$tmpdir/state.json"
+            [ -f "$VIDEO_QUEUE_FILE" ] && cp "$VIDEO_QUEUE_FILE" "$tmpdir/$VIDEO_QUEUE_FILE" || true
           elif [ "${{ steps.render.outcome }}" = "failure" ] && [ -f state.json ]; then
             cp state.json "$tmpdir/state.json"
           fi
@@ -261,9 +264,11 @@ jobs:
             for file in state.json diagnostic.json quality-report.json run-status.json "$VIDEO_QUEUE_FILE"; do
               [ -f "$tmpdir/$file" ] && cp "$tmpdir/$file" "$file"
             done
-            git add state.json run-status.json "$VIDEO_QUEUE_FILE"
-            [ -f diagnostic.json ] && git add diagnostic.json || true
-            [ -f quality-report.json ] && git add quality-report.json || true
+            git add run-status.json
+            [ -f "$tmpdir/state.json" ] && git add state.json || true
+            [ -f "$tmpdir/$VIDEO_QUEUE_FILE" ] && git add "$VIDEO_QUEUE_FILE" || true
+            [ -f "$tmpdir/diagnostic.json" ] && git add diagnostic.json || true
+            [ -f "$tmpdir/quality-report.json" ] && git add quality-report.json || true
             if git diff --cached --quiet; then
               exit 0
             fi
