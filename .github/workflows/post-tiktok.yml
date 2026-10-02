@@ -256,17 +256,19 @@ jobs:
         run: |
           set -e
           tmpdir=$(mktemp -d)
-          [ -f tiktok-diagnostic.json ] && cp tiktok-diagnostic.json "$tmpdir/tiktok-diagnostic.json" || true
-          [ -f "$VIDEO_QUEUE_FILE" ] && cp "$VIDEO_QUEUE_FILE" "$tmpdir/$VIDEO_QUEUE_FILE" || true
-          # Em falha de render, render.py registra o vídeo bloqueado em state.json.
-          # Promova esse estado para impedir que a recuperação tente o mesmo vídeo.
-          if [ "${{ steps.render.outcome }}" = "failure" ] && [ -f state.json ]; then
+          # Só uma publicação confirmada pode persistir e rotacionar a fila.
+          # Execuções deduplicadas partem de um checkout antigo e não podem
+          # sobrescrever o estado mais novo gravado pela execução vencedora.
+          if [ "${{ steps.publish.outcome }}" = "success" ]; then
+            [ -f tiktok-diagnostic.json ] && cp tiktok-diagnostic.json "$tmpdir/tiktok-diagnostic.json" || true
+            [ -f "$VIDEO_QUEUE_FILE" ] && cp "$VIDEO_QUEUE_FILE" "$tmpdir/$VIDEO_QUEUE_FILE" || true
+            [ -f state_tiktok.json ] && cp state_tiktok.json "$tmpdir/state_tiktok.json" || true
+            [ -f tiktok-used-ledger.json ] && cp tiktok-used-ledger.json "$tmpdir/tiktok-used-ledger.json" || true
+            [ -f quality-report.json ] && cp quality-report.json "$tmpdir/tiktok-quality-report.json" || true
+          elif [ "${{ steps.render.outcome }}" = "failure" ] && [ -f state.json ]; then
+            # Em falha de render, preserve apenas o bloqueio do vídeo; a fila não gira.
             cp state.json "$tmpdir/state_tiktok.json"
-          elif [ "${{ steps.publish.outcome }}" = "success" ] && [ -f state_tiktok.json ]; then
-            cp state_tiktok.json "$tmpdir/state_tiktok.json"
-            [ -f tiktok-used-ledger.json ] && cp tiktok-used-ledger.json "$tmpdir/tiktok-used-ledger.json"
           fi
-          [ -f quality-report.json ] && cp quality-report.json "$tmpdir/tiktok-quality-report.json" || true
           printf '{"run_id":"%s","finished_at":"%s","publish_outcome":"%s"}\n' "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.publish.outcome }}" > "$tmpdir/tiktok-run-status.json"
           git config user.name "Carlos TikTok Automation"
           git config user.email "actions@users.noreply.github.com"
@@ -279,7 +281,8 @@ jobs:
             [ -f "$tmpdir/tiktok-used-ledger.json" ] && cp "$tmpdir/tiktok-used-ledger.json" tiktok-used-ledger.json || true
             [ -f "$tmpdir/tiktok-quality-report.json" ] && cp "$tmpdir/tiktok-quality-report.json" tiktok-quality-report.json || true
             cp "$tmpdir/tiktok-run-status.json" tiktok-run-status.json
-            git add tiktok-run-status.json "$VIDEO_QUEUE_FILE"
+            git add tiktok-run-status.json
+            [ -f "$tmpdir/$VIDEO_QUEUE_FILE" ] && git add "$VIDEO_QUEUE_FILE" || true
             [ -f state_tiktok.json ] && git add state_tiktok.json || true
             [ -f tiktok-used-ledger.json ] && git add tiktok-used-ledger.json || true
             [ -f tiktok-diagnostic.json ] && git add tiktok-diagnostic.json || true
