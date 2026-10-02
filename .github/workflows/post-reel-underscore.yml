@@ -263,15 +263,23 @@ jobs:
             cp state.json state_instagram_underscore.json
             save_state=true
           fi
-          [ -f diagnostic.json ] && cp diagnostic.json diagnostic_instagram_underscore.json || true
-          [ -f quality-report.json ] && cp quality-report.json quality-report-instagram-underscore.json || true
+          if [ "${{ steps.publish.outcome }}" != "skipped" ]; then
+            [ -f diagnostic.json ] && cp diagnostic.json diagnostic_instagram_underscore.json || true
+            [ -f quality-report.json ] && cp quality-report.json quality-report-instagram-underscore.json || true
+          fi
           printf '{"run_id":"%s","finished_at":"%s","publish_outcome":"%s"}\n' "$GITHUB_RUN_ID" "$(date -u +%FT%TZ)" "${{ steps.publish.outcome }}" > run-status-instagram-underscore.json
           git config user.name "Carlos Reels Automation"
           git config user.email "actions@users.noreply.github.com"
           tmpdir=$(mktemp -d)
-          for file in diagnostic_instagram_underscore.json quality-report-instagram-underscore.json run-status-instagram-underscore.json "$VIDEO_QUEUE_FILE"; do
-            [ -f "$file" ] && cp "$file" "$tmpdir/$file"
-          done
+          cp run-status-instagram-underscore.json "$tmpdir/run-status-instagram-underscore.json"
+          if [ "${{ steps.publish.outcome }}" != "skipped" ]; then
+            for file in diagnostic_instagram_underscore.json quality-report-instagram-underscore.json; do
+              [ -f "$file" ] && cp "$file" "$tmpdir/$file"
+            done
+          fi
+          if [ "${{ steps.publish.outcome }}" = "success" ]; then
+            [ -f "$VIDEO_QUEUE_FILE" ] && cp "$VIDEO_QUEUE_FILE" "$tmpdir/$VIDEO_QUEUE_FILE" || true
+          fi
           [ "$save_state" = "true" ] && cp state_instagram_underscore.json "$tmpdir/state_instagram_underscore.json" || true
           for attempt in 1 2 3; do
             git fetch origin "$GITHUB_REF_NAME"
@@ -279,9 +287,11 @@ jobs:
             for file in state_instagram_underscore.json diagnostic_instagram_underscore.json quality-report-instagram-underscore.json run-status-instagram-underscore.json "$VIDEO_QUEUE_FILE"; do
               [ -f "$tmpdir/$file" ] && cp "$tmpdir/$file" "$file"
             done
-            git add state_instagram_underscore.json run-status-instagram-underscore.json "$VIDEO_QUEUE_FILE"
-            [ -f diagnostic_instagram_underscore.json ] && git add diagnostic_instagram_underscore.json || true
-            [ -f quality-report-instagram-underscore.json ] && git add quality-report-instagram-underscore.json || true
+            git add run-status-instagram-underscore.json
+            [ -f "$tmpdir/state_instagram_underscore.json" ] && git add state_instagram_underscore.json || true
+            [ -f "$tmpdir/$VIDEO_QUEUE_FILE" ] && git add "$VIDEO_QUEUE_FILE" || true
+            [ -f "$tmpdir/diagnostic_instagram_underscore.json" ] && git add diagnostic_instagram_underscore.json || true
+            [ -f "$tmpdir/quality-report-instagram-underscore.json" ] && git add quality-report-instagram-underscore.json || true
             if git diff --cached --quiet; then
               exit 0
             fi
