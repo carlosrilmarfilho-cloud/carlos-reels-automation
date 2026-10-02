@@ -1,9 +1,9 @@
 {
-  "started_at": "2026-10-01T21:18:44.696977+00:00",
+  "started_at": "2026-10-02T18:27:19.844059+00:00",
   "mode": "trial",
   "stage": "auth",
   "success": false,
   "error_type": "RuntimeError",
-  "error": "Instagram API 400: {\"error\": {\"message\": \"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\", \"type\": \"OAuthException\", \"code\": 190, \"error_subcode\": 0, \"fbtrace_id\": \"ARNbgqVfsGP4FPMidV_vvYG\"}}",
-  "finished_at": "2026-10-01T21:18:44.999357+00:00"
+  "error": "Instagram API 400: {\"error\": {\"message\": \"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\", \"type\": \"OAuthException\", \"code\": 190, \"error_subcode\": 0, \"fbtrace_id\": \"A-e-tZkTyaLwfr-aQs0I903\"}}",
+  "finished_at": "2026-10-02T18:27:20.198510+00:00"
 }
