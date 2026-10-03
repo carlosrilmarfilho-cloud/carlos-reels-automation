@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "913C4B82-A346-496C-846C-243F68ABE625.mp4",
-  "overlay": "Talvez seja esta parte que você precisava encontrar.",
+  "video": "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4",
+  "overlay": "Meu tipo favorito de música é a que faz a gente parar sem perceber.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.174609375,
+    "y0": 0.803125,
     "x1": 0.9555555555555556,
-    "y1": 0.265234375
+    "y1": 0.8765625
   },
-  "faces_checked": 8,
+  "faces_checked": 6,
   "failures": []
 }

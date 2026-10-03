@@ -1,81 +1,69 @@
 {
-  "started_at": "2026-10-03T18:11:44.128136+00:00",
+  "started_at": "2026-10-03T20:26:57.874556+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 126,
+  "caption_length": 142,
   "source_candidate": {
-    "name": "913C4B82-A346-496C-846C-243F68ABE625.mp4",
-    "drive_id": "127EZ5j_lVnsfY6r_YREtojAvs0WFHZSo",
-    "sha256": "4a5f1e9a0d6b22597d18468b2842c9c703a89b25e910acf289670f07292c9195"
+    "name": "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4",
+    "drive_id": "1WeYhH_-lNMycnsuz5K3wRGGVeG4nB-78",
+    "sha256": "c2148b27d3e55e487012705b05ce4ced9a324b96431eb79376834c94fa6bac9e"
   },
   "metadata_snapshot": {
-    "video": "913C4B82-A346-496C-846C-243F68ABE625.mp4",
+    "video": "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 18,
-    "overlay": "Talvez seja esta parte que você precisava encontrar.",
-    "caption": "Poucas notas entregaram a canção inteira. Qual instrumento você ouviu primeiro?\n\n#musica #reelsbrasil #som #boamusica #brasil",
-    "hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
+    "variant_index": 0,
+    "overlay": "Meu tipo favorito de música é a que faz a gente parar sem perceber.",
+    "caption": "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo.\n\n#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
+    "hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
     "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 447,
+      "y0": 2056,
       "x1": 1376,
-      "y1": 679
+      "y1": 2244
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.174609375,
+      "y0": 0.803125,
       "x1": 0.9555555555555556,
-      "y1": 0.265234375
+      "y1": 0.8765625
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 594.6666666666667,
-        "y0": 1064.0,
-        "x1": 997.3333333333333,
-        "y1": 1466.6666666666665
+        "x0": 733.3333333333334,
+        "y0": 1157.3333333333333,
+        "x1": 1216.0,
+        "y1": 1640.0
       },
       {
-        "x0": 18.666666666666668,
-        "y0": 1120.0,
-        "x1": 768.0,
-        "y1": 1869.3333333333335
+        "x0": 570.6666666666667,
+        "y0": 994.6666666666667,
+        "x1": 954.6666666666667,
+        "y1": 1378.6666666666667
       },
       {
-        "x0": 896.0,
-        "y0": 1757.3333333333333,
-        "x1": 1056.0,
-        "y1": 1917.3333333333333
+        "x0": 314.6666666666667,
+        "y0": 773.3333333333333,
+        "x1": 1245.3333333333333,
+        "y1": 1704.0
       },
       {
-        "x0": 626.6666666666666,
-        "y0": 1125.3333333333333,
-        "x1": 1042.6666666666667,
-        "y1": 1541.3333333333333
+        "x0": 840.0,
+        "y0": 1136.0,
+        "x1": 1104.0,
+        "y1": 1400.0
       },
       {
-        "x0": 469.33333333333337,
-        "y0": 1160.0,
-        "x1": 1176.0,
-        "y1": 1866.6666666666665
-      },
-      {
-        "x0": 272.0,
-        "y0": 1117.3333333333333,
-        "x1": 1197.3333333333333,
-        "y1": 2042.6666666666667
-      },
-      {
-        "x0": 658.6666666666667,
-        "y0": 1349.3333333333335,
-        "x1": 813.3333333333333,
-        "y1": 1504.0
+        "x0": 256.0,
+        "y0": 626.6666666666666,
+        "x1": 1314.6666666666667,
+        "y1": 1685.3333333333333
       }
     ],
     "visual_rules": {
@@ -86,10 +74,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 192,
-      "last_posted_at": "2026-10-03T14:15:13.232Z",
-      "last_video": "913C4B82-A346-496C-846C-243F68ABE625.mp4",
-      "last_overlay": "Talvez seja esta parte que você precisava encontrar.",
+      "posts_total": 193,
+      "last_posted_at": "2026-10-03T18:13:28.990Z",
+      "last_video": "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4",
+      "last_overlay": "Meu tipo favorito de música é a que faz a gente parar sem perceber.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -122,7 +110,7 @@
         "41EF1F58-C757-4821-8692-EE6110066BFA.mp4": 2,
         "4794BCDF-52FD-41F4-81CE-56A1A908BD0C.mp4": 2,
         "4955BB00-3C3B-47AE-BF5E-A5F19A0813C9.mp4": 2,
-        "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4": 2,
+        "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4": 3,
         "58169D78-D22A-46CC-8A18-74C0FA9775F3.mp4": 2,
         "5E9AA733-82BF-4099-B77F-FDE5F646184F.mp4": 3,
         "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4": 3,
@@ -180,8 +168,8 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "Poucas notas entregaram a canção inteira. Qual instrumento você ouviu primeiro?",
-      "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
+      "last_caption": "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo.",
+      "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -370,7 +358,8 @@
         "Existe um motivo para este refrão continuar na cabeça.",
         "Repara na letra: ela diz mais do que parece.",
         "A voz entrou e minha atenção desistiu de ir embora.",
-        "Talvez seja esta parte que você precisava encontrar."
+        "Talvez seja esta parte que você precisava encontrar.",
+        "Meu tipo favorito de música é a que faz a gente parar sem perceber."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -560,7 +549,8 @@
         "Repara no jeito como a letra encontra a melodia. Que frase ficou contigo?",
         "O trecho chegou na hora certa ou foi coincidência? Diz o que ele despertou.",
         "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?",
-        "Poucas notas entregaram a canção inteira. Qual instrumento você ouviu primeiro?"
+        "Poucas notas entregaram a canção inteira. Qual instrumento você ouviu primeiro?",
+        "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo."
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -570,20 +560,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6ac10d82814d657011c7dde6",
+      "last_buffer_post_id": "6ac14561814d657011d08ec4",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692444519056395538",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692505961319157012",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
+  "hashtags_snapshot": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6ac14561814d657011d08ec4",
+  "post_id": "6ac165147d53b827e0ed0137",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-10-03T18:13:28.990Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692505961319157012",
+  "sent_at": "2026-10-03T20:28:44.478Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692540795995376917",
   "success": true,
-  "finished_at": "2026-10-03T18:13:36.581281+00:00"
+  "finished_at": "2026-10-03T20:28:52.937268+00:00"
 }
