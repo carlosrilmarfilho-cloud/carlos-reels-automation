@@ -1,9 +1,9 @@
 {
   "video_index": 1,
-  "posts_total": 191,
-  "last_posted_at": "2026-10-03T14:15:13.232Z",
-  "last_video": "D3390941-13EB-4298-95BC-5C3D430C7685.mp4",
-  "last_overlay": "A voz entrou e minha atenção desistiu de ir embora.",
+  "posts_total": 192,
+  "last_posted_at": "2026-10-03T18:13:28.990Z",
+  "last_video": "913C4B82-A346-496C-846C-243F68ABE625.mp4",
+  "last_overlay": "Talvez seja esta parte que você precisava encontrar.",
   "last_mode": "buffer_auto_confirmed",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -52,7 +52,7 @@
     "8DA4425C-CCE2-46B2-9116-2A947856E053.mp4": 2,
     "99069C52-1345-4260-8C4A-C7B611E1BC84.mp4": 2,
     "9B45B7B2-4A20-483A-9A3B-2F3866E150CF.mp4": 2,
-    "913C4B82-A346-496C-846C-243F68ABE625.mp4": 2,
+    "913C4B82-A346-496C-846C-243F68ABE625.mp4": 3,
     "9ACC0CB2-136E-41C6-86F3-F837E3CE5490.mp4": 3,
     "B27F702C-D111-43BF-8EA0-8F9257EC9546.mp4": 3,
     "CA6E6C03-D0B2-46D2-BEFE-E112DE04EF2B.mp4": 3,
@@ -94,8 +94,8 @@
     "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
     "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
   },
-  "last_caption": "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?",
-  "last_hashtags": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
+  "last_caption": "Poucas notas entregaram a canção inteira. Qual instrumento você ouviu primeiro?",
+  "last_hashtags": "#musica #tiktokbrasil #som #boamusica #brasil",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -283,7 +283,8 @@
     "Escuta o detalhe que transforma este trecho inteiro.",
     "Existe um motivo para este refrão continuar na cabeça.",
     "Repara na letra: ela diz mais do que parece.",
-    "A voz entrou e minha atenção desistiu de ir embora."
+    "A voz entrou e minha atenção desistiu de ir embora.",
+    "Talvez seja esta parte que você precisava encontrar."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -472,7 +473,8 @@
     "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou.",
     "Repara no jeito como a letra encontra a melodia. Que frase ficou contigo?",
     "O trecho chegou na hora certa ou foi coincidência? Diz o que ele despertou.",
-    "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?"
+    "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?",
+    "Poucas notas entregaram a canção inteira. Qual instrumento você ouviu primeiro?"
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -482,8 +484,8 @@
     "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6ac10d82814d657011c7dde6",
+  "last_buffer_post_id": "6ac14561814d657011d08ec4",
   "last_buffer_status": "sent",
-  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692444519056395538",
+  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692505961319157012",
   "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
 }
