@@ -1,24 +1,24 @@
 {
-  "started_at": "2026-10-02T23:22:03.182387+00:00",
+  "started_at": "2026-10-03T11:42:02.550638+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 137,
+  "caption_length": 139,
   "source_candidate": {
-    "name": "B27F702C-D111-43BF-8EA0-8F9257EC9546.mp4",
-    "drive_id": "1F3xYCngZYPJB77c5ugPhIiaupghHC3Fd",
-    "sha256": "f7fd5528375819b134864da2dd7c5cf82f8705c88f9240e11a7d2e7db4191ae1"
+    "name": "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4",
+    "drive_id": "1-1TTKHIHesJMvaFh_80hNBh60bX9jQrW",
+    "sha256": "bd8a52397b07c65c6b566cb7df7c77c0be405b4638808d102f1cf1885c769585"
   },
   "metadata_snapshot": {
-    "video": "B27F702C-D111-43BF-8EA0-8F9257EC9546.mp4",
+    "video": "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 0,
-    "overlay": "Existe um motivo para este refrão continuar na cabeça.",
-    "caption": "Repara no jeito como a letra encontra a melodia. Que frase ficou contigo?\n\n#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
+    "variant_index": 15,
+    "overlay": "Repara na letra: ela diz mais do que parece.",
+    "caption": "O trecho chegou na hora certa ou foi coincidência? Diz o que ele despertou.\n\n#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
     "hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
     "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
@@ -36,16 +36,58 @@
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 469.33333333333337,
-        "y0": 1016.0,
-        "x1": 1176.0,
-        "y1": 1722.6666666666667
+        "x0": 405.33333333333337,
+        "y0": 1154.6666666666667,
+        "x1": 968.0000000000001,
+        "y1": 1717.3333333333333
       },
       {
-        "x0": 549.3333333333334,
-        "y0": 1101.3333333333335,
-        "x1": 1061.3333333333333,
-        "y1": 1613.3333333333335
+        "x0": 645.3333333333333,
+        "y0": 1226.6666666666667,
+        "x1": 1050.6666666666667,
+        "y1": 1632.0
+      },
+      {
+        "x0": 976.0,
+        "y0": 2053.3333333333335,
+        "x1": 1125.3333333333333,
+        "y1": 2202.666666666667
+      },
+      {
+        "x0": 530.6666666666666,
+        "y0": 1002.6666666666666,
+        "x1": 1384.0,
+        "y1": 1856.0
+      },
+      {
+        "x0": 474.66666666666663,
+        "y0": 1000.0,
+        "x1": 1264.0,
+        "y1": 1789.3333333333335
+      },
+      {
+        "x0": 813.3333333333333,
+        "y0": 1344.0,
+        "x1": 1213.3333333333333,
+        "y1": 1744.0
+      },
+      {
+        "x0": 541.3333333333334,
+        "y0": 1005.3333333333333,
+        "x1": 1370.6666666666667,
+        "y1": 1834.6666666666667
+      },
+      {
+        "x0": 560.0,
+        "y0": 1328.0,
+        "x1": 1312.0,
+        "y1": 2080.0
+      },
+      {
+        "x0": 503.99999999999994,
+        "y0": 1778.6666666666667,
+        "x1": 1130.6666666666667,
+        "y1": 2405.3333333333335
       }
     ],
     "visual_rules": {
@@ -56,10 +98,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 189,
-      "last_posted_at": "2026-10-02T21:16:58.646Z",
-      "last_video": "B27F702C-D111-43BF-8EA0-8F9257EC9546.mp4",
-      "last_overlay": "Existe um motivo para este refrão continuar na cabeça.",
+      "posts_total": 190,
+      "last_posted_at": "2026-10-02T23:23:48.279Z",
+      "last_video": "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4",
+      "last_overlay": "Repara na letra: ela diz mais do que parece.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -115,7 +157,7 @@
         "CC16C569-E899-45F2-AA46-381A81EE8BE2.mp4": 3,
         "D3390941-13EB-4298-95BC-5C3D430C7685.mp4": 2,
         "E33D9A8A-03BC-4BF1-B49C-9DF5A17DC778.mp4": 2,
-        "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4": 2,
+        "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4": 3,
         "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4": 3,
         "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 2,
         "1287DDFF-011C-4141-B09E-249B63C95F08.mp4": 3,
@@ -150,7 +192,7 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "Repara no jeito como a letra encontra a melodia. Que frase ficou contigo?",
+      "last_caption": "O trecho chegou na hora certa ou foi coincidência? Diz o que ele despertou.",
       "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
@@ -337,7 +379,8 @@
         "Eu ia passar o vídeo. A música claramente tinha outros planos.",
         "A canção avisa cedo quando merece chegar ao fim.",
         "Escuta o detalhe que transforma este trecho inteiro.",
-        "Existe um motivo para este refrão continuar na cabeça."
+        "Existe um motivo para este refrão continuar na cabeça.",
+        "Repara na letra: ela diz mais do que parece."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -524,7 +567,8 @@
         "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.",
         "Eu ia escrever uma reflexão enorme, mas o refrão já fez o serviço. 😂",
         "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou.",
-        "Repara no jeito como a letra encontra a melodia. Que frase ficou contigo?"
+        "Repara no jeito como a letra encontra a melodia. Que frase ficou contigo?",
+        "O trecho chegou na hora certa ou foi coincidência? Diz o que ele despertou."
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -534,20 +578,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6ac01ee37d2f797785859e0e",
+      "last_buffer_post_id": "6ac03c9dad2f47bd7d4b29a9",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692182141312109876",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692214788423748885",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
   "hashtags_snapshot": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6ac03c9dad2f47bd7d4b29a9",
+  "post_id": "6ac0ea0b814d657011c25624",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-10-02T23:23:48.279Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692214788423748885",
+  "sent_at": "2026-10-03T11:44:48.040Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692405521206250758",
   "success": true,
-  "finished_at": "2026-10-02T23:23:56.906633+00:00"
+  "finished_at": "2026-10-03T11:44:55.527853+00:00"
 }
