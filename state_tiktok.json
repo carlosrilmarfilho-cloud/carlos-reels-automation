@@ -1,9 +1,9 @@
 {
   "video_index": 1,
-  "posts_total": 194,
-  "last_posted_at": "2026-10-04T00:31:30.681Z",
-  "last_video": "6AA0991D-5050-4107-A363-6D0C646C5741.mp4",
-  "last_overlay": "Terapia do dia: essa música e cinco minutos sem explicar nada.",
+  "posts_total": 195,
+  "last_posted_at": "2026-10-04T11:57:26.819Z",
+  "last_video": "E33D9A8A-03BC-4BF1-B49C-9DF5A17DC778.mp4",
+  "last_overlay": "Tem refrão que funciona melhor quando pega a gente desprevenido.",
   "last_mode": "buffer_auto_confirmed",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -58,7 +58,7 @@
     "CA6E6C03-D0B2-46D2-BEFE-E112DE04EF2B.mp4": 3,
     "CC16C569-E899-45F2-AA46-381A81EE8BE2.mp4": 3,
     "D3390941-13EB-4298-95BC-5C3D430C7685.mp4": 3,
-    "E33D9A8A-03BC-4BF1-B49C-9DF5A17DC778.mp4": 2,
+    "E33D9A8A-03BC-4BF1-B49C-9DF5A17DC778.mp4": 3,
     "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4": 3,
     "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4": 3,
     "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 2,
@@ -94,8 +94,8 @@
     "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
     "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
   },
-  "last_caption": "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas.",
-  "last_hashtags": "#musica #tiktokbrasil #som #boamusica #brasil",
+  "last_caption": "Qual foi a última música que fez você esquecer o que tava fazendo por alguns segundos?",
+  "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
     "Tem saudade que só um forró desses resolve.",
@@ -286,7 +286,8 @@
     "A voz entrou e minha atenção desistiu de ir embora.",
     "Talvez seja esta parte que você precisava encontrar.",
     "Meu tipo favorito de música é a que faz a gente parar sem perceber.",
-    "Terapia do dia: essa música e cinco minutos sem explicar nada."
+    "Terapia do dia: essa música e cinco minutos sem explicar nada.",
+    "Tem refrão que funciona melhor quando pega a gente desprevenido."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -478,7 +479,8 @@
     "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?",
     "Poucas notas entregaram a canção inteira. Qual instrumento você ouviu primeiro?",
     "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo.",
-    "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas."
+    "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas.",
+    "Qual foi a última música que fez você esquecer o que tava fazendo por alguns segundos?"
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -488,8 +490,8 @@
     "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6ac19dfa5829d2489afe0501",
+  "last_buffer_post_id": "6ac23ebfa486988a6e14d0a1",
   "last_buffer_status": "sent",
-  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692603267968290049",
+  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692780073086225665",
   "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
 }
