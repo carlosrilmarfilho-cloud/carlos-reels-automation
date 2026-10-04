@@ -1,69 +1,93 @@
 {
-  "started_at": "2026-10-03T20:26:57.874556+00:00",
+  "started_at": "2026-10-04T00:29:44.256216+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 142,
+  "caption_length": 128,
   "source_candidate": {
-    "name": "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4",
-    "drive_id": "1WeYhH_-lNMycnsuz5K3wRGGVeG4nB-78",
-    "sha256": "c2148b27d3e55e487012705b05ce4ced9a324b96431eb79376834c94fa6bac9e"
+    "name": "6AA0991D-5050-4107-A363-6D0C646C5741.mp4",
+    "drive_id": "13V3DQWH_j5lzCdrwoF2J8DqXwzQWosrk",
+    "sha256": "22258bf8d95795a3737f35a536cc3981db9dd6b080a2f54d7d1050b909f7f50d"
   },
   "metadata_snapshot": {
-    "video": "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4",
+    "video": "6AA0991D-5050-4107-A363-6D0C646C5741.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
     "variant_index": 0,
-    "overlay": "Meu tipo favorito de música é a que faz a gente parar sem perceber.",
-    "caption": "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo.\n\n#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
-    "hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
+    "overlay": "Terapia do dia: essa música e cinco minutos sem explicar nada.",
+    "caption": "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas.\n\n#musica #reelsbrasil #som #boamusica #brasil",
+    "hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
     "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 2056,
+      "y0": 402,
       "x1": 1376,
-      "y1": 2244
+      "y1": 724
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.803125,
+      "y0": 0.15703125,
       "x1": 0.9555555555555556,
-      "y1": 0.8765625
+      "y1": 0.2828125
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 733.3333333333334,
-        "y0": 1157.3333333333333,
-        "x1": 1216.0,
-        "y1": 1640.0
+        "x0": 184.0,
+        "y0": 1109.3333333333335,
+        "x1": 1170.6666666666667,
+        "y1": 2096.0
       },
       {
-        "x0": 570.6666666666667,
+        "x0": 565.3333333333334,
+        "y0": 1570.6666666666665,
+        "x1": 834.6666666666666,
+        "y1": 1840.0
+      },
+      {
+        "x0": 29.333333333333336,
+        "y0": 1120.0,
+        "x1": 997.3333333333333,
+        "y1": 2088.0
+      },
+      {
+        "x0": 415.99999999999994,
+        "y0": 1357.3333333333333,
+        "x1": 570.6666666666667,
+        "y1": 1512.0
+      },
+      {
+        "x0": 445.3333333333333,
+        "y0": 1128.0,
+        "x1": 1120.0,
+        "y1": 1802.6666666666667
+      },
+      {
+        "x0": 234.66666666666669,
+        "y0": 1336.0,
+        "x1": 400.0,
+        "y1": 1501.3333333333333
+      },
+      {
+        "x0": 264.0,
+        "y0": 1093.3333333333333,
+        "x1": 1090.6666666666667,
+        "y1": 1920.0
+      },
+      {
+        "x0": 368.0,
         "y0": 994.6666666666667,
-        "x1": 954.6666666666667,
-        "y1": 1378.6666666666667
+        "x1": 1098.6666666666667,
+        "y1": 1725.3333333333333
       },
       {
-        "x0": 314.6666666666667,
-        "y0": 773.3333333333333,
-        "x1": 1245.3333333333333,
-        "y1": 1704.0
-      },
-      {
-        "x0": 840.0,
-        "y0": 1136.0,
-        "x1": 1104.0,
-        "y1": 1400.0
-      },
-      {
-        "x0": 256.0,
-        "y0": 626.6666666666666,
-        "x1": 1314.6666666666667,
-        "y1": 1685.3333333333333
+        "x0": 181.33333333333331,
+        "y0": 1805.3333333333333,
+        "x1": 589.3333333333334,
+        "y1": 2213.3333333333335
       }
     ],
     "visual_rules": {
@@ -74,10 +98,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 193,
-      "last_posted_at": "2026-10-03T18:13:28.990Z",
-      "last_video": "49F9416B-F0C6-47A9-B4D8-8D3A7DB8A6FC.mp4",
-      "last_overlay": "Meu tipo favorito de música é a que faz a gente parar sem perceber.",
+      "posts_total": 194,
+      "last_posted_at": "2026-10-03T20:28:44.478Z",
+      "last_video": "6AA0991D-5050-4107-A363-6D0C646C5741.mp4",
+      "last_overlay": "Terapia do dia: essa música e cinco minutos sem explicar nada.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -115,7 +139,7 @@
         "5E9AA733-82BF-4099-B77F-FDE5F646184F.mp4": 3,
         "6133FCC7-4F89-4C5C-B84E-63C4AA14A776.mp4": 3,
         "66DDCAFF-E155-463B-B226-F8270C9B5E3A.mp4": 3,
-        "6AA0991D-5050-4107-A363-6D0C646C5741.mp4": 2,
+        "6AA0991D-5050-4107-A363-6D0C646C5741.mp4": 3,
         "6DD5C58B-5228-4751-84D0-85926784DBDF.mp4": 2,
         "6E8B103F-7E05-40A4-91A0-F02779331E45.mp4": 2,
         "6FFB8681-5089-4A43-8E3C-ED1F0A6BB8D8.mp4": 2,
@@ -168,8 +192,8 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo.",
-      "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
+      "last_caption": "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas.",
+      "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -359,7 +383,8 @@
         "Repara na letra: ela diz mais do que parece.",
         "A voz entrou e minha atenção desistiu de ir embora.",
         "Talvez seja esta parte que você precisava encontrar.",
-        "Meu tipo favorito de música é a que faz a gente parar sem perceber."
+        "Meu tipo favorito de música é a que faz a gente parar sem perceber.",
+        "Terapia do dia: essa música e cinco minutos sem explicar nada."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -550,7 +575,8 @@
         "O trecho chegou na hora certa ou foi coincidência? Diz o que ele despertou.",
         "Certas vozes interrompem qualquer distração. Quem você faria ouvir este trecho?",
         "Poucas notas entregaram a canção inteira. Qual instrumento você ouviu primeiro?",
-        "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo."
+        "O melhor tipo de vídeo é aquele em que a música faz você esquecer que tava só passando o tempo.",
+        "Algumas músicas funcionam melhor sem legenda explicando demais. Essa é uma delas."
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -560,20 +586,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6ac14561814d657011d08ec4",
+      "last_buffer_post_id": "6ac165147d53b827e0ed0137",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692505961319157012",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692540795995376917",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
+  "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6ac165147d53b827e0ed0137",
+  "post_id": "6ac19dfa5829d2489afe0501",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-10-03T20:28:44.478Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692540795995376917",
+  "sent_at": "2026-10-04T00:31:30.681Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692603267968290049",
   "success": true,
-  "finished_at": "2026-10-03T20:28:52.937268+00:00"
+  "finished_at": "2026-10-04T00:31:39.017606+00:00"
 }
