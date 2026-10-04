@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "B27F702C-D111-43BF-8EA0-8F9257EC9546.mp4",
-  "overlay": "Se essa parte não te pegou, espera o próximo verso antes de julgar.",
+  "video": "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4",
+  "overlay": "Tem dia que a melhor decisão é só deixar a música terminar.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.15703125,
+    "y0": 0.174609375,
     "x1": 0.9555555555555556,
-    "y1": 0.2828125
+    "y1": 0.265234375
   },
-  "faces_checked": 2,
+  "faces_checked": 9,
   "failures": []
 }
