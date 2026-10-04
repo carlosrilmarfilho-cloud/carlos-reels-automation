@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "66DDCAFF-E155-463B-B226-F8270C9B5E3A.mp4",
-  "overlay": "Dá mais dez segundos; essa melodia vai explicar por quê.",
+  "video": "B27F702C-D111-43BF-8EA0-8F9257EC9546.mp4",
+  "overlay": "Se essa parte não te pegou, espera o próximo verso antes de julgar.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.049609375,
+    "y0": 0.15703125,
     "x1": 0.9555555555555556,
-    "y1": 0.140234375
+    "y1": 0.2828125
   },
-  "faces_checked": 6,
+  "faces_checked": 2,
   "failures": []
 }
