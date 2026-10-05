@@ -27,6 +27,14 @@ def save_diag(**extra):
     DIAG.write_text(json.dumps(diag, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+class InstagramAPIError(RuntimeError):
+    def __init__(self, status_code, body):
+        self.status_code = status_code
+        self.body = body
+        message = json.dumps(body, ensure_ascii=False) if isinstance(body, dict) else str(body)
+        super().__init__(f"Instagram API {status_code}: {message}")
+
+
 def api(method, path, **kwargs):
     url = path if path.startswith("http") else BASE + path
     kwargs.setdefault("timeout", 120)
@@ -36,8 +44,33 @@ def api(method, path, **kwargs):
             body = r.json()
         except Exception:
             body = r.text[:1200]
-        raise RuntimeError(f"Instagram API {r.status_code}: {json.dumps(body, ensure_ascii=False) if isinstance(body, dict) else body}")
+        raise InstagramAPIError(r.status_code, body)
     return r.json()
+
+
+def trial_reels_unsupported(error):
+    if not isinstance(error, InstagramAPIError):
+        return False
+    body = error.body if isinstance(error.body, dict) else {"message": str(error.body)}
+    api_error = body.get("error", body)
+    try:
+        code = int(api_error.get("code", 0))
+    except (TypeError, ValueError):
+        code = 0
+    if code == 190:
+        return False
+    text = json.dumps(body, ensure_ascii=False).lower()
+    explicit = (
+        "trial_params",
+        "trial reel",
+        "trial reels",
+        "graduation_strategy",
+    )
+    generic_parameter_rejection = code == 100 and any(
+        marker in text
+        for marker in ("invalid parameter", "unsupported post request", "unknown field")
+    )
+    return any(marker in text for marker in explicit) or generic_parameter_rejection
 
 
 def wait_public(url):
@@ -62,6 +95,7 @@ def main():
         save_diag(stage="video_public", username=me.get("username"), ig_id=ig_id)
 
         wait_public(VIDEO_URL)
+        publish_mode = "trial" if TRIAL_REEL else "normal"
         payload = {
             "media_type": "REELS",
             "video_url": VIDEO_URL,
@@ -71,10 +105,31 @@ def main():
         }
         if TRIAL_REEL:
             payload["trial_params"] = json.dumps({"graduation_strategy": "MANUAL"})
-        save_diag(stage="create_container")
-        container = api("POST", f"/{ig_id}/media", data=payload)
+        save_diag(stage="create_container", requested_mode=publish_mode)
+        try:
+            container = api("POST", f"/{ig_id}/media", data=payload)
+        except InstagramAPIError as trial_error:
+            if not (TRIAL_REEL and trial_reels_unsupported(trial_error)):
+                raise
+            # Trial Reels ainda não estão liberados para todas as contas/API.
+            # Nessa condição específica, preserve a janela com um Reel normal.
+            # Nenhuma fila é girada até a publicação abaixo ser confirmada.
+            publish_mode = "normal_fallback"
+            regular_payload = {
+                "media_type": "REELS",
+                "video_url": VIDEO_URL,
+                "caption": caption,
+                "share_to_feed": "true",
+                "access_token": TOKEN,
+            }
+            save_diag(
+                stage="create_container_fallback",
+                mode=publish_mode,
+                trial_error=str(trial_error)[:1200],
+            )
+            container = api("POST", f"/{ig_id}/media", data=regular_payload)
         cid = container["id"]
-        save_diag(stage="container_processing", container_id=cid)
+        save_diag(stage="container_processing", mode=publish_mode, container_id=cid)
 
         status = None
         last_status = None
@@ -96,9 +151,15 @@ def main():
 
         state = meta["next_state"]
         state["last_posted_at"] = datetime.now(timezone.utc).isoformat()
-        state["last_mode"] = "trial" if TRIAL_REEL else "normal"
+        state["last_mode"] = publish_mode
         STATE.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        save_diag(stage="success", success=True, media_id=media_id, finished_at=datetime.now(timezone.utc).isoformat())
+        save_diag(
+            stage="success",
+            success=True,
+            mode=publish_mode,
+            media_id=media_id,
+            finished_at=datetime.now(timezone.utc).isoformat(),
+        )
         print(f"Reel publicado: {media_id}")
     except Exception as e:
         save_diag(stage=diag.get("stage", "unknown"), success=False, error_type=type(e).__name__, error=str(e)[:1800], finished_at=datetime.now(timezone.utc).isoformat())
