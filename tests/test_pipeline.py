@@ -83,6 +83,26 @@ class LayoutRulesTests(unittest.TestCase):
         self.assertLessEqual(box_height / 1920, 0.145)
         self.assertGreaterEqual(font.size, 36)
 
+    def test_source_text_near_head_keeps_detection_clearance(self):
+        image = render.Image.new("RGBA", (1440, 2560), (0, 0, 0, 0))
+        draw = render.ImageDraw.Draw(image)
+        head = {"x0": 0.09, "y0": 0.31, "x1": 0.92, "y1": 0.792}
+        analysis = {
+            "text_bbox_norm": {"x0": 0.12, "y0": 0.83, "x1": 0.88, "y1": 0.87},
+            "face_boxes_norm": [],
+            "head_boxes_norm": [head],
+        }
+        _, _, _, rect, _ = render.plan_overlay(
+            draw,
+            "Tenta passar direto depois de ouvir esta parte.",
+            analysis,
+            (2160, 3840),
+            (1440, 2560),
+        )
+        mapped_head = render.map_norm_box(head, 2160, 3840, 1440, 2560)
+        clearance = max(12 * (1440 / 1080), 2560 * 0.0125)
+        self.assertFalse(render.boxes_intersect(rect, mapped_head, margin=clearance))
+
     def test_render_preserves_full_frame(self):
         source = (ROOT / "render.py").read_text(encoding="utf-8")
         self.assertIn("force_original_aspect_ratio=decrease", source)
