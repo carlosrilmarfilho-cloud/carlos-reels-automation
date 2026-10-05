@@ -416,7 +416,7 @@ def plan_overlay(
                 },
             ]
         )
-        obstacles = mapped_faces
+        obstacles = mapped_heads + mapped_faces
     else:
         # Inclui uma faixa inferior adicional para vídeos em que o rosto ocupa
         # quase todo o quadro. A validação de sobreposição abaixo continua
@@ -432,7 +432,7 @@ def plan_overlay(
                     "y1": center_y + box_height / 2,
                 }
             )
-        obstacles = mapped_heads or mapped_faces
+        obstacles = mapped_heads + mapped_faces
 
     top_limit = target_height * 0.045
     # Até 90% mantém margem inferior e permite aproveitar a área livre
@@ -447,9 +447,8 @@ def plan_overlay(
             and candidate["y1"] >= source_rect["y1"]
         ):
             continue
-        # Tolera apenas um toque mínimo de borda causado pela imprecisão do detector.
-        # Uma caixa atravessando rosto/cabeça continua sendo bloqueada com folga.
-        if any(overlap_fraction(candidate, obstacle) > 0.035 for obstacle in obstacles):
+        # Nenhuma parte da caixa pode cobrir rosto ou cabeça.
+        if any(overlap_fraction(candidate, obstacle) > 0 for obstacle in obstacles):
             continue
         chosen = candidate
         break
@@ -736,6 +735,10 @@ def main() -> None:
             "overlay_rect_px": overlay_rect,
             "overlay_rect_norm": normalized_rect(overlay_rect, target_width, target_height),
             "face_boxes_mapped_px": mapped_faces,
+            "head_boxes_mapped_px": [
+                map_norm_box(box, source_width, source_height, target_width, target_height)
+                for box in analysis.get("head_boxes_norm", [])
+            ],
             "visual_rules": {
                 "preserve_full_frame": True,
                 "maximum_overlay_height_ratio": 0.145,

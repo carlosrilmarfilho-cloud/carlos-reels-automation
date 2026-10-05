@@ -71,11 +71,14 @@ def main() -> None:
             frame = ROOT / f".quality_frame_{index}.jpg"
             temporary_files.append(frame)
             extract_frame(second, frame)
-            faces, _ = face_and_head_boxes(frame)
+            faces, heads = face_and_head_boxes(frame)
             for face in faces:
                 detected_faces.append({**face, "sample_time": second})
-                if overlay_rect and overlap_fraction(overlay_rect, face) > 0.035:
+                if overlay_rect and overlap_fraction(overlay_rect, face) > 0:
                     failures.append(f"texto encosta no rosto em {second:.2f}s")
+            for head in heads:
+                if overlay_rect and overlap_fraction(overlay_rect, head) > 0:
+                    failures.append(f"texto encosta na cabeça em {second:.2f}s")
     except Exception as exc:
         failures.append(f"não foi possível concluir a revisão visual: {exc}")
     finally:
@@ -84,7 +87,10 @@ def main() -> None:
 
     # Confere também as posições encontradas antes da renderização. Isso cobre
     # quadros em que o detector final não reconheça um rosto de perfil.
-    for face in metadata.get("face_boxes_mapped_px", []):
+    for face in (
+        metadata.get("face_boxes_mapped_px", [])
+        + metadata.get("head_boxes_mapped_px", [])
+    ):
         resolution = str(metadata.get("render_resolution", "1080x1920"))
         width, height = (int(value) for value in resolution.split("x", 1))
         normalized_face = {
@@ -93,8 +99,8 @@ def main() -> None:
             "x1": float(face["x1"]) / width,
             "y1": float(face["y1"]) / height,
         }
-        if overlay_rect and overlap_fraction(overlay_rect, normalized_face) > 0.035:
-            failures.append("texto coincide com rosto detectado na análise de origem")
+        if overlay_rect and overlap_fraction(overlay_rect, normalized_face) > 0:
+            failures.append("texto coincide com rosto/cabeça detectado na análise de origem")
             break
 
     unique_failures = list(dict.fromkeys(failures))
