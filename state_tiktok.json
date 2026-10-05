@@ -1,9 +1,9 @@
 {
   "video_index": 1,
-  "posts_total": 200,
-  "last_posted_at": "2026-10-05T11:23:24.177Z",
-  "last_video": "D3390941-13EB-4298-95BC-5C3D430C7685.mp4",
-  "last_overlay": "Poucas notas bastam para entregar uma canção inesquecível.",
+  "posts_total": 201,
+  "last_posted_at": "2026-10-05T14:24:31.729Z",
+  "last_video": "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4",
+  "last_overlay": "Essa parte aqui merece mais atenção do que muita conversa por aí.",
   "last_mode": "buffer_auto_confirmed",
   "variant_usage": {
     "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -61,7 +61,7 @@
     "E33D9A8A-03BC-4BF1-B49C-9DF5A17DC778.mp4": 3,
     "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4": 4,
     "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4": 3,
-    "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 2,
+    "03778AF9-1CBF-4659-8491-EAFE6EE7500B.mp4": 3,
     "1287DDFF-011C-4141-B09E-249B63C95F08.mp4": 3,
     "130B02E5-AE15-4DA4-918F-5B937C95B602.mp4": 3,
     "15B0403C-2ECE-4915-B49E-4D477362302F.mp4": 3,
@@ -94,7 +94,7 @@
     "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
     "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
   },
-  "last_caption": "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?",
+  "last_caption": "Um pequeno detalhe no arranjo muda a história toda. Você percebeu qual?",
   "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
   "recent_overlays": [
     "Tem sofrimento que só fica bonito quando vira brega.",
@@ -292,7 +292,8 @@
     "Dá mais dez segundos; essa melodia vai explicar por quê.",
     "Se essa parte não te pegou, espera o próximo verso antes de julgar.",
     "Tem dia que a melhor decisão é só deixar a música terminar.",
-    "Poucas notas bastam para entregar uma canção inesquecível."
+    "Poucas notas bastam para entregar uma canção inesquecível.",
+    "Essa parte aqui merece mais atenção do que muita conversa por aí."
   ],
   "recent_captions": [
     "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -490,7 +491,8 @@
     "Talvez este fosse o som que faltava no teu dia. Salva para ouvir com calma.",
     "Eu gosto quando a música segura a pessoa sem precisar inventar efeito, texto ou promessa. Só a música mesmo.",
     "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe.",
-    "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?"
+    "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?",
+    "Um pequeno detalhe no arranjo muda a história toda. Você percebeu qual?"
   ],
   "blocked_videos": [
     "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -500,8 +502,8 @@
     "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
   ],
   "last_platform": "tiktok",
-  "last_buffer_post_id": "6ac3884453279f4f19be33e7",
+  "last_buffer_post_id": "6ac3b2b8c5a0c40187543a53",
   "last_buffer_status": "sent",
-  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7693142441951579413",
+  "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7693189157279288597",
   "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
 }
