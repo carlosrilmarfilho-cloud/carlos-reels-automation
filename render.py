@@ -380,12 +380,20 @@ def plan_overlay(
         and box["y0"] <= target_height * 0.24
         for box in mapped_heads
     )
+    subject_boxes = mapped_heads + mapped_faces
+    source_near_subject = bool(source_rect) and any(
+        box["x1"] > x0
+        and box["x0"] < x1
+        and box["y1"] <= source_rect["y1"]
+        and source_rect["y0"] - box["y1"] < target_height * 0.05
+        for box in subject_boxes
+    )
     font, lines, line_height = fit_text(
         draw,
         text,
         int(x1 - x0) - horizontal_padding * 2,
         target_width,
-        start_size_base=44 if crowded_head else 58,
+        start_size_base=44 if crowded_head or source_near_subject else 58,
     )
     box_height = line_height * len(lines) + vertical_padding * 2
     if box_height > target_height * 0.145:
@@ -438,6 +446,10 @@ def plan_overlay(
     # Até 90% mantém margem inferior e permite aproveitar a área livre
     # abaixo de cabeças altas sem recortar nem redimensionar o vídeo.
     bottom_limit = target_height * 0.90
+    # A detecção do gate é refeita nos quadros renderizados e pode variar
+    # alguns pixels em relação à análise de origem. Mantemos uma folga real
+    # ao redor de rosto/cabeça para que um quase-toque nunca vire sobreposição.
+    subject_clearance = max(12 * scale, target_height * 0.0125)
     chosen = None
     for candidate in candidates:
         if candidate["y0"] < top_limit or candidate["y1"] > bottom_limit:
@@ -447,8 +459,11 @@ def plan_overlay(
             and candidate["y1"] >= source_rect["y1"]
         ):
             continue
-        # Nenhuma parte da caixa pode cobrir rosto ou cabeça.
-        if any(overlap_fraction(candidate, obstacle) > 0 for obstacle in obstacles):
+        # Nenhuma parte da caixa pode cobrir ou encostar em rosto/cabeça.
+        if any(
+            boxes_intersect(candidate, obstacle, margin=subject_clearance)
+            for obstacle in obstacles
+        ):
             continue
         chosen = candidate
         break
