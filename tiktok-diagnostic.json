@@ -1,93 +1,137 @@
 {
-  "started_at": "2026-10-04T23:34:20.638165+00:00",
+  "started_at": "2026-10-05T11:21:39.770326+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 142,
+  "caption_length": 139,
   "source_candidate": {
-    "name": "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4",
-    "drive_id": "1AhW5RRKrMkc37a9wsRKUmIYbDea5Ad7Q",
-    "sha256": "bd8a52397b07c65c6b566cb7df7c77c0be405b4638808d102f1cf1885c769585"
+    "name": "D3390941-13EB-4298-95BC-5C3D430C7685.mp4",
+    "drive_id": "1CcRs9g-pFYjckBdz7aMAqDkwPybChTJA",
+    "sha256": "072cfbd8b06c16c40b1725518e9f5e0330ffffc5155fe6166cc1c2e91c14f577"
   },
   "metadata_snapshot": {
-    "video": "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4",
+    "video": "D3390941-13EB-4298-95BC-5C3D430C7685.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
-    "variant_index": 0,
-    "overlay": "Tem dia que a melhor decisão é só deixar a música terminar.",
-    "caption": "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe.\n\n#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
-    "hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
+    "variant_index": 13,
+    "overlay": "Poucas notas bastam para entregar uma canção inesquecível.",
+    "caption": "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?\n\n#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
+    "hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
     "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 447,
+      "y0": 121,
       "x1": 1376,
-      "y1": 679
+      "y1": 443
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.174609375,
+      "y0": 0.047265625,
       "x1": 0.9555555555555556,
-      "y1": 0.265234375
+      "y1": 0.173046875
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 405.33333333333337,
-        "y0": 1154.6666666666667,
-        "x1": 968.0000000000001,
-        "y1": 1717.3333333333333
+        "x0": 32.0,
+        "y0": 986.6666666666667,
+        "x1": 480.0,
+        "y1": 1434.6666666666667
       },
       {
-        "x0": 645.3333333333333,
-        "y0": 1226.6666666666667,
-        "x1": 1050.6666666666667,
-        "y1": 1632.0
+        "x0": 642.6666666666666,
+        "y0": 1178.6666666666665,
+        "x1": 1002.6666666666666,
+        "y1": 1538.6666666666667
       },
       {
-        "x0": 976.0,
-        "y0": 2053.3333333333335,
-        "x1": 1125.3333333333333,
-        "y1": 2202.666666666667
+        "x0": 952.0,
+        "y0": 1562.6666666666667,
+        "x1": 1117.3333333333333,
+        "y1": 1728.0
       },
       {
-        "x0": 530.6666666666666,
-        "y0": 1002.6666666666666,
-        "x1": 1384.0,
-        "y1": 1856.0
+        "x0": 757.3333333333333,
+        "y0": 1197.3333333333333,
+        "x1": 1178.6666666666667,
+        "y1": 1618.6666666666667
       },
       {
-        "x0": 474.66666666666663,
-        "y0": 1000.0,
-        "x1": 1264.0,
-        "y1": 1789.3333333333335
+        "x0": 597.3333333333334,
+        "y0": 1197.3333333333333,
+        "x1": 938.6666666666667,
+        "y1": 1538.6666666666667
       },
       {
-        "x0": 813.3333333333333,
-        "y0": 1344.0,
-        "x1": 1213.3333333333333,
-        "y1": 1744.0
+        "x0": 512.0,
+        "y0": 1024.0,
+        "x1": 1418.6666666666667,
+        "y1": 1930.6666666666665
       },
       {
-        "x0": 541.3333333333334,
-        "y0": 1005.3333333333333,
-        "x1": 1370.6666666666667,
-        "y1": 1834.6666666666667
+        "x0": 786.6666666666666,
+        "y0": 1370.6666666666665,
+        "x1": 1184.0,
+        "y1": 1768.0
       },
       {
-        "x0": 560.0,
-        "y0": 1328.0,
-        "x1": 1312.0,
-        "y1": 2080.0
+        "x0": 314.6666666666667,
+        "y0": 869.3333333333334,
+        "x1": 1381.3333333333333,
+        "y1": 1936.0
+      }
+    ],
+    "head_boxes_mapped_px": [
+      {
+        "x0": 0.0,
+        "y0": 883.6266666666667,
+        "x1": 560.64,
+        "y1": 1515.3066666666666
       },
       {
-        "x0": 503.99999999999994,
-        "y0": 1778.6666666666667,
-        "x1": 1130.6666666666667,
-        "y1": 2405.3333333333335
+        "x0": 577.8666666666667,
+        "y0": 1095.8666666666666,
+        "x1": 1067.4666666666667,
+        "y1": 1603.4666666666667
+      },
+      {
+        "x0": 922.2399999999999,
+        "y0": 1524.6400000000003,
+        "x1": 1147.0933333333332,
+        "y1": 1757.7600000000002
+      },
+      {
+        "x0": 681.4933333333332,
+        "y0": 1100.4266666666667,
+        "x1": 1254.5066666666667,
+        "y1": 1694.5066666666667
+      },
+      {
+        "x0": 535.8933333333333,
+        "y0": 1118.8266666666666,
+        "x1": 1000.1066666666667,
+        "y1": 1600.1066666666668
+      },
+      {
+        "x0": 348.80000000000007,
+        "y0": 815.4666666666668,
+        "x1": 1440.0,
+        "y1": 2093.866666666667
+      },
+      {
+        "x0": 715.1466666666666,
+        "y0": 1279.28,
+        "x1": 1255.52,
+        "y1": 1839.5200000000002
+      },
+      {
+        "x0": 122.66666666666669,
+        "y0": 624.0,
+        "x1": 1440.0,
+        "y1": 2128.0
       }
     ],
     "visual_rules": {
@@ -98,10 +142,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 199,
-      "last_posted_at": "2026-10-04T20:21:55.062Z",
-      "last_video": "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4",
-      "last_overlay": "Tem dia que a melhor decisão é só deixar a música terminar.",
+      "posts_total": 200,
+      "last_posted_at": "2026-10-04T23:36:05.712Z",
+      "last_video": "D3390941-13EB-4298-95BC-5C3D430C7685.mp4",
+      "last_overlay": "Poucas notas bastam para entregar uma canção inesquecível.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -155,7 +199,7 @@
         "B27F702C-D111-43BF-8EA0-8F9257EC9546.mp4": 4,
         "CA6E6C03-D0B2-46D2-BEFE-E112DE04EF2B.mp4": 3,
         "CC16C569-E899-45F2-AA46-381A81EE8BE2.mp4": 3,
-        "D3390941-13EB-4298-95BC-5C3D430C7685.mp4": 3,
+        "D3390941-13EB-4298-95BC-5C3D430C7685.mp4": 4,
         "E33D9A8A-03BC-4BF1-B49C-9DF5A17DC778.mp4": 3,
         "FF30FC44-4329-490C-876F-C643E4EAD9C9.mp4": 4,
         "FF4168FB-98EC-4DDF-9AA4-18B753CD8766.mp4": 3,
@@ -192,8 +236,8 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe.",
-      "last_hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
+      "last_caption": "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?",
+      "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -389,7 +433,8 @@
         "De repente, o vídeo vira só cenário para a música.",
         "Dá mais dez segundos; essa melodia vai explicar por quê.",
         "Se essa parte não te pegou, espera o próximo verso antes de julgar.",
-        "Tem dia que a melhor decisão é só deixar a música terminar."
+        "Tem dia que a melhor decisão é só deixar a música terminar.",
+        "Poucas notas bastam para entregar uma canção inesquecível."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -586,7 +631,8 @@
         "Tem dia que eu posto pra cantar. Em outros, percebo que a música acaba falando com alguém do outro lado.",
         "Talvez este fosse o som que faltava no teu dia. Salva para ouvir com calma.",
         "Eu gosto quando a música segura a pessoa sem precisar inventar efeito, texto ou promessa. Só a música mesmo.",
-        "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe."
+        "Esta interpretação fez a rolagem esperar. Manda para quem escuta cada detalhe.",
+        "A batida chegou primeiro e a lembrança veio depois. Para onde ela te levou?"
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -596,20 +642,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6ac2b4fbfe1389e41340023a",
+      "last_buffer_post_id": "6ac2e27e63761da98b61a659",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692909993309244678",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692960168564509973",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
+  "hashtags_snapshot": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6ac2e27e63761da98b61a659",
+  "post_id": "6ac3884453279f4f19be33e7",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-10-04T23:36:05.712Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7692960168564509973",
+  "sent_at": "2026-10-05T11:23:24.177Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7693142441951579413",
   "success": true,
-  "finished_at": "2026-10-04T23:36:13.799992+00:00"
+  "finished_at": "2026-10-05T11:23:32.103727+00:00"
 }
