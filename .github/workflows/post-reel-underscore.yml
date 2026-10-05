@@ -26,7 +26,6 @@ jobs:
       AUTOMATION_PAUSED: 'false'
       PLATFORM: instagram_underscore
       VIDEO_QUEUE_FILE: video-queue-instagram-underscore.json
-      FIXED_OVERLAY_TEXT: 'Tá aí a terapia que você precisa'
       EXPECTED_INSTAGRAM_USERNAME: '_carlosrilmarfilho'
 
     steps:
@@ -167,13 +166,12 @@ jobs:
       - name: Analisar vídeo
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         run: python analyze_video.py
-      - name: Aplicar regras visuais seguras
+      - name: Aplicar regras visuais seguras e copy viral
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         run: |
           python apply_style_overrides.py
           python adaptive_placement.py
-          python prepare_fixed_instagram.py
-      - name: Renderizar frase fixa
+      - name: Renderizar com frase viral contextual
         id: render
         if: steps.gate.outputs.ready == 'true' && steps.videos.outputs.has_videos == 'true'
         env:
