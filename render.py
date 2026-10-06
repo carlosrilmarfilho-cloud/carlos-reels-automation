@@ -375,9 +375,9 @@ def plan_overlay(
     # superior estreita, reduzimos somente o tamanho inicial do texto. A caixa
     # continua sujeita aos mesmos limites e ao bloqueio obrigatório de sobreposição.
     crowded_head = any(
-        (box["x1"] - box["x0"]) >= target_width * 0.88
-        and box["y0"] >= target_height * 0.10
-        and box["y0"] <= target_height * 0.24
+        (box["x1"] - box["x0"]) >= target_width * 0.78
+        and box["y0"] >= target_height * 0.08
+        and box["y0"] <= target_height * 0.36
         for box in mapped_heads
     )
     subject_boxes = mapped_heads + mapped_faces
@@ -429,7 +429,10 @@ def plan_overlay(
         # Inclui uma faixa inferior adicional para vídeos em que o rosto ocupa
         # quase todo o quadro. A validação de sobreposição abaixo continua
         # obrigatória, portanto o texto só usa essa faixa quando ela está livre.
-        safe_centers = (0.13, 0.25, 0.68, 0.78, 0.84)
+        # A primeira opção fica no topo extremo da margem segura. Isso evita
+        # a oscilação do detector entre análise e gate quando uma cabeça larga
+        # começa perto de 30% da altura do quadro.
+        safe_centers = (0.085, 0.13, 0.25, 0.68, 0.78, 0.84)
         for center_ratio in safe_centers:
             center_y = target_height * center_ratio
             candidates.append(
