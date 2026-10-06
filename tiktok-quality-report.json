@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "E049B12F-585F-42D9-BCB4-446DDBF991EF.mp4",
-  "overlay": "Hoje eu só queria cantar. Se virou terapia, foi consequência.",
+  "video": "CEE8A75E-E9A0-4A11-A686-06D90E1184D8.mp4",
+  "overlay": "Nem toda música precisa de contexto. Algumas só precisam de volume.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
     "y0": 0.0484375,
     "x1": 0.9555555555555556,
     "y1": 0.121875
   },
-  "faces_checked": 9,
+  "faces_checked": 7,
   "failures": []
 }
