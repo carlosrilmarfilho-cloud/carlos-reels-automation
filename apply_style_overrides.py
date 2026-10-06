@@ -370,16 +370,11 @@ def main() -> None:
     )
 
     render_source = RENDER.read_text(encoding="utf-8")
-    legacy = "safe_centers = (0.13, 0.25, 0.68, 0.78)"
-    current = "safe_centers = (0.13, 0.25, 0.68, 0.78, 0.84)"
-    new = "safe_centers = (0.22, 0.32, 0.66, 0.76, 0.84)"
-    if current in render_source:
-        render_source = render_source.replace(current, new, 1)
-    elif legacy in render_source:
-        render_source = render_source.replace(legacy, new, 1)
-    elif new not in render_source and "tuple(step / 1000 for step in range(80, 841, 5))" not in render_source:
-        raise RuntimeError("Não encontrei a geometria esperada para ajustar a altura do texto")
-    RENDER.write_text(render_source, encoding="utf-8")
+    # A geometria é responsabilidade de adaptive_placement.py, executado logo
+    # depois deste migrador. Aqui validamos apenas que o ponto de extensão existe,
+    # sem rebaixar uma configuração mais segura já presente no repositório.
+    if "safe_centers =" not in render_source:
+        raise RuntimeError("Não encontrei a geometria segura de posicionamento do texto")
 
     print(
         "Estilo aplicado: frases autorais sem templates nos temas principais; "
