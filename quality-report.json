@@ -4,9 +4,9 @@
   "overlay": "Tenta passar direto depois de ouvir esta parte.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
-    "y0": 0.049609375,
+    "y0": 0.0484375,
     "x1": 0.9555555555555556,
-    "y1": 0.140234375
+    "y1": 0.121875
   },
   "faces_checked": 6,
   "failures": []
