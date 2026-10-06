@@ -1,1 +1,1 @@
-recovery 2026-10-05T23:35:00Z main overlay-clearance
+recovery 2026-10-06T11:27:00Z main 08h-window
