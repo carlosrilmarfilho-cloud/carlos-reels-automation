@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "video": "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4",
-  "overlay": "Tem música que chega antes da gente saber que tava precisando.",
+  "video": "B29A925E-34FD-4015-AFD6-5249D690E051.mp4",
+  "overlay": "Se a letra bater diferente, finge que foi só coincidência.",
   "overlay_rect_norm": {
     "x0": 0.044444444444444446,
     "y0": 0.0484375,
     "x1": 0.9555555555555556,
     "y1": 0.121875
   },
-  "faces_checked": 6,
+  "faces_checked": 4,
   "failures": []
 }

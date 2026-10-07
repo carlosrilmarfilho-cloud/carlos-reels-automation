@@ -1,25 +1,25 @@
 {
-  "started_at": "2026-10-07T14:31:31.169213+00:00",
+  "started_at": "2026-10-07T17:17:21.799233+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 142,
+  "caption_length": 137,
   "source_candidate": {
-    "name": "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4",
-    "drive_id": "1yy9HvV3uMG70FLN0B7yK6zR8x_e3XGCb",
-    "sha256": "7073eccf594b1159138e6985d07cebef928d786660d976c05ceefe85004aa138"
+    "name": "B29A925E-34FD-4015-AFD6-5249D690E051.mp4",
+    "drive_id": "1qAVQhOnsBfeYeeltPGPHBTLn73neL0Rv",
+    "sha256": "a9e9c3f282878a0c10486b0beed8318dc1153a3303ced7be997b390a154505c3"
   },
   "metadata_snapshot": {
-    "video": "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4",
+    "video": "B29A925E-34FD-4015-AFD6-5249D690E051.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
     "variant_index": 0,
-    "overlay": "Tem música que chega antes da gente saber que tava precisando.",
-    "caption": "Se te lembrou alguém, um lugar ou uma fase, comenta só uma palavra. Quero ver as histórias que aparecem.\n\n#musica #reelsbrasil #som #boamusica #brasil",
-    "hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
+    "overlay": "Se a letra bater diferente, finge que foi só coincidência.",
+    "caption": "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou.\n\n#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
+    "hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
     "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
@@ -36,114 +36,66 @@
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 176.0,
-        "y0": 794.6666666666667,
-        "x1": 1007.9999999999999,
-        "y1": 1626.6666666666665
+        "x0": 488.0,
+        "y0": 1288.0,
+        "x1": 848.0,
+        "y1": 1648.0
       },
       {
-        "x0": 936.0,
-        "y0": 1661.3333333333333,
-        "x1": 1301.3333333333333,
-        "y1": 2026.6666666666665
+        "x0": 114.66666666666667,
+        "y0": 848.0,
+        "x1": 1394.6666666666667,
+        "y1": 2128.0
       },
       {
-        "x0": 186.66666666666666,
-        "y0": 2314.6666666666665,
-        "x1": 314.6666666666667,
-        "y1": 2442.666666666667
+        "x0": 624.0,
+        "y0": 1200.0,
+        "x1": 1304.0,
+        "y1": 1880.0
       },
       {
-        "x0": 293.3333333333333,
-        "y0": 845.3333333333333,
-        "x1": 1061.3333333333333,
-        "y1": 1613.3333333333335
+        "x0": 226.66666666666669,
+        "y0": 968.0,
+        "x1": 1338.6666666666665,
+        "y1": 2080.0
       },
       {
-        "x0": 69.33333333333333,
-        "y0": 1922.6666666666667,
-        "x1": 194.66666666666666,
-        "y1": 2048.0
-      },
-      {
-        "x0": 384.0,
-        "y0": 850.6666666666666,
-        "x1": 1192.0,
-        "y1": 1658.6666666666667
-      },
-      {
-        "x0": 216.0,
-        "y0": 2370.6666666666665,
-        "x1": 352.0,
-        "y1": 2506.6666666666665
-      },
-      {
-        "x0": 290.6666666666667,
-        "y0": 816.0,
-        "x1": 1080.0,
-        "y1": 1605.3333333333333
-      },
-      {
-        "x0": 133.33333333333331,
-        "y0": 928.0,
-        "x1": 1029.3333333333333,
-        "y1": 1824.0
+        "x0": 45.33333333333333,
+        "y0": 877.3333333333334,
+        "x1": 1176.0,
+        "y1": 2008.0
       }
     ],
     "head_boxes_mapped_px": [
       {
-        "x0": 26.24000000000002,
-        "y0": 603.3066666666667,
-        "x1": 1157.76,
-        "y1": 1776.4266666666665
-      },
-      {
-        "x0": 870.2400000000001,
-        "y0": 1577.3066666666664,
-        "x1": 1367.0933333333332,
-        "y1": 2092.4266666666663
-      },
-      {
-        "x0": 163.62666666666667,
-        "y0": 2285.226666666667,
-        "x1": 337.7066666666667,
-        "y1": 2465.706666666667
-      },
-      {
-        "x0": 155.0933333333333,
-        "y0": 668.6933333333333,
-        "x1": 1199.5733333333333,
-        "y1": 1751.5733333333335
-      },
-      {
-        "x0": 46.77333333333334,
-        "y0": 1893.8400000000001,
-        "x1": 217.22666666666666,
-        "y1": 2070.56
-      },
-      {
-        "x0": 238.56000000000003,
-        "y0": 664.8266666666666,
-        "x1": 1337.4399999999998,
-        "y1": 1804.1066666666668
-      },
-      {
-        "x0": 191.52,
-        "y0": 2339.3866666666668,
-        "x1": 376.47999999999996,
-        "y1": 2531.1466666666665
-      },
-      {
-        "x0": 148.58666666666667,
-        "y0": 634.4533333333333,
-        "x1": 1222.08,
-        "y1": 1747.4133333333334
+        "x0": 423.20000000000005,
+        "y0": 1205.2,
+        "x1": 912.8000000000001,
+        "y1": 1712.8
       },
       {
         "x0": 0.0,
-        "y0": 721.92,
-        "x1": 1190.6133333333332,
-        "y1": 1985.2800000000002
+        "y0": 553.6,
+        "x1": 1440.0,
+        "y1": 2358.4
+      },
+      {
+        "x0": 501.6000000000001,
+        "y0": 1043.6,
+        "x1": 1426.3999999999999,
+        "y1": 2002.4
+      },
+      {
+        "x0": 26.506666666666696,
+        "y0": 712.2399999999999,
+        "x1": 1440.0,
+        "y1": 2280.16
+      },
+      {
+        "x0": 0.0,
+        "y0": 617.28,
+        "x1": 1379.52,
+        "y1": 2211.52
       }
     ],
     "visual_rules": {
@@ -154,10 +106,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 210,
-      "last_posted_at": "2026-10-07T12:13:54.494Z",
-      "last_video": "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4",
-      "last_overlay": "Tem música que chega antes da gente saber que tava precisando.",
+      "posts_total": 211,
+      "last_posted_at": "2026-10-07T14:33:16.454Z",
+      "last_video": "B29A925E-34FD-4015-AFD6-5249D690E051.mp4",
+      "last_overlay": "Se a letra bater diferente, finge que foi só coincidência.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -229,7 +181,7 @@
         "CEE8A75E-E9A0-4A11-A686-06D90E1184D8.mp4": 2,
         "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4": 3,
         "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4": 3,
-        "B29A925E-34FD-4015-AFD6-5249D690E051.mp4": 2,
+        "B29A925E-34FD-4015-AFD6-5249D690E051.mp4": 3,
         "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4": 2,
         "131F3617-EC16-4844-8A37-35A986CC598A.mp4": 2,
         "B020B86A-7648-4905-A31C-6AD6C347C050.mp4": 2,
@@ -248,8 +200,8 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "Se te lembrou alguém, um lugar ou uma fase, comenta só uma palavra. Quero ver as histórias que aparecem.",
-      "last_hashtags": "#musica #reelsbrasil #som #boamusica #brasil",
+      "last_caption": "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou.",
+      "last_hashtags": "#musicabrasileira #reelsbrasil #musica #nostalgia #sentimento",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -456,7 +408,8 @@
         "Hoje eu só queria cantar. Se virou terapia, foi consequência.",
         "Nem toda música precisa de contexto. Algumas só precisam de volume.",
         "Eu não sei o que essa música te lembra. Em mim, ela mexeu aqui.",
-        "Tem música que chega antes da gente saber que tava precisando."
+        "Tem música que chega antes da gente saber que tava precisando.",
+        "Se a letra bater diferente, finge que foi só coincidência."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -664,7 +617,8 @@
         "Dez segundos foram suficientes para prender tua atenção? Salva para comparar depois.",
         "A primeira nota fez uma promessa e a próxima cumpriu. Você ouviu até onde?",
         "Tem voz que impressiona pela técnica. Tem voz que prende porque parece verdade. Eu fico com a segunda.",
-        "Se te lembrou alguém, um lugar ou uma fase, comenta só uma palavra. Quero ver as histórias que aparecem."
+        "Se te lembrou alguém, um lugar ou uma fase, comenta só uma palavra. Quero ver as histórias que aparecem.",
+        "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou."
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -674,20 +628,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6ac6371aa7413693ad617d35",
+      "last_buffer_post_id": "6ac657c4d75d415cada76129",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7693897635782167828",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7693933536302189844",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#musica #tiktokbrasil #som #boamusica #brasil",
+  "hashtags_snapshot": "#musicabrasileira #tiktokbrasil #musica #nostalgia #sentimento",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6ac657c4d75d415cada76129",
+  "post_id": "6ac67ea35dd7df060c6e1961",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-10-07T14:33:16.454Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7693933536302189844",
+  "sent_at": "2026-10-07T17:27:07.762Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7693977229197315336",
   "success": true,
-  "finished_at": "2026-10-07T14:33:24.368311+00:00"
+  "finished_at": "2026-10-07T17:27:15.101470+00:00"
 }
