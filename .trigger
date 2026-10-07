@@ -1,1 +1,1 @@
-recovery 2026-10-06T20:40:00Z main 17h-window
+recovery 2026-10-07T12:07:00Z main 08h-window
