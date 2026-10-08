@@ -1,10 +1,6 @@
 name: Postar 5 TikToks por dia
 
 on:
-  schedule:
-    # O gate interno só permite 08h, 11h, 14h, 17h e 20h BRT e deduplica por janela.
-    # Seis oportunidades por janela fornecem recuperação contra atrasos do agendador do GitHub.
-    - cron: '2,12,22,32,42,52 11,14,17,20,23 * * *'
   workflow_dispatch:
   push:
     paths:
@@ -23,7 +19,7 @@ jobs:
     timeout-minutes: 25
     env:
       GDRIVE_FOLDER_URL: https://drive.google.com/drive/folders/1sVLfUVK2FgssbqEEQeUrrUT5z9WluAin
-      TIKTOK_AUTOMATION_PAUSED: 'false'
+      TIKTOK_AUTOMATION_PAUSED: 'true'
       PLATFORM: tiktok
       VIDEO_QUEUE_FILE: video-queue-tiktok.json
     steps:
