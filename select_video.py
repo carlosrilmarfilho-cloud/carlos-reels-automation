@@ -22,7 +22,7 @@ now_utc = datetime.now(timezone.utc)
 slot_anchor = now_utc if now_utc.hour in target_hours_utc else now_utc - timedelta(hours=1)
 inside_bounded_window = (
     slot_anchor.hour in target_hours_utc
-    and (now_utc.hour in target_hours_utc or now_utc.minute < 30)
+    and (now_utc.hour in target_hours_utc or now_utc.minute < 50)
 )
 if platform in {"instagram", "instagram_underscore", "tiktok"} and not inside_bounded_window:
     print(json.dumps({"count": 0, "reason": "outside_five_daily_window", "platform": platform}))
