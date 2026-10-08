@@ -1,137 +1,77 @@
 {
-  "started_at": "2026-10-07T20:53:27.411450+00:00",
+  "started_at": "2026-10-08T00:35:59.983889+00:00",
   "platform": "tiktok",
   "publisher": "buffer",
   "stage": "success",
-  "caption_length": 129,
+  "caption_length": 138,
   "source_candidate": {
-    "name": "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4",
-    "drive_id": "1vhTsbz6gBwOKK28XZjGqyD0NpoSrGF4z",
-    "sha256": "e1e07a0c21ce5572767dcc96e92ada8e3d333d371d95fdbaa3cd79e19053d55b"
+    "name": "131F3617-EC16-4844-8A37-35A986CC598A.mp4",
+    "drive_id": "1OBIOAuaOHWCbBjwgW1oTNgDUGvKbvXED",
+    "sha256": "622d083597370c85a475eecdddaa5621d1de263d5d9684f4a66e88484eaa499b"
   },
   "metadata_snapshot": {
-    "video": "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4",
+    "video": "131F3617-EC16-4844-8A37-35A986CC598A.mp4",
     "video_index": 0,
     "total_videos": 82,
     "theme": "generic",
     "source_text_detected": "",
     "automatic_analysis": true,
     "variant_index": 0,
-    "overlay": "Eu gosto de música que me faz esquecer por que peguei o celular.",
-    "caption": "Alguns refrões continuam trabalhando depois do fim. Este ficou na tua cabeça?\n\n#boamusica #reelsbrasil #musica #brasil #reels",
-    "hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
+    "overlay": "Aqui está o segundo em que a música muda tudo.",
+    "caption": "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.\n\n#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
+    "hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
     "source_resolution": "1440x2560",
     "render_resolution": "1440x2560",
     "overlay_rect_px": {
       "x0": 64,
-      "y0": 124,
+      "y0": 217,
       "x1": 1376,
-      "y1": 312
+      "y1": 449
     },
     "overlay_rect_norm": {
       "x0": 0.044444444444444446,
-      "y0": 0.0484375,
+      "y0": 0.084765625,
       "x1": 0.9555555555555556,
-      "y1": 0.121875
+      "y1": 0.175390625
     },
     "face_boxes_mapped_px": [
       {
-        "x0": 101.33333333333334,
-        "y0": 1728.0,
-        "x1": 493.33333333333337,
-        "y1": 2120.0
+        "x0": 709.3333333333334,
+        "y0": 1258.6666666666665,
+        "x1": 874.6666666666666,
+        "y1": 1424.0
       },
       {
-        "x0": 970.6666666666666,
-        "y0": 1360.0,
-        "x1": 1314.6666666666667,
-        "y1": 1704.0
+        "x0": 181.33333333333331,
+        "y0": 1053.3333333333333,
+        "x1": 949.3333333333333,
+        "y1": 1821.3333333333333
       },
       {
-        "x0": 162.66666666666666,
-        "y0": 2237.333333333333,
-        "x1": 314.6666666666667,
-        "y1": 2389.3333333333335
-      },
-      {
-        "x0": 954.6666666666667,
-        "y0": 1362.6666666666667,
-        "x1": 1253.3333333333333,
-        "y1": 1661.3333333333333
-      },
-      {
-        "x0": 242.66666666666666,
-        "y0": 914.6666666666667,
-        "x1": 1210.6666666666667,
-        "y1": 1882.6666666666667
-      },
-      {
-        "x0": 928.0000000000001,
-        "y0": 1328.0,
-        "x1": 1248.0,
-        "y1": 1648.0
-      },
-      {
-        "x0": 437.3333333333333,
-        "y0": 1032.0,
-        "x1": 1309.3333333333333,
-        "y1": 1904.0
-      },
-      {
-        "x0": 66.66666666666666,
-        "y0": 1645.3333333333333,
-        "x1": 503.99999999999994,
-        "y1": 2082.666666666667
+        "x0": 605.3333333333334,
+        "y0": 1144.0,
+        "x1": 1378.6666666666665,
+        "y1": 1917.3333333333333
       }
     ],
     "head_boxes_mapped_px": [
       {
-        "x0": 30.773333333333337,
-        "y0": 1637.8400000000001,
-        "x1": 563.8933333333333,
-        "y1": 2190.56
+        "x0": 679.5733333333333,
+        "y0": 1220.6399999999999,
+        "x1": 904.4266666666666,
+        "y1": 1453.76
       },
       {
-        "x0": 908.7466666666666,
-        "y0": 1280.8799999999999,
-        "x1": 1376.5866666666668,
-        "y1": 1765.92
+        "x0": 43.09333333333331,
+        "y0": 876.6933333333333,
+        "x1": 1087.5733333333333,
+        "y1": 1959.5733333333333
       },
       {
-        "x0": 135.30666666666664,
-        "y0": 2202.373333333333,
-        "x1": 342.02666666666664,
-        "y1": 2416.693333333333
-      },
-      {
-        "x0": 900.9066666666666,
-        "y0": 1293.9733333333336,
-        "x1": 1307.0933333333332,
-        "y1": 1715.0933333333332
-      },
-      {
-        "x0": 68.42666666666665,
-        "y0": 692.0266666666666,
-        "x1": 1384.9066666666668,
-        "y1": 2056.9066666666668
-      },
-      {
-        "x0": 870.4,
-        "y0": 1254.4,
-        "x1": 1305.6000000000001,
-        "y1": 1705.6
-      },
-      {
-        "x0": 280.37333333333333,
-        "y0": 831.44,
+        "x0": 466.1333333333333,
+        "y0": 966.1333333333334,
         "x1": 1440.0,
-        "y1": 2060.96
-      },
-      {
-        "x0": 0.0,
-        "y0": 1544.7466666666664,
-        "x1": 582.7199999999999,
-        "y1": 2161.3866666666668
+        "y1": 2056.533333333333
       }
     ],
     "visual_rules": {
@@ -142,10 +82,10 @@
     },
     "next_state": {
       "video_index": 1,
-      "posts_total": 212,
-      "last_posted_at": "2026-10-07T17:27:07.762Z",
-      "last_video": "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4",
-      "last_overlay": "Eu gosto de música que me faz esquecer por que peguei o celular.",
+      "posts_total": 213,
+      "last_posted_at": "2026-10-07T20:55:12.042Z",
+      "last_video": "131F3617-EC16-4844-8A37-35A986CC598A.mp4",
+      "last_overlay": "Aqui está o segundo em que a música muda tudo.",
       "last_mode": "buffer_auto_confirmed",
       "variant_usage": {
         "2ebc8c8660e742e188d26e8b3dfbf50f.mov": 3,
@@ -219,7 +159,7 @@
         "EF9DA00A-6F02-4D8D-A7E0-A1BE5143A76C.mp4": 3,
         "B29A925E-34FD-4015-AFD6-5249D690E051.mp4": 3,
         "09B14DBD-162B-402E-B1D1-393D52FD357C.mp4": 3,
-        "131F3617-EC16-4844-8A37-35A986CC598A.mp4": 2,
+        "131F3617-EC16-4844-8A37-35A986CC598A.mp4": 3,
         "B020B86A-7648-4905-A31C-6AD6C347C050.mp4": 2,
         "13ADDC34-C864-4CF1-ADB1-21EB454FA4B7.mp4": 2,
         "C031AA4C-509B-46F6-8480-EB30D15FE161.mp4": 2,
@@ -236,8 +176,8 @@
         "B89D4621-D215-47E8-9A36-12932B93D041.mp4": 1,
         "7575FAD6-D40A-42CA-9343-375176AEC6BB.mp4": 1
       },
-      "last_caption": "Alguns refrões continuam trabalhando depois do fim. Este ficou na tua cabeça?",
-      "last_hashtags": "#boamusica #reelsbrasil #musica #brasil #reels",
+      "last_caption": "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu.",
+      "last_hashtags": "#musica #musicabrasileira #musicaboa #sentimento #reelsbrasil",
       "recent_overlays": [
         "Tem sofrimento que só fica bonito quando vira brega.",
         "Tem saudade que só um forró desses resolve.",
@@ -446,7 +386,8 @@
         "Eu não sei o que essa música te lembra. Em mim, ela mexeu aqui.",
         "Tem música que chega antes da gente saber que tava precisando.",
         "Se a letra bater diferente, finge que foi só coincidência.",
-        "Eu gosto de música que me faz esquecer por que peguei o celular."
+        "Eu gosto de música que me faz esquecer por que peguei o celular.",
+        "Aqui está o segundo em que a música muda tudo."
       ],
       "recent_captions": [
         "A vida complica, o brega organiza a trilha sonora. Qual clássico entra nessa lista? 😂❤️",
@@ -656,7 +597,8 @@
         "Tem voz que impressiona pela técnica. Tem voz que prende porque parece verdade. Eu fico com a segunda.",
         "Se te lembrou alguém, um lugar ou uma fase, comenta só uma palavra. Quero ver as histórias que aparecem.",
         "Existe um segundo preciso em que tudo muda. Volta e comenta se encontrou.",
-        "Alguns refrões continuam trabalhando depois do fim. Este ficou na tua cabeça?"
+        "Alguns refrões continuam trabalhando depois do fim. Este ficou na tua cabeça?",
+        "Reconheceu a voz antes de entender a letra? Conta qual segundo te prendeu."
       ],
       "blocked_videos": [
         "65A1EA7F-94D1-4855-A3CD-AF38D2CE7499.mp4",
@@ -666,20 +608,20 @@
         "129A2ACF-EEF2-4565-8559-674C6E69B814.mp4"
       ],
       "last_platform": "tiktok",
-      "last_buffer_post_id": "6ac67ea35dd7df060c6e1961",
+      "last_buffer_post_id": "6ac6b148b47a34c6c48bdbda",
       "last_buffer_status": "sent",
-      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7693977229197315336",
+      "last_external_link": "https://tiktok.com/@carlosrilmarfilho/video/7694031939031829767",
       "last_attempted_video": "A7DE5AD8-E655-4EEE-ABF5-788FF38683EB.mp4"
     }
   },
-  "hashtags_snapshot": "#boamusica #tiktokbrasil #musica #brasil #paravoce",
+  "hashtags_snapshot": "#musica #musicabrasileira #musicaboa #sentimento #tiktokbrasil",
   "channel_id": "6a8d782bccaf649a671248a9",
   "channel_name": "carlosrilmarfilho",
-  "post_id": "6ac6b148b47a34c6c48bdbda",
+  "post_id": "6ac6e571365feab0d735b4bd",
   "initial_status": "sending",
   "buffer_status": "sent",
-  "sent_at": "2026-10-07T20:55:12.042Z",
-  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7694031939031829767",
+  "sent_at": "2026-10-08T00:37:44.979Z",
+  "external_link": "https://tiktok.com/@carlosrilmarfilho/video/7694089281689652488",
   "success": true,
-  "finished_at": "2026-10-07T20:55:20.204402+00:00"
+  "finished_at": "2026-10-08T00:37:52.954277+00:00"
 }
