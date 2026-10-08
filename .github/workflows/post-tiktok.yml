@@ -49,7 +49,7 @@ jobs:
           now=datetime.now(timezone.utc)
           official={11,14,17,20,23}
           anchor=now if now.hour in official else now-timedelta(hours=1)
-          if anchor.hour not in official or (now.hour not in official and now.minute>=30):
+          if anchor.hour not in official or (now.hour not in official and now.minute>=50):
               print('false'); raise SystemExit
           slot_date,slot_hour=anchor.date(),anchor.hour
           diag=Path('tiktok-diagnostic.json')
