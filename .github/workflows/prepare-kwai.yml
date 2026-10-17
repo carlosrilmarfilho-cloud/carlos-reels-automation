@@ -45,6 +45,7 @@ jobs:
           official_hours = {11,14,17,20,23}
           anchor = now if now.hour in official_hours else now - timedelta(hours=1)
           if anchor.hour not in official_hours or (now.hour not in official_hours and now.minute >= 30):
+              print("__OUTSIDE_RECOVERY_WINDOW__")
               raise SystemExit
           slot_date, slot_hour = anchor.date(), anchor.hour
 
@@ -67,8 +68,12 @@ jobs:
                   print(workflow)
           PY
           )
+          if [ "$targets" = "__OUTSIDE_RECOVERY_WINDOW__" ]; then
+            echo "Fora da janela de recuperação; nenhuma confirmação foi inferida."
+            exit 0
+          fi
           if [ -z "$targets" ]; then
-            echo "Todos os alvos já têm publicação confirmada nesta janela."
+            echo "Todos os alvos têm publicação confirmada nesta janela."
             exit 0
           fi
           while IFS= read -r workflow; do
