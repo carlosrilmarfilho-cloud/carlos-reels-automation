@@ -78,6 +78,20 @@ jobs:
           fi
           while IFS= read -r workflow; do
             [ -n "$workflow" ] || continue
+
+            # Não sobrepor a recuperação a um publicador já ativo. Isso protege a
+            # hospedagem, a confirmação remota e o avanço FIFO contra corridas.
+            active_runs=$(gh run list \
+              --workflow "$workflow" \
+              --branch "$GITHUB_REF_NAME" \
+              --limit 20 \
+              --json status \
+              --jq '[.[] | select(.status == "in_progress" or .status == "queued" or .status == "requested" or .status == "waiting" or .status == "pending")] | length')
+            if [ "$active_runs" -gt 0 ]; then
+              echo "Publicador $workflow já ativo; recuperação não será sobreposta."
+              continue
+            fi
+
             echo "Recuperando $workflow"
             gh workflow run "$workflow" --ref "$GITHUB_REF_NAME"
           done <<< "$targets"
