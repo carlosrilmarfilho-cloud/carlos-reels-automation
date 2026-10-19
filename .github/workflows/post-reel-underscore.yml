@@ -155,7 +155,20 @@ jobs:
           filename=$(jq -r '.name' /tmp/selected.json)
           idx=$(jq -r '.index' /tmp/selected.json)
           drive_id=$(jq -r '.drive_id' /tmp/selected.json)
-          gdown "$url" -O "videos/$filename"
+          downloaded=false
+          for attempt in 1 2 3; do
+            rm -f "videos/$filename"
+            if gdown "$url" -O "videos/$filename"; then
+              downloaded=true
+              break
+            fi
+            echo "Falha ao baixar $filename (tentativa $attempt/3); mantendo o mesmo item na cabeça da fila." >&2
+            sleep $((attempt * 5))
+          done
+          if [ "$downloaded" != "true" ]; then
+            echo "Vídeo indisponível após três tentativas; fila FIFO preservada sem avançar." >&2
+            exit 1
+          fi
           sha256=$(sha256sum "videos/$filename" | awk '{print $1}')
           jq -n --arg name "$filename" --arg drive_id "$drive_id" --arg sha256 "$sha256" \
             '{name:$name,drive_id:$drive_id,sha256:$sha256}' > video-queue-candidate.json
