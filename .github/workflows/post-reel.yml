@@ -228,7 +228,19 @@ jobs:
           git add latest.mp4 && git commit -m "latest reel"
           git branch -M media-host
           git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          git push --force origin media-host
+          pushed=false
+          for attempt in 1 2 3; do
+            if git push --force origin media-host; then
+              pushed=true
+              break
+            fi
+            echo "Falha transitória ao hospedar vídeo (tentativa $attempt/3)." >&2
+            sleep $((attempt * 5))
+          done
+          if [ "$pushed" != "true" ]; then
+            echo "Falha ao hospedar vídeo após três tentativas; publicação e fila permanecem bloqueadas." >&2
+            exit 1
+          fi
 
       - name: Revalidar duplicação antes de publicar
         id: prepublish
