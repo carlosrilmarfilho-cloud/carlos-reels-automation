@@ -91,6 +91,14 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Preparar ffmpeg com cache
+        if: steps.gate.outputs.ready == 'true'
+        uses: FedericoCarboni/setup-ffmpeg@v3.1
+        with:
+          ffmpeg-version: release
+          linking-type: static
+          github-token: ${{ github.token }}
+
       - name: Instalar dependências
         if: steps.gate.outputs.ready == 'true'
         run: |
