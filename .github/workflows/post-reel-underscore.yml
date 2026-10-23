@@ -91,13 +91,22 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Preparar ffmpeg com cache
+      - name: Preparar ffmpeg estático
         if: steps.gate.outputs.ready == 'true'
-        uses: FedericoCarboni/setup-ffmpeg@v3.1
-        with:
-          ffmpeg-version: '6.1.1'
-          linking-type: static
-          github-token: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          ffmpeg_dir="$RUNNER_TEMP/ffmpeg-static"
+          archive="$RUNNER_TEMP/ffmpeg-static.tar.xz"
+          rm -rf "$ffmpeg_dir" "$archive"
+          mkdir -p "$ffmpeg_dir"
+          curl --fail --location --retry 4 --retry-delay 5 --connect-timeout 20 --max-time 300 \
+            --output "$archive" \
+            "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-n8.1-latest-linux64-gpl-8.1.tar.xz"
+          tar -xJf "$archive" --strip-components=1 -C "$ffmpeg_dir"
+          test -x "$ffmpeg_dir/bin/ffmpeg"
+          test -x "$ffmpeg_dir/bin/ffprobe"
+          echo "$ffmpeg_dir/bin" >> "$GITHUB_PATH"
 
       - name: Instalar dependências
         if: steps.gate.outputs.ready == 'true'
